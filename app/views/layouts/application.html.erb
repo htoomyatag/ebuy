@@ -7,52 +7,179 @@
   <%= csrf_meta_tags %>
 </head>
 
-		<div id="my_header">
+<!-- header -->
+    <nav class="navbar navbar-default" id="mynav">
+      <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-   			
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+          <ul class="nav navbar-nav">
+   
+			<li><a href="#" id="menulink">Sign In |</a></li>
+			<li><a href="#" id="menulink">Register |</a></li>
+			<li><a href="#" id="menulink">My Account |</a></li>
+			<li><a href="#" id="menulink">Cart |</a></li>
+			<li><a href="#" id="menulink">Help </a></li>
+			<li><a href="#" id="menulink">Contact Us |</a></li>
+			<li><a href="#" id="menulink">About Us |</a></li>
+			<li><a href="#" id="menulink">Language </a></li>
 
-		</div>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
 
 
-		<div id="my_logoheader">
-		
-		    <div id="logo_blk">
-				<%= image_tag "logo.png", :id=>"my_logo", :alt=>"Lucky Bags" %>
-			</div>
-			<div id="logoheader_blk">
+	<!-- logo headere -->
+	<div class="row">
+	  <div class="col-md-2">
+	  	<%= image_tag "logo.png", :id=>"my_logo", :alt=>"Lucky Bags" %>
+	  </div>
+	  <div class="col-md-4">
+	  		<h1 id="ebuy_title">eBuy Myanmar </h1>
+			<p id="ebuy_second"> Company Limited</p>
+	  </div>
+	  <div class="col-md-6" style="text-align:center;font-size:13px;">
 
-					<h1 id="ebuy_title">eBuy Myanmar </h1>
-					<p  id="ebuy_second"> Company Limited</p>
+	  		<span >No. 221/59, 1 st /2 nd /3 rd Floor, Shwe Wah Myay Street, Baho Middle Road,</span><br/>
+			<span>Mayangone Township,Yangon, Myanmar</span><br/>
+			<span>Tel : 09 779825801, 09779825802</span><br/>
+			<span>Email : <a href="">service@ebuymyanmar.com </a></span><br/>
+			<span>Website : <a href="">www.ebuymyanmar.com </a></span>
+	  </div>
+	</div>
+	<div class="row" id="search_row">
+		 <div class="col-md-2"> 
+		 </div>
+		  <div class="col-md-2">
+		  		<span id="website_name">ebuymyanmar.com </span>
 				
+		  </div>
+		  <div class="col-md-6">
 
-				
-			</div>
-			<div id="logoadd_blk">
-				<p  id="ebuy_address">
-					<span>No. 221/59, 1 st /2 nd /3 rd Floor, Shwe Wah Myay Street, Baho Middle Road,</span><br/>
-							<span>Mayangone Township,Yangon, Myanmar</span><br/>
-							<span>Tel : 09 779825801, 09779825802</span><br/>
-							<span>Email : <a href="">service@ebuymyanmar.com </a></span><br/>
-							<span>Website : <a href="">www.ebuymyanmar.com </a></span>
-
-				</p>
-					
+		  	<div class="input-group" style="width:500px;">
+			      <input type="text" class="form-control" id="exampleInputAmount" placeholder="search for products and brands">
+			      <div class="input-group-addon"> search</div>
 			</div>
 
-		</div>
-
-		<div id="my_navheader">
-
-
-
-
-		</div>
+		  </div>
+		  <div class="col-md-4"></div>
+    </div>
 
 
 
-		<body>
+
+	<!-- menu bar -->
+<br/>
+<nav class="navbar navbar-default" id="menu_header">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">All Categories  <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Authentic Brand Zone   <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Women’s Fashion   <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+
+
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Men’s Fashion  <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+
+
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Digital & Mobile  <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+
+
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Home & Living  <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Health & Beauty  <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+
+
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Food & Beverage  <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+
+
+
+
+      </ul>
+     
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<body>
 
 			<%= yield %>
+
+
+
+
+</body>
+
 
 
 			<div id="my_navfooter">
@@ -66,12 +193,14 @@
 				</div>
 
 				<div id="nav_menub">
-					<p class="nav_menu_title"> Tools </p>
+				    <p class="nav_menu_title"> Sell on ebuy Myanmar</p>
 				</div>
 
 				<div id="nav_menub">
-				    <p class="nav_menu_title"> Sell on ebuy Myanmar</p>
+					<p class="nav_menu_title"> Tools </p>
 				</div>
+
+				
 
 			</div>
 
@@ -80,20 +209,13 @@
 			</div>
 
 			<div id="link_footer">
-			     <h3 id="header"> wwww.ebuymyanmar.com 
-			      <span style="text-align:center;position:relative;left:70px;">
+			     <a href="" id="header"> wwww.ebuymyanmar.com </a>
+			  
+			      <span id="copy_right">
 			      	Copy right reserved by ebuy Myanmar Co.Ltd.
 			      </span>
-			     </h3>
 
 			</div>
-
-
-			
-
-
-	   </body>
-
 
 		
 

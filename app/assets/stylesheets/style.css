@@ -1,4 +1,3 @@
-
 body{
 
 
@@ -7,33 +6,56 @@ overflow-x: hidden;
 
 }
 
-#my_header{
-	background:#E74C3C;
-	margin: -10px;
-	height: 40px;
+
+#mynav{
+ background-color: #E74C3C;
 }
 
-#my_logo {
+
+
+#my_logo{
+	position: relative;
+	left: 20px;
 	height: 150px;
-	padding-top: 20px;
-    padding-left: 20px;
 }
 
 
-#my_logoheader{
+#ebuy_title{
+	font-size: 35px;
+	color: #3498DB;
+	position: relative;
+    left: -35px;
+    top: -20px;
 
-	margin-top: 10px;
-
-	height: 200px;
-	margin: -10px;
 }
 
 
-#my_navheader{
-	background:#3498DB;
-	margin: -10px;
-	height: 40px;
+#ebuy_second {
+
+	color: #3498DB;
+	font-size: 15px;
+	font-weight: bold;
+	position: relative;
+    left: 10px;
+    top: -20px;
 }
+
+
+
+#menulink {
+	color: white;
+
+
+}
+
+#menu_header{
+
+ background-color: #3498DB;
+
+}
+
+
+
 
 
 #my_navfooter{
@@ -66,7 +88,8 @@ overflow-x: hidden;
 .nav_menu_title {
 	color: white;
 	font-weight: bold;
-	padding-left: 20px;
+	padding-left: 55px;
+	padding-top: 20px;
 }
 
 
@@ -86,67 +109,36 @@ overflow-x: hidden;
 }
 
 
-
-
 #header {
 	color: #3498DB;
 	padding-left: 20px;
+	font-size: 12px;
 
 }
 
-
-
-#logo_blk {
-
-width: 15%;
-float: left;
-
-
-}
-
-
-#logoheader_blk {
-
-	width: 30%;
-	float: left;
-
-
-}
-
-#logoadd_blk{
-	width: 55%;
-	float: right;
-
-}
-
-
-#ebuy_title {
-
+#copy_right {
+	text-align:center;
+	position:relative;
+	left:70px;
 	color: #3498DB;
-	font-size: 35px;
+	font-size: 12px;
 }
 
 
-#ebuy_second {
-
-	color: #3498DB;
-	font-size: 25px;
+#website_name{
+	color: #E74C3C;
 	font-weight: bold;
 	position: relative;
-    left: 14px;
-    top: -20px;
+	left: 10px;
+	top: 8px;
+
 }
 
+#search_row{
 
-#ebuy_address {
 
-	font-size: 18px;
-	font-weight: bold;
 	position: relative;
-    left: 14px;
-    top: 10px;
-    text-align: center;
-    color: #797D7F;
-
+	top: -50px;
+	
 
 }
