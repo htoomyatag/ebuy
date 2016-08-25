@@ -1,5 +1,11 @@
 
+body{
 
+
+overflow-y: scroll;
+overflow-x: hidden;
+
+}
 
 #my_header{
 	background:#E74C3C;
@@ -7,13 +13,19 @@
 	height: 40px;
 }
 
+#my_logo {
+	height: 150px;
+	padding-top: 20px;
+    padding-left: 20px;
+}
+
 
 #my_logoheader{
 
-	background: #F2F3F4;
 	margin-top: 10px;
 
-	height: 140px;
+	height: 200px;
+	margin: -10px;
 }
 
 
@@ -30,10 +42,111 @@
 	margin: -10px;
 	height: 300px;
 
-	position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
+
+}
+
+
+
+#nav_menua{
+
+	width: 25%;
+	float:left;
+	text-align: left;
+}
+
+
+#nav_menub{
+
+	width: 25%;
+	float:right;
+	text-align: left;
+}
+
+
+.nav_menu_title {
+	color: white;
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+
+#payment_footer {
+	height: 120px;
+	margin: -10px;
+
+
+}
+
+
+#link_footer {
+
+
+   margin: -10px;
+
+}
+
+
+
+
+#header {
+	color: #3498DB;
+	padding-left: 20px;
+
+}
+
+
+
+#logo_blk {
+
+width: 15%;
+float: left;
+
+
+}
+
+
+#logoheader_blk {
+
+	width: 30%;
+	float: left;
+
+
+}
+
+#logoadd_blk{
+	width: 55%;
+	float: right;
+
+}
+
+
+#ebuy_title {
+
+	color: #3498DB;
+	font-size: 35px;
+}
+
+
+#ebuy_second {
+
+	color: #3498DB;
+	font-size: 25px;
+	font-weight: bold;
+	position: relative;
+    left: 14px;
+    top: -20px;
+}
+
+
+#ebuy_address {
+
+	font-size: 18px;
+	font-weight: bold;
+	position: relative;
+    left: 14px;
+    top: 10px;
+    text-align: center;
+    color: #797D7F;
+
 
 }

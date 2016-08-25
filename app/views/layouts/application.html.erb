@@ -9,16 +9,35 @@
 
 		<div id="my_header">
 
-
-
+   			
 
 		</div>
 
 
 		<div id="my_logoheader">
+		
+		    <div id="logo_blk">
+				<%= image_tag "logo.png", :id=>"my_logo", :alt=>"Lucky Bags" %>
+			</div>
+			<div id="logoheader_blk">
 
+					<h1 id="ebuy_title">eBuy Myanmar </h1>
+					<p  id="ebuy_second"> Company Limited</p>
+				
 
+				
+			</div>
+			<div id="logoadd_blk">
+				<p  id="ebuy_address">
+					<span>No. 221/59, 1 st /2 nd /3 rd Floor, Shwe Wah Myay Street, Baho Middle Road,</span><br/>
+							<span>Mayangone Township,Yangon, Myanmar</span><br/>
+							<span>Tel : 09 779825801, 09779825802</span><br/>
+							<span>Email : <a href="">service@ebuymyanmar.com </a></span><br/>
+							<span>Website : <a href="">www.ebuymyanmar.com </a></span>
 
+				</p>
+					
+			</div>
 
 		</div>
 
@@ -31,17 +50,52 @@
 
 
 
-			<body>
+		<body>
 
 			<%= yield %>
 
-			</body>
+
+			<div id="my_navfooter">
+
+				<div id="nav_menua">
+					<p class="nav_menu_title">  Customer Service</p>
+				</div>
+
+				<div id="nav_menua">
+					<p class="nav_menu_title"> About ebuy Myanmar</p>
+				</div>
+
+				<div id="nav_menub">
+					<p class="nav_menu_title"> Tools </p>
+				</div>
+
+				<div id="nav_menub">
+				    <p class="nav_menu_title"> Sell on ebuy Myanmar</p>
+				</div>
+
+			</div>
+
+			<div id="payment_footer">
+				<h3 id="header"> Payment methods </h3>
+			</div>
+
+			<div id="link_footer">
+			     <h3 id="header"> wwww.ebuymyanmar.com 
+			      <span style="text-align:center;position:relative;left:70px;">
+			      	Copy right reserved by ebuy Myanmar Co.Ltd.
+			      </span>
+			     </h3>
+
+			</div>
 
 
-		<div id="my_navfooter">
+			
 
 
-		</div>
+	   </body>
+
+
+		
 
 
 </html>
