@@ -1,0 +1,1 @@
+json.partial! "frontends/frontend", frontend: @frontend

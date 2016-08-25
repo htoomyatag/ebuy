@@ -1,0 +1,1 @@
+json.array! @frontends, partial: 'frontends/frontend', as: :frontend
