@@ -10,7 +10,9 @@
 <!-- header -->
     <nav class="navbar navbar-default" id="mynav">
       <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
-      <div class="container-fluid">
+      <div class="col-md-1"></div>
+
+      <div class="col-md-10">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -27,39 +29,39 @@
 
 				<a href="#" id="menulink">
 				<%= image_tag "sign.png", :alt=>"sign.png" %>
-				Sign In &nbsp;&nbsp;|
+				Sign In &nbsp;|
 
 				</a>
 			</li>
 			<li>
 				<a href="#" id="menulink">
 					<%= image_tag "register.png", :alt=>"register" %>
-					Register &nbsp;&nbsp;|
+					Register &nbsp;|
 				</a>
 			</li>
 			<li>
 				<a href="#" id="menulink">
 				<%= image_tag "profile.png", :alt=>"profile" %>
-				My Account &nbsp;&nbsp;|</a>
+				My Account &nbsp;|</a>
 			</li>
 			<li>
 				<a href="#" id="menulink">
 				<%= image_tag "cart.png", :alt=>"cart" %>
-				Cart &nbsp;&nbsp;|</a>
+				Cart &nbsp;|</a>
 			</li>
 			<li>
 				<a href="#" id="menulink">
 				<%= image_tag "mark.png", :alt=>"mark" %>
-				Help &nbsp;&nbsp;|</a></li>
+				Help &nbsp;|</a></li>
 			<li>
 				<a href="#" id="menulink">
 				<%= image_tag "phone.png", :alt=>"phone" %>
-				Contact Us &nbsp;&nbsp;|</a>
+				Contact Us &nbsp;|</a>
 			</li>
 			<li>
 				<a href="#" id="menulink">
 				<%= image_tag "aboutus.png", :alt=>"aboutus" %>
-				About Us &nbsp;&nbsp;|
+				About Us &nbsp;|
 				</a>
 			</li>
 			<li><a href="#" id="menulink">
@@ -73,6 +75,7 @@
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
+      <div class="col-md-1"></div>
     </nav>
 
 
@@ -116,7 +119,7 @@
 
 
 	<!-- menu bar -->
-<br/>
+
 <nav class="navbar navbar-default" id="menu_header">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -221,32 +224,65 @@
 
 			<div id="my_navfooter">
 
-				<div id="nav_menua">
-					<p class="nav_menu_title">  Customer Service</p>
+				<div class="col-md-12">
+					<div class="col-md-3">
+						<p class="fonter_headtitle">Customer service</p>
+						<a class="fonter_menutitle" href="">Help topics</a><br/>
+						<a class="fonter_menutitle" href="">How to buy</a><br/>
+						<a class="fonter_menutitle" href="">Payment</a><br/>
+						<a class="fonter_menutitle" href="">Shipping & Delivery</a><br/>
+						<a class="fonter_menutitle" href="">Contact Us</a><br/>
+						<a class="fonter_menutitle" href="">Customer Feedback</a>
+					</div>
+					<div class="col-md-3">
+						<p class="fonter_headtitle">About Ebuy Myanmar</p>
+						<a class="fonter_menutitle" href="">About Us</a><br/>
+						<a class="fonter_menutitle" href="">Career Opportunities</a><br/>
+						<a class="fonter_menutitle" href="">Terms and Conditions</a><br/>
+						<a class="fonter_menutitle" href="">Privacy Policy</a><br/>
+					</div>
+					<div class="col-md-3">
+						<p class="fonter_headtitle">Tools</p>
+						<a class="fonter_menutitle" href="">Join</a><br/>
+
+
+						<%= link_to image_tag("facebook.png", :border => 0, :alt => '', :title => ''), "https://www.facebook.com/ebuy.myanmar?fref=ts", :class => 'dock-item' %><br/><br/>
+
+					
+
+						<a class="fonter_menutitle" href="">Download the App</a><br/>
+						<%= link_to image_tag("googleplay.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'dock-item' %><br/>
+					    <%= link_to image_tag("apple_store.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'dock-item' %><br/>
+
+
+						
+
+					</div>
+					<div class="col-md-3">
+						<p class="fonter_headtitle">Sell on ebuy Myammar</p>
+						<a class="fonter_menutitle" href="">How to sell</a><br/>
+					</div>
+
 				</div>
 
-				<div id="nav_menua">
-					<p class="nav_menu_title"> About ebuy Myanmar</p>
-				</div>
 
-				<div id="nav_menub">
-				    <p class="nav_menu_title"> Sell on ebuy Myanmar</p>
-				</div>
+			</div>
 
-				<div id="nav_menub">
-					<p class="nav_menu_title"> Tools </p>
-				</div>
+			<div class="col-md-12"><br/>
+				<p class="fonter_head2title"> Payment methods </p><br/>
+				<%= image_tag("visa_mastercard_logo", :id => "payment_logo") %><br/><br/><br/>
+			</div>
+
+			<div class="col-md-12">
+				<p class="view_on_mobie"> View on Mobile
+				<%= image_tag("mobile.png") %>
+				</p>
+
 
 				
-
 			</div>
-
-			<div id="payment_footer">
-				<h3 id="header"> Payment methods </h3>
-			</div>
-
-			<div id="link_footer">
-			     <a href="" id="header"> wwww.ebuymyanmar.com </a>
+			<div class="col-md-12">
+			     <a href=""> wwww.ebuymyanmar.com </a>
 			  
 			      <span id="copy_right">
 			      	Copy right reserved by ebuy Myanmar Co.Ltd.

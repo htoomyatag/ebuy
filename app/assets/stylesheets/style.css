@@ -51,6 +51,8 @@ overflow-x: hidden;
 #menu_header{
 
  background-color: #3498DB;
+ position: relative;
+ top: -18px;
 
 }
 
@@ -150,4 +152,35 @@ overflow-x: hidden;
 
 
 
+.fonter_headtitle{
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+	padding-top: 10px;
+}
 
+.fonter_head2title{
+	color: #3498DB;
+	font-size: 22px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+
+
+.fonter_menutitle{
+	color: white;
+	font-size: 16px;
+	padding-top: 10px;
+}
+
+.view_on_mobie {
+	position: relative;
+	text-align: center;
+	color: #3498DB;
+	font-size: 18px;
+}
+
+#payment_logo{
+	height: 100px;
+}
