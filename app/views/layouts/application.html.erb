@@ -23,14 +23,51 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
           <ul class="nav navbar-nav">
    
-			<li><a href="#" id="menulink">Sign In |</a></li>
-			<li><a href="#" id="menulink">Register |</a></li>
-			<li><a href="#" id="menulink">My Account |</a></li>
-			<li><a href="#" id="menulink">Cart |</a></li>
-			<li><a href="#" id="menulink">Help </a></li>
-			<li><a href="#" id="menulink">Contact Us |</a></li>
-			<li><a href="#" id="menulink">About Us |</a></li>
-			<li><a href="#" id="menulink">Language </a></li>
+			<li>
+
+				<a href="#" id="menulink">
+				<%= image_tag "sign.png", :alt=>"sign.png" %>
+				Sign In &nbsp;&nbsp;|
+
+				</a>
+			</li>
+			<li>
+				<a href="#" id="menulink">
+					<%= image_tag "register.png", :alt=>"register" %>
+					Register &nbsp;&nbsp;|
+				</a>
+			</li>
+			<li>
+				<a href="#" id="menulink">
+				<%= image_tag "profile.png", :alt=>"profile" %>
+				My Account &nbsp;&nbsp;|</a>
+			</li>
+			<li>
+				<a href="#" id="menulink">
+				<%= image_tag "cart.png", :alt=>"cart" %>
+				Cart &nbsp;&nbsp;|</a>
+			</li>
+			<li>
+				<a href="#" id="menulink">
+				<%= image_tag "mark.png", :alt=>"mark" %>
+				Help &nbsp;&nbsp;|</a></li>
+			<li>
+				<a href="#" id="menulink">
+				<%= image_tag "phone.png", :alt=>"phone" %>
+				Contact Us &nbsp;&nbsp;|</a>
+			</li>
+			<li>
+				<a href="#" id="menulink">
+				<%= image_tag "aboutus.png", :alt=>"aboutus" %>
+				About Us &nbsp;&nbsp;|
+				</a>
+			</li>
+			<li><a href="#" id="menulink">
+				Language 
+				<%= image_tag "english_flag.png", :alt=>"english", :style => "border:1px solid #021a40;"  %>
+				<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
+				</a>
+			</li>
 
 
           </ul>

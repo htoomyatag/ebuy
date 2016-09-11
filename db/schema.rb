@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160825061850) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "frontends", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -23,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160825061850) do
     t.string   "actual_price"
     t.string   "discount_price"
     t.integer  "quantity"
+    t.text     "specs"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

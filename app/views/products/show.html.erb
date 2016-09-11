@@ -1,24 +1,52 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+	<div class="rows">
+		<div class="col-md-12">
+			    <h3>Product Info</h3><hr/>
+				<p>
+				  <strong>Title:</strong>
+				  <%= @product.title %>
+				</p>
 
-<p>
-  <strong>Actual price:</strong>
-  <%= @product.actual_price %>
-</p>
+				<p>
+				  <strong>Actual price:</strong>
+				  <%= @product.actual_price %>
+				</p>
 
-<p>
-  <strong>Discount price:</strong>
-  <%= @product.discount_price %>
-</p>
+				<p>
+				  <strong>Discount price:</strong>
+				  <%= @product.discount_price %>
+				</p>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @product.quantity %>
-</p>
+				<p>
+				  <strong>Quantity:</strong>
+				  <%= @product.quantity %>
+				</p>
+		</div>
+		
+		<div class="col-md-3">
+		<%= image_tag("sorry-image-not-available") %>
+		</div>
+		<div class="col-md-3">
+			<%= image_tag("sorry-image-not-available") %>
+		</div>
+		<div class="col-md-3">
+			<%= image_tag("sorry-image-not-available") %>
+		</div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+		<div class="col-md-3">
+			<%= image_tag("sorry-image-not-available") %>
+		</div>
+
+		<div class="col-md-12"><br/>
+			<%= link_to 'Edit', edit_product_path(@product) %> |
+			<%= link_to 'Back', products_path %>
+		</div>
+	</div>
+  
+
+
+
+ </div>
+</div>
