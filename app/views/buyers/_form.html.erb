@@ -1,0 +1,33 @@
+<%= form_for(@buyer) do |f| %>
+  <% if @buyer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@buyer.errors.count, "error") %> prohibited this buyer from being saved:</h2>
+
+      <ul>
+      <% @buyer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :buyer_name %><br>
+    <%= f.text_field :buyer_name %>
+  </div>
+  <div class="field">
+    <%= f.label :buyer_phone %><br>
+    <%= f.text_field :buyer_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :buyer_township %><br>
+    <%= f.text_field :buyer_township %>
+  </div>
+  <div class="field">
+    <%= f.label :buyer_address %><br>
+    <%= f.text_area :buyer_address %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

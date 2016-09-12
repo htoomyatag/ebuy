@@ -47,7 +47,9 @@
 			<li>
 				<a href="#" id="menulink">
 				<%= image_tag "cart.png", :alt=>"cart" %>
-				Cart &nbsp;|</a>
+				Cart &nbsp; 
+				<%= (@cart.total_quantity) %>
+				|</a>
 			</li>
 			<li>
 				<a href="#" id="menulink">

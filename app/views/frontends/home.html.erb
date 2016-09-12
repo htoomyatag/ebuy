@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-md-1">.col-md-4</div>
+  <% @products.each do |product| %>
+	  <div class="col-md-2">
+	     <%= image_tag("sorry-image-not-available", :class=>"img-responsive") %>
+	  	 <p id="product_title"><%= product.title %></p>
+	  	 <p id="product_price"><%= product.discount_price %></p>
+
+	<%= button_to 'Add to Cart' , line_items_path(:product_id => product),:id => "btn_add_to_cart"+product.id.to_s,:class =>"btn btn-primary", remote:true %>
+	  	 
+	  </div>
+  <% end %>
+  <div class="col-md-1">.col-md-4</div>
+</div>
+
+
+
+

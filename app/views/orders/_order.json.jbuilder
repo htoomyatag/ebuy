@@ -1,0 +1,2 @@
+json.extract! order, :id, :buyer_id, :buyer_name, :buyer_email, :buyer_phone, :buyer_township, :buyer_address, :cart_id, :order_status, :created_at, :updated_at
+json.url order_url(order, format: :json)

@@ -184,3 +184,19 @@ overflow-x: hidden;
 #payment_logo{
 	height: 100px;
 }
+
+#product_title{
+
+	color: #3498DB;
+	font-size: 18px;
+	text-align: center;
+
+}
+
+#product_price{
+
+	color: #E74C3C;
+	font-size: 18px;
+	text-align: center;
+
+}

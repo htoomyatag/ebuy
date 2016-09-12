@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :discount_price
       t.integer :quantity
       t.text :specs
+      t.string :product_category
 
 
       t.timestamps null: false

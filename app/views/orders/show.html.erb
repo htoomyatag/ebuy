@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Buyer:</strong>
+  <%= @order.buyer_id %>
+</p>
+
+<p>
+  <strong>Buyer name:</strong>
+  <%= @order.buyer_name %>
+</p>
+
+<p>
+  <strong>Buyer email:</strong>
+  <%= @order.buyer_email %>
+</p>
+
+<p>
+  <strong>Buyer phone:</strong>
+  <%= @order.buyer_phone %>
+</p>
+
+<p>
+  <strong>Buyer township:</strong>
+  <%= @order.buyer_township %>
+</p>
+
+<p>
+  <strong>Buyer address:</strong>
+  <%= @order.buyer_address %>
+</p>
+
+<p>
+  <strong>Cart:</strong>
+  <%= @order.cart_id %>
+</p>
+
+<p>
+  <strong>Order status:</strong>
+  <%= @order.order_status %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

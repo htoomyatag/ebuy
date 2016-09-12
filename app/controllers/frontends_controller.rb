@@ -8,7 +8,7 @@ class FrontendsController < ApplicationController
   end
 
   def home
-
+     @products = Product.where(:product_category => "AuthenticBrandZone").last(5)
   end
 
   # GET /frontends/1

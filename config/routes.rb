@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :buyers
+  resources :carts
+  resources :line_items
+  resources :orders
   resources :frontends
   root 'frontends#home'
 
