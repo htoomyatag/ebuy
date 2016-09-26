@@ -69,10 +69,21 @@
 			<%= image_tag("sorry-image-not-available") %>
 		</div>
 
+
+		<div class="col-md-12">
+			<br/><p>
+				<strong>Start to sell on:</strong>
+				<%= @product.start_to_sell_on %>
+			</p>
+		</div>
+
 		<div class="col-md-12"><br/>
 			<%= link_to 'Edit', edit_product_path(@product) %> |
 			<%= link_to 'Back', products_path %>
 		</div>
+
+
+
 	</div>
   
 

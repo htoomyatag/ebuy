@@ -67,6 +67,8 @@ ActiveRecord::Schema.define(version: 20160912145323) do
     t.string   "pick_up"
     t.string   "ebuy_delivery"
     t.string   "delivery_time"
+    t.string   "start_to_sell_on"
+    t.string   "date"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
