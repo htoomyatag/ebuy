@@ -64,6 +64,9 @@ ActiveRecord::Schema.define(version: 20160912145323) do
     t.integer  "quantity"
     t.text     "specs"
     t.string   "product_category"
+    t.string   "pick_up"
+    t.string   "ebuy_delivery"
+    t.string   "delivery_time"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

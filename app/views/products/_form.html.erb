@@ -61,9 +61,42 @@
     </div>
 
 
-<div id='cont' >
+    <div id='cont' >
 
-</div>
+    </div>
+     
+
+    <div class="col-md-12">
+      <h3> Delivery Option
+      </h3>
+       <hr/>
+    </div>
+
+
+    <div class="col-md-6">
+       <label>Pick up</label><br>
+         <div class="field">
+           <%= f.check_box :pick_up %>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+       <label>ebuy delivery</label><br>
+         <div class="field">
+           <%= f.check_box :ebuy_delivery %>
+        </div>
+    </div>
+
+
+    <div class="col-md-6"><br/>
+       <label>Delivery time</label><br>
+         <div class="field">
+            <%= f.number_field :delivery_time, :class => "form-control" %>
+        </div>
+    </div>
+
+ 
+
  
 
 

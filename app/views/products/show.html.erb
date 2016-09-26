@@ -23,6 +23,36 @@
 				  <strong>Quantity:</strong>
 				  <%= @product.quantity %>
 				</p>
+
+
+				<h3>Delivery Info</h3><hr/>
+
+				<p>
+				  <strong>Pick up:</strong>
+				  <% if @product.pick_up == "0" %>
+				  			No
+				   <% end %>
+				   <% if @product.pick_up == "1" %>
+				  			Yes
+				   <% end %>
+				</p>
+
+
+				<p>
+				  <strong>Self Delivery:</strong>
+				   <% if @product.ebuy_delivery == "0" %>
+				  			No
+				   <% end %>
+				   <% if @product.ebuy_delivery == "1" %>
+				  			Yes
+				   <% end %>
+				</p>
+
+
+				<p>
+				  <strong>Delivery time:</strong>
+				  <%= @product.delivery_time %> days
+				</p>
 		</div>
 		
 		<div class="col-md-3">
