@@ -17,6 +17,18 @@
   {title:"tmp5",discount_price: "210", quantity: 10, product_category:"AuthenticBrandZone"},
   {title:"tmp6",discount_price: "150", quantity: 10, product_category:"AuthenticBrandZone"},
   {title:"tmp7",discount_price: "210", quantity: 10, product_category:"AuthenticBrandZone"},
+
+  {title:"tmp1a",discount_price: "100", quantity: 10, product_category:"AuthenticBrandZone"},
+  {title:"tmp2b",discount_price: "150", quantity: 10, product_category:"AuthenticBrandZone"},
+  {title:"tmp3c",discount_price: "300", quantity: 10, product_category:"AuthenticBrandZone"},
+  {title:"tmp4d",discount_price: "450", quantity: 10, product_category:"AuthenticBrandZone"},
+  {title:"tmp5e",discount_price: "210", quantity: 10, product_category:"AuthenticBrandZone"},
+  {title:"tmp6f",discount_price: "150", quantity: 10, product_category:"AuthenticBrandZone"},
+  {title:"tmp7g",discount_price: "210", quantity: 10, product_category:"AuthenticBrandZone"},
+
+
+
+
   {title:"tmp8",discount_price: "650", quantity: 10},
   {title:"tmp9",discount_price: "610", quantity: 10},
   {title:"tmp10",discount_price: "450", quantity: 10},

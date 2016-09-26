@@ -1,0 +1,65 @@
+ 			<div class="container">
+ 			<h4>AuthenticBrandZone</h4><hr/>
+ 			</div>
+  
+            <div id="myCarousel1" class="carousel slide">
+                
+
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="container">
+
+                       
+	       					<% @first_authentic_products.each do |product| %>
+	                            <div class="col-md-2">
+	                                <a href="#x">
+	                            	 <%= image_tag("sorry-image-not-available", :class=>"img-responsive") %>
+	                            	 <p id="product_title"><%= product.title %></p>
+			  	                     <p id="product_price"><%= product.discount_price %> Ks</p>
+	                            	</a>
+	                            </div>
+	                        <% end %>
+
+                                               
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                    <div class="item">
+                        <div class="container">
+
+
+                        	<% @second_authentic_products.each do |product| %>
+	                            <div class="col-md-2">
+	                                <a href="#x">
+	                            	 <%= image_tag("sorry-image-not-available", :class=>"img-responsive") %>
+	                            	 <p id="product_title"><%= product.title %></p>
+			  	                     <p id="product_price"><%= product.discount_price %> Ks</p>
+	                            	</a>
+	                            </div>
+	                        <% end %>
+                       			
+                       		
+                             
+                        	
+                         
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                  
+                    <!--/item-->
+                </div>
+                <!--/carousel-inner-->
+				 <a class="left carousel-control" id="arrow_crousel" href="#myCarousel1" role="button" data-slide="prev">
+				     <%= image_tag("leftarrow.png") %>
+				  </a>
+
+				  <a class="right carousel-control" id="arrow_crousel" href="#myCarousel1" role="button" data-slide="next">
+				  	  <%= image_tag("rightarrow.png") %>
+				  </a>
+
+            </div>
+            <!--/myCarousel-->
+ 

@@ -215,3 +215,12 @@ overflow-x: hidden;
 
 
 
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
+
+
+#arrow_crousel {
+	top: 45px;
+}

@@ -20,7 +20,8 @@ class FrontendsController < ApplicationController
   end
 
   def home
-     @products = Product.where(:product_category => "AuthenticBrandZone").last(5)
+     @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").last(6)
+     @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6) 
   end
 
   # GET /frontends/1
