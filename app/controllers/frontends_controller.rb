@@ -3,6 +3,14 @@ class FrontendsController < ApplicationController
 
   # GET /frontends
   # GET /frontends.json
+  def about_us
+
+  end
+
+  def contact_us
+
+  end
+
   def index
     @frontends = Frontend.all
   end

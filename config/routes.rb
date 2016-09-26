@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :orders
   resources :frontends
   root 'frontends#home'
+  get 'about_us' => 'frontends#about_us'
+  get 'contact_us' => 'frontends#contact_us'
 
   resources :products
   # The priority is based upon order of creation: first created -> highest priority.
