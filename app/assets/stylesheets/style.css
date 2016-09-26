@@ -206,3 +206,9 @@ overflow-x: hidden;
 	color: #3498DB;
 	font-weight: bold;
 }
+
+
+.quick_help_link{
+	font-size: 16px;
+	font-weight: bold;
+}

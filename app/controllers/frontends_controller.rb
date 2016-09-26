@@ -11,6 +11,10 @@ class FrontendsController < ApplicationController
 
   end
 
+  def help
+
+  end
+
   def index
     @frontends = Frontend.all
   end
