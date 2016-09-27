@@ -224,3 +224,47 @@ overflow-x: hidden;
 #arrow_crousel {
 	top: 45px;
 }
+
+
+.detailpage_link {
+	color: #3498DB;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 40px;
+}
+
+
+#product_background {
+	background-color: #dce6f2;
+	height: 60px;
+}
+
+
+#product_name {
+	padding:10px;
+	color: #0472c1;
+	font-weight: bold;
+}
+
+
+#btn_checkout{
+
+	width: 150px;
+}
+
+.detail_tab_title{
+	color: white;
+	font-size: 18px;
+	text-align: center;
+}
+
+
+#tab_detail{
+	background-color: #0070c0;
+	width: 25%;
+}
+
+
+li .active {
+	background-color: red;
+}

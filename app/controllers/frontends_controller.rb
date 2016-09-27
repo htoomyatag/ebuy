@@ -3,6 +3,12 @@ class FrontendsController < ApplicationController
 
   # GET /frontends
   # GET /frontends.json
+
+  def product_info
+
+  end
+
+  
   def about_us
 
   end
