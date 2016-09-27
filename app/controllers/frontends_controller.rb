@@ -6,6 +6,9 @@ class FrontendsController < ApplicationController
 
   def product_info
 
+     @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").last(6)
+     @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6) 
+
   end
 
   

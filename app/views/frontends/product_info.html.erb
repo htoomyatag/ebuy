@@ -1,4 +1,4 @@
-<div style="height:900px;">
+<div style="height:1600px;">
 
 <div class="row">
 
@@ -6,11 +6,11 @@
 
 	<h4 class="detailpage_link">
 		Home > Product Category > Product Name > Product Code  
-	</h4>
+	</h4><br/>
 
   </div>
 
-  <div class="container">
+    <div class="col-md-12">
   		<div class="col-md-5">
   				<!-- product image -->
   		</div>
@@ -92,10 +92,10 @@
 
 
 
-		<div class="container">
+		    <div class="col-md-12">
 
 		  <!-- Nav tabs -->
-		  <div>
+		  <div style="height:400px;">
 
 			  <ul class="nav nav-tabs" role="tablist">
 			    <li role="presentation" class="active" id="tab_detail"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="detail_tab_title"> Product Detail</a></li>
@@ -116,10 +116,22 @@
 		</div>
 
 
+
   </div>
+
+ 
+    
 
 
 </div>
 
+  <div style="background:blue;height:5px;"></div>
+  <%= render 'related_item' %>
 
+  <div style="background:blue;height:5px;"></div>
+  <%= render 'recommended_item' %>
+
+  <div style="background:blue;height:5px;">
+
+  </div>
 </div>
