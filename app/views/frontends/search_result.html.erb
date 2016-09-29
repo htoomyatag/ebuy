@@ -1,0 +1,45 @@
+<div id="search_result_height">
+  <div class="col-md-12">
+			<div class="well well-lg">
+				<b> Keyword Search </b>
+				<span id="search_parm"><%= params[:title] %></span>
+			</div> 
+  </div>
+
+
+  <div class="col-md-12">
+
+
+  		<table class="table table-condensed">
+
+  				<thead>
+			        <tr>
+			          <th style="width:50%;"></th>
+			          <th>Title</th>
+			          <th>Actual price</th>
+			          <th>Discount price</th>
+			          <th>Quantity</th>
+
+			        </tr>
+			      </thead>
+
+			      <tbody>
+			        <% @products.each do |product| %>
+			          <tr>
+			            <td><%= image_tag("avatar_product") %></td>
+			            <td><%= product.title %></td>
+			            <td><%= product.actual_price %></td>
+			            <td><%= product.discount_price %></td>
+			            <td><%= product.quantity %></td>
+			          </tr>
+			        <% end %>
+			      </tbody>
+
+		</table>
+
+
+
+
+  </div>
+
+</div>

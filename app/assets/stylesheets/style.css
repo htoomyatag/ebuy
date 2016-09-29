@@ -4,6 +4,9 @@ body{
 overflow-y: scroll;
 overflow-x: hidden;
 
+
+
+
 }
 
 
@@ -268,4 +271,16 @@ overflow-x: hidden;
 
 li .active {
 	background-color: red;
+}
+
+
+#search_parm{
+	padding-left: 50px;
+}
+
+
+#search_result_height{
+
+	height: 1800px;
+
 }

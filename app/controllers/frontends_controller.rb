@@ -29,6 +29,10 @@ class FrontendsController < ApplicationController
 
   end
 
+  def search_result
+        @products = Product.where("lower(title) LIKE ?", "%#{params[:query]}%").limit(10) 
+  end
+
   
   def about_us
 

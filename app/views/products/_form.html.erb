@@ -40,6 +40,16 @@
       <%= f.text_field :discount_price, :class => "form-control" %>
     </div>
   </div>
+
+  <div class="col-md-6">
+   <label>Product Category</label><br>
+    <div class="field">
+      <%= f.select(:product_category, Product::PRODUCTCATEGORY) %>
+    </div>
+  </div>
+
+
+   
   
   <div class="col-md-12">
     <h3>Specifications 

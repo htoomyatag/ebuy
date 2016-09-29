@@ -102,10 +102,23 @@
 		  </div>
 		  <div class="col-md-6">
 
-		  	<div class="input-group" style="width:500px;">
-			      <input type="text" class="form-control" id="exampleInputAmount" placeholder="search for products and brands">
-			      <div class="input-group-addon"> search</div>
-			</div>
+	
+
+
+              <%= form_tag(search_result_path, :method => "get") do %> 
+                                   
+                        <div class="input-group" style="width:500px;"> 
+                                <%= text_field_tag :title, params[:query], :placeholder => "search for products and brands", :class=>"form-control" %>
+                               <div class="input-group-addon" type="submit"> 
+                               		Search
+                               </div>
+
+                        </div>
+			      			                    
+              <% end %>
+
+
+
 
 		  </div>
 		  <div class="col-md-4"></div>
@@ -217,8 +230,10 @@
 </body>
 
 
+<footer>
+	
 
-			<div id="my_navfooter">
+	<div id="my_navfooter">
 
 				<div class="col-md-12">
 					<div class="col-md-3">
@@ -285,6 +300,11 @@
 			      </span>
 
 			</div>
+
+
+			
+</footer>
+			
 
 		
 
