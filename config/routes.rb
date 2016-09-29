@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :admins, :controllers => {:sessions => "admins/sessions", :registrations => "admins/registrations"}
+  resources :admins
+  get 'dashboard' => 'admins#dashboard'
+
+  resources :comments
+  resources :coupons
   resources :buyers
   resources :carts
   resources :line_items

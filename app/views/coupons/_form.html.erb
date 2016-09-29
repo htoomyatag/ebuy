@@ -1,0 +1,44 @@
+<%= form_for(@coupon) do |f| %>
+  <% if @coupon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coupon.errors.count, "error") %> prohibited this coupon from being saved:</h2>
+
+      <ul>
+      <% @coupon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="col-md-6">
+   <label>Title</label><br>
+     <div class="field">
+       <%= f.text_field :title, :class => "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+   <label>expire_date</label><br>
+     <div class="field">
+       <%= f.date_field :expire_date, :class => "form-control" %>
+    </div>
+  </div>
+
+   <div class="col-md-6">
+   <label>limitation</label><br>
+     <div class="field">
+       <%= f.text_field :limitation, :class => "form-control" %>
+    </div>
+  </div>
+
+
+   <div class="col-md-12"><br/>
+      <%= f.submit :class=>"btn btn-default" %>
+   
+  </div>
+<% end %>
+
+
+

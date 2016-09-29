@@ -44,6 +44,7 @@ overflow-x: hidden;
 
 #menulink {
 	color: white;
+	font-size: 17px;
 
 
 }
@@ -63,7 +64,7 @@ overflow-x: hidden;
 #my_navfooter{
 
 	background:#3498DB;
-	margin: -10px;
+
 	height: 300px;
 
 
@@ -154,7 +155,7 @@ overflow-x: hidden;
 
 .fonter_headtitle{
 	color: white;
-	font-size: 22px;
+	font-size: 19px;
 	font-weight: bold;
 	padding-top: 10px;
 }

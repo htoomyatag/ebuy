@@ -8,6 +8,18 @@
 
 
 
+admins = Admin.create([
+
+
+{username: "htoomyatag", email: "htoomyatag.webdev@gmail.com", password: "12345678", password_confirmation: "12345678"},
+{username: "theldarlykhin", email: "theldarlykhin.webdev@gmail.com", password: "12345678", password_confirmation: "12345678"},
+{username: "ebuy", email: "ebuy.admin@gmail.com", password: "12345678", password_confirmation: "12345678"}
+
+
+
+    ])
+
+
   products = Product.create([
 
   {title:"tmp1",discount_price: "100", quantity: 10, product_category:"AuthenticBrandZone"},
@@ -27,6 +39,21 @@
   {title:"tmp7g",discount_price: "210", quantity: 10, product_category:"AuthenticBrandZone"},
 
 
+  {title:"tmp1",discount_price: "100", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp2",discount_price: "150", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp3",discount_price: "300", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp4",discount_price: "450", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp5",discount_price: "210", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp6",discount_price: "150", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp7",discount_price: "210", quantity: 10, product_category:"WomenFashion"},
+
+  {title:"tmp1a",discount_price: "100", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp2b",discount_price: "150", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp3c",discount_price: "300", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp4d",discount_price: "450", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp5e",discount_price: "210", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp6f",discount_price: "150", quantity: 10, product_category:"WomenFashion"},
+  {title:"tmp7g",discount_price: "210", quantity: 10, product_category:"WomenFashion"},
 
 
   {title:"tmp8",discount_price: "650", quantity: 10},
