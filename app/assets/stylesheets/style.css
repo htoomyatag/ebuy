@@ -305,3 +305,15 @@ li .active {
 	color: #0472c1;
 	font-weight: bold;
 }
+
+
+#small_slide {
+	margin: 10px;
+}
+
+
+#carousel-example-generic_small {
+  margin: -5px;
+  margin-left: -36px;
+
+}
