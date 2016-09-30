@@ -226,7 +226,7 @@ overflow-x: hidden;
 
 
 #arrow_crousel {
-	top: 45px;
+	top: 65px;
 }
 
 
@@ -283,4 +283,25 @@ li .active {
 
 	height: 1800px;
 
+}
+
+
+#myhomeslider{
+	position: relative;
+	bottom: 38px;
+}
+
+#arrow_crousel_home {
+
+	position: absolute;
+	top: 145px;
+}
+
+
+
+#slider_home_title{
+
+	padding:10px;
+	color: #0472c1;
+	font-weight: bold;
 }

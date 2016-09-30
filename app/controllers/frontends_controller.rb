@@ -24,8 +24,10 @@ class FrontendsController < ApplicationController
      @first_health_beauty = Product.where(:product_category => "Health&Beauty").last(6)
      @second_health_beauty = Product.where(:product_category => "Health&Beauty").where.not(id: 1).limit(6) 
 
-     @first_food_beverage = Product.where(:product_category => "Food&Beverag").last(6)
-     @second_food_beverage = Product.where(:product_category => "Food&Beverag").where.not(id: 1).limit(6) 
+     @first_food_beverage = Product.where(:product_category => "Food&Beverage").last(6)
+     @second_food_beverage = Product.where(:product_category => "Food&Beverage").where.not(id: 1).limit(6) 
+
+
 
   end
 
@@ -70,8 +72,9 @@ class FrontendsController < ApplicationController
      @first_health_beauty = Product.where(:product_category => "Health&Beauty").last(6)
      @second_health_beauty = Product.where(:product_category => "Health&Beauty").where.not(id: 1).limit(6) 
 
-     @first_food_beverage = Product.where(:product_category => "Food&Beverag").last(6)
-     @second_food_beverage = Product.where(:product_category => "Food&Beverag").where.not(id: 1).limit(6) 
+     @first_food_beverage = Product.where(:product_category => "Food&Beverage").last(6)
+     @second_food_beverage = Product.where(:product_category => "Food&Beverage").where.not(id: 1).limit(6) 
+
 
   end
 

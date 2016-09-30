@@ -1,4 +1,53 @@
-<div class="rows">
+<div class="row" id="myhomeslider">
+
+<div class="col-md-8"> 
+
+	 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <%= image_tag("homeslider1.jpg") %>
+				    </div>
+				    <div class="item">
+				       <%= image_tag("homeslider2.jpg") %>
+				    </div>
+				  </div>
+
+				  <!-- Controls -->
+				 <a class="left carousel-control" id="arrow_crousel_home" href="#carousel-example-generic" role="button" data-slide="prev">
+				     <%= image_tag("leftarrow.png") %>
+				  </a>
+
+				  <a class="right carousel-control" id="arrow_crousel_home" href="#carousel-example-generic" role="button" data-slide="next">
+				  	  <%= image_tag("rightarrow.png") %>
+				  </a>
+
+
+			</div>
+
+
+</div>
+
+<div class="col-md-4">  bok
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+	<div style="background:blue;height:5px;"></div>
 
 
 	<%= render 'authentic_brand' %>
@@ -9,12 +58,8 @@
     <%= render 'health_beauty' %>
     <%= render 'food_beverage' %>
     <%= render 'top_selling' %>
+
+    
     <br/><br/><br/>
 
     
-
-</div>
-
-
-
-

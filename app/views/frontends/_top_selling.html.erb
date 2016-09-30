@@ -1,5 +1,5 @@
- 			<div class="container">
- 			<h4>Top Selling item</h4><hr/>
+ 		  <div class="rows">
+ 			<h4 id="slider_home_title">Top Selling item</h4><hr/>
  			</div>
   
             <div id="myCarousel7" class="carousel slide">
@@ -8,7 +8,7 @@
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <div class="container">
+                         <div class="col-md-12" style="width:98%;margin-left:14px;">
 
                        
 	       					<% @first_authentic_products.each do |product| %>
@@ -27,7 +27,7 @@
                     </div>
                     <!--/item-->
                     <div class="item">
-                        <div class="container">
+                         <div class="col-md-12">
 
 
                         	<% @second_authentic_products.each do |product| %>
@@ -53,11 +53,11 @@
                 </div>
                 <!--/carousel-inner-->
 				 <a class="left carousel-control" id="arrow_crousel" href="#myCarousel7" role="button" data-slide="prev">
-				     <%= image_tag("leftarrow.png") %>
+				     <%= image_tag("leftarrow.png", :style=>"float:left;") %>
 				  </a>
 
 				  <a class="right carousel-control" id="arrow_crousel" href="#myCarousel7" role="button" data-slide="next">
-				  	  <%= image_tag("rightarrow.png") %>
+				  	  <%= image_tag("rightarrow.png", :style=>"float:right;") %>
 				  </a>
 
             </div>
