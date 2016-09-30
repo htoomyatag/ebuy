@@ -18,6 +18,16 @@ Rails.application.routes.draw do
   get 'search_result' => 'frontends#search_result'
 
   
+   get 'how_to_buy' => 'frontends#how_to_buy'
+   get 'payment' => 'frontends#payment'
+   get 'shipment_delivery'  => 'frontends#shipment_delivery'
+   get 'customer_feedback'  => 'frontends#customer_feedback'
+
+
+   get 'career_opportunity'  => 'frontends#career_opportunity'
+   get 'termns_and_condition'  => 'frontends#termns_and_condition'
+   get 'privacy_policy'  => 'frontends#privacy_policy'
+
 
   resources :products
   # The priority is based upon order of creation: first created -> highest priority.

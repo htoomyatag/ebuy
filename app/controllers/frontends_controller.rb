@@ -31,8 +31,39 @@ class FrontendsController < ApplicationController
 
   end
 
+
+  def career_opportunity
+
+  end
+
+
+  def termns_and_condition
+
+  end
+
+  def privacy_policy
+
+  end
+
+
+  def how_to_buy
+
+  end
+
+  def payment
+
+  end
+
+  def shipment_delivery
+
+  end
+
+  def customer_feedback
+
+  end
+
   def search_result
-        @products = Product.where("lower(title) LIKE ?", "%#{params[:query]}%").limit(10) 
+        @products = Product.where("title LIKE ?", params[:title]).limit(10) 
   end
 
   

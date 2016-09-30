@@ -46,16 +46,16 @@
 			</li>
 		<!--  -->
 			<li>
-				<a href="#" id="menulink">
+				<a href="/help" id="menulink">
 				<%= image_tag "mark.png", :alt=>"mark" %>
 				Help &nbsp;|</a></li>
 			<li>
-				<a href="#" id="menulink">
+				<a href="/contact_us" id="menulink">
 				<%= image_tag "phone.png", :alt=>"phone" %>
 				Contact Us &nbsp;|</a>
 			</li>
 			<li>
-				<a href="#" id="menulink">
+				<a href="/about_us" id="menulink">
 				<%= image_tag "aboutus.png", :alt=>"aboutus" %>
 				About Us &nbsp;|
 				</a>
@@ -108,7 +108,7 @@
               <%= form_tag(search_result_path, :method => "get") do %> 
                                    
                         <div class="input-group" style="width:500px;"> 
-                                <%= text_field_tag :title, params[:query], :placeholder => "search for products and brands", :class=>"form-control" %>
+                                <%= text_field_tag :title, params[:title], :placeholder => "search for products and brands", :class=>"form-control" %>
                                <div class="input-group-addon" type="submit"> 
                                		Search
                                </div>
@@ -238,19 +238,19 @@
 				<div class="col-md-12">
 					<div class="col-md-3">
 						<p class="fonter_headtitle">Customer service</p>
-						<a class="fonter_menutitle" href="">Help topics</a><br/>
-						<a class="fonter_menutitle" href="">How to buy</a><br/>
-						<a class="fonter_menutitle" href="">Payment</a><br/>
-						<a class="fonter_menutitle" href="">Shipping & Delivery</a><br/>
-						<a class="fonter_menutitle" href="">Contact Us</a><br/>
-						<a class="fonter_menutitle" href="">Customer Feedback</a>
+						<a class="fonter_menutitle" href="/help">Help topics</a><br/>
+						<a class="fonter_menutitle" href="/how_to_buy">How to buy</a><br/>
+						<a class="fonter_menutitle" href="/payment">Payment</a><br/>
+						<a class="fonter_menutitle" href="/shipment_delivery">Shipping & Delivery</a><br/>
+						<a class="fonter_menutitle" href="/contact_us">Contact Us</a><br/>
+						<a class="fonter_menutitle" href="/customer_feedback">Customer Feedback</a>
 					</div>
 					<div class="col-md-3">
 						<p class="fonter_headtitle">About Ebuy Myanmar</p>
-						<a class="fonter_menutitle" href="">About Us</a><br/>
-						<a class="fonter_menutitle" href="">Career Opportunities</a><br/>
-						<a class="fonter_menutitle" href="">Terms and Conditions</a><br/>
-						<a class="fonter_menutitle" href="">Privacy Policy</a><br/>
+						<a class="fonter_menutitle" href="/about_us">About Us</a><br/>
+						<a class="fonter_menutitle" href="/career_opportunity">Career Opportunities</a><br/>
+						<a class="fonter_menutitle" href="/termns_and_condition">Terms and Conditions</a><br/>
+						<a class="fonter_menutitle" href="/privacy_policy">Privacy Policy</a><br/>
 					</div>
 					<div class="col-md-3">
 						<p class="fonter_headtitle">Tools</p>
