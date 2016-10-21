@@ -4,6 +4,7 @@ class CreateComments < ActiveRecord::Migration
       t.string :product_name
       t.text :buyer_comment
       t.integer :buyer_id
+      t.integer :product_id
 
       t.timestamps null: false
     end

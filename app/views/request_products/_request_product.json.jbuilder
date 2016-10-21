@@ -1,0 +1,2 @@
+json.extract! request_product, :id, :title, :actual_price, :discount_price, :quantity, :specs, :product_category, :pick_up, :ebuy_delivery, :delivery_time, :start_to_sell_on, :created_at, :updated_at
+json.url request_product_url(request_product, format: :json)

@@ -1,0 +1,93 @@
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  <div class="rows">
+    <div class="col-md-12">
+          <h3>Product Info</h3><hr/>
+        <p>
+          <strong>Title:</strong>
+          <%= @request_product.title %>
+        </p>
+
+        <p>
+          <strong>Actual price:</strong>
+          <%= @request_product.actual_price %>
+        </p>
+
+        <p>
+          <strong>Discount price:</strong>
+          <%= @request_product.discount_price %>
+        </p>
+
+        <p>
+          <strong>Quantity:</strong>
+          <%= @request_product.quantity %>
+        </p>
+
+
+        <h3>Delivery Info</h3><hr/>
+
+        <p>
+          <strong>Pick up:</strong>
+          <% if @request_product.pick_up == "0" %>
+                No
+           <% end %>
+           <% if @request_product.pick_up == "1" %>
+                Yes
+           <% end %>
+        </p>
+
+
+        <p>
+          <strong>Self Delivery:</strong>
+           <% if @request_product.ebuy_delivery == "0" %>
+                No
+           <% end %>
+           <% if @request_product.ebuy_delivery == "1" %>
+                Yes
+           <% end %>
+        </p>
+
+
+        <p>
+          <strong>Delivery time:</strong>
+          <%= @request_product.delivery_time %> days
+        </p>
+    </div>
+    
+    <div class="col-md-3">
+    <%= image_tag("sorry-image-not-available") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("sorry-image-not-available") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("sorry-image-not-available") %>
+    </div>
+
+    <div class="col-md-3">
+      <%= image_tag("sorry-image-not-available") %>
+    </div>
+
+
+    <div class="col-md-12">
+      <br/><p>
+        <strong>Start to sell on:</strong>
+        <%= @request_product.start_to_sell_on %>
+      </p>
+    </div>
+
+    <div class="col-md-12"><br/>
+      <%= link_to 'Edit', edit_product_path(@request_product) %> |
+      <%= link_to 'Back', products_path %>
+    </div>
+
+
+
+  </div>
+  
+
+
+
+ </div>
+</div>

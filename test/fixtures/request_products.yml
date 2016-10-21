@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  actual_price: MyString
+  discount_price: MyString
+  quantity: 1
+  specs: MyText
+  product_category: MyString
+  pick_up: MyString
+  ebuy_delivery: MyString
+  delivery_time: MyString
+  start_to_sell_on: MyString
+
+two:
+  title: MyString
+  actual_price: MyString
+  discount_price: MyString
+  quantity: 1
+  specs: MyText
+  product_category: MyString
+  pick_up: MyString
+  ebuy_delivery: MyString
+  delivery_time: MyString
+  start_to_sell_on: MyString

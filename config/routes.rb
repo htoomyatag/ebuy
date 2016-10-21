@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :request_products
+  get 'thanks_for_request' => 'request_products#thanks_for_request', as: 'thanks_for_request'
+
   devise_for :buyers, :controllers => {:sessions => "buyers/sessions", :registrations => "buyers/registrations"}
   devise_for :admins, :controllers => {:sessions => "admins/sessions", :registrations => "admins/registrations"}
   resources :admins

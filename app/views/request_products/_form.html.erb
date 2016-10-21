@@ -1,0 +1,155 @@
+<%= form_for(@request_product) do |f| %>
+  <% if @request_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@request_product.errors.count, "error") %> prohibited this request_product from being saved:</h2>
+
+      <ul>
+      <% @request_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="col-md-6">
+   <label>Title</label><br>
+     <div class="field">
+       <%= f.text_field :title, :class => "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+   <label>Quantity</label><br>
+    <div class="field">
+      <%= f.number_field :quantity,  :class => "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+   <label>Actual Price</label><br>
+     <div class="field">
+      <%= f.text_field :actual_price,  :class => "form-control" %>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+   <label>Discount Price</label><br>
+    <div class="field">
+      <%= f.text_field :discount_price, :class => "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+   <label>Product Category</label><br>
+    <div class="field">
+      <%= f.select(:product_category, Product::PRODUCTCATEGORY) %>
+    </div>
+  </div>
+
+
+   
+  
+  <div class="col-md-12">
+    <h3>Specifications 
+    <input class="btn btn-default" type="button" id="add_btn" value="Add">
+    </h3>
+     <hr/>
+  </div>
+
+    <div class="col-md-6">
+       <div class="field">
+         <%= f.text_field :specs, multiple: true, :class => "form-control" %>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="field">
+         <%= f.text_field :specs, multiple: true, :class => "form-control" %>
+      </div>
+    </div>
+
+
+    <div id='cont' >
+
+    </div>
+     
+
+    <div class="col-md-12">
+      <h3> Delivery Option
+      </h3>
+       <hr/>
+    </div>
+
+
+
+
+    <div class="col-md-6">
+       <label>Pick up</label><br>
+         <div class="field">
+           <%= f.check_box :pick_up %>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+       <label>ebuy delivery</label><br>
+         <div class="field">
+           <%= f.check_box :ebuy_delivery %>
+        </div>
+    </div>
+
+
+    <div class="col-md-6"><br/>
+       <label>Delivery time</label><br>
+         <div class="field">
+            <%= f.number_field :delivery_time, :class => "form-control" %>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-12">
+      <h3> Seller Option
+      </h3>
+       <hr/>
+    </div>
+
+
+      <div class="col-md-6"><br/>
+       <label>Start to sell on</label><br>
+         <div class="field">
+            <%= f.date_field :start_to_sell_on, :class => "form-control" %>
+        </div>
+    </div>
+
+  
+
+
+ 
+
+ 
+
+
+
+  <div class="col-md-12"><br/>
+    <div class="actions">
+      <%= f.submit :class=>"btn btn-default" %>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<script type="text/javascript">
+  
+$( "#add_btn" ).click(function() {
+
+    var textarea =  $('<div class="col-md-6"><div class="field"><input multiple="multiple" class="form-control" type="text" name="product[specs][]" id="product_specs"></div></div>  <div class="col-md-6"><div class="field"><input multiple="multiple" class="form-control" type="text" name="product[specs][]" id="product_specs"></div></div><br/><hr/>');
+    $('#cont').append(textarea);
+
+
+});
+
+</script>
+
+

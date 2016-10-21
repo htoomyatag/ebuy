@@ -12,6 +12,9 @@ class FrontendsController < ApplicationController
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6) 
 
 
+      @comment = Comment.new
+      @comments = Comment.where(:product_id => @product.id)
+
 
   end
 

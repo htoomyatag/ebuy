@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Request Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Actual price</th>
+      <th>Discount price</th>
+      <th>Quantity</th>
+      <th>Specs</th>
+      <th>Product category</th>
+      <th>Pick up</th>
+      <th>Ebuy delivery</th>
+      <th>Delivery time</th>
+      <th>Start to sell on</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @request_products.each do |request_product| %>
+      <tr>
+        <td><%= request_product.title %></td>
+        <td><%= request_product.actual_price %></td>
+        <td><%= request_product.discount_price %></td>
+        <td><%= request_product.quantity %></td>
+        <td><%= request_product.specs %></td>
+        <td><%= request_product.product_category %></td>
+        <td><%= request_product.pick_up %></td>
+        <td><%= request_product.ebuy_delivery %></td>
+        <td><%= request_product.delivery_time %></td>
+        <td><%= request_product.start_to_sell_on %></td>
+        <td><%= link_to 'Show', request_product %></td>
+        <td><%= link_to 'Edit', edit_request_product_path(request_product) %></td>
+        <td><%= link_to 'Destroy', request_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Request product', new_request_product_path %>

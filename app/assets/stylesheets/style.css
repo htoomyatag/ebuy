@@ -321,3 +321,15 @@ li .active {
 .mydetail_title{
 	color: #0472c1;
 }
+
+
+#buyer_comment{
+	font-size: 16px;
+	padding-top: 10px;
+}
+
+
+#comment_buyer_comment {
+
+	margin-top: 20px;
+}
