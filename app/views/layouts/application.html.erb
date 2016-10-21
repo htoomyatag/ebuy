@@ -25,26 +25,63 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
           <ul class="nav navbar-nav">
    
-			<li>
+   			<% if buyer_signed_in? %>
 
-				<a href="#" id="menulink">
-				<%= image_tag "sign.png", :alt=>"sign.png" %>
-				Sign In &nbsp;|
+   					 <li>
+						<a href="#" id="menulink">
+						Hello <b> <%= current_buyer.buyer_name %>!</b>
+						</a>
+					</li>
 
-				</a>
-			</li>
-			<li>
-				<a href="#" id="menulink">
-					<%= image_tag "register.png", :alt=>"register" %>
-					Register &nbsp;|
-				</a>
-			</li>
-			<li>
-				<a href="#" id="menulink">
-				<%= image_tag "profile.png", :alt=>"profile" %>
-				My Account &nbsp;|</a>
-			</li>
+
+
+   				     <li>
+						<a href="/my_account" id="menulink">
+						<%= image_tag "profile.png", :alt=>"profile" %>
+						My Account &nbsp;|</a>
+					</li>
+
+
+
+					<li>
+						<%= link_to "Log Out", destroy_buyer_session_path, method: :delete, :id=>"menulink"  %>
+					</li>
+					
+		    <% else %>
 		<!--  -->
+			        <li>
+
+						<a href="/buyers/sign_in" id="menulink">
+						<%= image_tag "sign.png", :alt=>"sign.png" %>
+						Sign In &nbsp;|
+
+						</a>
+					</li>
+					<li>
+						<a href="/buyers/sign_up" id="menulink">
+							<%= image_tag "register.png", :alt=>"register" %>
+							Register &nbsp;|
+						</a>
+					</li>
+					<li>
+						<a href="#" id="menulink">
+						<%= image_tag "profile.png", :alt=>"profile" %>
+						My Account &nbsp;|</a>
+					</li>
+
+					 <li>
+						<a href="/cart_item?cart_id=<%= session[:cart_id] %>" id="menulink">
+						<%= image_tag "cart.png", :alt=>"profile" %>
+						Cart 
+						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price) %>
+						&nbsp;|</a>
+					</li>
+
+		
+
+			  <% end %>
+
+
 			<li>
 				<a href="/help" id="menulink">
 				<%= image_tag "mark.png", :alt=>"mark" %>
@@ -67,6 +104,8 @@
 				</a>
 			</li>
 
+			
+
 
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -76,7 +115,7 @@
 
 
 	<!-- logo headere -->
-	<div class="row">
+	<div class="row" id="the_footer">
 	  <div class="col-md-2">
 	  	<%= image_tag "logo.png", :id=>"my_logo", :alt=>"Lucky Bags" %>
 	  </div>

@@ -4,7 +4,7 @@ class CreateLineItems < ActiveRecord::Migration
       t.integer :product_id
       t.integer :cart_id
       t.integer :buyer_id
-      t.integer :quantity
+      t.integer :quantity,   default: 1
 
       t.timestamps null: false
     end

@@ -6,28 +6,17 @@ class FrontendsController < ApplicationController
 
   def product_info
 
+
+     @product = Product.find(params[:id])
      @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").last(6)
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6) 
 
-     @first_women_fashion_products = Product.where(:product_category => "WomenFashion").last(6)
-     @second_women_fashion_products = Product.where(:product_category => "WomenFashion").where.not(id: 1).limit(6) 
-
-     @first_men_fashion_products = Product.where(:product_category => "MenFashion").last(6)
-     @second_men_fashion_products = Product.where(:product_category => "MenFashion").where.not(id: 1).limit(6) 
-
-     @first_digital_marketings = Product.where(:product_category => "Digital&Mobile").last(6)
-     @second_digital_marketings = Product.where(:product_category => "Digital&Mobile").where.not(id: 1).limit(6) 
-
-     @first_home_livings = Product.where(:product_category => "Home&Living").last(6)
-     @second_home_livings = Product.where(:product_category => "Home&Living").where.not(id: 1).limit(6) 
-
-     @first_health_beauty = Product.where(:product_category => "Health&Beauty").last(6)
-     @second_health_beauty = Product.where(:product_category => "Health&Beauty").where.not(id: 1).limit(6) 
-
-     @first_food_beverage = Product.where(:product_category => "Food&Beverage").last(6)
-     @second_food_beverage = Product.where(:product_category => "Food&Beverage").where.not(id: 1).limit(6) 
 
 
+  end
+
+
+  def my_account
 
   end
 

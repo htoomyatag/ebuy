@@ -1,0 +1,25 @@
+
+<table class="table hcart">
+        <% @line_items.each do |line_item| %>
+                    <tr>
+                      <td class="text-center">
+                        <a href="#">
+                         <img src="/assets/product-images/hcart-thumb1.jpg" alt="image" title="image" class="img-thumbnail img-responsive" />
+                        </a>
+                      </td>
+                      <td class="text-left">
+                        <a href="#">
+                          <%= line_item.product.title %>
+                        </a>
+                      </td>
+                      <td class="text-right">x <%= line_item.quantity %></td>
+                      <td class="text-right"><%= (line_item.total_price) %> MMK</td>
+                    </tr>
+       <% end %>             
+</table>
+
+
+
+
+
+

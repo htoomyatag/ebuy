@@ -29,7 +29,7 @@ class LineItemsController < ApplicationController
       @line_item = @cart.add_item(product.id)
       respond_to do |format|
             if @line_item.save
-              format.html { redirect_to my_product_path }
+              format.html { redirect_to request.referer }
               format.xml { render :xml => @line_item, :status => :created, :location => @line_item }
             else
               format.html { render :action => "new" }
@@ -37,6 +37,16 @@ class LineItemsController < ApplicationController
             end
         end
    end
+
+  def cart_item
+      
+      if params[:cart_id]
+         @line_items = LineItem.where("cart_id = ? ", params[:cart_id])
+      end
+
+  end
+
+   
 
 
 

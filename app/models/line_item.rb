@@ -4,9 +4,13 @@ class LineItem < ActiveRecord::Base
 	belongs_to :cart
 
 	def total_price
-		product.price.to_i * quantity
+		product.discount_price.to_i * quantity
 	end
 
 	
+
+
+
+
 
 end

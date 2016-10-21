@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :buyers, :controllers => {:sessions => "buyers/sessions", :registrations => "buyers/registrations"}
   devise_for :admins, :controllers => {:sessions => "admins/sessions", :registrations => "admins/registrations"}
   resources :admins
   get 'dashboard' => 'admins#dashboard'
@@ -7,14 +8,19 @@ Rails.application.routes.draw do
   resources :coupons
   resources :buyers
   resources :carts
+
+
   resources :line_items
+  get 'cart_item' => 'line_items#cart_item', as: 'cart_item'
+
   resources :orders
   resources :frontends
   root 'frontends#home'
   get 'about_us' => 'frontends#about_us'
   get 'contact_us' => 'frontends#contact_us'
   get 'help' => 'frontends#help'
-  get 'product_info' => 'frontends#product_info'
+  get 'product_info/:id' => 'frontends#product_info', as: 'product_info'
+
   get 'search_result' => 'frontends#search_result'
 
   
@@ -28,6 +34,7 @@ Rails.application.routes.draw do
    get 'termns_and_condition'  => 'frontends#termns_and_condition'
    get 'privacy_policy'  => 'frontends#privacy_policy'
 
+   get 'my_account'  => 'frontends#my_account'
 
   resources :products
   # The priority is based upon order of creation: first created -> highest priority.

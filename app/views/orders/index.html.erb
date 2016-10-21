@@ -1,41 +1,51 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Orders</h1>
+<!--  -->
 
-<table>
-  <thead>
-    <tr>
-      <th>Buyer</th>
-      <th>Buyer name</th>
-      <th>Buyer email</th>
-      <th>Buyer phone</th>
-      <th>Buyer township</th>
-      <th>Buyer address</th>
-      <th>Cart</th>
-      <th>Order status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @orders.each do |order| %>
-      <tr>
-        <td><%= order.buyer_id %></td>
-        <td><%= order.buyer_name %></td>
-        <td><%= order.buyer_email %></td>
-        <td><%= order.buyer_phone %></td>
-        <td><%= order.buyer_township %></td>
-        <td><%= order.buyer_address %></td>
-        <td><%= order.cart_id %></td>
-        <td><%= order.order_status %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="col-md-12">
+    <h3>Order listings
+    </h3><hr/>
 
-<br>
+    <table class="table">
+          <thead>
+            <tr>
+              <th>Buyer</th>
+              <th>Buyer name</th>
+              <th>Buyer email</th>
+              <th>Buyer phone</th>
+              <th>Buyer township</th>
+              <th>Buyer address</th>
+              <th>Cart</th>
+              <th>Order status</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<%= link_to 'New Order', new_order_path %>
+          <tbody>
+            <% @orders.each do |order| %>
+              <tr>
+                <td><%= order.buyer_id %></td>
+                <td><%= order.buyer_name %></td>
+                <td><%= order.buyer_email %></td>
+                <td><%= order.buyer_phone %></td>
+                <td><%= order.buyer_township %></td>
+                <td><%= order.buyer_address %></td>
+                <td><%= order.cart_id %></td>
+                <td><%= order.order_status %></td>
+                <td><%= link_to 'Show', order %></td>
+                <td><%= link_to 'Edit', edit_order_path(order) %></td>
+                <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+    </table>
+
+    <br>
+    </div>
+
+   
+
+    </div>
+</div>
