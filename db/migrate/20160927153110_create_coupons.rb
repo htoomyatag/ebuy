@@ -4,6 +4,7 @@ class CreateCoupons < ActiveRecord::Migration
       t.string :title
       t.date :expire_date
       t.integer :limitation
+      t.string :discount_percentage
 
       t.timestamps null: false
     end

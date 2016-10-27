@@ -4,6 +4,17 @@ class FrontendsController < ApplicationController
   # GET /frontends
   # GET /frontends.json
 
+  def use_coupon
+
+    @raw_coupon = Coupon.where("title = ?", params[:title]).where("limitation =< ", params[:limitation])
+    render :text => {:limitation => @raw_coupon }
+# date filter sat yay yan
+  end
+
+  def check_out
+      @order = Order.new
+   end
+
   def product_info
 
 
@@ -55,7 +66,12 @@ class FrontendsController < ApplicationController
   end
 
   def search_result
+        if !params[:title].nil?
         @products = Product.where("title LIKE ?", params[:title]).limit(10) 
+        elsif !params[:price_from].nil?
+        @products = Product.where(:discount_price => params[:price_from]..params[:price_to]).limit(10) 
+        end
+
   end
 
   

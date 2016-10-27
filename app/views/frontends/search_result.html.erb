@@ -6,6 +6,25 @@
 			</div> 
   </div>
 
+  <div class="col-md-12">
+		<div class="well well-lg">
+			<p> Price Filter </p><hr/>
+				
+		
+			 <%= form_tag(search_result_path, :method => "get", :class=>"form-inline") do %> 
+                                   
+                   <%= text_field_tag :price_from, params[:price_from], :placeholder => "from", :class=>"form-control" %>
+
+                    <%= text_field_tag :price_to, params[:price_to], :placeholder => "to", :class=>"form-control" %>
+
+                    <button type="submit" class="btn btn-default">Search</button>
+                                 
+             <% end %>
+
+       </div>
+
+  </div>
+
 
   <div class="col-md-12">
 

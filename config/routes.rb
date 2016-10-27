@@ -39,6 +39,11 @@ Rails.application.routes.draw do
 
    get 'my_account'  => 'frontends#my_account'
 
+   get 'check_out'  => 'frontends#check_out'
+   
+   get 'use_coupon'  => 'frontends#use_coupon'
+
+
   resources :products
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

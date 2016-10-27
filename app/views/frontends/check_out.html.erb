@@ -1,0 +1,47 @@
+
+
+
+<input id="coupon_code" placeholder="coupon">
+<button class="btn btn-default" id="send_coupon"> use</button>
+<br/>
+
+<input id="total_price" value="100" placeholder="total_price"><br/>
+
+<input id="checkout_price" placeholder="checkout_price">
+
+
+
+
+
+<script type="text/javascript">
+	
+ $('#send_coupon').click(function() {
+ 
+
+ 		coupon_code = document.getElementById("coupon_code").value;
+
+
+
+  		$.ajax({
+              type: 'get',
+              url: 'use_coupon',
+              dataType: 'text',
+              data: {'title':coupon_code},
+              complete: function(r){
+              
+              			aok = r.responseText;
+	          			alert(aok);
+
+
+              }
+           });
+
+
+
+
+
+
+    });
+
+
+</script>

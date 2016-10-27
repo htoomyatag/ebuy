@@ -47,7 +47,7 @@ overflow-x: hidden;
 
 #menulink {
 	color: white;
-	font-size: 17px;
+	font-size: 12px;
 
 
 }
@@ -180,7 +180,7 @@ overflow-x: hidden;
 
 .view_on_mobie {
 	position: relative;
-	text-align: center;
+	float: right;
 	color: #3498DB;
 	font-size: 18px;
 }

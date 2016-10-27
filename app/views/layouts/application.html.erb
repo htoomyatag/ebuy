@@ -3,7 +3,11 @@
 <head>
   <title>Ebuymyanmar</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'jquery.min.js' %>
+  <%= javascript_include_tag 'bootstrap.min.js' %>
+  <%= javascript_include_tag 'bootstrap-submenu.min.js' %>
+
   <%= csrf_meta_tags %>
 </head>
 
@@ -168,96 +172,571 @@
 
 	<!-- menu bar -->
 
-<nav class="navbar navbar-default" id="menu_header">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">All Categories  <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Authentic Brand Zone   <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-          </ul>
-        </li>
 
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Women’s Fashion   <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-          </ul>
-        </li>
+	<nav class="navbar navbar-default" id="menu_header">
+	  <div class="navbar-header">
+	    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
 
+	  
+	  </div>
 
-         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Men’s Fashion  <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-          </ul>
-        </li>
+	  <div class="collapse navbar-collapse">
+	    <ul class="nav navbar-nav">
+	    	<!-- authentic brand zone -->
+	    	 <li><a id="menulink"> All Categories</a></li>
+	      	<li class="dropdown">
 
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Authentic Brand Zone<span class="caret"></span></a>
 
-         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Digital & Mobile  <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-          </ul>
-        </li>
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		          <li><a tabindex="0">All Products on Authentic Brand Zone</a></li>
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Women's Fashion </a>
 
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Women's Apparel</a></li>
+		              <li><a tabindex="0">Shoes</a></li>
+		              <li><a tabindex="0">Bags & Wallets</a></li>
+		              <li><a tabindex="0">Watches</a></li>
+		              <li><a tabindex="0">Jewellery</a></li>
+		              <li><a tabindex="0">Others</a></li>
+		            </ul>
+		          </li>
 
-         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Home & Living  <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-          </ul>
-        </li>
+		           <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Men's Fashion </a>
 
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Health & Beauty  <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-          </ul>
-        </li>
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Men's Apparel</a></li>
+		              <li><a tabindex="0">Shoes</a></li>
+		              <li><a tabindex="0">Bags & Wallets</a></li>
+		              <li><a tabindex="0">Watches</a></li>
+		              <li><a tabindex="0">Jewellery</a></li>
+		              <li><a tabindex="0">Others</a></li>
+		            </ul>
+		          </li>
 
 
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menulink">Food & Beverage  <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-          </ul>
-        </li>
+		           <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Digital </a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Phones and Tables</a></li>
+		              <li><a tabindex="0">Computers and Laptops</a></li>
+		              <li><a tabindex="0">TV</a></li>
+		              <li><a tabindex="0">Video and Player</a></li>
+		              <li><a tabindex="0">Audio and Hi Fi</a></li>
+		              <li><a tabindex="0">Camera and Photo</a></li>
+		              <li><a tabindex="0">Gaming</a></li>
+		              <li><a tabindex="0">Home Appliances</a></li>
+		              <li><a tabindex="0">Others</a></li>
+		            </ul>
+		          </li>
+
+		           <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Home and Living </a>
+
+					    <ul class="dropdown-menu">
+							<li><a tabindex="0">Living Room Supplies</a></li>
+							<li><a tabindex="0">Bedroom Appliances</a></li>
+							<li><a tabindex="0">Bathroom Products</a></li>
+							<li><a tabindex="0">Garment Care</a></li>
+							<li><a tabindex="0">Kitchen and Dining</a></li>
+							<li><a tabindex="0">Housekeeping</a></li>
+							<li><a tabindex="0">Home Decoration</a></li>
+							<li><a tabindex="0">Outdoor and Garden</a></li>
+							<li><a tabindex="0">Others</a></li>
+					 	</ul>
+		          </li>
 
 
 
 
-      </ul>
-     
-      
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+ 				<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Health and Beauty</a>
+     					<ul class="dropdown-menu">
+							<li><a tabindex="0">Bath and Body Supplies</a></li>
+							<li><a tabindex="0">Skin Care</a></li> 
+							<li><a tabindex="0">Eye Care</a></li> 
+							<li><a tabindex="0">Hair Care</a></li> 
+							<li><a tabindex="0">Hand Care</a></li> 
+							<li><a tabindex="0">Dental Care</a></li> 
+							<li><a tabindex="0">Perfumes</a></li> 
+							<li><a tabindex="0">Shaving Supplies</a></li>
+							<li><a tabindex="0">Food Supplements</a></li>
+							<li><a tabindex="0">Health and Beauty Tools</a></li>
+							<li><a tabindex="0">Others</a></li>
+	 					</ul>
+		          </li>
+
+			 <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Food and Beverage</a>
+ 					<ul class="dropdown-menu">
+						<li><a tabindex="0">Vegetable</a></li> 
+						<li><a tabindex="0">Products</a></li> 
+						<li><a tabindex="0">Confectionery</a></li> 
+						<li><a tabindex="0">Baked Goods </a></li> 
+						<li><a tabindex="0">Grain Products</a></li> 
+						<li><a tabindex="0">Food Ingredients </a></li> 
+						<li><a tabindex="0">Dairy Products</a></li> 
+						<li><a tabindex="0">Honey Products</a></li> 
+						<li><a tabindex="0">Meat and Meat and Meat Products </a></li> 
+						<li><a tabindex="0">Egg and Egg Products</a></li> 
+						<li><a tabindex="0">Seafood and Seafood Products </a></li> 
+						<li><a tabindex="0">Coffee </a></li> 
+						<li><a tabindex="0">Instant Food </a></li>  
+						<li><a tabindex="0">Canned Food </a></li> 
+						<li><a tabindex="0">Baby Food </a></li> 
+						<li><a tabindex="0">Beverage</a></li> 
+						<li><a tabindex="0">Others</a></li> 
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Kid</a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0">Baby and Maternity</a> </li> 
+						<li><a tabindex="0">Kid's Fashion</a></li> 
+						<li><a tabindex="0">Baby Care</a></li> 
+						<li><a tabindex="0">Baby Feeding</a></li> 
+						<li><a tabindex="0">Toys</a></li> 
+						<li><a tabindex="0">Maternity Care</a></li> 
+						<li><a tabindex="0">Others</a></li> 
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Sports</a>
+ 					<ul class="dropdown-menu">
+						<li><a tabindex="0">Outdoors and Entertainment </a></li> 
+						<li><a tabindex="0">Indoor Sport Supplies </a></li> 
+						<li><a tabindex="0">Outdoor Sport Supplies</a> </li> 
+						<li><a tabindex="0">Outdoor Recreation</a></li> 
+						<li><a tabindex="0">Entertainment</a></li> 
+						<li><a tabindex="0">Others</a></li> 
+					</ul>
+			</li>
 
 
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Office and School Supplies</a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0">Education Supplies</a></li> 
+						<li><a tabindex="0">Office Supplies</a></li> 
+						<li><a tabindex="0">Art Supplies</a></li> 
+						<li><a tabindex="0">Others</a></li>
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Lights and Lightings</a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0">Indoor Lightings</a></li> 
+							<li><a tabindex="0">Outdoor Lightings</a></li> 
+							<li><a tabindex="0">Others</a></li> 
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Transportation</a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0">Bicycles </a></li> 
+							<li><a tabindex="0">Automobiles and Motorcycles</a> </li> 
+							<li><a tabindex="0">Others</a></li> 
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Electronic</a>
+ 					<ul class="dropdown-menu">
+						<li><a tabindex="0">Electrical and Mechanic Products</a></li> 
+						<li><a tabindex="0">Electronic Components and Parts</a> </li> 
+						<li><a tabindex="0">Electrical Equipments and Parts </a></li> 
+						<li><a tabindex="0">Mechanical Products and Tools</a></li> 
+						<li><a tabindex="0">Safety Equipments and Accessories</a> </li> 
+						<li><a tabindex="0">OEM Products</a></li> 
+					</ul>
+
+		         
+		        </ul>
+		      </li>  
+
+		      	    	<!-- Women's Fashion  -->
+	      	<li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Women's Fashion <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0">All Products on Women's Fashion</a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Women's Apparel</a>
+		            <ul class="dropdown-menu">
+		            		<li><a tabindex="0">Shirts/Tops </a></li>
+							<li><a tabindex="0">Jackets/Coats </a></li>
+							<li><a tabindex="0">Jeans </a></li>
+							<li><a tabindex="0">Trousers </a></li>
+							<li><a tabindex="0">Leggings </a></li>
+							<li><a tabindex="0">Skirts </a></li>
+							<li><a tabindex="0">Shorts </a></li>
+							<li><a tabindex="0">Sleepwear </a></li>
+							<li><a tabindex="0">Fleeces </a></li>
+							<li><a tabindex="0">Sweatshirts </a></li>
+							<li><a tabindex="0">Formal Wear </a></li>
+							<li><a tabindex="0">Wedding Dresses </a></li>
+							<li><a tabindex="0">Bridesmaid Dresses </a></li>
+							<li><a tabindex="0">Sleeveless </a></li>
+							<li><a tabindex="0">Korean Fashion </a></li>
+							<li><a tabindex="0">Traditional Dresses </a></li>
+							<li><a tabindex="0">Underwear </a></li>
+							<li><a tabindex="0">Bikinis </a></li>
+							<li><a tabindex="0">Sportswear </a></li>
+							<li><a tabindex="0">Swimwear </a></li>
+							<li><a tabindex="0">Maternity Dresses </a></li>
+							<li><a tabindex="0">Others and Accessories</a></li>
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"> Shoes and Footwear</a>
+		            <ul class="dropdown-menu">
+		            		<li><a tabindex="0">Flats </a></li>
+		            		<li><a tabindex="0">Heels </a></li>
+		            		<li><a tabindex="0">Casual </a></li>
+		            		<li><a tabindex="0">Formal </a></li>
+		            		<li><a tabindex="0">Sports Shoes </a></li>
+		            		<li><a tabindex="0">Boots </a></li>
+		            		<li><a tabindex="0">Slippers </a></li>
+		            		<li><a tabindex="0">Sandals </a></li>
+		            		<li><a tabindex="0">Others and Accessories </a></li>
+					</ul>
+				  </li>
+
+
+
+	  			 <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"> Bags and Wallets</a>
+		            <ul class="dropdown-menu">
+		            		<li><a tabindex="0"> Handbags</a></li>
+		            		<li><a tabindex="0"> Clutch Bags</a></li>
+		            		<li><a tabindex="0"> Sling Bags </a></li>
+							<li><a tabindex="0"> Briefcases </a></li>
+							<li><a tabindex="0"> Waist Bags </a></li>
+							<li><a tabindex="0"> Laptop Bags </a></li>
+							<li><a tabindex="0"> Camera Bags </a></li>
+							<li><a tabindex="0"> Backpacks </a></li>
+							<li><a tabindex="0"> Toiletries Bags </a></li>
+							<li><a tabindex="0"> Waterproof Bags </a></li>
+							<li><a tabindex="0"> Cooler Bags </a></li> 
+							<li><a tabindex="0"> Shoe Bags </a></li>
+							<li><a tabindex="0"> Wallets </a></li> 
+							<li><a tabindex="0"> Travel Luggages </a></li>
+							<li><a tabindex="0"> Others and Accessories </a></li>
+					</ul>
+				  </li>
+
+
+				 <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"> Watches and Glasses</a>
+		            <ul class="dropdown-menu">
+		            		<li><a tabindex="0"> Digital Watches</a></li>
+		            		<li><a tabindex="0"> Casual Watches</a></li>
+		            		<li><a tabindex="0"> Premium Watches</a></li>
+		            		<li><a tabindex="0"> Sport Watches,</a></li>
+							<li><a tabindex="0"> Waterproof Watches,</a></li>
+							<li><a tabindex="0"> Premium Watches</a></li>
+							<li><a tabindex="0"> Others and Accessories</a></li>
+					</ul>
+				  </li>
+
+
+	  			<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Jewellery</a>
+		            <ul class="dropdown-menu">
+		            		<li><a tabindex="0">Rings </a></li>
+							<li><a tabindex="0">Earrings </a></li>
+							<li><a tabindex="0">Necklaces </a></li>
+							<li><a tabindex="0">Bracelets </a></li>
+							<li><a tabindex="0">Brooches </a></li>
+							<li><a tabindex="0">Charms</a></li>
+							<li><a tabindex="0">Jewellery Sets </a></li>
+							<li><a tabindex="0">Others and Accessories </a></li>
+					</ul>
+				  </li>
+		
+
+
+	  			
+
+		        </ul>
+		      </li>  
+
+
+
+
+  				
+
+
+
+
+
+		      <!-- Mens fashion -->
+		      	<li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Men's Fashion <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another sub action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		              <li><a tabindex="0">Something else here</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		            </ul>
+		          </li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li><a tabindex="0">Another sub action</a></li>
+		              <li><a tabindex="0">Something else here</a></li>
+		            </ul>
+		          </li>
+		          <li><a tabindex="0">Something else here</a></li>
+		          <li class="divider"></li>
+		          <li><a tabindex="0">Separated link</a></li>
+		        </ul>
+		      </li>  
+
+		      		      <!-- electrinics -->
+
+		      	<li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" > Electronic, Electrical and Mechanical Products <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another sub action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		              <li><a tabindex="0">Something else here</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		            </ul>
+		          </li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li><a tabindex="0">Another sub action</a></li>
+		              <li><a tabindex="0">Something else here</a></li>
+		            </ul>
+		          </li>
+		          <li><a tabindex="0">Something else here</a></li>
+		          <li class="divider"></li>
+		          <li><a tabindex="0">Separated link</a></li>
+		        </ul>
+		      </li>  
+
+
+		      <!-- Home and living -->
+		      	<li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Home & Living <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another sub action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		              <li><a tabindex="0">Something else here</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		            </ul>
+		          </li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li><a tabindex="0">Another sub action</a></li>
+		              <li><a tabindex="0">Something else here</a></li>
+		            </ul>
+		          </li>
+		          <li><a tabindex="0">Something else here</a></li>
+		          <li class="divider"></li>
+		          <li><a tabindex="0">Separated link</a></li>
+		        </ul>
+		      </li>  
+
+		      <!-- health and beauty -->
+		      	<li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Health and Beauty <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another sub action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		              <li><a tabindex="0">Something else here</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		            </ul>
+		          </li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li><a tabindex="0">Another sub action</a></li>
+		              <li><a tabindex="0">Something else here</a></li>
+		            </ul>
+		          </li>
+		          <li><a tabindex="0">Something else here</a></li>
+		          <li class="divider"></li>
+		          <li><a tabindex="0">Separated link</a></li>
+		        </ul>
+		      </li>  
+		      <!-- food and beverage -->
+		      	<li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Food and Beverage  <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another sub action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		              <li><a tabindex="0">Something else here</a></li>
+		              <li class="dropdown-submenu">
+		                <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		                <ul class="dropdown-menu">
+		                  <li><a tabindex="0">Sub action</a></li>
+		                  <li><a tabindex="0">Another sub action</a></li>
+		                  <li><a tabindex="0">Something else here</a></li>
+		                </ul>
+		              </li>
+		            </ul>
+		          </li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown">Another action</a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0">Sub action</a></li>
+		              <li><a tabindex="0">Another sub action</a></li>
+		              <li><a tabindex="0">Something else here</a></li>
+		            </ul>
+		          </li>
+		          <li><a tabindex="0">Something else here</a></li>
+		          <li class="divider"></li>
+		          <li><a tabindex="0">Separated link</a></li>
+		        </ul>
+		      </li>  
+		     
+
+
+
+	    </ul>
+	  </div>
+	</nav>
 
 <body>
 
@@ -320,23 +799,21 @@
 
 			<div class="col-md-12"><br/>
 				<p class="fonter_head2title"> Payment methods </p><br/>
-				<%= image_tag("visa_mastercard_logo", :id => "payment_logo") %><br/><br/><br/>
+				<%= image_tag("visa-master-mpu.jpg", :id => "payment_logo") %><br/><br/><br/>
 			</div>
 
-			<div class="col-md-12">
-				<p class="view_on_mobie"> View on Mobile
-				<%= image_tag("mobile.png") %>
-				</p>
-
-
-				
-			</div>
+		
 			<div class="col-md-12">
 			     <a href=""> wwww.ebuymyanmar.com </a>
 			  
 			      <span id="copy_right">
 			      	Copy right reserved by ebuy Myanmar Co.Ltd.
 			      </span>
+
+
+			      <span class="view_on_mobie"> View on Mobile
+					<%= image_tag("mobile.png") %>
+				</span>
 
 			</div>
 
@@ -349,3 +826,10 @@
 
 
 </html>
+
+
+<script type="text/javascript">
+	
+		$('.dropdown-submenu > a').submenupicker();
+
+</script>

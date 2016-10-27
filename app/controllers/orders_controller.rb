@@ -7,6 +7,8 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
 
+
+
   # GET /orders/1
   # GET /orders/1.json
   def show
