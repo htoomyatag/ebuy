@@ -5,7 +5,7 @@
   <div class="col-md-12">
 
 	<h4 class="detailpage_link">
-		Home > <%= @product.product_category %> > <%= @product.title %> > Ebuy00<%= @product.id %> 
+		Home > <%= @product.product_category %> > <%= @product.title %> > eBuy00<%= @product.id %> 
 	</h4><br/>
 
   </div>
@@ -25,68 +25,86 @@
 
 
   		  <br/>
-  		  <table style="width:76%">
+  		  <table style="width:100%">
 			  
-			  <tr >
-			    <td> <span class="mydetail_title">Retail Price</span></td>
-			    <td> <span class="mydetail_title"> <%= @product.actual_price %> Ks </span></td> 
+			  <tr>
+			    <td style="width:60%"> <span class="mydetail_title">Actual Price</span></td>
+			    <td > <span class="mydetail_title"> <%= @product.actual_price %> Ks </span></td> 
 			  </tr>
 			  <tr>
-			    <td> Discount Price</td>
+			    <td style="width:60%"> Offer Price</td>
 			    <td> <%= @product.discount_price %> Ks</td> 
 			  </tr>
 
 		   </table><hr/>
 
-		   <table style="width:92%">
+		   <table style="width:100%">
 			  
 			  <tr>
-			    <td> <span class="mydetail_title">Shipping From</span></td>
+			    <td style="width:60%"> <span class="mydetail_title">Shipping From</span></td>
 			    <td> <span class="mydetail_title"> Overseas </span></td> 
 			  </tr>
 			  <tr>
-			    <td><span class="mydetail_title"> Delivery Rate </span></td>
+			    <td style="width:60%"><span class="mydetail_title"> Delivery Rate </span></td>
 			    <td> <span class="mydetail_title"> FREE </span></td> 
 			  </tr>
 
 			   <tr>
-			    <td> <span class="mydetail_title"> Estimated Delivery </span></td>
+			    <td style="width:60%"> <span class="mydetail_title"> Estimated Delivery </span></td>
 			    <td> <span class="mydetail_title"> <%= @product.delivery_time %> </span></td> 
 			  </tr>
 
 			  <tr>
-			    <td> <span class="mydetail_title">Delivery Service </span></td>
+			    <td style="width:60%"> <span class="mydetail_title">Delivery Service </span></td>
 			    <td> <span class="mydetail_title"> 
 			    		<select>
 			    		  <option>Choose</option>
 						  <option>Pick up</option>
-						  <option>EBuy Delivery</option>
+						  <option>eBuy Delivery</option>
 						</select>
 			     </span></td> 
 			  </tr>
 			  
 		   </table ><hr/>
 
-		    <table style="width:130%">
+		    <table style="width:100%">
 			  
 			  <tr>
-			    <td> <span class="mydetail_title">Quantity </span></td>
-			    <td> <span class="mydetail_title"> 70000 Ks </span></td> 
+			    <td style="width:60%"> <span class="mydetail_title">Quantity </span></td>
+			    <td> <span class="mydetail_title"><%= @product.quantity %></span></td>
 			  </tr>
+
 			 
 
 		   </table><br/>
 
 		   <br/>
-		   <button type="button" id="btn_checkout" class="btn btn-danger"> Buy Now</button>
-
-		   
-   			<%= button_to 'Add to Cart' , line_items_path(:product_id => @product),:class =>"btn btn-primary" %>
 
 
+		 
+		 
 
-		   <button type="button" id="btn_checkout" class="btn btn-info"> Add to whish list</button>
-		   <button type="button" id="btn_checkout" class="btn btn-default"> Share this item</button>
+		   <table style="width:100%">
+			
+			  <tr>
+			    <td>
+			    	 <button type="button" id="btn_checkout" class="btn btn-danger" > Buy Now</button>
+			    </td>
+			    <td>
+			    	<%= button_to 'Add to Cart' , line_items_path(:product_id => @product),:class =>"btn btn-primary", :id=>"btn_checkout" %>
+			    </td> 
+			    <td>
+			    	 <button type="button" id="btn_checkout" class="btn btn-info"> Add to whish list</button>
+			    </td>
+			    <td>
+			    	  <button type="button" id="btn_checkout" class="btn btn-default"> Share this item</button>
+
+			    </td>
+			  </tr>
+			 
+			</table>
+
+
 
 
   			<br/><br/><br/>

@@ -1,22 +1,39 @@
 
-<table class="table hcart">
-        <% @line_items.each do |line_item| %>
-                    <tr>
-                      <td class="text-center">
-                        <a href="#">
-                         <img src="/assets/product-images/hcart-thumb1.jpg" alt="image" title="image" class="img-thumbnail img-responsive" />
-                        </a>
-                      </td>
-                      <td class="text-left">
-                        <a href="#">
-                          <%= line_item.product.title %>
-                        </a>
-                      </td>
-                      <td class="text-right">x <%= line_item.quantity %></td>
-                      <td class="text-right"><%= (line_item.total_price) %> MMK</td>
-                    </tr>
-       <% end %>             
-</table>
+
+<div class="container"> 
+
+<h4 style="text-align:center;"> eBuy checkout list </h4>
+  <table class="table">
+          <% @line_items.each do |line_item| %>
+                      <tr>
+                        <td style="width:30%;">
+                          <a href="#">
+                           <img src="/assets/product_avatar.png" alt="image" title="image" class="img-thumbnail img-responsive" />
+                          </a>
+                        </td>
+                        <td >
+                          <a href="#">
+                            <%= line_item.product.title %>
+                          </a>
+                        </td>
+                        <td >x <%= line_item.quantity %></td>
+                        <td ><%= (line_item.total_price) %> MMK</td>
+                        <td ><%= link_to 'remove',line_item, method: :delete, data: { confirm: 'Are you sure?' } ,:class=>"btn btn-danger" %></td>
+                      </tr>
+         <% end %> 
+
+
+
+
+  </table>
+  <br/>
+  <div style="float:right;">
+    Total Price: <%= (@cart.total_price) %> MMK
+    <%= link_to 'Fill up order form', order_form_path, :class => "btn btn-primary"  %>
+  </div>
+  <br/> <br/>
+
+</div>
 
 
 

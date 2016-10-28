@@ -17,8 +17,11 @@ Rails.application.routes.draw do
   get 'cart_item' => 'line_items#cart_item', as: 'cart_item'
 
   resources :orders
+
+
   resources :frontends
   root 'frontends#home'
+  get 'order_form' => 'frontends#order_form', as: 'order_form'
   get 'about_us' => 'frontends#about_us'
   get 'contact_us' => 'frontends#contact_us'
   get 'help' => 'frontends#help'

@@ -16,4 +16,6 @@ Rails.application.config.assets.precompile += %w( backend.css )
 Rails.application.config.assets.precompile += %w( jquery.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap-submenu.min.js )
+Rails.application.config.assets.precompile += %w( jquery_ujs.js )
+
 

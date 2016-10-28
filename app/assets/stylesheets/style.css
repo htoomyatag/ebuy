@@ -47,7 +47,7 @@ overflow-x: hidden;
 
 #menulink {
 	color: white;
-	font-size: 12px;
+	font-size: 11px;
 
 
 }
@@ -253,7 +253,7 @@ overflow-x: hidden;
 
 #btn_checkout{
 
-	width: 150px;
+	width: 98%;
 }
 
 .detail_tab_title{
@@ -320,6 +320,7 @@ li .active {
 
 .mydetail_title{
 	color: #0472c1;
+
 }
 
 
@@ -332,4 +333,28 @@ li .active {
 #comment_buyer_comment {
 
 	margin-top: 20px;
+}
+
+
+#faq_title{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+#register_btn,
+#sign_in_btn,
+#my_account_btn,
+#my_coupon_btn,
+#my_cart_btn,
+#how_to_buy_btn,
+#payment_btn,
+#shipping_btn,
+#cancel_refund_btn,
+#exchange_btn,
+#sell_item_btn,
+#faq_btn,
+#bank_transfer_btn {
+
+	cursor: pointer;
 }

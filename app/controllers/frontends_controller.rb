@@ -3,7 +3,10 @@ class FrontendsController < ApplicationController
 
   # GET /frontends
   # GET /frontends.json
-
+  def order_form
+    @order = Order.new
+  end
+  
   def use_coupon
 
     @raw_coupon = Coupon.where("title = ?", params[:title]).where("limitation =< ", params[:limitation])
