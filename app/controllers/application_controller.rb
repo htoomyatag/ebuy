@@ -3,11 +3,16 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_filter :ebuy_cart
+  before_action :set_locale
+  
 
-def ebuy_cart
-@cart = current_cart
-end
+  def ebuy_cart
+    @cart = current_cart
+  end
 
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
 
  private
   def current_cart

@@ -3,6 +3,8 @@
 <div class="container"> 
 
 <h4 style="text-align:center;"> eBuy checkout list </h4>
+<br/>
+<br/>
   <table class="table">
           <% @line_items.each do |line_item| %>
                       <tr>
@@ -26,17 +28,75 @@
 
 
   </table>
+  <hr/>
   <br/>
-  <div style="float:right;">
+  <div style="float:right;width:30%;">
     Total Price: <%= (@cart.total_price) %> MMK
+
+    <br/> <br/>
+    Coupon Code:
+    <input id="coupon_code"   >
+    <button class="btn btn-default" id="send_coupon"> use</button>
+    <br/> <br/>
+    Final Price:
+    <input id="checkout_price" placeholder="checkout_price">
+    <br/> <br/>
     <%= link_to 'Fill up order form', order_form_path, :class => "btn btn-primary"  %>
   </div>
-  <br/> <br/>
+  <br/>
+
 
 </div>
 
 
+  <br/>
+  <br/>
 
 
 
 
+
+
+
+<script type="text/javascript">
+  
+ $('#send_coupon').click(function() {
+ 
+
+    coupon_code = document.getElementById("coupon_code").value;
+    limitation = "<%= (@cart.total_price) %>";
+
+
+      $.ajax({
+              type: 'get',
+              url: 'use_coupon',
+              dataType: 'text',
+              data: {'title':coupon_code, 'limitation':limitation},
+              complete: function(r){
+              
+                  raw_discount_price = r.responseText;
+                  clean_discount_price = raw_discount_price.replace('{:discount_price=>["', "");
+                  discount_percent = clean_discount_price.replace('"]}', "");
+                 
+                  // couopon calculation
+                  var percentage = parseFloat(discount_percent/100);
+                  var descrease_amount =  parseInt(percentage*limitation);
+                  var actual_amount = parseInt(limitation-descrease_amount)
+
+                  document.getElementById("checkout_price").value = actual_amount;
+         
+
+
+
+              }
+           });
+
+
+
+
+
+
+    });
+
+
+</script>

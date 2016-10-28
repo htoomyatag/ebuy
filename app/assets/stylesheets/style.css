@@ -358,3 +358,8 @@ li .active {
 
 	cursor: pointer;
 }
+
+
+#coupon_code{
+	height: 35px;
+}
