@@ -3,6 +3,13 @@ class FrontendsController < ApplicationController
 
   # GET /frontends
   # GET /frontends.json
+
+  def add_to_wish_list
+      WishList.create(:product_name => params[:product_name], :product_id => params[:product_id])
+      redirect_to request.referer
+
+  end
+
   def order_form
     @order = Order.new
   end

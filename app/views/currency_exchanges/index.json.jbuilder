@@ -1,0 +1,1 @@
+json.array! @currency_exchanges, partial: 'currency_exchanges/currency_exchange', as: :currency_exchange

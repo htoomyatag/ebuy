@@ -1,0 +1,23 @@
+
+
+<%= form_for(@currency_exchange) do |f| %>
+  <% if @currency_exchange.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@currency_exchange.errors.count, "error") %> prohibited this currency_exchange from being saved:</h2>
+
+      <ul>
+      <% @currency_exchange.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :currency_rate %><br>
+    <%= f.text_field :currency_rate %>
+  </div><br/>
+  <div class="actions">
+    <%= f.submit :class => "btn btn-default" %>
+  </div>
+<% end %>

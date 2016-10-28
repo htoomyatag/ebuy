@@ -10,7 +10,8 @@ class AdminsController < ApplicationController
   def dashboard
     @products = Product.distinct.count('id')
     @orders = Order.distinct.count('id')
-    @coupons = Coupon.distinct.count('id')
+    @currency_exchanges = CurrencyExchange.pluck('currency_rate').last
+
 
   end
 

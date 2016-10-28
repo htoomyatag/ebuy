@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Currency rate:</strong>
+  <%= @currency_exchange.currency_rate %>
+</p>
+
+<%= link_to 'Edit', edit_currency_exchange_path(@currency_exchange) %> |
+<%= link_to 'Back', currency_exchanges_path %>

@@ -1,0 +1,26 @@
+
+<h3>New Currency Exchange</h3><hr/>
+<%= render 'form' %>
+
+
+<hr/>
+<h1>Listing Currency Exchanges</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Currency rate</th>
+      <th>Change Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @currency_exchanges.each do |currency_exchange| %>
+      <tr>
+        <td><%= currency_exchange.currency_rate %></td>
+        <td><%= currency_exchange.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

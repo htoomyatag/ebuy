@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021074823) do
+ActiveRecord::Schema.define(version: 20161028082503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,12 @@ ActiveRecord::Schema.define(version: 20161021074823) do
     t.datetime "updated_at",          null: false
   end
 
+  create_table "currency_exchanges", force: :cascade do |t|
+    t.string   "currency_rate"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "frontends", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -136,6 +142,15 @@ ActiveRecord::Schema.define(version: 20161021074823) do
     t.string   "start_to_sell_on"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "wish_lists", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "buyer_id"
+    t.string   "product_name"
+    t.text     "description"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

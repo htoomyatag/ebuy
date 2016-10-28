@@ -1,0 +1,1 @@
+json.partial! "currency_exchanges/currency_exchange", currency_exchange: @currency_exchange

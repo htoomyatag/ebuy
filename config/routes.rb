@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :currency_exchanges
+  resources :wish_lists
   resources :request_products
   get 'thanks_for_request' => 'request_products#thanks_for_request', as: 'thanks_for_request'
 
@@ -45,6 +47,8 @@ Rails.application.routes.draw do
    get 'check_out'  => 'frontends#check_out'
    
    get 'use_coupon'  => 'frontends#use_coupon'
+   post 'add_to_wish_list'  => 'frontends#add_to_wish_list'
+
 
 
   resources :products
