@@ -111,7 +111,8 @@
 				About Us &nbsp;|
 				</a>
 			</li>
-			<li><a href="#" id="menulink">
+			<li>
+				<a href="#" id="menulink">
 				Language 
 				<%= image_tag "english_flag.png", :alt=>"english", :style => "border:1px solid #021a40;"  %>
 				<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
@@ -1194,7 +1195,7 @@
 
 				<div class="col-md-12">
 					<div class="col-md-3">
-						<p class="fonter_headtitle">Customer service</p>
+						<p class="fonter_headtitle"><%= t('customer_service') %></p>
 						<a class="fonter_menutitle" href="/help">Help topics</a><br/>
 						<a class="fonter_menutitle" href="/how_to_buy">How to buy</a><br/>
 						<a class="fonter_menutitle" href="/payment">Payment</a><br/>

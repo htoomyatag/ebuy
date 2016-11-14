@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
 
   scope "(:locale)", locale: /en|mm/ do
-    root to: 'frontends#home'
+    root 'frontends#home'
   end
 
   get 'order_form' => 'frontends#order_form', as: 'order_form'

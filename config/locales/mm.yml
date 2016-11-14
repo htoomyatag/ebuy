@@ -1,4 +1,6 @@
+
+
 mm:
-  books:
-    index:
-      title: "Titel"
+  hello: "Hello world"
+  welcome: "အကူအညီေပးေရး ဌာနမွ ၾကိဳဆိုပါတယ္။"
+  customer_service: "ဝန္ေဆာင္မႈ"
