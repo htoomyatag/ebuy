@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20161028082503) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "admins", force: :cascade do |t|
     t.string   "username"
     t.datetime "created_at",                          null: false
@@ -28,12 +25,12 @@ ActiveRecord::Schema.define(version: 20161028082503) do
     t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
+    t.integer  "current_sign_in_ip"
+    t.integer  "last_sign_in_ip"
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
   create_table "buyers", force: :cascade do |t|
     t.string   "buyer_name"
@@ -50,12 +47,12 @@ ActiveRecord::Schema.define(version: 20161028082503) do
     t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
+    t.integer  "current_sign_in_ip"
+    t.integer  "last_sign_in_ip"
   end
 
-  add_index "buyers", ["email"], name: "index_buyers_on_email", unique: true, using: :btree
-  add_index "buyers", ["reset_password_token"], name: "index_buyers_on_reset_password_token", unique: true, using: :btree
+  add_index "buyers", ["email"], name: "index_buyers_on_email", unique: true
+  add_index "buyers", ["reset_password_token"], name: "index_buyers_on_reset_password_token", unique: true
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
