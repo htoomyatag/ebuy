@@ -27,6 +27,23 @@
     </div>
   </div>
 
+
+  <div class="col-md-6">
+   <label>Size</label><br>
+     <div class="field">
+       <%= f.text_field :product_size, :class => "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+   <label>Color</label><br>
+    <div class="field">
+      <%= f.text_field :product_color,  :class => "form-control" %>
+    </div>
+  </div>
+
+
+
   <div class="col-md-6">
    <label>Actual Price</label><br>
      <div class="field">
@@ -41,42 +58,66 @@
     </div>
   </div>
 
-  <div class="col-md-6">
+
+  <div class="col-md-6"><br/>
    <label>Product Category</label><br>
     <div class="field">
       <%= f.select(:product_category, Product::PRODUCTCATEGORY) %>
     </div>
   </div>
 
-
-   
-  
-  <div class="col-md-12">
-    <h3>Specifications 
-    <input class="btn btn-default" type="button" id="add_btn" value="Add">
-    </h3>
-     <hr/>
+    <div class="col-md-6"><br/>
+   <label>Product Sub Category</label><br>
+    <div class="field">
+      <%= f.select(:product_subcategory, Product::PRODUCTSUBCATEGORY) %>
+    </div>
   </div>
 
-    <div class="col-md-6">
-       <div class="field">
-         <%= f.text_field :specs, multiple: true, :class => "form-control" %>
+
+  <div class="col-md-12"><br><br>
+   <label>Product You tube embedded code </label><br>
+    <div class="field">
+      <%= f.text_field :product_video, :class => "form-control" %>
+    </div>
+  </div>
+
+
+
+
+
+      <div class="col-md-12">
+
+        <br/><br/><br/>      <hr/>
+        <h3>Specifications 
+        <input class="btn btn-default" type="button" id="add_btn" value="Add">
+        </h3>
+         <hr/>
       </div>
-    </div>
-    
-    <div class="col-md-6">
-      <div class="field">
-         <%= f.text_field :specs, multiple: true, :class => "form-control" %>
-      </div>
-    </div>
 
 
-    <div id='cont' >
 
-    </div>
+        <div class="col-md-6">
+           <div class="field">
+             <%= f.text_field :specs, multiple: true, :class => "form-control" %>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="field">
+             <%= f.text_field :specs, multiple: true, :class => "form-control" %>
+          </div>
+        </div>
+
+
+        <div id='cont' >
+
+        </div>
+
+
      
 
     <div class="col-md-12">
+     <br/><br/><br/>      <hr/>
       <h3> Delivery Option
       </h3>
        <hr/>
@@ -108,8 +149,17 @@
     </div>
 
 
+    <div class="col-md-6"><br/>
+       <label>Delivery rate</label><br>
+         <div class="field">
+            <%= f.number_field :delivery_rate, :class => "form-control" %>
+        </div>
+    </div>
+
+
 
     <div class="col-md-12">
+       <br/><br/><br/>      <hr/>
       <h3> Seller Option
       </h3>
        <hr/>
@@ -120,6 +170,15 @@
        <label>Start to sell on</label><br>
          <div class="field">
             <%= f.date_field :start_to_sell_on, :class => "form-control" %>
+        </div>
+    </div>
+
+
+
+      <div class="col-md-6"><br/>
+       <label>End on</label><br>
+         <div class="field">
+            <%= f.date_field :end_on, :class => "form-control" %>
         </div>
     </div>
 

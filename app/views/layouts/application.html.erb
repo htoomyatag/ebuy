@@ -15,9 +15,9 @@
 <!-- header -->
     <nav class="navbar navbar-default" id="mynav">
       <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
-      <div class="col-md-1"></div>
+     
 
-      <div class="col-md-10">
+      <div class="col-md-12">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -28,7 +28,18 @@
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+        
           <ul class="nav navbar-nav">
+
+          		
+
+   				     <li>
+						<a href="/" id="menulink">
+						<%= image_tag "home.png", :alt=>"profile" %>
+						Home |</a>
+					</li>
+
+
    
    			<% if buyer_signed_in? %>
 
@@ -43,7 +54,7 @@
    				     <li>
 						<a href="/my_account" id="menulink">
 						<%= image_tag "profile.png", :alt=>"profile" %>
-						My Account &nbsp;|</a>
+						My Account |</a>
 					</li>
 
 
@@ -52,7 +63,7 @@
 						<%= image_tag "cart.png", :alt=>"profile" %>
 						Cart 
 						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price) %>
-						&nbsp;|</a>
+						|</a>
 					</li>
 
 
@@ -67,20 +78,20 @@
 
 						<a href="/buyers/sign_in" id="menulink">
 						<%= image_tag "sign.png", :alt=>"sign.png" %>
-						Sign In &nbsp;|
+						Sign In |
 
 						</a>
 					</li>
 					<li>
 						<a href="/buyers/sign_up" id="menulink">
 							<%= image_tag "register.png", :alt=>"register" %>
-							Register &nbsp;|
+							Register |
 						</a>
 					</li>
 					<li>
 						<a href="#" id="menulink">
 						<%= image_tag "profile.png", :alt=>"profile" %>
-						My Account &nbsp;|</a>
+						My Account |</a>
 					</li>
 
 					 <li>
@@ -88,7 +99,7 @@
 						<%= image_tag "cart.png", :alt=>"profile" %>
 						Cart 
 						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price) %>
-						&nbsp;|</a>
+						|</a>
 					</li>
 
 		
@@ -99,7 +110,8 @@
 			<li>
 				<a href="/help" id="menulink">
 				<%= image_tag "mark.png", :alt=>"mark" %>
-				Help &nbsp;|</a></li>
+				Help |</a>
+			</li>
 			<li>
 				<a href="/contact_us" id="menulink">
 				<%= image_tag "phone.png", :alt=>"phone" %>
@@ -123,9 +135,10 @@
 
 
           </ul>
+          
         </div><!-- /.navbar-collapse -->
       </div>
-      <div class="col-md-1"></div>
+    
     </nav>
 
 
@@ -606,12 +619,12 @@
 		      		      <!-- electrinics -->
 
 		      		      	<li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Digital, Mobile and Electrical Appliance <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" > Digital & Mobile <span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
 		     
-		           <li><a tabindex="0">All Products on Digital, Mobile and Electrical Appliances</a></li>
+		           <li><a tabindex="0">All Products on Digital & Mobile</a></li>
 
 		          <li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown">Phones and Tablets </a>
@@ -989,14 +1002,14 @@
 		      <!-- food and beverage -->
 		      
 	      	<li class="dropdown" >
-		        <a tabindex="0" data-toggle="dropdown" id="menulink">Food and Beverages <span class="caret" ></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink">Food & Beverages <span class="caret" ></span></a>
 
 
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
 		     
-		           <li><a tabindex="0">All Products on Food and Beverage</a></li>
+		           <li><a tabindex="0">All Products on Food & Beverage</a></li>
 
 
 					<li class="dropdown-submenu">

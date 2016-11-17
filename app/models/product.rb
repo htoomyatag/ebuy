@@ -22,6 +22,20 @@ PRODUCTCATEGORY = [
 ]
 
 
+PRODUCTSUBCATEGORY = [
+
+"AuthenticBrandZone",
+"WomenFashion",
+"MenFashion",
+"Digital&Mobile",
+"Home&Living",
+"Health&Beauty",
+"Food&Beverage"
+
+]
+
+
+
 
   def ensure_not_referenced_by_any_line_item
     if line_items.count.zero?

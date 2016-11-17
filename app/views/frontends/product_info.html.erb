@@ -26,6 +26,21 @@
 
   		  <br/>
   		  <table style="width:100%">
+
+
+  	
+
+
+  		   	  <tr>
+			    <td style="width:60%"> <span class="mydetail_title">Product Size</span></td>
+			    <td > <span class="mydetail_title"> <%= @product.	  product_size %>  </span></td> 
+			  </tr>
+			  <tr>
+			    <td style="width:60%"> <span class="mydetail_title"> Product Color</span></td>
+			    <td> <span class="mydetail_title"><%= @product.product_color %></span></td> 
+			  </tr>
+
+
 			  
 			  <tr>
 			    <td style="width:60%"> <span class="mydetail_title">Actual Price</span></td>
@@ -46,12 +61,12 @@
 			  </tr>
 			  <tr>
 			    <td style="width:60%"><span class="mydetail_title"> Delivery Rate </span></td>
-			    <td> <span class="mydetail_title"> FREE </span></td> 
+			    <td> <span class="mydetail_title">  <%= @product.delivery_rate %> Ks</span></td> 
 			  </tr>
 
 			   <tr>
 			    <td style="width:60%"> <span class="mydetail_title"> Estimated Delivery </span></td>
-			    <td> <span class="mydetail_title"> <%= @product.delivery_time %> </span></td> 
+			    <td> <span class="mydetail_title"> <%= @product.delivery_time %> Days</span></td> 
 			  </tr>
 
 			  <tr>
@@ -135,7 +150,20 @@
 			    <div role="tabpanel" class="tab-pane active" id="home">
 			    	
 
-			    		 <%= @product.specs %>
+			    <br/><br/><br/>
+			    
+			    <% if !@product.product_video.nil? %>
+
+			    	<center>
+			    			<br/>
+							<iframe width="700" height="400" src="<%= "http://www.youtube.com/embed/"+@product.product_video.to_s %>">
+							</iframe>
+							</br/>
+			    	</center>
+
+			     <% end %>
+
+
 			    </div>
 			    <div role="tabpanel" class="tab-pane" id="profile">
 			    	

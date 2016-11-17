@@ -122,8 +122,14 @@ ActiveRecord::Schema.define(version: 20161028082503) do
     t.string   "delivery_time"
     t.string   "start_to_sell_on"
     t.string   "date"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.text     "product_video"
+    t.string   "product_size"
+    t.string   "product_color"
+    t.string   "delivery_rate"
+    t.string   "end_on"
+    t.string   "product_subcategory"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "request_products", force: :cascade do |t|
