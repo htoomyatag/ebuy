@@ -69,26 +69,76 @@
 <div class="row" style="padding:10px;">
   
 
-  <div class="col-xs-6 col-md-4">
+
+<h4 id="slider_home_title">AuthenticBrandZone</h4>
+<% @first_authentic_products.each do |product| %>
+	                            
+
+
+	<div class="col-xs-6 col-md-4">
 
   		<div class="panel panel-default">
 
-
+			  <a href="/product_info/<%= product.id %>"><%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
+			  </a>
 			  
-			  <div class="panel-body">
-			    Panel content
-			  </div>
-
-
 			  <div class="panel-heading" id="panel_header">
-			    Panel title
+
+			    <span id="product_title_mobile">
+			    	<%= product.title %>
+			    </span><br/>
+
+			    <span id="product_title_price"> 
+			    	<%= product.discount_price %> Ks
+			     </span>
 			  </div>
 
 
 		</div>
 
-  </div>
+  	</div>
 
+<% end %>
+
+
+
+
+<h4 id="slider_home_title">Women Fashions</h4>
+<% @first_women_fashion_products.each do |product| %>
+	                            
+
+
+	<div class="col-xs-6 col-md-4">
+
+  		<div class="panel panel-default">
+
+			   <a href="/product_info/<%= product.id %>">
+			   <%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
+			   </a>
+			  
+			  <div class="panel-heading" id="panel_header">
+
+			    <span id="product_title_mobile">
+			    	<%= product.title %>
+			    </span><br/>
+
+			    <span id="product_title_price"> 
+			    	<%= product.discount_price %> Ks
+			     </span>
+			  </div>
+
+
+		</div>
+
+  	</div>
+
+<% end %>
+
+
+
+
+
+  
 
 
 
