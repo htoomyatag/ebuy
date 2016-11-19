@@ -364,3 +364,38 @@ li .active {
 #coupon_code{
 	height: 35px;
 }
+
+
+
+
+
+
+#mobile_view {
+
+ display: block;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+  #mobile_view {
+    display: none; /* This is how it looks on desktop */
+  }
+
+
+
+
+
+
+
+
+}

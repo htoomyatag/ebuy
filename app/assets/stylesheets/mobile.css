@@ -1,0 +1,25 @@
+
+@media (max-width: 767px)  {
+
+
+#desktop_view{
+
+	display: none;
+}
+
+
+#mobile_view {
+	display: block;
+	height: 1000px;
+	background-color: red;
+}
+
+
+
+
+
+
+}
+
+
+

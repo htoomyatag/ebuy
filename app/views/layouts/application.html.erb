@@ -9,9 +9,31 @@
   <%= javascript_include_tag 'bootstrap.min.js' %>
   <%= javascript_include_tag 'bootstrap-submenu.min.js' %>
   <%= csrf_meta_tags %>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 </head>
 
+
+<!-- mobile view -->
+		
+<div id="mobile_view" >
+ mobile this
+
+
+</div>
+
+
+
+
+
+
+
+
+<!--  desktop view -->
+
+<div id="desktop_view">
 <!-- header -->
     <nav class="navbar navbar-default" id="mynav">
       <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
@@ -1191,6 +1213,7 @@
 	  </div>
 	</nav>
 
+
 <body>
 
 			<%= yield %>
@@ -1272,8 +1295,9 @@
 			
 </footer>
 			
+</div>
 
-		
+
 
 
 </html>
