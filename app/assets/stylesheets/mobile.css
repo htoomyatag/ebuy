@@ -11,12 +11,34 @@
 #mobile_view {
 	display: block;
 	height: 1000px;
-	background-color: red;
+
 }
 
 
 
+.navbar-toggle.navbar-left {
+  float: left;
+  margin-left: 10px;
+}
 
+
+.navbar-brand {
+	margin-left: -10px;
+	font-color: white;
+}
+
+.nav_text{
+	color: white;
+	font-size: 12px;
+}
+
+
+.btn-default{
+
+	height: 34px;
+
+
+}
 
 
 }
