@@ -15,6 +15,11 @@
 }
 
 
+#mobile_view_home {
+		display: block;
+}
+
+
 
 .navbar-toggle.navbar-left {
   float: left;
@@ -37,6 +42,49 @@
 
 	height: 34px;
 
+
+}
+
+
+#mobile_logo_img{
+
+	position: relative;
+	top: -22px;
+
+}
+
+
+
+#panel_header{
+
+
+   background:rgba(0,0,0,0.5);
+    color: white;
+
+}
+
+
+#second_navbarmobile{
+	background:#3498DB;
+	position: relative;
+	top: -22px;
+	height: 40px;
+
+}
+
+
+#carousel-example-generic{
+
+	position: relative;
+	top: -22px;
+
+}
+
+
+#mobile_menu_link{
+	position: relative;
+	top: 8px;
+	padding-left: 10px;
 
 }
 
