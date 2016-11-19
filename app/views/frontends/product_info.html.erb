@@ -14,9 +14,12 @@
   		<div class="col-md-5">
   				<!-- product image -->
 
-  					<image src="/assets/logo.png" style="width:100px;">
-
-  					<image src="/assets/logo.png" style="width:500px;">
+  					
+  					
+<p>
+        <img alt="" src="/assets/logo.png" 
+            style="height: 85px; width: 198px" id="imgClickAndChange" onclick="changeImage()"  />
+</p>
 
 
 
@@ -256,3 +259,25 @@
 
   </div>
 </div>
+
+
+
+<script language="javascript">
+    function changeImage() {
+
+        if (document.getElementById("imgClickAndChange").src == "/assets/logo.png") 
+        {
+       		alert("aok");
+            document.getElementById("imgClickAndChange").src = "1001.jpg";
+       
+        }
+        else 
+        {
+
+        		var aok = document.getElementById("imgClickAndChange").src;
+        		alert(aok);
+            document.getElementById("imgClickAndChange").src = "1001.jpg";
+       
+        }
+    }
+</script>
