@@ -227,7 +227,11 @@ overflow-x: hidden;
 
 
 #arrow_crousel {
+
 	top: 65px;
+	margin: -10px;
+	width: 10px;
+	
 }
 
 
@@ -381,6 +385,41 @@ li .active {
 
 
 
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+
+
+background-color: #0472c1;
+
+}
+
+
+
+#avatar_mobile_product1,#avatar_mobile_product2,#avatar_mobile_product3,#avatar_mobile_product4,#avatar_mobile_product5{
+
+	height: 56px;
+	width: 55px;
+	border: 1px solid #e5e5e5;
+
+	margin-top: 21px;
+	border-style: 1px solid #eee;
+
+}
+
+
+
+
+
+#receive_img{
+	height: 405px;
+	width: 380px;
+	position: relative;
+	left: 35px;
+	background-color: #e5e5e5;
+	border: 1px solid #eee;
+
+
+}
 
 
 

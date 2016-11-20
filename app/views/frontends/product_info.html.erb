@@ -14,17 +14,32 @@
   		<div class="col-md-5">
   				<!-- product image -->
 
-  					
-  					
-<p>
-        <img alt="" src="/assets/logo.png" 
-            style="height: 85px; width: 198px" id="imgClickAndChange" onclick="changeImage()"  />
-</p>
+  		<div class="col-md-1">
 
+  		
+  			<img id="avatar_mobile_product1" src="/assets/1001.jpg"  />
 
+  			<img id="avatar_mobile_product2" src="/assets/1002.jpg"  />
+
+  			<img id="avatar_mobile_product3" src="/assets/1003.jpg"  />
+
+  			<img id="avatar_mobile_product4" src="/assets/1004.jpg"  />
+
+  			<img id="avatar_mobile_product5" src="/assets/1005.jpg"  />
 
 
   		</div>
+  		
+
+  	
+  		<div class="col-md-4" style="margin-left:20px;">
+
+  				<img id="receive_img"   />
+
+  		</div>
+
+        
+  	</div>
 
   		<div class="col-md-7">
 
@@ -159,20 +174,46 @@
 			  <!-- Tab panes -->
 			  <div class="tab-content">
 			    <div role="tabpanel" class="tab-pane active" id="home">
+			   
+			   		 <div class="col-md-12"> 
+
+			   		 	 <div class="col-md-6"> 
+
+			   		 	 		    <% @product.specs.each do |key| %>
+									 <h3><%= key %></h3>
+									<% end %>
+				
+			   		 	 </div>
+
+			   		 	  <div class="col-md-6"> 
+
+			   		 	  		 <% if !@product.product_video.nil? %>
+
+							    	<center>
+							    			<br/>
+											<iframe width="400" height="300" src="<%= "http://www.youtube.com/embed/"+@product.product_video.to_s %>">
+											</iframe>
+											</br/>
+							    	</center>
+
+							     <% end %>
+
+			   		 	 </div>
+
+
+			   		 </div>
+				
+
+
+				
+			
+
+
 			    	
 
 			    <br/><br/><br/>
 			    
-			    <% if !@product.product_video.nil? %>
-
-			    	<center>
-			    			<br/>
-							<iframe width="700" height="400" src="<%= "http://www.youtube.com/embed/"+@product.product_video.to_s %>">
-							</iframe>
-							</br/>
-			    	</center>
-
-			     <% end %>
+			   
 
 
 			    </div>
@@ -262,22 +303,66 @@
 
 
 
-<script language="javascript">
-    function changeImage() {
 
-        if (document.getElementById("imgClickAndChange").src == "/assets/logo.png") 
-        {
-       		alert("aok");
-            document.getElementById("imgClickAndChange").src = "1001.jpg";
-       
-        }
-        else 
-        {
 
-        		var aok = document.getElementById("imgClickAndChange").src;
-        		alert(aok);
-            document.getElementById("imgClickAndChange").src = "1001.jpg";
-       
-        }
-    }
+
+<script>
+
+
+
+ $('#avatar_mobile_product1').click(function(){
+
+ 	  var aok = document.getElementById("avatar_mobile_product1").src;
+ 	  document.getElementById("receive_img").src = aok;
+    
+
+
+ });
+
+
+
+  $('#avatar_mobile_product2').click(function(){
+
+ 	  var aok = document.getElementById("avatar_mobile_product2").src;
+ 	  document.getElementById("receive_img").src = aok;
+    
+
+
+ });
+
+
+    $('#avatar_mobile_product3').click(function(){
+
+ 	  var aok = document.getElementById("avatar_mobile_product3").src;
+ 	  document.getElementById("receive_img").src = aok;
+    
+
+
+ });
+
+
+
+      $('#avatar_mobile_product4').click(function(){
+
+ 	  var aok = document.getElementById("avatar_mobile_product4").src;
+ 	  document.getElementById("receive_img").src = aok;
+    
+
+
+ });
+
+
+        $('#avatar_mobile_product5').click(function(){
+
+ 	  var aok = document.getElementById("avatar_mobile_product5").src;
+ 	  document.getElementById("receive_img").src = aok;
+    
+
+
+ });
+
+
+
+
+
 </script>

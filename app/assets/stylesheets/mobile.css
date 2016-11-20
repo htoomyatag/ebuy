@@ -10,7 +10,7 @@
 
 #mobile_view {
 	display: block;
-	height: 1000px;
+
 
 }
 
@@ -49,7 +49,7 @@
 #mobile_logo_img{
 
 	position: relative;
-	top: -22px;
+	top: -10px;
 
 }
 
@@ -71,7 +71,7 @@
 	position: relative;
 
 
-	top: -22px;
+	/*	top: -895px;*/
 	height: 40px;
 
 }
@@ -80,7 +80,7 @@
 #carousel-example-generic{
 
 	position: relative;
-	top: -22px;
+/*	top: -895px;*/
 
 }
 
@@ -97,6 +97,18 @@
 	font-size: 12px;
 	text-align: center;
 
+}
+
+
+
+.menu_title_mobile{
+	color: white;
+	font-size: 14px;
+}
+
+
+body{
+	min-height: 100px;
 }
 
 
