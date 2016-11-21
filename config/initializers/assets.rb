@@ -11,11 +11,12 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.css )
 Rails.application.config.assets.precompile += %w( backend.css )
-
-
 Rails.application.config.assets.precompile += %w( jquery.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap-submenu.min.js )
 Rails.application.config.assets.precompile += %w( jquery_ujs.js )
+Rails.application.config.assets.precompile += %w( jquery-ui.css )
 
 
+Rails.application.config.assets.precompile += %w( jquery-1.12.4.js )
+Rails.application.config.assets.precompile += %w( jquery-ui.js )
