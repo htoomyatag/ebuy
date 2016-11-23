@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161123042057) do
+ActiveRecord::Schema.define(version: 20161123081155) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username"
@@ -115,7 +115,8 @@ ActiveRecord::Schema.define(version: 20161123042057) do
     t.string   "actual_price"
     t.string   "discount_price"
     t.integer  "quantity"
-    t.text     "specs"
+    t.text     "specsq"
+    t.text     "specsa"
     t.string   "product_category"
     t.string   "pick_up"
     t.string   "ebuy_delivery"
@@ -175,6 +176,9 @@ ActiveRecord::Schema.define(version: 20161123042057) do
     t.string   "product_code_3"
     t.string   "product_code_4"
     t.string   "product_code_5"
+    t.text     "question"
+    t.text     "answer"
+    t.text     "notice"
   end
 
   create_table "request_products", force: :cascade do |t|

@@ -80,3 +80,17 @@
   width: 100px;
 
 }
+
+
+.question{
+  font-size: 13px;
+  color: black;
+  font-weight: bold;
+}
+
+
+.answer{
+  font-size: 13px;
+  color: gray;
+  font-weight: bold;
+}

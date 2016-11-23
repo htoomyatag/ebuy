@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   get 'contact_us' => 'frontends#contact_us'
   get 'help' => 'frontends#help'
   get 'product_info/:id' => 'frontends#product_info', as: 'product_info'
+  get 'view_image/:id' => 'frontends#view_image', as: 'view_image'
+
 
   get 'search_result' => 'frontends#search_result'
 
@@ -57,6 +59,7 @@ Rails.application.routes.draw do
 
 
   resources :products
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

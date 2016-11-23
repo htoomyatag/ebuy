@@ -424,8 +424,17 @@ background-color: #0472c1;
 }
 
 
+#other_productdv{
+	height: 250px;
+}
 
 
+
+#view_img{
+	position: relative;
+
+	left: 140px;
+}
 
 
 

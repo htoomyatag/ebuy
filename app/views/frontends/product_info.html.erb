@@ -1,4 +1,4 @@
-<div style="height:1700px;">
+<div style="height:2010px;">
 
 <div class="row">
 
@@ -40,8 +40,13 @@
 
   				 <%= image_tag @product.avatar1.url, :id => "receive_img" %>
 
+  				  <a href="/view_image/<%= @product.id %>" id="view_img"> View images in zoom</a>
+
+
 
   		</div>
+
+
 
         
   	</div>
@@ -183,6 +188,26 @@
 			   		 <div class="col-md-12"> 
 
 			   		 	 <div class="col-md-6"> 
+			   		 	 <br/><br/>
+			   		 	 <table class="table table-bordered">
+							      <thead>
+							        <tr>
+							          <th>Fields</th>
+							          <th>Value</th>
+							        </tr>
+							      </thead>
+							      <tbody>
+							      <% @product.specsq.zip ( @product.specsa).each do |question, answer| %>
+							        <tr>
+							          <td><%= question %></td>
+							          <td><%= answer %></td>
+							        </tr>
+							       <% end %>
+							       
+							       
+							      </tbody>
+							</table>
+
 
 			   		 	 		    
 				
@@ -276,7 +301,23 @@
 
 
 			    </div>
-			    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+			    <div role="tabpanel" class="tab-pane" id="messages">
+			    	
+			     <div class="col-md-12">
+
+					<h3> Question and Answer about this product</h3><hr/>
+
+
+					 <% @product.question.zip ( @product.answer).each do |question, answer| %>
+
+						  <p class="question"><%= question %></p>
+						  <p class="answer"><%= answer %></p>
+					<% end %>
+
+					</div>
+
+
+			    </div>
 			    <div role="tabpanel" class="tab-pane" id="settings">...</div>
 			  </div>
 		  </div>
@@ -292,6 +333,8 @@
 
 
 </div>
+  <hr/>
+  <%= render 'other_product' %>
 
   <div style="background:blue;height:5px;"></div>
   <%= render 'related_item' %>

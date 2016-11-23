@@ -1,4 +1,15 @@
 
+<!-- Main Quill library -->
+<script src="//cdn.quilljs.com/1.1.5/quill.js"></script>
+<script src="//cdn.quilljs.com/1.1.5/quill.min.js"></script>
+
+<!-- Theme included stylesheets -->
+<link href="//cdn.quilljs.com/1.1.5/quill.snow.css" rel="stylesheet">
+<link href="//cdn.quilljs.com/1.1.5/quill.bubble.css" rel="stylesheet">
+
+
+
+
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -85,6 +96,8 @@
 
 
 
+
+
   <div class="col-md-12"><br><br>
    <label>Youtube embedded code </label><br>
     <div class="field">
@@ -92,7 +105,20 @@
     </div>
   </div>
 
+  <div class="col-md-12"><br><br>
+<!--  -->
 
+    <div id="toolbar">
+      <button class="ql-bold">Bold</button>
+      <button class="ql-italic">Italic</button>
+    </div>
+    <div id="editor">
+  <p>Hello World!</p>
+</div>
+
+
+<!--  -->
+    </div>
 
 
 
@@ -109,13 +135,13 @@
 
         <div class="col-md-6">
            <div class="field">
-             <%= f.text_field :specs, multiple: true, :class => "form-control" %>
+             <%= f.text_field :specsq, multiple: true, :class => "form-control" %>
           </div>
         </div>
         
         <div class="col-md-6">
           <div class="field">
-             <%= f.text_field :specs, multiple: true, :class => "form-control" %>
+             <%= f.text_field :specsa, multiple: true, :class => "form-control" %>
           </div>
         </div>
 
@@ -123,6 +149,42 @@
         <div id='cont' >
 
         </div>
+
+        <!--  question ans answer -->
+
+          <div class="col-md-12">
+
+        <br/><br/><br/><hr/>
+        <h3>Questions and Answer 
+        <input class="btn btn-default" type="button" id="add_btn_2" value="Add">
+        </h3>
+         <hr/>
+      </div>
+
+
+
+        <div class="col-md-12">
+           <div class="field">
+             <%= f.text_field :question, multiple: true, :class => "form-control", :placeholder => "Question" %>
+          </div>
+        </div>
+        
+        <div class="col-md-12">
+          <div class="field"><br/>
+             <%= f.text_field :answer, multiple: true, :class => "form-control", :placeholder => "Answer" %>
+          </div>
+        </div>
+
+
+        <div id='cont2' >
+
+        </div>
+
+
+
+
+
+
 
 
      
@@ -339,11 +401,22 @@
   
 $( "#add_btn" ).click(function() {
 
-    var textarea =  $('<div class="col-md-6"><div class="field"><input multiple="multiple" class="form-control" type="text" name="product[specs][]" id="product_specs"></div></div>  <div class="col-md-6"><div class="field"><input multiple="multiple" class="form-control" type="text" name="product[specs][]" id="product_specs"></div></div><br/><hr/>');
+    var textarea =  $('<div class="col-md-6"><div class="field"><br/><input multiple="multiple" class="form-control" type="text" name="product[specsq][]" id="product_specsq"></div></div>  <div class="col-md-6"><div class="field"><br/><input multiple="multiple" class="form-control" type="text" name="product[specsa][]" id="product_specsa"></div></div><br/><hr/>');
     $('#cont').append(textarea);
 
 
 });
+
+
+
+$( "#add_btn_2" ).click(function() {
+
+    var textarea =  $('<div class="col-md-12"><div class="field"><br/><input multiple="multiple" class="form-control" type="text" name="product[question][]" id="product_question"></div></div> <div class="col-md-12"><div class="field"><br/><input multiple="multiple" class="form-control" type="text" name="product[answer][]" id="product_answer"></div></div><br/><hr/>');
+    $('#cont2').append(textarea);
+
+
+});
+
 
 </script>
 
@@ -695,3 +768,11 @@ $("#product_other_avatar5").change(function(){
 
 
   </script>
+
+
+<script>
+  var editor = new Quill('#editor', {
+    modules: { toolbar: '#toolbar' },
+    theme: 'snow'
+  });
+</script>

@@ -43,6 +43,10 @@ class FrontendsController < ApplicationController
 
   end
 
+  def view_image
+     @product = Product.find(params[:id])
+  end
+
 
   def my_account
 

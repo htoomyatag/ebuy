@@ -79,6 +79,48 @@
 				</p>
 		</div>
 
+
+		<div class="col-md-12">
+
+		<h3> Specification</h3><hr/>
+
+			<table class="table table-bordered">
+			      <thead>
+			        <tr>
+			          <th>Fields</th>
+			          <th>Value</th>
+			        </tr>
+			      </thead>
+			      <tbody>
+			      <% @product.specsq.zip ( @product.specsa).each do |question, answer| %>
+			        <tr>
+			          <td><%= question %></td>
+			          <td><%= answer %></td>
+			        </tr>
+			       <% end %>
+			       
+			       
+			      </tbody>
+			</table>
+
+
+		</div>
+
+
+
+		<div class="col-md-12">
+
+		<h3> Question and Answer</h3><hr/>
+
+
+		 <% @product.question.zip ( @product.answer).each do |question, answer| %>
+
+			  <p class="question"><%= question %></p>
+			  <p class="answer"><%= answer %></p>
+		<% end %>
+
+		</div>
+
 		<div class="col-md-12">
 
 		<h3>Product Images</h3><hr/>

@@ -5,7 +5,8 @@ class CreateProducts < ActiveRecord::Migration
       t.string :actual_price
       t.string :discount_price
       t.integer :quantity
-      t.text :specs
+      t.text :specsq
+      t.text :specsa
       t.string :product_category
       t.string :pick_up
       t.string :ebuy_delivery
