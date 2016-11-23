@@ -1,3 +1,4 @@
+
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -82,14 +83,10 @@
   </div>
 
 
- 
-
-
-
 
 
   <div class="col-md-12"><br><br>
-   <label>Product You tube embedded code </label><br>
+   <label>Youtube embedded code </label><br>
     <div class="field">
       <%= f.text_field :product_video, :class => "form-control" %>
     </div>
@@ -101,7 +98,7 @@
 
       <div class="col-md-12">
 
-        <br/><br/><br/>      <hr/>
+        <br/><br/><br/><hr/>
         <h3>Specifications 
         <input class="btn btn-default" type="button" id="add_btn" value="Add">
         </h3>
@@ -198,10 +195,135 @@
 
   
 
+    <div class="col-md-12">
+       <br/><br/><br/>      <hr/>
+      <h3> Product Image
+      </h3>
+       <hr/>
+    </div>
 
- 
+    <div class="col-md-2"><br/>
+       <label> Image 1</label><br>
+         <div class="field">
+            <%= f.file_field :avatar1 %>
+             <img id="blah1" src="#" alt="Image 1" />
+        </div>
+    </div>
 
- 
+
+        <div class="col-md-2"><br/>
+       <label> Image 2</label><br>
+         <div class="field">
+            <%= f.file_field :avatar2 %>
+             <img id="blah2" src="#" alt="Image 2" />
+        </div>
+    </div>
+
+
+        <div class="col-md-2"><br/>
+       <label> Image 3</label><br>
+         <div class="field">
+            <%= f.file_field :avatar3 %>
+             <img id="blah3" src="#" alt="Image 3" />
+        </div>
+    </div>
+
+
+
+        <div class="col-md-2"><br/>
+       <label> Image 4</label><br>
+         <div class="field">
+            <%= f.file_field :avatar4 %>
+             <img id="blah4" src="#" alt="Image 4" />
+        </div>
+    </div>
+
+
+
+        <div class="col-md-2"><br/>
+       <label> Image 5</label><br>
+         <div class="field">
+            <%= f.file_field :avatar5 %>
+             <img id="blah5" src="#" alt="Image 5" />
+        </div>
+    </div>
+
+<!-- product others -->
+
+
+    <div class="col-md-12">
+       <br/><br/><br/>      <hr/>
+      <h3> Others Product
+      </h3>
+       <hr/>
+    </div>
+
+    <div class="col-md-2"><br/>
+       <label> Code</label><br>
+       <%= f.text_field :product_code_1, :class => "form-control" %>
+       <br/>
+       <label> Product Image</label><br>
+         <div class="field">
+            <%= f.file_field :other_avatar1 %>
+             <img id="blah1_product" src="#" alt="Image 1" />
+        </div>
+    </div>
+
+
+        <div class="col-md-2"><br/>
+         <label> Code</label><br>
+       <%= f.text_field :product_code_2, :class => "form-control" %>
+       <br/>
+       <label> Product Image</label><br>
+         <div class="field">
+            <%= f.file_field :other_avatar2 %>
+             <img id="blah2_product" src="#" alt="Image 2" />
+        </div>
+    </div>
+
+
+        <div class="col-md-2"><br/>
+         <label> Code</label><br>
+       <%= f.text_field :product_code_3, :class => "form-control" %>
+       <br/>
+       <label> Product Image</label><br>
+         <div class="field">
+            <%= f.file_field :other_avatar3 %>
+             <img id="blah3_product" src="#" alt="Image 3" />
+        </div>
+    </div>
+
+
+
+        <div class="col-md-2"><br/>
+         <label> Code</label><br>
+       <%= f.text_field :product_code_4, :class => "form-control" %>
+       <br/>
+       <label> Product Image</label><br>
+         <div class="field">
+            <%= f.file_field :other_avatar4 %>
+             <img id="blah4_product" src="#" alt="Image 4" />
+        </div>
+    </div>
+
+
+
+        <div class="col-md-2"><br/>
+         <label> Code</label><br>
+       <%= f.text_field :product_code_5, :class => "form-control" %>
+       <br/>
+       <label> Product Image</label><br>
+         <div class="field">
+            <%= f.file_field :other_avatar5 %>
+             <img id="blah5_product" src="#" alt="Image 5" />
+        </div>
+    </div>
+
+
+
+
+
+
 
 
 
@@ -369,4 +491,207 @@ $( "#add_btn" ).click(function() {
       $( "#product_product_subcategory" ).toggle();
     });
   } );
+  </script>
+
+
+  <script type="text/javascript">
+
+function readURL1(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah1').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_avatar1").change(function(){
+    readURL1(this);
+});
+
+
+function readURL2(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah2').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_avatar2").change(function(){
+    readURL2(this);
+});
+
+
+
+function readURL3(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah3').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_avatar3").change(function(){
+    readURL3(this);
+});
+
+
+
+function readURL4(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah4').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_avatar4").change(function(){
+    readURL4(this);
+});
+
+
+
+
+function readURL5(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah5').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_avatar5").change(function(){
+    readURL5(this);
+});
+
+
+  </script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+
+function readURL1_product(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah1_product').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_other_avatar1").change(function(){
+    readURL1_product(this);
+});
+
+
+function readURL2_product(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah2_product').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_other_avatar2").change(function(){
+    readURL2_product(this);
+});
+
+
+
+function readURL3_product(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah3_product').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_other_avatar3").change(function(){
+    readURL3_product(this);
+});
+
+
+
+function readURL4_product(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah4_product').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_other_avatar4").change(function(){
+    readURL4_product(this);
+});
+
+
+
+
+function readURL5_product(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah5_product').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#product_other_avatar5").change(function(){
+    readURL5_product(this);
+});
+
+
   </script>

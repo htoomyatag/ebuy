@@ -56,3 +56,27 @@
 	position: relative;
 	top: -1px;
 }
+
+
+
+#blah1, #blah2, #blah3, #blah4, #blah5{
+  height: 100px;
+  width: 100px;
+}
+
+
+#product_image_info{
+  height: 200px;
+  width: 200px;
+  border: 1px solid #ccc;
+}
+
+
+
+
+#blah5_product, #blah4_product, #blah3_product, #blah2_product, #blah2_product, #blah1_product{
+
+ height: 100px;
+  width: 100px;
+
+}

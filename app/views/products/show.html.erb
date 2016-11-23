@@ -10,6 +10,19 @@
 				</p>
 
 				<p>
+				  <strong>Size:</strong>
+				  <%= @product.product_size %>
+				</p>
+
+				<p>
+				  <strong>Color:</strong>
+				  <%= @product.product_color %>
+				</p>
+
+
+
+
+				<p>
 				  <strong>Actual price:</strong>
 				  <%= @product.actual_price %>
 				</p>
@@ -22,6 +35,17 @@
 				<p>
 				  <strong>Quantity:</strong>
 				  <%= @product.quantity %>
+				</p>
+
+
+				<p>
+				  <strong>category:</strong>
+				  <%= @product.product_category %>
+				</p>
+
+				<p>
+				  <strong>sub category:</strong>
+				  <%= @product.product_subcategory %>
 				</p>
 
 
@@ -54,19 +78,68 @@
 				  <%= @product.delivery_time %> days
 				</p>
 		</div>
+
+		<div class="col-md-12">
+
+		<h3>Product Images</h3><hr/>
 		
-		<div class="col-md-3">
-		<%= image_tag("sorry-image-not-available.png") %>
-		</div>
-		<div class="col-md-3">
-			<%= image_tag("sorry-image-not-available.png") %>
-		</div>
-		<div class="col-md-3">
-			<%= image_tag("sorry-image-not-available.png") %>
+			<div class="col-md-2">
+			  <%= image_tag @product.avatar1.url(:medium), :id => "product_image_info" %>
+			</div>
+			<div class="col-md-2">
+				 <%= image_tag @product.avatar2.url(:medium), :id => "product_image_info" %>
+			</div>
+			<div class="col-md-2">
+				 <%= image_tag @product.avatar3.url(:medium), :id => "product_image_info" %>
+			</div>
+
+			<div class="col-md-2">
+				 <%= image_tag @product.avatar4.url(:medium), :id => "product_image_info" %>
+			</div>
+
+				<div class="col-md-2">
+				 <%= image_tag @product.avatar5.url(:medium), :id => "product_image_info" %>
+			</div>
+
 		</div>
 
-		<div class="col-md-3">
-			<%= image_tag("sorry-image-not-available.png") %>
+		<div class="col-md-12">
+
+		<h3>Other Product</h3><hr/>
+		
+			<div class="col-md-2">
+			  <%= image_tag @product.other_avatar1.url(:medium), :id => "product_image_info" %>
+			 <p style="font-size:18px;">
+			 	<%= @product.product_code_1 %>
+			 </p>
+			</div>
+			<div class="col-md-2">
+				 <%= image_tag @product.other_avatar2.url(:medium), :id => "product_image_info" %>
+				  <p style="font-size:18px;">
+				 <%= @product.product_code_2 %>
+				 </p>
+			</div>
+			<div class="col-md-2">
+				 <%= image_tag @product.other_avatar3.url(:medium), :id => "product_image_info" %>
+				  <p style="font-size:18px;">
+				 <%= @product.product_code_3 %>
+				 </p>
+			</div>
+
+			<div class="col-md-2">
+				 <%= image_tag @product.other_avatar4.url(:medium), :id => "product_image_info" %>
+				  <p style="font-size:18px;">
+				 <%= @product.product_code_4 %>
+				 </p>
+			</div>
+
+				<div class="col-md-2">
+				 <%= image_tag @product.other_avatar5.url(:medium), :id => "product_image_info" %>
+				  <p style="font-size:18px;">
+				 <%= @product.product_code_5 %>
+				 </p>
+			</div>
+
 		</div>
 
 
@@ -74,6 +147,11 @@
 			<br/><p>
 				<strong>Start to sell on:</strong>
 				<%= @product.start_to_sell_on %>
+			</p>
+
+			<br/><p>
+				<strong>End on:</strong>
+				<%= @product.end_on %>
 			</p>
 		</div>
 

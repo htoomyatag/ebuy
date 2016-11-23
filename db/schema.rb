@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028082503) do
+ActiveRecord::Schema.define(version: 20161123042057) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username"
@@ -128,8 +128,53 @@ ActiveRecord::Schema.define(version: 20161028082503) do
     t.string   "delivery_rate"
     t.string   "end_on"
     t.string   "product_subcategory"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "avatar1_file_name"
+    t.string   "avatar1_content_type"
+    t.integer  "avatar1_file_size"
+    t.datetime "avatar1_updated_at"
+    t.string   "avatar2_file_name"
+    t.string   "avatar2_content_type"
+    t.integer  "avatar2_file_size"
+    t.datetime "avatar2_updated_at"
+    t.string   "avatar3_file_name"
+    t.string   "avatar3_content_type"
+    t.integer  "avatar3_file_size"
+    t.datetime "avatar3_updated_at"
+    t.string   "avatar4_file_name"
+    t.string   "avatar4_content_type"
+    t.integer  "avatar4_file_size"
+    t.datetime "avatar4_updated_at"
+    t.string   "avatar5_file_name"
+    t.string   "avatar5_content_type"
+    t.integer  "avatar5_file_size"
+    t.datetime "avatar5_updated_at"
+    t.string   "other_avatar1_file_name"
+    t.string   "other_avatar1_content_type"
+    t.integer  "other_avatar1_file_size"
+    t.datetime "other_avatar1_updated_at"
+    t.string   "other_avatar2_file_name"
+    t.string   "other_avatar2_content_type"
+    t.integer  "other_avatar2_file_size"
+    t.datetime "other_avatar2_updated_at"
+    t.string   "other_avatar3_file_name"
+    t.string   "other_avatar3_content_type"
+    t.integer  "other_avatar3_file_size"
+    t.datetime "other_avatar3_updated_at"
+    t.string   "other_avatar4_file_name"
+    t.string   "other_avatar4_content_type"
+    t.integer  "other_avatar4_file_size"
+    t.datetime "other_avatar4_updated_at"
+    t.string   "other_avatar5_file_name"
+    t.string   "other_avatar5_content_type"
+    t.integer  "other_avatar5_file_size"
+    t.datetime "other_avatar5_updated_at"
+    t.string   "product_code_1"
+    t.string   "product_code_2"
+    t.string   "product_code_3"
+    t.string   "product_code_4"
+    t.string   "product_code_5"
   end
 
   create_table "request_products", force: :cascade do |t|

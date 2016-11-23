@@ -17,15 +17,19 @@
   		<div class="col-md-1">
 
   		
-  			<img id="avatar_mobile_product1" src="/assets/1001.jpg"  />
 
-  			<img id="avatar_mobile_product2" src="/assets/1002.jpg"  />
+  			 <%= image_tag @product.avatar1.url, :id => "avatar_mobile_product1" %>
 
-  			<img id="avatar_mobile_product3" src="/assets/1003.jpg"  />
 
-  			<img id="avatar_mobile_product4" src="/assets/1004.jpg"  />
+  			 <%= image_tag @product.avatar2.url, :id => "avatar_mobile_product2" %>
 
-  			<img id="avatar_mobile_product5" src="/assets/1005.jpg"  />
+  			  <%= image_tag @product.avatar3.url, :id => "avatar_mobile_product3" %>
+
+
+  			  <%= image_tag @product.avatar4.url, :id => "avatar_mobile_product4" %>
+
+
+  			   <%= image_tag @product.avatar5.url, :id => "avatar_mobile_product5" %>
 
 
   		</div>
@@ -34,7 +38,8 @@
   	
   		<div class="col-md-4" style="margin-left:20px;">
 
-  				<img id="receive_img"   />
+  				 <%= image_tag @product.avatar1.url, :id => "receive_img" %>
+
 
   		</div>
 
@@ -179,9 +184,7 @@
 
 			   		 	 <div class="col-md-6"> 
 
-			   		 	 		    <% @product.specs.each do |key| %>
-									 <h3><%= key %></h3>
-									<% end %>
+			   		 	 		    
 				
 			   		 	 </div>
 
