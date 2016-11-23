@@ -202,6 +202,7 @@
 
 			   		 	 <div class="col-md-6"> 
 			   		 	 <br/><br/>
+			   		 	  <% if !@product.specsq.nil? or !@product.specsa.nil? %>
 			   		 	 <table class="table table-bordered">
 							      <thead>
 							        <tr>
@@ -220,6 +221,8 @@
 							       
 							      </tbody>
 							</table>
+
+							 <% end %>
 
 
 			   		 	 		    
@@ -321,11 +324,18 @@
 					<h3> Question and Answer about this product</h3><hr/>
 
 
+					  <% if !@product.question.nil? or !@product.answer.nil? %>
+
+
 					 <% @product.question.zip ( @product.answer).each do |question, answer| %>
 
 						  <p class="question"><%= question %></p>
 						  <p class="answer"><%= answer %></p>
 					<% end %>
+
+
+					<% end %>
+
 
 					</div>
 
