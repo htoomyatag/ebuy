@@ -1,0 +1,97 @@
+<div class="row">
+
+<div style="position:relative;left:10px;">
+  	<%= image_tag @product.avatar1.url, :id => "receive_img" %>
+ </div>
+
+</div>
+<div class="container">
+<center>
+  	<%= image_tag @product.avatar1.url, :id => "avatar_mobile_product1" %>
+
+
+  	<%= image_tag @product.avatar2.url, :id => "avatar_mobile_product2" %>
+
+  	<%= image_tag @product.avatar3.url, :id => "avatar_mobile_product3" %>
+
+
+  	<%= image_tag @product.avatar4.url, :id => "avatar_mobile_product4" %>
+
+
+  	<%= image_tag @product.avatar5.url, :id => "avatar_mobile_product5" %>
+
+</center>	
+
+</div>
+
+
+<hr/>
+
+
+
+
+<div class="container"> 
+<h3 class="mydetail_title"> titletitletitletitletitletitle</h3>
+
+<br/>
+<p> <span class="mydetail_title">Size: </span> 
+	<%= @product.product_size %></p>
+<p> <span class="mydetail_title">Color: </span>
+<%= @product.product_color %></p>
+
+<hr/>
+<p><span class="mydetail_title"> Actual Price:</span>
+<%= @product.actual_price %> Ks</p>
+
+<p><span class="mydetail_title"> Offer Price:</span>
+<%= @product.discount_price %> Ks</p>
+<hr/> 
+
+<p> <span class="mydetail_title"> Shipping from </span>
+Overseas
+</p>
+<p> <span class="mydetail_title">Delivery rate: </span>
+<%= @product.delivery_rate %> Ks</p>
+
+<p> <span class="mydetail_title">Estimate delivery:</span>
+ <%= @product.delivery_time %> days</p>
+
+<p><span class="mydetail_title"> Delivery service: </span>
+						<select>
+			    		  <option>Choose</option>
+						  <option>Pick up</option>
+						  <option>eBuy Delivery</option>
+						</select>
+
+</p>
+<hr/>
+
+<p> <span class="mydetail_title">Quantity: </span>
+<%= @product.quantity %></p>
+<hr/>
+
+<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+
+
+
+
+</div>
+
+<br/>
+<div class="row">
+  <div class="col-xs-3 col-md-3">
+  	<button type="button" class="btn btn-danger" id="footer_button">Buy now</button>
+  </div>
+  <div class="col-xs-3 col-md-3">
+  	<button type="button" class="btn btn-primary" id="footer_button">Add to cart</button>
+  </div>
+  <div class="col-xs-3 col-md-3">
+  	<button type="button" class="btn btn-info" id="footer_button">Wish list</button>
+  </div>
+  <div class="col-xs-3 col-md-3">
+  	<button type="button" class="btn btn-default" id="footer_button">Share</button>
+  </div>
+</div>

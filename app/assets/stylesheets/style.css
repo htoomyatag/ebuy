@@ -437,6 +437,13 @@ background-color: #0472c1;
 }
 
 
+#footer_button{
+
+	width: 130%;
+	height: 50px;
+
+}
+
 
 @media (min-width: 600px) {
   #mobile_view, #mobile_view_home {
