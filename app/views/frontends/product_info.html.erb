@@ -82,7 +82,7 @@
 
   		   	  <tr>
 			    <td style="width:60%"> <span class="mydetail_title">Product Size</span></td>
-			    <td > <span class="mydetail_title"> <%= @product.	  product_size %>  </span></td> 
+			    <td > <span class="mydetail_title"> <%= @product.product_size %>  </span></td> 
 			  </tr>
 			  <tr>
 			    <td style="width:60%"> <span class="mydetail_title"> Product Color</span></td>
@@ -152,7 +152,9 @@
 			
 			  <tr>
 			    <td>
-			    	 <button type="button" id="btn_checkout" class="btn btn-danger" > Buy Now</button>
+
+			    	 <%= button_to 'Buy Now' , fill_your_order_form_path(@product),:class =>"btn btn-danger", :id=>"btn_checkout", :method => "GET" %>
+
 			    </td>
 			    <td>
 			    	<%= button_to 'Add to Cart' , line_items_path(:product_id => @product),:class =>"btn btn-primary", :id=>"btn_checkout" %>
@@ -223,6 +225,10 @@
 							</table>
 
 							 <% end %>
+
+							 <% if !@product.description.nil? %>
+						    	<%= @product.description.html_safe %>
+						    <% end %>
 
 
 			   		 	 		    
@@ -342,7 +348,9 @@
 
 			    </div>
 			    <div role="tabpanel" class="tab-pane" id="settings">
-			    	<%= @product.notice.html_safe %>
+			    	<% if !@product.notice.nil? %>
+			    		<%= @product.notice.html_safe %>
+			    	<% end %>
 			    </div>
 			  </div>
 		  </div>

@@ -1,0 +1,124 @@
+<div class="container">
+	<h3 style="text-align:center;">Order form </h3><hr/>
+
+
+<form class="new_order" id="new_order" action="/submit_online_payment" >
+
+
+
+	   <div class="col-md-12">
+	
+	  	  <h4> Product Information</h4><hr>
+		  <table class="table table-bordered">
+		      <thead>
+		        <tr>
+		          <th>#</th>
+		          <th>Product Name</th>
+		          <th>Avaiable Color
+		          	<%= @product.product_color %>
+		          </th>
+		          <th>Available Size
+		          	 <%= @product.product_size %>
+		          </th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <th scope="row">1</th>
+		          <td>  <%= @product.title %></td>
+		          <td>
+		          	 <input class="form-control" type="text" name="product_color" id="product_color">
+		          </td>
+		          <td>
+		          	 <input class="form-control" type="text" name="product_size" id="product_size">
+		          </td>
+		        </tr>
+		 
+		      </tbody>
+		    </table>
+
+		    <h4> Additional message</h4><hr>
+		    <textarea class="form-control" rows="3" name="product_message" id="product_message"></textarea>
+		    <br/>
+
+
+	
+
+	 </div>
+
+
+	  <div class="col-md-6">
+	
+	  	  <h4> Personal Information</h4><hr>
+		  <div class="field">
+		    <p> Your Name</p>
+		    <input class="form-control" type="text" name="customer_name" id="customer_name">
+
+		  </div><br>
+		  <div class="field">
+		    <p>Your Email</p>
+		    <input class="form-control" type="text" name="customer_email" id="customer_email">
+		  </div><br>
+		 
+		 
+
+		  <div class="field">
+		    <p> Requested Delivery Date</p>
+		    <input class="form-control" type="date" name="requested_date" id="requested_date">
+		  </div><br>
+
+
+
+	
+
+	 </div>
+
+	 <div class="col-md-6">
+	
+	  	  <h4> Delivery Address</h4><hr>
+		  <div class="field">
+		     <p>Phone</p>
+		     <input class="form-control" type="text" name="customer_phone" id="customer_phone">
+		  </div><br>
+		 
+		  <div class="field">
+		    <p> House Number, Street</p>
+		     <input class="form-control" type="text" name="customer_house" id="customer_house">
+		  </div><br>
+
+		   <div class="field">
+		    <p>Township</p>
+		    <input class="form-control" type="text" name="customer_township" id="customer_township">
+		  </div><br>
+
+
+		   <div class="field">
+		    <p>City</p>
+		    <input class="form-control" type="text" name="customer_city" id="customer_city">
+		  </div><br>
+
+		 
+	 </div>
+
+	  <div class="col-md-12">
+
+	     <br/> <br/> <br/>
+
+	  	 <div class="actions">
+			    <input type="submit" name="commit" value="Submit Payment" class="btn btn-primary btn-lg btn-block">
+		</div>
+
+	  </div>
+
+	
+	
+		
+
+
+</form>
+
+
+
+</div>
+
+	  <br/>	  <br/>	  <br/>

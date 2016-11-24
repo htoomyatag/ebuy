@@ -1,0 +1,32 @@
+
+
+<form method="post" action="http://122.248.120.252:60145/UAT/Payment/Payment/pay">
+
+
+        <input type="text" id="merchantID" name="merchantID" value="<%= @merchant_id %>"/><br/>
+
+        <input type="text" id="invoiceNo" name="invoiceNo" value="<%= @invoice_no %>" /><br/>
+
+        <input type="text" id="productDesc" name="productDesc" value="<%= @product_desc %>"/><br/>
+
+        <input type="text" id="amount" name="amount" value="<%= @amount %>"/>
+        <br/>
+
+        <input type="text" id="currencyCode" name="currencyCode" value="<%= @currency_code %>"/><br/>
+
+        <input type="text" id="userDefined1" name="userDefined1" value="<%= @user_defined_1 %>" /><br/>
+
+        <input type="text" id="userDefined2" name="userDefined2" value="<%= @user_defined_2 %>" /><br/>
+
+        <input type="text" id="userDefined3" name="userDefined3" value="<%= @user_defined_3 %>" /><br/>
+
+
+        <input type="text" id="hashValue" name="hashValue" value="<%= @aok %>" />
+
+         <button type="submit" class="btn btn-danger">
+
+
+
+              
+  </form>
+

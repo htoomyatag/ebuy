@@ -4,6 +4,47 @@ class FrontendsController < ApplicationController
   # GET /frontends
   # GET /frontends.json
 
+  def fill_your_order_form
+         @product = Product.find(params[:id])
+  end
+
+
+  def submit_online_payment
+
+
+     
+
+      key = 'ROHBJXV0BZM1SRXJQXACQM0HI22QBYGX';
+      @merchant_id = "208104000702167";
+      @invoice_no = "ebuy1111112";
+      @product_desc = "tourprogram";
+      @amount =  '000000010000';
+      @currency_code = "104";
+      @user_defined_1 = "userDefined1";
+      @user_defined_2 = "userDefined2";
+      @user_defined_3 = "userDefined3";
+
+
+
+      
+      @tmp_data = [@merchant_id,@invoice_no,@product_desc,@amount,@currency_code,@user_defined_1,@user_defined_2,@user_defined_3]
+      puts "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      puts @tmp_data
+      @thisaok = @tmp_data.sort
+      @myaok = @thisaok.to_s.gsub('"', " ").gsub(',', "").gsub('[', "").gsub(']', "").gsub(' ', "")
+
+      digest = OpenSSL::Digest.new('sha1')
+      hmac = OpenSSL::HMAC.hexdigest(digest, key, @myaok)
+      @aok = hmac
+
+
+
+
+
+
+
+  end
+
   def add_to_wish_list
       WishList.create(:product_name => params[:product_name], :product_id => params[:product_id])
       redirect_to request.referer

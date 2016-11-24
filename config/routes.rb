@@ -21,12 +21,18 @@ Rails.application.routes.draw do
   resources :orders
 
 
+
+
   resources :frontends
 
 
   scope "(:locale)", locale: /en|mm/ do
     root 'frontends#home'
   end
+
+  match 'fill_your_order_form/:id' => 'frontends#fill_your_order_form', as: 'fill_your_order_form', via: [:get, :post]
+  get 'submit_online_payment' => 'frontends#submit_online_payment', as: 'submit_online_payment', via: [:get, :post]
+
 
   get 'order_form' => 'frontends#order_form', as: 'order_form'
   get 'about_us' => 'frontends#about_us'
