@@ -13,21 +13,62 @@ class FrontendsController < ApplicationController
 
 
      
+   # order number
+   @myorder_number = Order.maximum(:id)
+   if @myorder_number.nil?
+      @order_number =  9
+   else
+      @order_number = Order.maximum(:id) + 1
+   end
 
+   #product description
+   @my_product_desc = params[:product_name].to_s;
+   #product_price
+      @total = params[:total_price];
+      if @total.to_s.length == 1
+        @concattotal = "000000000" + @total.to_s
+      elsif @total.to_s.length == 2
+        @concattotal = "00000000" + @total.to_s
+      elsif @total.to_s.length == 3
+        @concattotal = "0000000" + @total.to_s
+      elsif @total.to_s.length == 4
+        @concattotal = "000000" + @total.to_s
+      elsif @total.to_s.length == 5
+        @concattotal = "00000" + @total.to_s
+      elsif @total.to_s.length == 6
+        @concattotal = "0000" + @total.to_s
+      elsif @total.to_s.length == 7
+        @concattotal = "000" + @total.to_s
+      elsif @total.to_s.length == 8
+        @concattotal = "00" + @total.to_s
+      elsif @total.to_s.length == 9
+        @concattotal = "0" + @total.to_s
+      elsif @total.to_s.length == 10
+        @concattotal = @total.to_s
+      end
+
+
+    #address
+    @address = params[:customer_phone].to_s+params[:customer_house].to_s+params[:customer_township].to_s+params[:customer_city].to_s;
+
+    @personal = params[:customer_name].to_s+"("+params[:customer_email].to_s+")";
+                
+    
       key = 'ROHBJXV0BZM1SRXJQXACQM0HI22QBYGX';
       @merchant_id = "208104000702167";
-      @invoice_no = "ebuy1111112";
-      @product_desc = "tourprogram";
-      @amount =  '000000010000';
+
+      @invoice_no = "eBuyMyanmar"+Date.today.strftime("%d%m%y")+@order_number.to_s;
+
+      @product_desc = @my_product_desc;
+
+      @amount =  @concattotal.to_s+"00";
       @currency_code = "104";
-      @user_defined_1 = "userDefined1";
-      @user_defined_2 = "userDefined2";
-      @user_defined_3 = "userDefined3";
+      @user_defined_1 = @address;
+      @user_defined_2 = @personal;
+      @user_defined_3 = @request_date;
 
 
-
-      
-      @tmp_data = [@merchant_id,@invoice_no,@product_desc,@amount,@currency_code,@user_defined_1,@user_defined_2,@user_defined_3]
+      @tmp_data = [@merchant_id,@invoice_no,@product_desc,@amount,@currency_code,@user_defined_1,@user_defined_2]
       puts "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
       puts @tmp_data
       @thisaok = @tmp_data.sort

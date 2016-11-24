@@ -25,7 +25,9 @@
 		      <tbody>
 		        <tr>
 		          <th scope="row">1</th>
-		          <td>  <%= @product.title %></td>
+		          <td>  <%= @product.title %>
+		           <input class="form-control" type="text" name="product_name" id="product_name" value="<%= @product.title %>" style="display:none;">
+		          </td>
 		          <td>
 		          	 <input class="form-control" type="text" name="product_color" id="product_color">
 		          </td>
@@ -36,6 +38,27 @@
 		 
 		      </tbody>
 		    </table>
+
+
+            <h4> Product Images</h4><hr>
+
+
+             <%= image_tag @product.avatar1.url, :id => "avatar_mobile_product1" %>
+
+
+  			 <%= image_tag @product.avatar2.url, :id => "avatar_mobile_product2" %>
+
+  			  <%= image_tag @product.avatar3.url, :id => "avatar_mobile_product3" %>
+
+
+  			  <%= image_tag @product.avatar4.url, :id => "avatar_mobile_product4" %>
+
+
+  			   <%= image_tag @product.avatar5.url, :id => "avatar_mobile_product5" %>
+
+  			  <br/><br/><br/>
+
+
 
 		    <h4> Additional message</h4><hr>
 		    <textarea class="form-control" rows="3" name="product_message" id="product_message"></textarea>
@@ -61,11 +84,6 @@
 		  </div><br>
 		 
 		 
-
-		  <div class="field">
-		    <p> Requested Delivery Date</p>
-		    <input class="form-control" type="date" name="requested_date" id="requested_date">
-		  </div><br>
 
 
 
@@ -100,6 +118,10 @@
 		 
 	 </div>
 
+      <h3 style="text-align:center;"> Total Product Price: 
+         <input class="form-control" type="text" name="total_price" id="total_price" value="<%= @product.discount_price %>" style="display:none;">
+       <%= @product.discount_price %>
+      </h3>
 	  <div class="col-md-12">
 
 	     <br/> <br/> <br/>
