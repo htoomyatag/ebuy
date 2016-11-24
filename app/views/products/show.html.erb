@@ -197,6 +197,20 @@
 			</p>
 		</div>
 
+
+		<div class="col-md-12">
+		  <strong>Notice:</strong>
+		  <p><%= @product.notice.html_safe %></p>
+
+		</div>
+
+
+		<div class="col-md-12">
+		  <strong>Description:</strong>
+		  <p><%= @product.description.html_safe %></p>
+
+		</div>
+
 		<div class="col-md-12"><br/>
 			<%= link_to 'Edit', edit_product_path(@product) %> |
 			<%= link_to 'Back', products_path %>

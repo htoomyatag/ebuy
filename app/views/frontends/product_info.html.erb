@@ -11,7 +11,7 @@
 <div id="desktop_view">
 
 
-<div style="height:2010px;">
+<div style="height:2300px;">
 
 <div class="row">
 
@@ -185,7 +185,7 @@
 		    <div class="col-md-12">
 
 		  <!-- Nav tabs -->
-		  <div style="height:400px;">
+		  <div>
 
 			  <ul class="nav nav-tabs" role="tablist">
 			    <li role="presentation" class="active" id="tab_detail"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="detail_tab_title"> Product Detail</a></li>
@@ -341,7 +341,9 @@
 
 
 			    </div>
-			    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+			    <div role="tabpanel" class="tab-pane" id="settings">
+			    	<%= @product.notice.html_safe %>
+			    </div>
 			  </div>
 		  </div>
 

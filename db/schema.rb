@@ -179,6 +179,7 @@ ActiveRecord::Schema.define(version: 20161123081155) do
     t.text     "question"
     t.text     "answer"
     t.text     "notice"
+    t.text     "description"
   end
 
   create_table "request_products", force: :cascade do |t|

@@ -94,6 +94,41 @@
   </div>
 
 
+  <div class="col-md-12"><br><br>
+<!--  -->
+     <label> Description </label><br>
+    <div id="toolbar_desc">
+        <!-- Add font size dropdown -->
+        <select class="ql-size">
+          <option value="small"></option>
+          <!-- Note a missing, thus falsy value, is used to reset to default -->
+          <option selected></option>
+          <option value="large"></option>
+          <option value="huge"></option>
+        </select>
+        <!-- Add a bold button -->
+        <button class="ql-bold"></button>
+        <button class="ql-image"></button>
+        <button class="ql-direction"></button>
+        <button class="ql-align"></button>
+
+        
+        <!-- Add subscript and superscript buttons -->
+        <button class="ql-script" value="sub"></button>
+        <button class="ql-script" value="super"></button>
+
+
+
+    </div>
+
+    <div id="editor_desc">
+       
+    </div>
+
+    <%= f.text_field :description, :class => "form-control", :style=>"display:none;" %>
+
+    </div>
+
 
 
 
@@ -107,17 +142,37 @@
 
   <div class="col-md-12"><br><br>
 <!--  -->
-
+     <label>Notice & Policy </label><br>
     <div id="toolbar">
-      <button class="ql-bold">Bold</button>
-      <button class="ql-italic">Italic</button>
+        <!-- Add font size dropdown -->
+        <select class="ql-size">
+          <option value="small"></option>
+          <!-- Note a missing, thus falsy value, is used to reset to default -->
+          <option selected></option>
+          <option value="large"></option>
+          <option value="huge"></option>
+        </select>
+        <!-- Add a bold button -->
+        <button class="ql-bold"></button>
+        <button class="ql-image"></button>
+        <button class="ql-direction"></button>
+        <button class="ql-align"></button>
+
+        
+        <!-- Add subscript and superscript buttons -->
+        <button class="ql-script" value="sub"></button>
+        <button class="ql-script" value="super"></button>
+
+
+
     </div>
+
     <div id="editor">
-  <p>Hello World!</p>
-</div>
+       
+    </div>
 
+    <%= f.text_field :notice, :class => "form-control", :style=>"display:none;" %>
 
-<!--  -->
     </div>
 
 
@@ -391,7 +446,7 @@
 
   <div class="col-md-12"><br/>
     <div class="actions">
-      <%= f.submit :class=>"btn btn-default" %>
+      <%= f.submit :class=>"btn btn-default", :id=> "mysubmitbutton" %>
     </div>
   </div>
 <% end %>
@@ -775,4 +830,43 @@ $("#product_other_avatar5").change(function(){
     modules: { toolbar: '#toolbar' },
     theme: 'snow'
   });
+
+
+  var editor_desc = new Quill('#editor_desc', {
+    modules: { toolbar: '#toolbar_desc' },
+    theme: 'snow'
+  });
+
+
+
+   // editor.on('selection-change', function(range) {
+   //      console.log('selection-change', range)
+   //    });
+   //    editor.on('text-change', function(delta, source) {
+   //      console.log('text-change', delta, source)
+   //    });
+
+
+
+
+
+
+$("#mysubmitbutton").click(function(e) {
+  e.preventDefault();
+
+
+      var a = editor.container.firstChild.innerHTML;
+      document.getElementById('product_notice').value = a;
+
+
+       var b = editor_desc.container.firstChild.innerHTML;
+      document.getElementById('product_description').value = b;
+
+      
+      $("#new_product").submit();
+});
+
+
+
 </script>
+
