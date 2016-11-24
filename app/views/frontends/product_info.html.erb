@@ -93,11 +93,11 @@
 			  
 			  <tr>
 			    <td style="width:60%"> <span class="mydetail_title">Actual Price</span></td>
-			    <td > <span class="mydetail_title"> <%= @product.actual_price %> Ks </span></td> 
+			    <td > <span class="mydetail_title"> <%= (@product.actual_price.to_i * @currency_exchange.to_i) %> Ks </span></td> 
 			  </tr>
 			  <tr>
 			    <td style="width:60%"> Offer Price</td>
-			    <td> <%= @product.discount_price %> Ks</td> 
+			    <td> <%= (@product.discount_price.to_i * @currency_exchange.to_i) %> Ks</td> 
 			  </tr>
 
 		   </table><hr/>

@@ -6,8 +6,11 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   
 
+ 
+
   def ebuy_cart
     @cart = current_cart
+    @currency_exchange = CurrencyExchange.pluck(:currency_rate).last
   end
 
   def set_locale
