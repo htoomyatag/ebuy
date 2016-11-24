@@ -40,6 +40,8 @@ class LineItemsController < ApplicationController
 
   def cart_item
       
+      @coupons = Coupon.all
+
       if params[:cart_id]
          @line_items = LineItem.where("cart_id = ? ", params[:cart_id])
       end

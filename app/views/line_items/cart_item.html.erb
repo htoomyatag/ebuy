@@ -1,3 +1,5 @@
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
 
 
 <div class="container"> 
@@ -10,7 +12,7 @@
                       <tr>
                         <td style="width:30%;">
                           <a href="#">
-                           <img src="/assets/product_avatar.png" alt="image" title="image" class="img-thumbnail img-responsive" />
+                            <%= image_tag line_item.product.avatar1.url(:medium), :class => "img-thumbnail img-responsive" %>
                           </a>
                         </td>
                         <td >
@@ -31,9 +33,10 @@
   <hr/>
   <br/>
   <div style="float:right;width:30%;">
-    Total Price: <%= (@cart.total_price) %> MMK
-
+    Total Price: <%= (@cart.total_price) %> Ks
+    <button id="opener" class="btn btn-small"> Get Coupons</button>
     <br/> <br/>
+
     Coupon Code:
     <input id="coupon_code"   >
     <button class="btn btn-default" id="send_coupon"> use</button>
@@ -54,8 +57,72 @@
 
 
 
+<!-- coupon dialog -->
 
 
+
+<div id="dialog1" title="Coupon list" hidden="hidden" style="width:900px;">
+
+
+   <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Coupon</th>
+          <th>Percentage</th>
+          <th>limit</th>
+          <th>Expire on</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @coupons.each do |coupon| %>
+          <tr>
+            <td><%= coupon.title %></td>
+            <td><%= coupon.discount_percentage %></td>
+            <td><%= coupon.limitation %></td>
+            <td><%= coupon.expire_date %></td>
+            <td> 
+            <button id="apply_co" value="<%= coupon.title %>" onClick='reply_click(this)'> Add</button>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+
+
+ 
+
+
+</div>
+
+ <script>
+
+    $(function () {
+      $( "#dialog1" ).dialog({
+         resizable: false,
+         autoOpen: false,
+         width: 'auto'
+
+      });
+      
+      $("#opener").click(function() {
+        $("#dialog1").dialog('open');
+      });
+    });
+
+  </script>
+
+
+<script type="text/javascript">
+
+    function reply_click(objButton)
+    {
+        var code = objButton.value;
+        document.getElementById("coupon_code").value = code;
+    }
+
+</script>
 
 
 <script type="text/javascript">
@@ -100,3 +167,5 @@
 
 
 </script>
+
+
