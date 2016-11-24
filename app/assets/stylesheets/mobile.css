@@ -107,6 +107,31 @@
 }
 
 
+#avatar_mymobile_product1,#avatar_mymobile_product2,#avatar_mymobile_product3,#avatar_mymobile_product4,#avatar_mymobile_product5{
+
+	height: 56px;
+	width: 55px;
+	border: 1px solid #e5e5e5;
+
+	margin-top: 21px;
+	border-style: 1px solid #eee;
+
+}
+
+
+
+#receive_myimg{
+	height: 405px;
+	width: 380px;
+	position: relative;
+	left: 35px;
+	background-color: #e5e5e5;
+	border: 1px solid #eee;
+
+
+}
+
+
 body{
 	min-height: 100px;
 }
