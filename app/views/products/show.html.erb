@@ -83,6 +83,7 @@
 		<div class="col-md-12">
 
 		<h3> Specification</h3><hr/>
+		 <% if !@product.specsq.nil? %> 
 
 			<table class="table table-bordered">
 			      <thead>
@@ -103,6 +104,8 @@
 			      </tbody>
 			</table>
 
+		 <% end %> 
+
 
 		</div>
 
@@ -112,12 +115,13 @@
 
 		<h3> Question and Answer</h3><hr/>
 
+		 <% if !@product.question.nil? %> 
+			 <% @product.question.zip ( @product.answer).each do |question, answer| %>
 
-		 <% @product.question.zip ( @product.answer).each do |question, answer| %>
-
-			  <p class="question"><%= question %></p>
-			  <p class="answer"><%= answer %></p>
-		<% end %>
+				  <p class="question"><%= question %></p>
+				  <p class="answer"><%= answer %></p>
+			<% end %>
+		<% end %> 
 
 		</div>
 
@@ -200,14 +204,18 @@
 
 		<div class="col-md-12">
 		  <strong>Notice:</strong>
-		  <p><%= @product.notice.html_safe %></p>
+		   <% if !@product.notice.nil? %> 
+		  	<p><%= @product.notice.html_safe %></p>
+		   <% end %> 
 
 		</div>
 
 
 		<div class="col-md-12">
 		  <strong>Description:</strong>
-		  <p><%= @product.description.html_safe %></p>
+		  <% if !@product.description.nil? %> 
+		  	<p><%= @product.description.html_safe %></p>
+		  <% end %> 
 
 		</div>
 

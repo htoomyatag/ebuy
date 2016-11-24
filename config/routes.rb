@@ -64,6 +64,18 @@ Rails.application.routes.draw do
 
 
 
+  get 'product_detail_mobiview/:id'  => 'frontends#product_detail_mobiview'
+  
+
+  get 'customer_review_mobiview/:id'  => 'frontends#customer_review_mobiview'
+
+
+  get 'productqanda_mobiview/:id'  => 'frontends#productqanda_mobiview'
+
+  get 'notice_mobiview/:id'  => 'frontends#notice_mobiview'
+
+
+
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -71,11 +71,20 @@ Overseas
 <%= @product.quantity %></p>
 <hr/>
 
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<a href="/product_detail_mobiview/<%= @product.id %>" class="btn btn-primary btn-lg btn-block" role="button">Product Detail</a>
 
+<a href="/customer_review_mobiview/<%= @product.id %>" class="btn btn-primary btn-lg btn-block" role="button">
+  Customer Review
+</a>
+
+
+<a href="/productqanda_mobiview/<%= @product.id %>" class="btn btn-primary btn-lg btn-block" role="button">
+  Question & Answer
+</a>
+
+<a href="/notice_mobiview/<%= @product.id %>" class="btn btn-primary btn-lg btn-block" role="button">
+  Notice & Policy
+</a>
 
 
 
@@ -98,13 +107,13 @@ Overseas
   </div>
   <div class="col-xs-3 col-md-3">
 
-     <%= button_to 'Add to Wish list' , add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id),:class =>"btn btn-info", :id=>"footer_button" %>
+     <%= button_to 'Wish list' , add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id),:class =>"btn btn-info", :id=>"footer_button" %>
 
 
   </div>
   <div class="col-xs-3 col-md-3">
 
-     <a href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" id="footer_button" class="btn btn-default" target="_blank"> Share this item</a>
+     <button href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" id="footer_button" class="btn btn-default" target="_blank"> Share</button>
 
 
   </div>

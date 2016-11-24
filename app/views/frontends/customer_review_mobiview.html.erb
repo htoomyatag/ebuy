@@ -1,0 +1,50 @@
+
+			    		<% @comments.each do |comment| %>
+						     <p id="buyer_comment"> 
+						     	<%= comment.buyer_comment %>
+						      </p>
+						      <p>
+						      (<%= comment.buyer.buyer_name %>) 
+						      </p>
+
+						<% end %>
+						<div id="the_feed"> </div>
+
+
+			    		<%= form_for(@comment, :remote => true) do |f| %>
+						  <% if @comment.errors.any? %>
+						    <div id="error_explanation">
+						      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+						      <ul>
+						      <% @comment.errors.full_messages.each do |message| %>
+						        <li><%= message %></li>
+						      <% end %>
+						      </ul>
+						    </div>
+						  <% end %>
+
+						  	<% if buyer_signed_in? %>
+						  	 
+
+							  
+
+									  <div class="field"  style="display:none;">
+									    <%= f.label :buyer_id %><br>
+									    <%= f.number_field :buyer_id, :value => current_buyer.id %>
+									  </div>
+									  <div class="field">
+									    <%= f.text_area :buyer_comment, :class => "form-control", :rows => "5" %>
+									  </div><br/>
+									  <div class="field" style="display:none;">
+									    <%= f.label :product_id %><br>
+									    <%= f.number_field :product_id, :value => @product.id %>
+									  </div>
+									  <div class="actions">
+									    <%= f.submit "Give feedback", :id=> "btn_feedback" %>
+									  </div>
+
+							<% end %>
+						
+
+						<% end %>

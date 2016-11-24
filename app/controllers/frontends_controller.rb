@@ -9,6 +9,26 @@ class FrontendsController < ApplicationController
   end
 
 
+  def product_detail_mobiview
+     @product = Product.find(params[:id])
+  end
+
+  def customer_review_mobiview
+     @product = Product.find(params[:id])
+     
+      @comment = Comment.new
+      @comments = Comment.where(:product_id => @product.id)
+  end
+
+  def productqanda_mobiview
+     @product = Product.find(params[:id])
+  end
+
+  def notice_mobiview
+     @product = Product.find(params[:id])
+  end
+
+
   def submit_online_payment
 
 

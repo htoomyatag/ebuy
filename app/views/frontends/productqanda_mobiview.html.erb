@@ -1,0 +1,19 @@
+  <div class="col-md-12">
+
+					<h3> Question and Answer Product</h3><hr/>
+
+
+					  <% if !@product.question.nil? or !@product.answer.nil? %>
+
+
+					 <% @product.question.zip ( @product.answer).each do |question, answer| %>
+
+						  <p class="question"><%= question %></p>
+						  <p class="answer"><%= answer %></p>
+					<% end %>
+
+
+					<% end %>
+
+
+</div>
