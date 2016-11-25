@@ -103,11 +103,17 @@ ActiveRecord::Schema.define(version: 20161123081155) do
     t.string   "buyer_email"
     t.string   "buyer_phone"
     t.string   "buyer_township"
+    t.string   "buyer_city"
     t.text     "buyer_address"
     t.integer  "cart_id"
+    t.string   "product_name"
+    t.string   "product_size"
+    t.string   "product_color"
+    t.string   "product_message"
     t.string   "order_status"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "payment_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "products", force: :cascade do |t|

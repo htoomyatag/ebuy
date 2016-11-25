@@ -39,12 +39,12 @@ class FrontendsController < ApplicationController
 
   def submit_online_payment
 
-
+  
      
    # order number
    @myorder_number = Order.maximum(:id)
    if @myorder_number.nil?
-      @order_number =  9
+      @order_number =  13
    else
       @order_number = Order.maximum(:id) + 1
    end
@@ -79,7 +79,7 @@ class FrontendsController < ApplicationController
     #address
     @address = params[:customer_phone].to_s+params[:customer_house].to_s+params[:customer_township].to_s+params[:customer_city].to_s;
 
-    @personal = params[:customer_name].to_s+"("+params[:customer_email].to_s+")";
+    @personal = params[:customer_name].to_s;
                 
     
       key = 'ROHBJXV0BZM1SRXJQXACQM0HI22QBYGX';
@@ -93,10 +93,10 @@ class FrontendsController < ApplicationController
       @currency_code = "104";
       @user_defined_1 = @address;
       @user_defined_2 = @personal;
-      @user_defined_3 = @request_date;
+      @user_defined_3 = params[:customer_email].to_s;
 
 
-      @tmp_data = [@merchant_id,@invoice_no,@product_desc,@amount,@currency_code,@user_defined_1,@user_defined_2]
+      @tmp_data = [@merchant_id,@invoice_no,@product_desc,@amount,@currency_code,@user_defined_1,@user_defined_2,@user_defined_3]
       puts "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
       puts @tmp_data
       @thisaok = @tmp_data.sort

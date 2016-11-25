@@ -1,7 +1,111 @@
 
+<div class="container">
+    <h3 style="text-align:center;">Invoice form </h3><hr/>
+
+
+
+
+       <div class="col-md-12">
+    
+          <h4> Product Information</h4><hr>
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Product Name</th>
+                  <th>Color
+                   
+                  </th>
+                  <th>Size
+                     <%= params[:product_size] %>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>  <%= @my_product_des %>
+                  </td>
+                  <td>
+                      <%= params[:product_color] %>
+                  </td>
+                  <td>
+                      <%= params[:product_size] %>
+                  </td>
+                </tr>
+         
+              </tbody>
+            </table>
+
+
+
+        
+
+    
+
+     </div>
+
+
+      <div class="col-md-6">
+    
+          <h4> Personal Information</h4><hr>
+          <div class="field">
+            <p> Your Name</p>
+             <%= params[:customer_name] %>
+
+          </div><br>
+          <div class="field">
+            <p>Your Email</p>
+            <%= params[:customer_email] %>
+          </div><br>
+         
+         
+
+
+
+    
+
+     </div>
+
+     <div class="col-md-6">
+    
+          <h4> Delivery Address</h4><hr>
+          <div class="field">
+             <p>Phone</p>
+              <%= params[:customer_phone] %>
+          </div><br>
+         
+          <div class="field">
+            <p> House Number, Street</p>
+                <%= params[:customer_house] %>
+          </div><br>
+
+           <div class="field">
+            <p>Township</p>
+               <%= params[:customer_township] %>
+          </div><br>
+
+
+           <div class="field">
+            <p>City</p>
+            <%= params[:customer_city] %>
+          </div><br>
+
+         
+     </div>
+
+      <h3 style="text-align:center;"> Total Product Price: 
+        <%= params[:total_price] %>
+      </h3>
+
+    
+        
+
+
 
 <form method="post" action="http://122.248.120.252:60145/UAT/Payment/Payment/pay">
 
+<div style="display:none;">
 
         <input type="text" id="merchantID" name="merchantID" value="<%= @merchant_id %>"/><br/>
 
@@ -9,8 +113,7 @@
 
         <input type="text" id="productDesc" name="productDesc" value="<%= @product_desc %>"/><br/>
 
-        <input type="text" id="amount" name="amount" value="<%= @amount %>"/>
-        <br/>
+        <input type="text" id="amount" name="amount" value="<%= @amount %>"/><br/>
 
         <input type="text" id="currencyCode" name="currencyCode" value="<%= @currency_code %>"/><br/>
 
@@ -18,14 +121,44 @@
 
         <input type="text" id="userDefined2" name="userDefined2" value="<%= @user_defined_2 %>" /><br/>
 
-       
+          <input type="text" id="userDefined3" name="userDefined3" value="<%= @user_defined_3 %>" /><br/>
+
 
         <input type="text" id="hashValue" name="hashValue" value="<%= @aok %>" />
 
-         <button type="submit" class="btn btn-danger">
+
+</div>
+
+         <button type="submit" class="btn btn-primary btn-lg"
+         style="float:right;">
+           Submit Payment
+         </button>
+         <br/><br/> <br/><br/>
+
+   
+</form>
 
 
 
-              
-  </form>
 
+</div>
+
+      
+      <!--  -->
+
+
+
+      t.integer :buyer_id
+      t.string :buyer_name
+      t.string :buyer_email
+      t.string :buyer_phone
+      t.string :buyer_township
+      t.string :buyer_city
+      t.text :buyer_address
+      t.integer :cart_id
+      t.string :product_name
+      t.string :product_size
+      t.string :product_color
+      t.string :product_message
+      t.string :order_status
+      t.string :payment_type
