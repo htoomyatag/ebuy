@@ -1,14 +1,5 @@
 
-<!-- Main Quill library -->
-<script src="//cdn.quilljs.com/1.1.5/quill.js"></script>
-<script src="//cdn.quilljs.com/1.1.5/quill.min.js"></script>
-
-<!-- Theme included stylesheets -->
-<link href="//cdn.quilljs.com/1.1.5/quill.snow.css" rel="stylesheet">
-<link href="//cdn.quilljs.com/1.1.5/quill.bubble.css" rel="stylesheet">
-
-
-
+   
 
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
@@ -57,14 +48,14 @@
 
 
   <div class="col-md-6">
-   <label>Actual Price</label><br>
+   <label>Actual Price (SGD)</label><br>
      <div class="field">
       <%= f.text_field :actual_price,  :class => "form-control" %>
     </div>
   </div>
   
   <div class="col-md-6">
-   <label>Offer Price</label><br>
+   <label>Offer Price (SGD)</label><br>
     <div class="field">
       <%= f.text_field :discount_price, :class => "form-control" %>
     </div>
@@ -82,7 +73,7 @@
 
 
     <div class="col-md-6"><br/>
-   <label>Product Sub Category</label><br>
+   <label>Product Sub Category (auto complete)</label><br>
     <div class="field">
 
         <%= f.select(:product_subcategory, Product::PRODUCTSUBCATEGORY) %>
@@ -190,13 +181,13 @@
 
         <div class="col-md-6">
            <div class="field">
-             <%= f.text_field :specsq, multiple: true, :class => "form-control" %>
+             <%= f.text_field :specsq, multiple: true, :class => "form-control", :placeholder => "field" %>
           </div>
         </div>
         
         <div class="col-md-6">
           <div class="field">
-             <%= f.text_field :specsa, multiple: true, :class => "form-control" %>
+             <%= f.text_field :specsa, multiple: true, :class => "form-control", :placeholder => "value"  %>
           </div>
         </div>
 
@@ -446,7 +437,7 @@
 
   <div class="col-md-12"><br/>
     <div class="actions">
-      <%= f.submit :class=>"btn btn-default", :id=> "mysubmitbutton" %>
+      <%= f.submit :class=>"btn btn-success btn-lg", :id=> "mysubmitbutton" %>
     </div>
   </div>
 <% end %>
@@ -825,48 +816,4 @@ $("#product_other_avatar5").change(function(){
   </script>
 
 
-<script>
-  var editor = new Quill('#editor', {
-    modules: { toolbar: '#toolbar' },
-    theme: 'snow'
-  });
-
-
-  var editor_desc = new Quill('#editor_desc', {
-    modules: { toolbar: '#toolbar_desc' },
-    theme: 'snow'
-  });
-
-
-
-   // editor.on('selection-change', function(range) {
-   //      console.log('selection-change', range)
-   //    });
-   //    editor.on('text-change', function(delta, source) {
-   //      console.log('text-change', delta, source)
-   //    });
-
-
-
-
-
-
-$("#mysubmitbutton").click(function(e) {
-  e.preventDefault();
-
-
-      var a = editor.container.firstChild.innerHTML;
-      document.getElementById('product_notice').value = a;
-
-
-       var b = editor_desc.container.firstChild.innerHTML;
-      document.getElementById('product_description').value = b;
-
-      
-      $("#new_product").submit();
-});
-
-
-
-</script>
 

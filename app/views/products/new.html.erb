@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'quill.js' %>
 
 <div class="panel panel-default">
   <div class="panel-body">
@@ -7,10 +8,44 @@
     		</div>
 
 			<%= render 'form' %>
-			 <div class="col-md-12">
-			<%= link_to 'Back', products_path %>
-			</div>
+			
 
   </div>
 </div>
 
+
+
+
+<script>
+  var editor = new Quill('#editor', {
+    modules: { toolbar: '#toolbar' },
+    theme: 'snow'
+  });
+
+
+  var editor_desc = new Quill('#editor_desc', {
+    modules: { toolbar: '#toolbar_desc' },
+    theme: 'snow'
+  });
+
+
+
+
+$("#mysubmitbutton").click(function(e) {
+  e.preventDefault();
+
+
+      var a = editor.container.firstChild.innerHTML;
+      document.getElementById('product_notice').value = a;
+
+
+       var b = editor_desc.container.firstChild.innerHTML;
+      document.getElementById('product_description').value = b;
+
+      
+      $("#new_product").submit();
+});
+
+
+
+</script>

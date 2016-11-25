@@ -4,8 +4,22 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    
+     if !params[:product_title].nil? && params[:product_category] == ""
+        @products = Product.where("title LIKE ?", params[:product_title]).all
+     elsif params[:product_title] == "" && !params[:product_category].nil?
+        @products = Product.where("product_category LIKE ?", params[:product_category]).all
+     elsif !params[:product_category].nil? && !params[:product_category].nil?
+        @products = Product.where("product_category LIKE ?", params[:product_category]).where("title LIKE ?", params[:product_title]).all
+     else 
+        @products = Product.all
+     end
+
+
   end
+
+
+
 
   # GET /products/1
   # GET /products/1.json
@@ -19,7 +33,14 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+
+  respond_to do |format|
+  if @product.save
+    format.html { render :edit }
+    format.js {render layout: false}
   end
+end
+end
 
   # POST /products
   # POST /products.json
