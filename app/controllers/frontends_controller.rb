@@ -4,6 +4,14 @@ class FrontendsController < ApplicationController
   # GET /frontends
   # GET /frontends.json
 
+  def my_wishlist
+        @wish_lists = WishList.where(:buyer_id => current_buyer.id)
+  end
+
+  def my_coupon
+        @coupons = Coupon.all
+  end
+
   def fill_your_order_form
          @product = Product.find(params[:id])
   end
@@ -107,7 +115,7 @@ class FrontendsController < ApplicationController
   end
 
   def add_to_wish_list
-      WishList.create(:product_name => params[:product_name], :product_id => params[:product_id])
+      WishList.create(:product_name => params[:product_name], :product_id => params[:product_id], :buyer_id => current_buyer.id)
       redirect_to request.referer
 
   end

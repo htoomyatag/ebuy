@@ -63,16 +63,18 @@ Rails.application.routes.draw do
    post 'add_to_wish_list'  => 'frontends#add_to_wish_list'
 
 
-
   get 'product_detail_mobiview/:id'  => 'frontends#product_detail_mobiview'
   
-
   get 'customer_review_mobiview/:id'  => 'frontends#customer_review_mobiview'
-
 
   get 'productqanda_mobiview/:id'  => 'frontends#productqanda_mobiview'
 
   get 'notice_mobiview/:id'  => 'frontends#notice_mobiview'
+
+  get 'my_wishlist'  => 'frontends#my_wishlist'
+
+  get 'my_coupon'  => 'frontends#my_coupon'
+
 
 
 

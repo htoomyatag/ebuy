@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="col-md-12">
+    <h3>Available Coupons
+     
+    </h3><hr/>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Expire date</th>
+          <th>Limitation</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @coupons.each do |coupon| %>
+          <tr>
+            <td><%= coupon.title %></td>
+            <td><%= coupon.expire_date %></td>
+            <td><%= coupon.limitation %></td>
+            <td><%= link_to 'Edit', edit_coupon_path(coupon) %></td>
+            <td><%= link_to 'Destroy', coupon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+    </div>
+
+   
+
+    </div>
+</div>
