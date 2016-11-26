@@ -2,39 +2,68 @@
 	<h3 style="text-align:center;">Order form </h3><hr/>
 
 
+<form class="new_order" id="new_order" action="/submit_online_payment" >
 
-	<%= form_for(@order) do |f| %>
-	  <% if @order.errors.any? %>
-	    <div id="error_explanation">
-	      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
 
-	      <ul>
-	      <% @order.errors.full_messages.each do |message| %>
-	        <li><%= message %></li>
-	      <% end %>
-	      </ul>
-	    </div>
-	  <% end %>
+
+	   <div class="col-md-12">
+	
+	  	  <h4> Product Information</h4><hr>
+
+	  	    <table class="table table-bordered">
+			          <% @line_items.each do |line_item| %>
+			                      <tr>
+			                        <td style="width:30%;">
+			                          <a href="#">
+			                            <%= image_tag line_item.product.avatar1.url(:medium), :class => "img-thumbnail img-responsive" %>
+			                          </a>
+			                        </td>
+			                        <td >
+			                          <a href="#">
+			                            <%= line_item.product.title %>
+			                          </a>
+			                        </td>
+			                        <td >x <%= line_item.quantity %></td>
+			                        <td ><%= (line_item.total_price.to_i * @currency_exchange.to_i) %> MMK</td>
+			                        <td ><%= link_to 'remove',line_item, method: :delete, data: { confirm: 'Are you sure?' } ,:class=>"btn btn-danger" %></td>
+			                      </tr>
+			         <% end %> 
+
+
+
+
+			  </table>
+
+
+
+
+           
+
+
+		    <h4> Additional message</h4><hr>
+		    <textarea class="form-control" rows="3" name="product_message" id="product_message"></textarea>
+		    <br/>
+
+
+	
+
+	 </div>
 
 
 	  <div class="col-md-6">
 	
-	  	  <h4> Personal Information</h4><hr/>
+	  	  <h4> Personal Information</h4><hr>
 		  <div class="field">
-		    <p>Your Name</p>
-		    <%= f.text_field :buyer_name, :class=>"form-control" %>
+		    <p> Your Name</p>
+		    <input class="form-control" type="text" name="customer_name" id="customer_name">
+
 		  </div><br>
 		  <div class="field">
 		    <p>Your Email</p>
-		    <%= f.text_field :buyer_email, :class=>"form-control" %>
+		    <input class="form-control" type="text" name="customer_email" id="customer_email">
 		  </div><br>
 		 
 		 
-
-		  <div class="field">
-		    <p> Requested Delivery Date</p>
-		    <%= f.date_field :buyer_email, :class=>"form-control" %>
-		  </div><br>
 
 
 
@@ -44,33 +73,41 @@
 
 	 <div class="col-md-6">
 	
-	  	  <h4> Delivery Address</h4><hr/>
+	  	  <h4> Delivery Address</h4><hr>
 		  <div class="field">
 		     <p>Phone</p>
-		    <%= f.text_field :buyer_phone, :class=>"form-control" %>
-		  </div><br/>
+		     <input class="form-control" type="text" name="customer_phone" id="customer_phone">
+		  </div><br>
 		 
 		  <div class="field">
 		    <p> House Number, Street</p>
-		    <%= f.text_field :buyer_address, :class=>"form-control" %>
+		     <input class="form-control" type="text" name="customer_house" id="customer_house">
 		  </div><br>
 
 		   <div class="field">
 		    <p>Township</p>
-		    <%= f.text_field :buyer_township, :class=>"form-control" %>
-		  </div><br/>
+		    <input class="form-control" type="text" name="customer_township" id="customer_township">
+		  </div><br>
 
-		  <div class="field">
-		    <p>Remark</p>
-		    <%= f.text_field :buyer_township, :class=>"form-control" %>
-		  </div>
 
+		   <div class="field">
+		    <p>City</p>
+		    <input class="form-control" type="text" name="customer_city" id="customer_city">
+		  </div><br>
+
+		 
 	 </div>
 
+      <h3 style="text-align:center;"> Total Product Price: 
+         <input class="form-control" type="text" name="total_price" id="total_price" value="" style="display:none;">
+     
+      </h3>
 	  <div class="col-md-12">
 
+	     <br/> <br/> <br/>
+
 	  	 <div class="actions">
-			    <%= f.submit "Submit Payment", :class=>"btn btn-primary btn-lg btn-block"%>
+			    <input type="submit" name="commit" value="Submit Payment" class="btn btn-primary btn-lg btn-block">
 		</div>
 
 	  </div>
@@ -80,8 +117,7 @@
 		
 
 
-<% end %>
-
+</form>
 
 
 

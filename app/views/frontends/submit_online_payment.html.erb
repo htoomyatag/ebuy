@@ -8,34 +8,65 @@
        <div class="col-md-12">
     
           <h4> Product Information</h4><hr>
-          <table class="table table-bordered">
+          <% if params[:cart_id] == nil %>
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Product Name</th>
+                      <th>Color</th>
+                      <th>Size
+                         <%= params[:product_size] %>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>  
+                        <%= params[:product_name] %>
+                      </td>
+                      <td>
+                          <%= params[:product_color] %>
+                      </td>
+                      <td>
+                          <%= params[:product_size] %>
+                      </td>
+                    </tr>
+             
+                  </tbody>
+                </table>
+            <% elsif params[:cart_id] != nil %>
+
+
+            <table class="table table-bordered">
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>Product Name</th>
-                  <th>Color
-                   
-                  </th>
+                  <th>Color</th>
                   <th>Size
-                     <%= params[:product_size] %>
                   </th>
                 </tr>
               </thead>
               <tbody>
+                <% @line_items.each do |line_item| %>
                 <tr>
-                  <th scope="row">1</th>
-                  <td>  <%= @my_product_des %>
+                  <td>  
+                     <%= line_item.product.title %>
                   </td>
                   <td>
-                      <%= params[:product_color] %>
+                     <%= line_item.product.product_color %>
                   </td>
                   <td>
-                      <%= params[:product_size] %>
+                     <%= line_item.product.product_size %>
                   </td>
                 </tr>
+                 <% end %> 
          
               </tbody>
             </table>
+
+
+            <% else %>
+            <% end %>
 
 
 
@@ -95,7 +126,7 @@
      </div>
 
       <h3 style="text-align:center;"> Total Product Price: 
-        <%= params[:total_price] %>
+        <%= params[:total_price] %> Ks
       </h3>
 
     
@@ -145,20 +176,3 @@
 
       
       <!--  -->
-
-
-
-      t.integer :buyer_id
-      t.string :buyer_name
-      t.string :buyer_email
-      t.string :buyer_phone
-      t.string :buyer_township
-      t.string :buyer_city
-      t.text :buyer_address
-      t.integer :cart_id
-      t.string :product_name
-      t.string :product_size
-      t.string :product_color
-      t.string :product_message
-      t.string :order_status
-      t.string :payment_type

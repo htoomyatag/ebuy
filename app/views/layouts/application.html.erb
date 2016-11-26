@@ -73,7 +73,7 @@
 			</a>
 
 			<a class="navbar-brand">
-				<span class="nav_text"><%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price) %></span>
+				<span class="nav_text"><%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price.to_i * @currency_exchange.to_i) %></span>
 			</a>
 
          
@@ -197,7 +197,7 @@
 						<a href="/cart_item?cart_id=<%= session[:cart_id] %>" id="menulink">
 						<%= image_tag "cart.png", :alt=>"profile" %>
 						Cart 
-						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price) %>
+						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price.to_i * @currency_exchange.to_i) %>
 						|</a>
 					</li>
 
@@ -233,7 +233,7 @@
 						<a href="/cart_item?cart_id=<%= session[:cart_id] %>" id="menulink">
 						<%= image_tag "cart.png", :alt=>"profile" %>
 						Cart 
-						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price) %>
+						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price.to_i * @currency_exchange.to_i) %>
 						|</a>
 					</li>
 

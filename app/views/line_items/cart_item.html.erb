@@ -36,22 +36,85 @@ eBuy checkout list
   </table>
   <hr/>
   <br/>
+
+
+
+  <form class="new_order" id="new_order" action="/submit_online_payment" >
+
+
+      <div class="col-md-6">
+  
+        <h4> Personal Information</h4><hr>
+      <div class="field">
+        <p> Your Name</p>
+        <input class="form-control" type="text" name="customer_name" id="customer_name">
+
+      </div><br>
+      <div class="field">
+        <p>Your Email</p>
+        <input class="form-control" type="text" name="customer_email" id="customer_email">
+      </div><br>
+     
+     
+
+
+
+  
+
+   </div>
+
+   <div class="col-md-6">
+  
+        <h4> Delivery Address</h4><hr>
+      <div class="field">
+         <p>Phone</p>
+         <input class="form-control" type="text" name="customer_phone" id="customer_phone">
+      </div><br>
+     
+      <div class="field">
+        <p> House Number, Street</p>
+         <input class="form-control" type="text" name="customer_house" id="customer_house">
+      </div><br>
+
+       <div class="field">
+        <p>Township</p>
+        <input class="form-control" type="text" name="customer_township" id="customer_township">
+      </div><br>
+
+
+       <div class="field">
+        <p>City</p>
+        <input class="form-control" type="text" name="customer_city" id="customer_city">
+      </div><br>
+
+     
+   </div>
+
+
+
+
+
   <div style="float:right;width:30%;">
+  <br/><br/>
     Total Price: <%= (@cart.total_price * @currency_exchange.to_i) %> Ks
-    <button id="opener" class="btn btn-small"> Get Coupons</button>
+    <input type="button" id="opener" class="btn btn-small" value="Get Coupons"> 
     <br/> <br/>
 
     Coupon Code:
     <input id="coupon_code"   >
-    <button class="btn btn-default" id="send_coupon"> use</button>
+      <input type="button" id="send_coupon" class="btn btn-default" value="Use"> 
     <br/> <br/>
     Final Price:
-    <input id="checkout_price" placeholder="checkout_price">
+    <input id="total_price" name="total_price" placeholder="checkout_price">
+
+
+     <input id="cart_id" name="cart_id" value="<%= params[:cart_id] %>" style="display:none;">
+
     <br/> <br/>
-    <%= link_to 'Fill up order form', order_form_path, :class => "btn btn-primary"  %>
+    <input type="submit" name="commit" value="Submit Payment" class="btn btn-primary btn-lg btn-block">
   </div>
   <br/>
-
+</form>
 
 </div>
 
@@ -135,7 +198,7 @@ eBuy checkout list
  
 
     coupon_code = document.getElementById("coupon_code").value;
-    limitation = "<%= (@cart.total_price) %>";
+    limitation = "<%= (@cart.total_price * @currency_exchange.to_i) %>";
 
 
       $.ajax({
@@ -152,9 +215,19 @@ eBuy checkout list
                   // couopon calculation
                   var percentage = parseFloat(discount_percent/100);
                   var descrease_amount =  parseInt(percentage*limitation);
-                  var actual_amount = parseInt(limitation-descrease_amount)
+                  var actual_amount = parseInt(limitation-descrease_amount);
 
-                  document.getElementById("checkout_price").value = actual_amount;
+                  if (raw_discount_price == "{:discount_price=>[]}"){
+                  
+                    document.getElementById("total_price").value = " <%= (@cart.total_price * @currency_exchange.to_i) %>"
+
+
+                  } else {
+
+                    document.getElementById("total_price").value = actual_amount;
+                    
+                  }
+                  
          
 
 

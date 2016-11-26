@@ -40,6 +40,10 @@ class FrontendsController < ApplicationController
   def submit_online_payment
 
   
+  
+      if params[:cart_id]
+         @line_items = LineItem.where("cart_id = ? ", params[:cart_id])
+      end
      
    # order number
    @myorder_number = Order.maximum(:id)
@@ -122,6 +126,10 @@ class FrontendsController < ApplicationController
 
   def order_form
     @order = Order.new
+    @coupons = Coupon.all
+    if params[:cart_id]
+         @line_items = LineItem.where("cart_id = ? ", params[:cart_id])
+    end
   end
   
   def use_coupon
