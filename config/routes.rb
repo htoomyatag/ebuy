@@ -77,7 +77,11 @@ Rails.application.routes.draw do
 
   get 'send_to_order'  => 'frontends#send_to_order'
 
+  get 'use_mpu' => 'frontends#use_mpu'
 
+  get 'use_cash_on_delivery' => 'frontends#use_cash_on_delivery'
+
+  get 'use_bank_transfer' => 'frontends#use_bank_transfer'
 
   resources :products
 

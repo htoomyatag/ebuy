@@ -4,10 +4,29 @@ class FrontendsController < ApplicationController
   # GET /frontends
   # GET /frontends.json
 
-  def send_to_order
-       @orders = Order.create(
 
-              :buyer_id => current_buyer.id,
+  def use_mpu
+
+  end
+
+  def use_cash_on_delivery
+
+  end
+  
+  def use_bank_transfer
+
+  end
+
+  def send_to_order
+
+    if buyer_signed_in?
+       buyer_id = current_buyer.id
+    else
+       buyer_id = "0"
+    end
+
+       @orders = Order.create(
+              :buyer_id => buyer_id,
               :buyer_name => params[:buyer_name],
               :buyer_email => params[:buyer_email],
               :buyer_phone => params[:buyer_phone],
@@ -21,9 +40,9 @@ class FrontendsController < ApplicationController
               :product_size => params[:product_size],
               :product_color => params[:product_color],
               :product_message => params[:product_message]
-
-        
          )
+
+     
   end
 
   def my_wishlist
@@ -250,27 +269,27 @@ class FrontendsController < ApplicationController
   end
 
   def home
-     @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").last(6)
-     @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6) 
+     @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).last(6)
+     @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
  
 
-     @first_women_fashion_products = Product.where(:product_category => "WomenFashion").last(6)
-     @second_women_fashion_products = Product.where(:product_category => "WomenFashion").where.not(id: 1).limit(6) 
+     @first_women_fashion_products = Product.where(:product_category => "WomenFashion").where(:show_at => 1).last(6)
+     @second_women_fashion_products = Product.where(:product_category => "WomenFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_men_fashion_products = Product.where(:product_category => "MenFashion").last(6)
-     @second_men_fashion_products = Product.where(:product_category => "MenFashion").where.not(id: 1).limit(6) 
+     @first_men_fashion_products = Product.where(:product_category => "MenFashion").where(:show_at => 1).last(6)
+     @second_men_fashion_products = Product.where(:product_category => "MenFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_digital_marketings = Product.where(:product_category => "Digital&Mobile").last(6)
-     @second_digital_marketings = Product.where(:product_category => "Digital&Mobile").where.not(id: 1).limit(6) 
+     @first_digital_marketings = Product.where(:product_category => "Digital&Mobile").where(:show_at => 1).last(6)
+     @second_digital_marketings = Product.where(:product_category => "Digital&Mobile").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_home_livings = Product.where(:product_category => "Home&Living").last(6)
-     @second_home_livings = Product.where(:product_category => "Home&Living").where.not(id: 1).limit(6) 
+     @first_home_livings = Product.where(:product_category => "Home&Living").where(:show_at => 1).last(6)
+     @second_home_livings = Product.where(:product_category => "Home&Living").where.not(id: 1).limit(6).where(:show_at => 1).last(6) 
 
-     @first_health_beauty = Product.where(:product_category => "Health&Beauty").last(6)
-     @second_health_beauty = Product.where(:product_category => "Health&Beauty").where.not(id: 1).limit(6) 
+     @first_health_beauty = Product.where(:product_category => "Health&Beauty").where(:show_at => 1).last(6)
+     @second_health_beauty = Product.where(:product_category => "Health&Beauty").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_food_beverage = Product.where(:product_category => "Food&Beverage").last(6)
-     @second_food_beverage = Product.where(:product_category => "Food&Beverage").where.not(id: 1).limit(6) 
+     @first_food_beverage = Product.where(:product_category => "Food&Beverage").where(:show_at => 1).last(6)
+     @second_food_beverage = Product.where(:product_category => "Food&Beverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
 
   end

@@ -40,7 +40,7 @@ currency_exchanges = CurrencyExchange.create([
   products = Product.create([
 
     
-  {title:"tmp1",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone"},
+  {show_at:"0",title:"tmp1",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone"},
   {title:"tmp2",actual_price: "130", discount_price: "150", quantity: 10, product_category:"AuthenticBrandZone"},
   {title:"tmp3",actual_price: "350", discount_price: "3", quantity: 10, product_category:"AuthenticBrandZone"},
   {title:"tmp4",actual_price: "5", discount_price: "450", quantity: 10, product_category:"AuthenticBrandZone"},
@@ -56,7 +56,7 @@ currency_exchanges = CurrencyExchange.create([
   {title:"tmp14",actual_price: "12", discount_price: "210", quantity: 10, product_category:"AuthenticBrandZone"},
 
 
-  {title:"tmp1",actual_price: "12", discount_price: "10", quantity: 10, product_category:"WomenFashion"},
+  {show_at:"1",title:"tmp1",actual_price: "12", discount_price: "10", quantity: 10, product_category:"WomenFashion"},
   {title:"tmp2",actual_price: "12", discount_price: "150", quantity: 10, product_category:"WomenFashion"},
   {title:"tmp3",actual_price: "12", discount_price: "3", quantity: 10, product_category:"WomenFashion"},
   {title:"tmp4",actual_price: "12", discount_price: "450", quantity: 10, product_category:"WomenFashion"},
@@ -88,7 +88,7 @@ currency_exchanges = CurrencyExchange.create([
   {title:"tmp14",actual_price: "12", discount_price: "210", quantity: 10, product_category:"MenFashion"},
 
 
-  {title:"tmp1",actual_price: "12", discount_price: "10", quantity: 10, product_category:"Digital&Mobile"},
+  {show_at:"1",title:"tmp1",actual_price: "12", discount_price: "10", quantity: 10, product_category:"Digital&Mobile"},
   {title:"tmp2",actual_price: "12", discount_price: "150", quantity: 10, product_category:"Digital&Mobile"},
   {title:"tmp3",actual_price: "12", discount_price: "3", quantity: 10, product_category:"Digital&Mobile"},
   {title:"tmp4",actual_price: "12", discount_price: "450", quantity: 10, product_category:"Digital&Mobile"},

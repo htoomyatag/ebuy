@@ -80,12 +80,12 @@
     
           <h4> Personal Information</h4><hr>
           <div class="field">
-            <p> Your Name</p>
+            <p> <b>Your Name</b></p>
              <%= params[:customer_name] %>
 
           </div><br>
           <div class="field">
-            <p>Your Email</p>
+            <p><b>Your Email</b></p>
             <%= params[:customer_email] %>
           </div><br>
          
@@ -101,32 +101,42 @@
     
           <h4> Delivery Address</h4><hr>
           <div class="field">
-             <p>Phone</p>
+             <p><b>Phone</b></p>
               <%= params[:customer_phone] %>
           </div><br>
          
           <div class="field">
-            <p> House Number, Street</p>
+            <p> <b>House No., Street</b></p>
                 <%= params[:customer_house] %>
           </div><br>
 
            <div class="field">
-            <p>Township</p>
+            <p><b>Township</b></p>
                <%= params[:customer_township] %>
           </div><br>
 
 
            <div class="field">
-            <p>City</p>
+            <p><b>City</b></p>
             <%= params[:customer_city] %>
           </div><br>
 
+
          
      </div>
+      
 
-      <h3 style="text-align:center;"> Total Product Price: 
-        <%= params[:total_price] %> Ks
+      <div class="col-md-12">
+              <div style="height:5px;background:#337ab7;"></div>
+                <br/>      <br/>    
+      </div>
+
+      <h3 style="text-align:right;"> 
+           <br/>    
+             Total Price: <%= params[:total_price] %> Ks
+    
       </h3>
+
 
     
         
@@ -163,26 +173,28 @@
          style="float:right;" id="my_send_btn_mpu">
            Submit Payment (MPU)
          </button>
-        <br/><br/><br/>
-         <h3  style="float:right;"> Others options</h3>
-         <br/><br/><br/>
+     
 
-         <button type="submit" class="btn btn-primary btn-lg"
-         style="float:right;" id="my_send_btn_bank">
-           Bank Transfer
-         </button>
-
-          <br/><br/><br/>
-
-         <button type="submit" class="btn btn-default btn-lg"
-         style="float:right;" id="my_send_btn_cod">
-           Cash on Delivery
-         </button>
-         <br/><br/> <br/><br/>
+       
 
    
 </form>
 
+   <br/><br/><br/>
+         <h3  style="float:right;"> Others options</h3>
+         <br/><br/><br/>
+
+ 
+
+          <%= link_to "Bank Transfer", use_bank_transfer_path, :class=>"btn btn-primary btn-lg",
+         :style=>"float:right;", :id=>"my_send_btn_bank" %>
+
+          <br/><br/><br/>
+
+          <%= link_to "Cash on Delivery", use_cash_on_delivery_path, :class=>"btn btn-primary btn-lg",
+         :style=>"float:right;", :id=>"my_send_btn_cod" %>
+
+         <br/><br/> <br/><br/>
 
 
 
@@ -194,9 +206,10 @@
 
     <script type="text/javascript">
   
-        $(document).ready(function () {
+       
 
 
+            // for mpu
             $('#my_send_btn_mpu').click(function () {
                 
           
@@ -230,12 +243,10 @@
                        "&product_name="+product_name+
                        "&product_size="+product_size+
                        "&product_color="+product_color+
-                        "&product_message="+product_message,
+                       "&product_message="+product_message,
 
                       complete: function(r){
-
-                    
-                          
+      
                       }
                    });
 
@@ -243,6 +254,113 @@
                 
             });
 
-        });
+
+
+
+</script>
+
+<script type="text/javascript">
+  
+
+
+
+            // for bank transfer
+            $('#my_send_btn_bank').click(function () {
+                
+          
+              alert("aok");
+              var buyer_name = "<%= params[:customer_name] %>";
+              var buyer_email = "<%= params[:customer_email] %>";
+              var buyer_phone = "<%= params[:customer_phone] %>";
+              var buyer_township = "<%= params[:customer_township] %>";
+              var buyer_city = "<%= params[:customer_city] %>";
+              var buyer_address = "<%= params[:customer_house] %>";
+              var cart_id = "<%= params[:cart_id] %>";
+              var order_status =   "unpaid";
+              var payment_type = "BankTransfer";
+
+
+              var product_name = "<%= params[:product_name] %>";
+              var product_size = " <%= params[:product_size] %>";
+              var product_color = "<%= params[:product_color] %>";
+              var product_message = "<%= params[:product_message] %>";
+
+
+              $.ajax({
+                      type: 'get',
+                      url: "send_to_order?buyer_name="+buyer_name+"&payment_type="+payment_type+
+                       "&buyer_email="+buyer_email+
+                       "&buyer_phone="+buyer_phone+
+                       "&buyer_township="+buyer_township+
+                       "&buyer_city="+buyer_city+
+                       "&buyer_address="+buyer_address+
+                       "&cart_id="+cart_id+
+                       "&product_name="+product_name+
+                       "&product_size="+product_size+
+                       "&product_color="+product_color+
+                       "&product_message="+product_message,
+
+                      complete: function(r){
+      
+                      }
+                   });
+
+                  
+                
+            });
+
+</script>
+
+<script type="text/javascript">
+  
+
+            // cod
+            $('#my_send_btn_cod').click(function () {
+                
+          
+
+              var buyer_name = "<%= params[:customer_name] %>";
+              var buyer_email = "<%= params[:customer_email] %>";
+              var buyer_phone = "<%= params[:customer_phone] %>";
+              var buyer_township = "<%= params[:customer_township] %>";
+              var buyer_city = "<%= params[:customer_city] %>";
+              var buyer_address = "<%= params[:customer_house] %>";
+              var cart_id = "<%= params[:cart_id] %>";
+              var order_status =   "unpaid";
+              var payment_type = "CashOnDelivery";
+
+
+              var product_name = "<%= params[:product_name] %>";
+              var product_size = " <%= params[:product_size] %>";
+              var product_color = "<%= params[:product_color] %>";
+              var product_message = "<%= params[:product_message] %>";
+
+
+              $.ajax({
+                      type: 'get',
+                      url: "send_to_order?buyer_name="+buyer_name+"&payment_type="+payment_type+
+                       "&buyer_email="+buyer_email+
+                       "&buyer_phone="+buyer_phone+
+                       "&buyer_township="+buyer_township+
+                       "&buyer_city="+buyer_city+
+                       "&buyer_address="+buyer_address+
+                       "&cart_id="+cart_id+
+                       "&product_name="+product_name+
+                       "&product_size="+product_size+
+                       "&product_color="+product_color+
+                       "&product_message="+product_message,
+
+                      complete: function(r){
+
+
+      
+                      }
+                   });
+
+                  
+                
+            });
+
+    
 
 </script>

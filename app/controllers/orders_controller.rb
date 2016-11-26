@@ -4,9 +4,16 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+    if !params[:payment_type].nil?
+    @orders = Order.where(:payment_type => params[:payment_type])
+    else
     @orders = Order.all
+    end
   end
 
+
+
+   
 
 
 
@@ -17,6 +24,11 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+
+      if !@order.cart_id.nil?
+         @line_items = LineItem.where("cart_id = ? ", @order.cart_id)
+      end
+
   end
 
   # GET /orders/new
@@ -76,10 +88,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:guest, :buyer_id,:buyer_name,:buyer_email,:buyer_phone,:buyer_township
-    ,:buyer_city ,:buyer_address,:cart_id,:product_name,:product_size,:product_color,:product_message ,:order_status,:payment_type)
-
-
-
+      params.require(:order).permit(:guest, :buyer_id,:buyer_name,:buyer_email,:buyer_phone,:buyer_township,:buyer_city ,:buyer_address,:cart_id,:product_name,:product_size,:product_color,:product_message ,:order_status,:payment_type)
     end
 end
