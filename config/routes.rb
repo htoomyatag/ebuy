@@ -75,6 +75,7 @@ Rails.application.routes.draw do
 
   get 'my_coupon'  => 'frontends#my_coupon'
 
+  get 'send_to_order'  => 'frontends#send_to_order'
 
 
 

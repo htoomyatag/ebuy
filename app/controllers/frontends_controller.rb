@@ -4,6 +4,28 @@ class FrontendsController < ApplicationController
   # GET /frontends
   # GET /frontends.json
 
+  def send_to_order
+       @orders = Order.create(
+
+              :buyer_id => current_buyer.id,
+              :buyer_name => params[:buyer_name],
+              :buyer_email => params[:buyer_email],
+              :buyer_phone => params[:buyer_phone],
+              :buyer_township => params[:buyer_township],
+              :buyer_city => params[:buyer_city],
+              :buyer_address => params[:buyer_address],
+              :cart_id =>  params[:cart_id].to_i,
+              :order_status => "unpaid",
+              :payment_type => params[:payment_type],
+              :product_name => params[:product_name],
+              :product_size => params[:product_size],
+              :product_color => params[:product_color],
+              :product_message => params[:product_message]
+
+        
+         )
+  end
+
   def my_wishlist
         @wish_lists = WishList.where(:buyer_id => current_buyer.id)
   end
