@@ -11,12 +11,12 @@
 
 				<p>
 				  <strong>Size:</strong>
-				  <%= @product.product_size %>
+				  <%= @product.product_size.gsub(",,", "") %>
 				</p>
 
 				<p>
 				  <strong>Color:</strong>
-				  <%= @product.product_color %>
+				  <%= @product.product_color.gsub(",,", "") %>
 				</p>
 
 

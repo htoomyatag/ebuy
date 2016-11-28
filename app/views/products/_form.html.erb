@@ -30,23 +30,50 @@
     </div>
   </div>
 
+  <div class="col-md-12">
+        <br/><br/>
+     </div>
+
+
+
+
 
   <div class="col-md-6">
    <label>Size</label><br>
      <div class="field">
-       <%= f.text_field :product_size, :class => "form-control" %>
+
+
+      <div id="tags">
+        <input type="text" value="" placeholder="Add a size"/>
+      </div>
+
+
+     <input id="product_product_size" name="product[product_size]" style="display:none;" />
+
+     
     </div>
   </div>
 
   <div class="col-md-6">
    <label>Color</label><br>
     <div class="field">
-      <%= f.text_field :product_color,  :class => "form-control" %>
+        
+
+      <div id="tags_color">
+        <input type="text" value="" placeholder="Add a color"/>
+      </div>
+
+
+     <input id="product_product_color" name="product[product_color]" style="display:none;" />
+
+
     </div>
   </div>
 
 
-
+     <div class="col-md-12">
+        <br/><br/>
+     </div>
   <div class="col-md-6">
    <label>Actual Price (SGD)</label><br>
      <div class="field">
@@ -823,3 +850,145 @@ $("#product_other_avatar5").change(function(){
 
 
 
+
+
+<script type="text/javascript">
+  
+$(function(){ // DOM ready
+
+  // ::: TAGS BOX
+
+  $("#tags input").on({
+    focusout : function() {
+      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var txt = mytxt+",";
+      if(txt) $("<span/>", {text:txt.toLowerCase(), insertBefore:this});
+      this.value = "";
+    },
+    keyup : function(ev) {
+      // if: comma|enter (delimit more keyCodes with | pipe)
+      if(/(188|13)/.test(ev.which)) $(this).focusout(); 
+    }
+  });
+  $('#tags').on('click', 'span', function() {
+    $(this).remove(); 
+  });
+
+});
+
+</script>
+
+
+<style type="text/css">
+  
+
+#tags{
+  float:left;
+  border:1px solid #ccc;
+  padding:5px;
+  font-family:Arial;
+}
+#tags > span{
+  cursor:pointer;
+  display:block;
+  float:left;
+  color:#fff;
+  background:#3498DB;
+  padding:5px;
+  padding-right:25px;
+  margin:4px;
+}
+#tags > span:hover{
+  opacity:0.7;
+}
+#tags > span:after{
+ position:absolute;
+ content:"×";
+ border:1px solid;
+ padding:2px 5px;
+ margin-left:3px;
+ font-size:11px;
+}
+#tags > input{
+  background:#eee;
+  border:0;
+  margin:4px;
+  padding:7px;
+  width:auto;
+}
+
+</style>
+
+
+
+<!-- color dynamic -->
+
+
+
+
+<script type="text/javascript">
+  
+$(function(){ // DOM ready
+
+  // ::: TAGS BOX
+
+  $("#tags_color input").on({
+    focusout : function() {
+      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var txt = mytxt+",";
+      if(txt) $("<span/>", {text:txt.toLowerCase(), insertBefore:this});
+      this.value = "";
+    },
+    keyup : function(ev) {
+      // if: comma|enter (delimit more keyCodes with | pipe)
+      if(/(188|13)/.test(ev.which)) $(this).focusout(); 
+    }
+  });
+  $('#tags_color').on('click', 'span', function() {
+    $(this).remove(); 
+  });
+
+});
+
+</script>
+
+
+<style type="text/css">
+  
+
+#tags_color{
+  float:left;
+  border:1px solid #ccc;
+  padding:5px;
+  font-family:Arial;
+}
+#tags_color > span{
+  cursor:pointer;
+  display:block;
+  float:left;
+  color:#fff;
+  background:#3498DB;
+  padding:5px;
+  padding-right:25px;
+  margin:4px;
+}
+#tags_color > span:hover{
+  opacity:0.7;
+}
+#tags_color > span:after{
+ position:absolute;
+ content:"×";
+ border:1px solid;
+ padding:2px 5px;
+ margin-left:3px;
+ font-size:11px;
+}
+#tags_color > input{
+  background:#eee;
+  border:0;
+  margin:4px;
+  padding:7px;
+  width:auto;
+}
+
+</style>

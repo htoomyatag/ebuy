@@ -43,37 +43,48 @@
 		<div class="col-md-8">
 
 
-				Help Topics<hr>
+				<%= t('help_topics') %><hr>
 
 				<div id="register">
-					<b>Register</b>  <br><br>
-					<p>You are required to Register your personal informations in eBuy Myanmar if you wish to purchase products in the website as the company will need to make contact, send invoice and proceed home delivery to you after your purchase. You will be a member of eBuy Myanmar and eligible to receive Discount Coupons offered by the company.
-					eBuy Myanmar is taking responsibility on the use of customer's personal informations and will use them only for company matter. 
+					<b> <%= t('register') %></b>  <br><br>
+					<p>
+					<%= t('register_pg1') %>
 					</p>
 					<br/>
 				</div>
 
 				<div id="sign_in">
 
-					<b>Sign In</b> <br><br>
-					<p>You are required to Sign In to purchase the products in eBuy Myanmar so that the company will be able to make contact, send invoice and proceed home delivery to you after your purchase.</p>
-					<p>There are three options in order to Sign In. They are</p> 
+					<b><%= t('sign_in') %></b> <br><br>
+					<p>
+					<%= t('sign_in_pg1') %>
+					</p>
+					<p>
+					 <%= t('sign_in_pg2') %>
+					</p> 
 					<p><b>Member Sign In</b></p>
 					<p><b>Facebook Sign In </b></p>
 					<p><b>Guest Sign In </b></p>
 		
-					<p> You are required to fill up your email address and password if you choose "Member Sign In".  A member is eligible to receive Discount Coupons offered by the company.</p>
+					<p><b><%= t('member_sign_in') %></b></p>
+					<p>
+						 <%= t('sign_in_pg3') %>
+					</p>
 					
-					<p><b>Facebook Sign In</b></p>
-					<p>You are required to fill up your Facebook ID and password if you choose "Facebook Sign In".  You are also eligible to receive Discount Coupons offered by the company.</p>
+					<p><b><%= t('facebook_sign_in') %></b></p>
+					<p>
+						 <%= t('sign_in_pg4') %>
+					</p>
 					
-					<p><b>Guest Sign In</b></p>
-					<p>You are required to fill up all necessary personal informations if you choose "Guest Sign In". eBuy Myanmar will not save/record these informations and you will be required to fill up your personal informations again for your next "Guest Sign In". You are not eligible to receive Discount Coupons offered by the company.</p>
+					<p><b><%= t('guest_sign_in') %></b></p>
+					<p>
+						 <%= t('sign_in_pg5') %>
+					</p>
 
 				</div>
 
 				<div id="my_account">
-					<p><b>My Account </b></p>
+					<p><b><%= t('my_account') %> </b></p>
 					<p><b>My Info</b> </p>
 					<p>"My Info" is a place where a member is able to view the personal informations such as name, email address, age, sex, contact number and home address.</p>
 					<p><b>Edit Info</b></p>
@@ -92,23 +103,23 @@
 				</div>
 
 				<div id="my_coupon">
-					<p><b>My Coupon </b></p>
+					<p><b> <%= t('my_coupon') %> </b></p>
 					<p>"My Coupon" is a place of Discount Coupon list where the company has given offer to a member to purchase products with discount prices. A member is able to use the Coupons at the Checkout page before making payment. </p>
 				</div>
 				<div id="my_cart">
-					<p><b>Cart</b></p>
+					<p><b><%= t('cart') %> </b></p>
 					<p>"Cart" is a place of product lists where a member has temporarily chosen the items before making purchase.</p>
 				</div>
 
 				<div id="how_to_buy">
 
-					<p><b>How to Buy/Order</b></p>
+					<p><b> <%= t('how_to_buy') %></b></p>
 					<p>If you wish to purchase a selected product, please click "Buy Now" below the product and proceed for Checkout and Payment. If you wish to keep going on shopping and place the selected product in the cart temporarily, please click "Add to Cart" and proceed to search for other items. Once all selected products has been added to the cart, please click "Cart" and you will see all selected items listed with total price calculated. If you are confirmed to purchase the items, please click "Proceed to Checkout " and you will reach to "Payment" page. Please refer to "Payment" at "Help Topic 7" for making payment.</p>
 				</div>
 
 				<div id="payment">
 
-							<p><b>Payment </b></p>
+							<p><b><%= t('payment') %></b></p>
 						    <p>There are four options for making payment. They are </p>
 							<p><b>Cash Deposit</b></p>
 							<p><b>Bank Transfer</b></p>
@@ -135,13 +146,13 @@
 
 
 				<div id="shipping">
-					<p><b>Shipping and Delivery </b></p>
+					<p><b><%= t('shipping_delivery') %> </b></p>
 					<p> After you have made successful payment or transaction, the company will proceed to make purchase order from manufacturers/supplies and will serve for shipping and home delivery of the products to the you as per schedule. </p>
 					<p> The estimated delivery period for the item is mentioned at "Estimated Delivery " in the product page of each product. The company will notify you by email as well. The company will try its best to serve you for faster delivery. </p>
 				</div>
 
 				<div id="cancel_refund">
-					<p><b>Cancel and Refund</b></p>
+					<p><b><%= t('cancel') %></b></p>
 					<p> You may cancel your purchased order with the following two options.
 					If the purchased product is to be shipped from local seller, you may cancel your purchased item within 8 hours after you have submitted for purchase. For cancellation, please click "My Account" at home page, and go to "My Shopping List". Then click "Cancel Order" beside the product that you wish to cancel.  </p>
 					<p> eBuy Myanmar will not accept cancellation request after 8 hours of submitting purchase order.</p>
@@ -151,19 +162,19 @@
 				</div>
 
 				<div id="exchange">
-					<p><b>Exchange and Return </b></p>
+					<p><b><%= t('exchange') %> </b></p>
 					<p>You may return your purchased and delivered product to the company within 7 days due to manufacturer's fault and the company will make a new order for exchange/replacement of your product. </p>
 					<p>However, the company will not accept for return and exchange of the purchased and delivered products due to user's fault and the the item returned after 7 days upon delivery.</p>
 				</div>
 
 				<div id="sell_item">
-					<p><b>Sell Your Items</b></p>
+					<p><b><%= t('sell_your_item') %></b></p>
 					<p>The company welcomes all manufacturers and suppliers for selling products on eBuy Myanmar page. If you wish to sell your items on the webpage, please click "Sell Your Items" at the home page. Then a mail box addressing eBuy Myanmar page will be appeared and you may send the mail which includes informations of product details with pictures to eBuy Myanmar.</p>
 					<p>The company will make contact and get agreement with the manufacturer and supplier on terms and conditions of selling the product.</p>
 				</div>
 
 				<div id="faq">
-					<p><b>FAQ</b></p>
+					<p><b><%= t('faq') %></b></p>
 										
 					<p id="faq_title">Register and Sign In</p>
 					Q. How do I register in eBuy Myanmar?<br/>
@@ -352,8 +363,8 @@
 
 				<div id="bank_transfer">
 
-			
-					<h3>BANK ACCOUNT FOR BANK TRANSFER </h3><br/>
+				
+					<h3><%= t('bank_account_for') %> </h3><br/>
 
 					<p><b>1.AYA BANK SAVINGS ACCOUNT NUMBER</b></p>		
 					<p>0004202012564091</p>

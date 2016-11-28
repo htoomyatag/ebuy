@@ -450,6 +450,13 @@ background-color: #0472c1;
 }
 
 
+#myProductSize,#myProductColor{
+	background-color: white;
+	color: gray;
+	margin-top: 5px;
+}
+
+
 @media (min-width: 600px) {
   #mobile_view, #mobile_view_home {
     display: none; /* This is how it looks on desktop */
