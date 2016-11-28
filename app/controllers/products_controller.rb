@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   layout "backend"
+  before_filter :authenticate_admin!, except: [:create]
   # GET /products
   # GET /products.json
   def index

@@ -1,6 +1,7 @@
 class CurrencyExchangesController < ApplicationController
   before_action :set_currency_exchange, only: [:show, :edit, :update, :destroy]
   layout "backend"
+  before_filter :authenticate_admin!
   # GET /currency_exchanges
   # GET /currency_exchanges.json
   def index

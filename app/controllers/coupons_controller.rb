@@ -1,6 +1,7 @@
 class CouponsController < ApplicationController
   before_action :set_coupon, only: [:show, :edit, :update, :destroy]
   layout "backend"
+  before_filter :authenticate_admin!
   # GET /coupons
   # GET /coupons.json
   def index

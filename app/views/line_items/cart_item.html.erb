@@ -94,7 +94,7 @@ eBuy checkout list
 
 
 
-  <div style="float:right;width:30%;">
+   <div class="col-md-12">
   <br/><br/>
     Total Price: <%= (@cart.total_price * @currency_exchange.to_i) %> Ks
     <input type="button" id="opener" class="btn btn-small" value="Get Coupons"> 
@@ -162,6 +162,12 @@ eBuy checkout list
 
 
 </div>
+
+<script type="text/javascript">
+  
+Document.ready 
+
+</script>
 
  <script>
 
@@ -246,3 +252,14 @@ eBuy checkout list
 </script>
 
 
+
+
+<script type="text/javascript">
+  
+$(document).ready(function(){ 
+
+  document.getElementById("total_price").value = "<%= (@cart.total_price * @currency_exchange.to_i) %>";
+
+});
+
+</script>

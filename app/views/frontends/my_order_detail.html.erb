@@ -1,0 +1,115 @@
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  <div class="rows">
+    <div class="col-md-12">
+
+
+       <div class="col-md-12">
+         <h4> Order informations</h4><hr/>
+
+          <% if @order.cart_id == 0 %>
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Product Name</th>
+                      <th>Color</th>
+                      <th>Size
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>  
+                        <%= @order.product_name %>
+                      </td>
+                      <td>
+                          <%= @order.product_color %>
+                      </td>
+                      <td>
+                          <%= @order.product_size %>
+                      </td>
+                    </tr>
+             
+                  </tbody>
+                </table>
+            <% elsif @order.cart_id != 0 %>
+
+
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Color</th>
+                  <th>Size
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @line_items.each do |line_item| %>
+                <tr>
+                  <td>  
+                     <%= line_item.product.title %>
+                  </td>
+                  <td>
+                     <%= line_item.product.product_color %>
+                  </td>
+                  <td>
+                     <%= line_item.product.product_size %>
+                  </td>
+                </tr>
+                 <% end %> 
+         
+              </tbody>
+            </table>
+
+
+              <% end %> 
+
+
+
+       </div>
+
+        <div class="col-md-12">
+          <h4> Customer Contact informations</h4><hr/>
+          <p>Customer Name</p>
+          <p style="color:gray;"><%= @order.buyer_name %></p>
+          <hr/>
+          <p>Customer Name</p>
+          <p style="color:gray;"><%= @order.buyer_name %></p>
+          <hr/>
+          <p>Customer Email</p>
+          <p style="color:gray;"><%= @order.buyer_email %></p>
+                <hr/>
+          <p>Shipping Address</p>
+          <p style="color:gray;"><%= @order.buyer_address %></p>
+          <p style="color:gray;"><%= @order.buyer_township %></p>
+          <p style="color:gray;"><%= @order.buyer_city %></p>
+          <p style="color:gray;"><%= @order.buyer_phone %></p>
+          <hr/>
+       </div>
+
+
+        <div class="col-md-12">
+          <h4> Payment informations</h4><hr/>
+          <p> Payment Type</p>
+          <p style="color:gray;"><%= @order.payment_type %></p>
+            <hr/>
+          <p> Payment Stage</p>
+          <p style="color:gray;">[ <%= @order.order_status %> ]</p>
+       </div>
+
+
+        <div class="col-md-12">
+          <h4> Order at</h4><hr/>
+           <p style="color:gray;"><%= @order.created_at %></p>
+       </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+

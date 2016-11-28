@@ -1,0 +1,82 @@
+<div id="desktop_view">
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <div class="col-md-12">
+        <h3>My Order Cancel/Refund listing</h3>
+
+      <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Address</th>
+                  <th>Township</th>
+                  <th>City</th>
+                  <th>Payment</th>
+                  <th>Order</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <% @orders.each do |order| %>
+                  <tr>
+                    <td><%= order.buyer_name %></td>
+                    <td><%= order.buyer_email %></td>
+                    <td><%= order.buyer_phone %></td>
+                    <td><%= order.buyer_address %></td>
+                    <td><%= order.buyer_address %></td>
+                    <td><%= order.buyer_city %></td>
+                    <td><%= order.payment_type %></td>
+                    <td><%= order.order_status %></td>
+                    <td><%= link_to 'Cart', my_order_detail_path(order),  :class=>"btn btn-success btn-sm" %>
+                  </tr>
+                <% end %>
+              </tbody>
+        </table>
+
+
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<div id="mobile_view" >
+
+
+      <div class="panel panel-default">
+          <div class="panel-body">
+              <div class="col-md-12">
+            <h3>My Order Cancel/Refund listing</h3>
+
+          <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Order</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% @orders.each do |order| %>
+                      <tr>
+                        <td><%= order.buyer_name %></td>
+                        <td><%= order.order_status %></td>
+                        <td><%= link_to 'Cart', my_order_detail_path(order),  :class=>"btn btn-success btn-sm" %>
+                      </tr>
+                    <% end %>
+                  </tbody>
+            </table>
+
+
+            </div>
+          </div>
+        </div>
+
+
+</div>

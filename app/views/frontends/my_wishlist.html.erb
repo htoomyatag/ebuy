@@ -1,5 +1,6 @@
 
 
+<div id="desktop_view">
 <div class="container">
   
   <h3>Listing Wish Lists</h3><hr/>
@@ -25,5 +26,43 @@
   </table>
 
 
+
+</div>
+
+
+</div>
+<!-- mobile ui -->
+
+
+
+
+
+<div id="mobile_view" >
+
+<div class="container">
+  
+  <h3>Listing Wish Lists</h3><hr/>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Product name</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @wish_lists.each do |wish_list| %>
+        <tr>
+          <td><%= wish_list.product_name %></td>
+          <td><%= link_to "Link", product_info_path(:id => wish_list.product_id) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+
+</div>
 
 </div>

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+
+scope "(:locale)", locale: /en|mm/ do
   resources :currency_exchanges
   resources :wish_lists
   resources :request_products
@@ -8,6 +11,8 @@ Rails.application.routes.draw do
   devise_for :admins, :controllers => {:sessions => "admins/sessions", :registrations => "admins/registrations"}
   resources :admins
   get 'dashboard' => 'admins#dashboard'
+  get 'buyer_list' => 'admins#buyer_list'
+  
 
   resources :comments
   resources :coupons
@@ -22,14 +27,13 @@ Rails.application.routes.draw do
 
 
 
-
   resources :frontends
+  
 
 
-  scope "(:locale)", locale: /en|mm/ do
-    root 'frontends#home'
-  end
 
+  root 'frontends#home'
+ 
   match 'fill_your_order_form/:id' => 'frontends#fill_your_order_form', as: 'fill_your_order_form', via: [:get, :post]
   get 'submit_online_payment' => 'frontends#submit_online_payment', as: 'submit_online_payment', via: [:get, :post]
 
@@ -83,6 +87,21 @@ Rails.application.routes.draw do
 
   get 'use_bank_transfer' => 'frontends#use_bank_transfer'
 
+  get 'my_order_list' => 'frontends#my_order_list'
+
+  get 'my_shopping_list' => 'frontends#my_shopping_list'
+
+
+  get 'my_order_detail/:id' => 'frontends#my_order_detail', as: 'my_order_detail'
+  
+
+  get 'cancel_order/:id' => 'frontends#cancel_order', as: 'cancel_order'
+  
+  get 'my_cancel_list' => 'frontends#my_cancel_list'
+
+  get 'my_personal_info/:id' => 'frontends#my_personal_info', as: 'my_personal_info'
+
+  
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -138,5 +157,6 @@ Rails.application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
+  #   
+      end
 end

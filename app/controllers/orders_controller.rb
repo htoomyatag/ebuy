@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-    layout "backend"
+  layout "backend"
+  before_filter :authenticate_admin!, except: [:create]
   # GET /orders
   # GET /orders.json
   def index

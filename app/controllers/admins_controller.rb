@@ -1,10 +1,17 @@
 class AdminsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
   layout "backend"
+  before_filter :authenticate_admin!, only: [:buyer_list, :dashboard, :show, :edit, :update, :destroy]
+  
   # GET /admins
   # GET /admins.json
   def index
     @admins = Admin.all
+  end
+
+
+  def buyer_list
+      @buyers = Buyer.all
   end
 
   def dashboard
@@ -77,6 +84,11 @@ class AdminsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_params
-      params.require(:admin).permit(:username)
+      params.require(:admin).permit(:username, :email, :password)
+    end
+
+
+    def sign_up_params
+      params.require(:admin).permit(:email, :password, :password_confirmation)
     end
 end

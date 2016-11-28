@@ -1,9 +1,41 @@
 class FrontendsController < ApplicationController
   before_action :set_frontend, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_buyer!, only: [:my_account, :my_order_list,:my_cancel_list,:cancel_order,:my_order_detail,:my_shopping_list]
   # GET /frontends
   # GET /frontends.json
 
+  def my_personal_info
+      @buyer = Buyer.find(params[:id])
+  end
+
+  def my_order_list
+      @orders = Order.where(:buyer_id => current_buyer.id).where(:order_status => "paid")
+  end
+
+  def my_cancel_list
+      @orders = Order.where(:buyer_id => current_buyer.id).where(:order_status => "order_cancel")
+  end
+
+
+  def cancel_order
+     @order = Order.find(params[:id])
+     @order.update(:order_status => "order_cancel")
+     redirect_to request.env['HTTP_REFERER']
+  end
+
+
+  def my_order_detail
+     @order = Order.find(params[:id])
+
+      if !@order.cart_id.nil?
+         @line_items = LineItem.where("cart_id = ? ", @order.cart_id)
+      end
+
+  end
+
+  def my_shopping_list
+     @orders = Order.where(:buyer_id => current_buyer.id)
+  end
 
   def use_mpu
 

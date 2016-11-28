@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="col-md-12">
+    <h3>Buyers
+    </h3><hr/>
+
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th>Buyer name</th>
+		      <th>Buyer phone</th>
+		      <th>Buyer township</th>
+		      <th>Buyer address</th>
+		      <th colspan="2"></th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		    <% @buyers.each do |buyer| %>
+		      <tr>
+		        <td><%= buyer.buyer_name %></td>
+		        <td><%= buyer.buyer_phone %></td>
+		        <td><%= buyer.buyer_township %></td>
+		        <td><%= buyer.buyer_address %></td>
+		        <td><%= link_to 'Edit', edit_buyer_path(buyer) %></td>
+		        <td><%= link_to 'Destroy', buyer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+
+    <br>
+    </div>
+
+   
+
+    </div>
+</div>

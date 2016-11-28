@@ -1,6 +1,7 @@
 class BuyersController < ApplicationController
   before_action :set_buyer, only: [:show, :edit, :update, :destroy]
-
+  layout "backend"
+  before_filter :authenticate_admin!, only: [:index,:new]
   # GET /buyers
   # GET /buyers.json
   def index
@@ -19,6 +20,7 @@ class BuyersController < ApplicationController
 
   # GET /buyers/1/edit
   def edit
+
   end
 
   # POST /buyers
@@ -42,7 +44,7 @@ class BuyersController < ApplicationController
   def update
     respond_to do |format|
       if @buyer.update(buyer_params)
-        format.html { redirect_to @buyer, notice: 'Buyer was successfully updated.' }
+        format.html { redirect_to buyer_list_path, notice: 'Buyer was successfully updated.' }
         format.json { render :show, status: :ok, location: @buyer }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class BuyersController < ApplicationController
   def destroy
     @buyer.destroy
     respond_to do |format|
-      format.html { redirect_to buyers_url, notice: 'Buyer was successfully destroyed.' }
+      format.html { redirect_to buyer_list_path, notice: 'Buyer was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +71,10 @@ class BuyersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def buyer_params
-      params.require(:buyer).permit(:buyer_name, :buyer_phone, :buyer_township, :buyer_address)
+      params.require(:buyer).permit(:buyer_name, :buyer_phone, :buyer_township, :buyer_address,:email, :password, :password_confirmation)
+    end
+
+    def sign_up_params
+      params.require(:buyer).permit(:email, :password, :password_confirmation)
     end
 end

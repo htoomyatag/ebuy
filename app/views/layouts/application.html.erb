@@ -171,7 +171,7 @@
    				     <li>
 						<a href="/" id="menulink">
 						<%= image_tag "home.png", :alt=>"profile" %>
-						Home |</a>
+						<%= t("home")%> |</a>
 					</li>
 
 
@@ -189,14 +189,14 @@
    				     <li>
 						<a href="/my_account" id="menulink">
 						<%= image_tag "profile.png", :alt=>"profile" %>
-						My Account |</a>
+						<%= t("my_account")%> |</a>
 					</li>
 
 
 					 <li>
 						<a href="/cart_item?cart_id=<%= session[:cart_id] %>" id="menulink">
 						<%= image_tag "cart.png", :alt=>"profile" %>
-						Cart 
+						<%= t("cart")%>
 						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price.to_i * @currency_exchange.to_i) %>
 						|</a>
 					</li>
@@ -213,26 +213,25 @@
 
 						<a href="/buyers/sign_in" id="menulink">
 						<%= image_tag "sign.png", :alt=>"sign.png" %>
-						Sign In |
-
+						<%= t("sign_in")%> |
 						</a>
 					</li>
 					<li>
 						<a href="/buyers/sign_up" id="menulink">
 							<%= image_tag "register.png", :alt=>"register" %>
-							Register |
+							<%= t("register")%> |
 						</a>
 					</li>
 					<li>
 						<a href="#" id="menulink">
 						<%= image_tag "profile.png", :alt=>"profile" %>
-						My Account |</a>
+					    <%= t("my_account")%> |</a>
 					</li>
 
 					 <li>
 						<a href="/cart_item?cart_id=<%= session[:cart_id] %>" id="menulink">
 						<%= image_tag "cart.png", :alt=>"profile" %>
-						Cart 
+						<%= t("cart")%>
 						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price.to_i * @currency_exchange.to_i) %>
 						|</a>
 					</li>
@@ -245,22 +244,22 @@
 			<li>
 				<a href="/help" id="menulink">
 				<%= image_tag "mark.png", :alt=>"mark" %>
-				Help |</a>
+				<%= t("help")%> |</a>
 			</li>
 			<li>
 				<a href="/contact_us" id="menulink">
 				<%= image_tag "phone.png", :alt=>"phone" %>
-				Contact Us &nbsp;|</a>
+				<%= t("contact_us")%> &nbsp;|</a>
 			</li>
 			<li>
 				<a href="/about_us" id="menulink">
 				<%= image_tag "aboutus.png", :alt=>"aboutus" %>
-				About Us &nbsp;|
+				<%= t("about_us")%> &nbsp;|
 				</a>
 			</li>
 			<li>
 				<a href="#" id="menulink">
-				Language 
+				<%= t("language")%>
 				<%= image_tag "english_flag.png", :alt=>"english", :style => "border:1px solid #021a40;"  %>
 				<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
 				</a>
@@ -288,11 +287,18 @@
 	  </div>
 	  <div class="col-md-6" style="text-align:center;font-size:13px;">
 
-	  		<span >No. 221/59, 1 st /2 nd /3 rd Floor, Shwe Wah Myay Street, Baho Middle Road,</span><br/>
-			<span>Mayangone Township,Yangon, Myanmar</span><br/>
-			<span>Tel : 09 779825801, 09779825802</span><br/>
-			<span>Email : <a href="">service@eBuymyanmar.com </a></span><br/>
-			<span>Website : <a href="">www.eBuymyanmar.com </a></span>
+	  		<span >
+	  		<%= t("address_1")%></span><br/>
+			<span>
+		    <%= t("address_2")%>
+			</span><br/>
+			<span>
+		     <%= t("address_3")%>
+			</span><br/>
+			<span><%= t("email")%>
+			<a href="">service@eBuymyanmar.com </a></span><br/>
+			<span><%= t("website")%> : 
+			<a href="">www.eBuymyanmar.com </a></span>
 	  </div>
 	</div>
 	<div class="row" id="search_row">
@@ -348,7 +354,7 @@
 	  <div class="collapse navbar-collapse">
 	    <ul class="nav navbar-nav">
 	    	<!-- authentic brand zone -->
-	    	 <li><a id="menulink"> All Categories</a></li>
+	    	 <li><a id="menulink"> <%= t("all_categories")%> </a></li>
 	      	<li class="dropdown">
 
 		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Authentic Brand Zone<span class="caret"></span></a>
@@ -1334,30 +1340,30 @@
 				<div class="col-md-12">
 					<div class="col-md-3">
 						<p class="fonter_headtitle"><%= t('customer_service') %></p>
-						<a class="fonter_menutitle" href="/help">Help topics</a><br/>
-						<a class="fonter_menutitle" href="/how_to_buy">How to buy</a><br/>
-						<a class="fonter_menutitle" href="/payment">Payment</a><br/>
-						<a class="fonter_menutitle" href="/shipment_delivery">Shipping & Delivery</a><br/>
-						<a class="fonter_menutitle" href="/contact_us">Contact Us</a><br/>
-						<a class="fonter_menutitle" href="/customer_feedback">Customer Feedback</a>
+						<a class="fonter_menutitle" href="/help"><%= t("help_topics")%></a><br/>
+						<a class="fonter_menutitle" href="/how_to_buy"><%= t("how_to_buy") %></a><br/>
+						<a class="fonter_menutitle" href="/payment"><%= t("payment")%></a><br/>
+						<a class="fonter_menutitle" href="/shipment_delivery"><%= t("shipping_delivery")%></a><br/>
+						<a class="fonter_menutitle" href="/contact_us"><%= t("contact_us")%></a><br/>
+						<a class="fonter_menutitle" href="/customer_feedback"><%= t("cusstomer_feedback")%></a>
 					</div>
 					<div class="col-md-3">
-						<p class="fonter_headtitle">About eBuy Myanmar</p>
-						<a class="fonter_menutitle" href="/about_us">About Us</a><br/>
-						<a class="fonter_menutitle" href="/career_opportunity">Career Opportunities</a><br/>
-						<a class="fonter_menutitle" href="/termns_and_condition">Terms and Conditions</a><br/>
-						<a class="fonter_menutitle" href="/privacy_policy">Privacy Policy</a><br/>
+						<p class="fonter_headtitle"><%= t("about_ebuy")%></p>
+						<a class="fonter_menutitle" href="/about_us"><%= t("about_us")%></a><br/>
+						<a class="fonter_menutitle" href="/career_opportunity"><%= t("career")%></a><br/>
+						<a class="fonter_menutitle" href="/termns_and_condition"><%= t("termns")%></a><br/>
+						<a class="fonter_menutitle" href="/privacy_policy"><%= t("privacy")%></a><br/>
 					</div>
 					<div class="col-md-3">
-						<p class="fonter_headtitle">Tools</p>
-						<a class="fonter_menutitle" href="">Join</a><br/>
+						<p class="fonter_headtitle"><%= t("tools")%></p>
+						<a class="fonter_menutitle" href=""><%= t("join")%></a><br/>
 
 
 						<%= link_to image_tag("facebook.png", :border => 0, :alt => '', :title => ''), "https://www.facebook.com/ebuy.myanmar?fref=ts", :class => 'dock-item' %><br/><br/>
 
 					
 
-						<a class="fonter_menutitle" href="">Download the App</a><br/>
+						<a class="fonter_menutitle" href=""><%= t("download")%></a><br/>
 						<%= link_to image_tag("googleplay.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'dock-item' %><br/>
 					    <%= link_to image_tag("apple_store.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'dock-item' %><br/>
 
@@ -1366,8 +1372,8 @@
 
 					</div>
 					<div class="col-md-3">
-						<p class="fonter_headtitle">Sell on eBuy Myammar</p>
-						<a class="fonter_menutitle" href="/request_products/new">Sell your items</a><br/>
+						<p class="fonter_headtitle"><%= t("sell_on")%></p>
+						<a class="fonter_menutitle" href="/request_products/new"><%= t("sell_your")%></a><br/>
 					</div>
 
 				</div>
@@ -1376,7 +1382,7 @@
 			</div>
 
 			<div class="col-md-12"><br/>
-				<p class="fonter_head2title"> Payment methods </p><br/>
+				<p class="fonter_head2title"> <%= t("payment_method")%> </p><br/>
 				<%= image_tag("visa-master-mpu.jpg", :id => "payment_logo") %><br/><br/><br/>
 			</div>
 
