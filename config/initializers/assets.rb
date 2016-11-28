@@ -20,7 +20,7 @@ Rails.application.config.assets.precompile += %w( jquery-ui.css )
 
 Rails.application.config.assets.precompile += %w( jquery-1.12.4.js )
 Rails.application.config.assets.precompile += %w( jquery-ui.js )
-
+Rails.application.config.assets.precompile += %w( jquery.zoom.min.js )
 
 
 Rails.application.config.assets.precompile += %w( quill.js )
