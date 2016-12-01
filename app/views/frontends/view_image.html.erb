@@ -1,18 +1,56 @@
 
 
-<div class="container" style="height:700px;">
+<div class="rows">
+ 	<h4 id="slider_home_title"> View image</h4><hr/>
+ </div>
+
+<div class="rows">
+
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+		    <center>
+			 <%= image_tag @product.avatar1.url(:original), :id => "zoom_pic_small_1" %>
+			 <%= image_tag @product.avatar2.url(:original), :id => "zoom_pic_small_2" %>
+			 <%= image_tag @product.avatar3.url(:original), :id => "zoom_pic_small_3" %>
+			 <%= image_tag @product.avatar4.url(:original), :id => "zoom_pic_small_4" %>
+			 <%= image_tag @product.avatar5.url(:original), :id => "zoom_pic_small_5" %>
+		</div>
+	   <div class="col-md-4"></div>
+
+</div>
+
+
+
+<div class="container" >
+
+
 
     <br/><br/><br/>
 	<div class="col-md-4"></div>
 	<div class="col-md-4">
-		<span class='zoom' id='ex1'>
-				 <%= image_tag @product.avatar1.url(:original), :id => "zoom_pic" %>
-		</span>
+		<div class="panel panel-default">
+			  <div class="panel-body">
+			    <center>
+				    <span class='zoom' id='ex1'>
+					 <%= image_tag @product.avatar1.url(:original), :id => "zoom_pic" %>
+					</span>	
+
+
+
+					
+
+				
+					
+					
+			    </center>
+			  </div>
+		</div>
 	</div>
 	<div class="col-md-4"></div>
 	
 
 </div>
+
 
 
 <script type="text/javascript">
@@ -27,10 +65,89 @@ $(document).ready(function(){
 
 
 
+<script>
+
+
+    $('#zoom_pic_small_1').click(function(){
+
+ 	  var aok = document.getElementById("zoom_pic_small_1").src;
+ 	  document.getElementById("zoom_pic").src = aok;
+     	  $('.zoomImg').attr('src', aok);
+
+
+ });
+
+
+
+ $('#zoom_pic_small_2').click(function(){
+
+ 	  var aok = document.getElementById("zoom_pic_small_2").src;
+ 	  document.getElementById("zoom_pic").src = aok;
+ 	  $('.zoomImg').attr('src', aok);
+
+
+ 	 
+
+
+ });
+
+
+
+  $('#zoom_pic_small_3').click(function(){
+
+ 	  var aok = document.getElementById("zoom_pic_small_3").src;
+ 	  document.getElementById("zoom_pic").src = aok;
+ 	  document.getElementsByClassName("zoomImg").src = aok;
+ 	 	  $('.zoomImg').attr('src', aok);
+    
+
+
+ });
+
+
+    $('#zoom_pic_small_4').click(function(){
+
+ 	  var aok = document.getElementById("zoom_pic_small_4").src;
+ 	  document.getElementById("zoom_pic").src = aok;
+     	  $('.zoomImg').attr('src', aok);
+
+
+ });
+
+
+
+      $('#zoom_pic_small_5').click(function(){
+
+ 	  var aok = document.getElementById("zoom_pic_small_5").src;
+ 	  document.getElementById("zoom_pic").src = aok;
+     	  $('.zoomImg').attr('src', aok);
+
+
+ });
+
+
+
+
+  
+
+   
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
 	<style>
-		/* styles unrelated to zoom */
-		* { border:0; margin:0; padding:0; }
-		p { position:absolute; top:3px; right:28px; color:#555; font:bold 13px/1 sans-serif;}
+
 
 		/* these styles are for the demo, but are not required for the plugin */
 		.zoom {

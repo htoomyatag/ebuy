@@ -383,7 +383,7 @@
 
 </div>
   <hr/>
-  <%= render 'other_product' %>
+
 
   <div style="background:blue;height:5px;"></div>
   <%= render 'related_item' %>
@@ -476,7 +476,7 @@ $( document ).ready(function() {
 
 	//Create array of options to be added
 
-	var str = "Choose,"+"<%= @product.product_color.gsub(',,','') %>";
+	var str = "Choose,"+"<%= @product.product_color.gsub(',,','') rescue '-' %>";
 	var str_array = str.split(',');
 
 
@@ -500,7 +500,7 @@ $( document ).ready(function() {
 
 	//Create array of options to be added
 
-	var str = "Choose,"+"<%= @product.product_size.gsub(',,','') %>";
+	var str = "Choose,"+"<%= @product.product_size.gsub(',,','') rescue '-' %>";
 	var str_array = str.split(',');
 
 

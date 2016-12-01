@@ -463,6 +463,12 @@ background-color: #0472c1;
 }
 
 
+#zoom_pic_small_1,#zoom_pic_small_2,#zoom_pic_small_3,#zoom_pic_small_4,#zoom_pic_small_5{
+	height: 70px;
+	width: 70px;
+}
+
+
 @media (min-width: 600px) {
   #mobile_view, #mobile_view_home {
     display: none; /* This is how it looks on desktop */
