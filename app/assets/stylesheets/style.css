@@ -243,6 +243,20 @@ overflow-x: hidden;
 }
 
 
+.detailpage_link_red {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	background-color:#d43f3a;
+	height: 50px;
+	padding-top: 10px;
+	position: relative;
+	top: -45px;
+
+}
+
+
+
 #product_background {
 	background-color: #dce6f2;
 	height: 60px;
@@ -467,6 +481,9 @@ background-color: #0472c1;
 	height: 70px;
 	width: 70px;
 }
+
+
+
 
 
 @media (min-width: 600px) {

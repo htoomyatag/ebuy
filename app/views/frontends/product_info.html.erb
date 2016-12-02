@@ -17,9 +17,19 @@
 
   <div class="col-md-12">
 
-	<h4 class="detailpage_link">
-		Home > <%= @product.product_category %> > <%= @product.title %> > eBuy00<%= @product.id %> 
-	</h4><br/>
+  	<% if Time.now.to_datetime.between?(@product.start_to_sell_on.to_datetime-1,@product.end_on.to_datetime) && Time.now.strftime("%H").to_i.between?(@product.start_to_sell_on.to_datetime.strftime("%H").to_i, @product.end_on.to_datetime.strftime("%H").to_i) %>
+		
+		<h4 class="detailpage_link">
+		  	Home > <%= @product.product_category %> > <%= @product.title %> > eBuy00<%= @product.id %> 
+		</h4><br/>
+	
+	<% else %>
+
+		<h4 class="detailpage_link_red">
+			This product item is expire now.
+		</h4><br/>
+
+	<% end %>
 
   </div>
 
@@ -161,15 +171,24 @@
 
 		   <table style="width:100%">
 			
+		
 			  <tr>
-			    <td>
+				  <% if Time.now.to_datetime.between?(@product.start_to_sell_on.to_datetime-1,@product.end_on.to_datetime) && Time.now.strftime("%H").to_i.between?(@product.start_to_sell_on.to_datetime.strftime("%H").to_i, @product.end_on.to_datetime.strftime("%H").to_i) %>
+					    <td>
+					    	 <%= button_to 'Buy Now' , fill_your_order_form_path(@product),:class =>"btn btn-danger", :id=>"btn_checkout", :method => "GET" %>
+					    </td>
+					    <td>
+					    	<%= button_to 'Add to Cart' , line_items_path(:product_id => @product),:class =>"btn btn-primary", :id=>"btn_checkout" %>
+					    </td> 
+				  <% else %>
+				  	    <td>
+					    	<button type="button" class="btn btn-default" id="btn_checkout">Expire now!</button>
+					    </td>
+					    <td>
+					        <button type="button" class="btn btn-default" id="btn_checkout">Expire now!</button>
+					    </td> 
+				  <% end %>
 
-			    	 <%= button_to 'Buy Now' , fill_your_order_form_path(@product),:class =>"btn btn-danger", :id=>"btn_checkout", :method => "GET" %>
-
-			    </td>
-			    <td>
-			    	<%= button_to 'Add to Cart' , line_items_path(:product_id => @product),:class =>"btn btn-primary", :id=>"btn_checkout" %>
-			    </td> 
 			    <td>
 			    	 <%= button_to 'Add to Wish list' , add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id),:class =>"btn btn-info", :id=>"btn_checkout" %>
 

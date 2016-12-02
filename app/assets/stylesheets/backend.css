@@ -94,3 +94,19 @@
   color: gray;
   font-weight: bold;
 }
+
+
+#running{
+  background-color: #4cae4c;
+  color:white;
+  width: 100%;
+  text-align: center;
+}
+
+
+#expire{
+  background-color: #d9534f;
+  color:white;
+  width: 100%;
+  text-align: center;
+}
