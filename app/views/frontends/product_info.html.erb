@@ -20,7 +20,7 @@
   	<% if Time.now.to_datetime.between?(@product.start_to_sell_on.to_datetime-1,@product.end_on.to_datetime) && Time.now.strftime("%H").to_i.between?(@product.start_to_sell_on.to_datetime.strftime("%H").to_i, @product.end_on.to_datetime.strftime("%H").to_i) %>
 		
 		<h4 class="detailpage_link">
-		  	Home > <%= @product.product_category %> > <%= @product.title %> > eBuy00<%= @product.id %> 
+		  	Home > <%= @product.product_category %> > <%= @product.short_title %> > eBuy00<%= @product.id %> 
 		</h4><br/>
 	
 	<% else %>
@@ -405,7 +405,7 @@
 
 
   <div style="background:blue;height:5px;"></div>
-  <%= render 'related_item' %>
+  <%= render 'related_item' %><br/><br/>
 
   <div style="background:blue;height:5px;"></div>
   <%= render 'recommended_item' %>
