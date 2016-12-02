@@ -11,12 +11,12 @@
 
 				<p>
 				  <strong>Size:</strong>
-				  <%= @product.product_size.gsub(",,", "") %>
+				  <%= @product.product_size.gsub(",,", "") rescue "-" %>
 				</p>
 
 				<p>
 				  <strong>Color:</strong>
-				  <%= @product.product_color.gsub(",,", "") %>
+				  <%= @product.product_color.gsub(",,", "") rescue "-" %>
 				</p>
 
 
@@ -189,15 +189,22 @@
 		</div>
 
 
+		
+
 		<div class="col-md-12">
+		<h3>Timeplan</h3><hr/>
 			<br/><p>
 				<strong>Start to sell on:</strong>
-				<%= @product.start_to_sell_on %>
+				<%= @product.start_to_sell_on.strftime('%m/%d/%Y at %I:%M%p') %>
+			</p>
+
+			<p> 
+			<%= Time.now.strftime('%m/%d/%Y at %I:%M%p') %>
 			</p>
 
 			<br/><p>
-				<strong>End on:</strong>
-				<%= @product.end_on %>
+				<strong>Will end on:</strong>
+				<%= @product.end_on.strftime('%m/%d/%Y at %I:%M%p') %>
 			</p>
 		</div>
 

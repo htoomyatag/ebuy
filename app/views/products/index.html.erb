@@ -36,15 +36,20 @@
 
       <tbody>
         <% @products.each do |product| %>
-          <tr>
-            <td><%= product.title %></td>
-            <td><%= product.actual_price %> SGD</td>
-            <td><%= product.discount_price %> SGD</td>
-            <td><%= product.product_category %></td>
-            <td><%= link_to 'Show', product %></td>
-            <td><%= link_to 'Edit', edit_product_path(product) %></td>
-            <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+
+
+
+           <% if Time.now.to_datetime.between?(product.start_to_sell_on.to_datetime-1,product.end_on.to_datetime) && Time.now.strftime("%H").to_i.between?(product.start_to_sell_on.to_datetime.strftime("%H").to_i, product.end_on.to_datetime.strftime("%H").to_i) %>
+              <tr>
+                <td><%= product.title %></td>
+                <td><%= product.actual_price %> SGD</td>
+                <td><%= product.discount_price %> SGD</td>
+                <td><%= product.product_category %></td>
+                <td><%= link_to 'Show', product %></td>
+                <td><%= link_to 'Edit', edit_product_path(product) %></td>
+                <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
         <% end %>
       </tbody>
     </table>

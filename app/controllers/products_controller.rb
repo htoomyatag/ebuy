@@ -13,7 +13,12 @@ class ProductsController < ApplicationController
      elsif !params[:product_category].nil? && !params[:product_category].nil?
         @products = Product.where("product_category LIKE ?", params[:product_category]).where("title LIKE ?", params[:product_title]).all
      else 
-        @products = Product.all
+      
+      # @products = Product.all  
+   
+      @products = Product.all
+
+
      end
 
 

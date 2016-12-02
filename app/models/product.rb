@@ -140,43 +140,43 @@ PRODUCTSUBCATEGORY = [
 
 
 
-  has_attached_file :avatar1, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :avatar1, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :avatar1, content_type: /\Aimage\/.*\z/
 
-    has_attached_file :avatar2, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+    has_attached_file :avatar2, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :avatar2, content_type: /\Aimage\/.*\z/
 
 
-    has_attached_file :avatar3, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+    has_attached_file :avatar3, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :avatar3, content_type: /\Aimage\/.*\z/
 
 
-    has_attached_file :avatar4, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+    has_attached_file :avatar4, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :avatar4, content_type: /\Aimage\/.*\z/
 
 
-  has_attached_file :avatar5, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :avatar5, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :avatar5, content_type: /\Aimage\/.*\z/
 
 
 # product code
 
-  has_attached_file :other_avatar1, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :other_avatar1, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :other_avatar1, content_type: /\Aimage\/.*\z/
 
-  has_attached_file :other_avatar2, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :other_avatar2, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :other_avatar2, content_type: /\Aimage\/.*\z/
 
 
-  has_attached_file :other_avatar3, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :other_avatar3, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :other_avatar3, content_type: /\Aimage\/.*\z/
 
 
-  has_attached_file :other_avatar4, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :other_avatar4, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :other_avatar4, content_type: /\Aimage\/.*\z/
 
 
-  has_attached_file :other_avatar5, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :other_avatar5, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/missing.png"
   validates_attachment_content_type :other_avatar5, content_type: /\Aimage\/.*\z/
 
 

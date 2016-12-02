@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126090008) do
+ActiveRecord::Schema.define(version: 20161201100357) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username"
@@ -128,13 +128,11 @@ ActiveRecord::Schema.define(version: 20161126090008) do
     t.string   "pick_up"
     t.string   "ebuy_delivery"
     t.string   "delivery_time"
-    t.string   "start_to_sell_on"
     t.string   "date"
     t.text     "product_video"
     t.string   "product_size"
     t.string   "product_color"
     t.string   "delivery_rate"
-    t.string   "end_on"
     t.string   "product_subcategory"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
@@ -188,6 +186,9 @@ ActiveRecord::Schema.define(version: 20161126090008) do
     t.text     "notice"
     t.text     "description"
     t.text     "show_at"
+    t.datetime "start_to_sell_on"
+    t.datetime "end_on"
+    t.string   "short_title"
   end
 
   create_table "request_products", force: :cascade do |t|

@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/radar/by_star
+  revision: 3fe3ef33e98aebcc226cbfea51d1e5101f948c78
+  specs:
+    by_star (2.2.1)
+      activesupport
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,6 +51,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (9.0.5)
+    chronic (0.10.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -177,7 +185,9 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord_any_of
+  by_star!
   byebug
+  chronic
   coffee-rails (~> 4.1.0)
   devise
   jbuilder (~> 2.0)

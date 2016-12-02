@@ -315,7 +315,7 @@
       <div class="col-md-6"><br/>
        <label>Start to sell on</label><br>
          <div class="field">
-            <%= f.date_field :start_to_sell_on, :class => "form-control" %>
+            <%= f.datetime_local_field(:start_to_sell_on, :class => "form-control")  %>
         </div>
     </div>
 
@@ -324,7 +324,7 @@
       <div class="col-md-6"><br/>
        <label>End on</label><br>
          <div class="field">
-            <%= f.date_field :end_on, :class => "form-control" %>
+            <%= f.datetime_local_field(:end_on, :class => "form-control" )  %>
         </div>
     </div>
 
