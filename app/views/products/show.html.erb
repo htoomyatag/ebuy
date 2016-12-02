@@ -162,16 +162,13 @@
 		<h3>Timeplan</h3><hr/>
 			<br/><p>
 				<strong>Start to sell on:</strong>
-				<%= @product.start_to_sell_on.strftime('%m/%d/%Y at %I:%M%p') %>
+				<%= @product.start_to_sell_on.strftime('%m/%d/%Y at %I:%M%p') rescue "-" %>
 			</p>
 
-			<p> 
-			<%= Time.now.strftime('%m/%d/%Y at %I:%M%p') %>
-			</p>
-
+		
 			<br/><p>
 				<strong>Will end on:</strong>
-				<%= @product.end_on.strftime('%m/%d/%Y at %I:%M%p') %>
+				<%= @product.end_on.strftime('%m/%d/%Y at %I:%M%p') rescue "-" %>
 			</p>
 		</div>
 

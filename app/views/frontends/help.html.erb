@@ -11,8 +11,7 @@
 					 <li class="list-group-item" id="register_btn"> <%= t('register') %> </li>
 					 <li class="list-group-item" id="sign_in_btn"> <%= t('sign_in') %> </li>
 					 <li class="list-group-item" id="my_account_btn"> <%= t('my_account') %> </li>
-					 <li class="list-group-item" id="my_coupon_btn">  
-					 <%= t('my_coupon') %></li>
+					 <li class="list-group-item" id="my_coupon_btn"> <%= t('my_coupon') %></li>
 					 <li class="list-group-item" id="my_cart_btn"> 
 					 		 <%= t('cart') %>
 					 </li>
@@ -62,10 +61,11 @@
 					<p>
 					 <%= t('sign_in_pg2') %>
 					</p> 
-					<p><b>Member Sign In</b></p>
-					<p><b>Facebook Sign In </b></p>
-					<p><b>Guest Sign In </b></p>
-		
+					<p><b><%= t('member_sign_in') %></b></p>
+					<p><b><%= t('facebook_sign_in') %></b></p>
+					<p><b><%= t('guest_sign_in') %></b></p>
+					
+					<br/>
 					<p><b><%= t('member_sign_in') %></b></p>
 					<p>
 						 <%= t('sign_in_pg3') %>
@@ -85,92 +85,119 @@
 
 				<div id="my_account">
 					<p><b><%= t('my_account') %> </b></p>
-					<p><b>My Info</b> </p>
-					<p>"My Info" is a place where a member is able to view the personal informations such as name, email address, age, sex, contact number and home address.</p>
-					<p><b>Edit Info</b></p>
-					<p>"Edit Info" is a place where a member is able to change and save the personal informations such as name, email address, age, sex, contact number and home address.</p>
-					<p><b>My Shopping List</b></p>
-					<p>"My Shopping List" is a place of product list where a member has completed purchase on the products.</p>
-					<p><b> Wish List</b></p>
-					<p>"Wish List" is a place of product list where a member has chosen to purchase the selected products.</p>
-					<p><b>Viewed List</b></p>
-					<p>"Viewed List" is a place of product list where a member searched and viewed the products preferred. </p>
-					<p><b>Cancel/Refund List </b></p>
-					<p>"Cancel/Refund List" is a place of product list where a member has cancelled for purchased items and the company has made refund to the member. </p>
-					<p><b>My Ordered List </b></p>
-					<p>"My ordered list is a place of product list where a member has made purchase and the company has made delivery to the member.  </p>
+					<p><b><%= t('my_info') %></b> </p>
+					<p>
+						<%= t('my_info_pg') %>
+					</p>
+					<p><b><%= t('edit_info') %></b></p>
+					<p><%= t('edit_info_pg') %>
+					</p>
+					<p><b><%= t('my_shopping_list') %></b></p>
+					<p><%= t('my_shopping_list_pg') %></p>
+					<p><b><%= t('my_wish_list') %></b></p>
+					<p><%= t('my_wish_list_pg') %></p>
+					<p><b><%= t('viewed_list') %></b></p>
+					<p><%= t('viewed_list_pg') %> </p>
+					<p><b><%= t('cancel_refund') %></b></p>
+					<p><%= t('cancel_refund_pg') %></p>
+					<p><b><%= t('my_ordered_list') %></b></p>
+					<p><%= t('my_ordered_list_pg') %> </p>
 
 				</div>
 
 				<div id="my_coupon">
 					<p><b> <%= t('my_coupon') %> </b></p>
-					<p>"My Coupon" is a place of Discount Coupon list where the company has given offer to a member to purchase products with discount prices. A member is able to use the Coupons at the Checkout page before making payment. </p>
+					<p>
+					 <%= t('my_coupon_pg') %>
+					 </p>
 				</div>
 				<div id="my_cart">
 					<p><b><%= t('cart') %> </b></p>
-					<p>"Cart" is a place of product lists where a member has temporarily chosen the items before making purchase.</p>
+					<p> 
+					<%= t('cart_pg') %>
+					</p>
 				</div>
 
 				<div id="how_to_buy">
 
 					<p><b> <%= t('how_to_buy') %></b></p>
-					<p>If you wish to purchase a selected product, please click "Buy Now" below the product and proceed for Checkout and Payment. If you wish to keep going on shopping and place the selected product in the cart temporarily, please click "Add to Cart" and proceed to search for other items. Once all selected products has been added to the cart, please click "Cart" and you will see all selected items listed with total price calculated. If you are confirmed to purchase the items, please click "Proceed to Checkout " and you will reach to "Payment" page. Please refer to "Payment" at "Help Topic 7" for making payment.</p>
+					<p><%= t('how_to_buy_pg') %>
+					</p>
 				</div>
 
 				<div id="payment">
 
 							<p><b><%= t('payment') %></b></p>
-						    <p>There are four options for making payment. They are </p>
-							<p><b>Cash Deposit</b></p>
-							<p><b>Bank Transfer</b></p>
-							<p><b>MPU</b></p>
-							<p><b>Visa/Master</b></p>
+						    <p>
+						    <%= t('four_option_pg') %> </p>
+							<p><b><%= t('cash_deposit') %></b></p>
+							<p><b><%= t('bank_transfer') %></b></p>
+							<p><b><%= t('mpu') %></b></p>
+							<p><b><%= t('visa_master') %></b></p>
 
-						<p><b>Cash Deposit </b></p>
-						<p>If you choose "Cash Deposit " for payment, you will have to fill up your required personal informations and the click "Proceed to Pay". Order confirmation email with invoice will be sent to your mail box. You are required to make cash payment at the company office by showing the invoice. The company will proceed for purchase order once full payment has been received. </p>
-						<p>The company address and contacts are stated in "Contact " at home page. </p>
+						<p><b><%= t('cash_deposit') %> </b></p>
+						<p><%= t('cash_deposit_pg1') %>
+						 </p>
+						<p><%= t('cash_deposit_pg2') %>
+						 </p>
 
-						<p><b>Bank Transfer</b></p>
-						<p> If you choose "Bank Transfer" for payment, you will have to fill up your required personal informations and the click "Proceed to Pay". Order confirmation email with invoice will be sent to your mail box. You are required to make account transfer to any eBuy Myanmar account number stated in your invoice. The company will proceed for purchase order once full payment has been received.</p>
-					    <p>You may proceed to the nearest bank outlet for account transfer or you may also use internet banking for it. You are required to inform the company for complete transaction by making a call, giving a message or sending an email. 
+						<p><b><%= t('bank_transfer') %></b></p>
+						<p> <%= t('bank_transfer_pg1') %></p>
+					    <p> <%= t('bank_transfer_pg2') %> 
 					    </p>
-						<p>All company contacts are stated in "Contact " at home page. </p>
-						<p><b>MPU </b></p>
-						<p>If you choose "MPU" for payment, you will have to fill up your required personal informations and the click "Proceed to Pay". You are required to fill up datas mentioned on your card and click "Proceed to Pay ". Order confirmation email with invoice will be sent to your mail box. </p>
-						<p> The currency for the use of MPU card is Myanmar Kyats, "MMK".</p>
-						<p><b>Visa/Master </b></p>
-						<p> If you choose "Visa/Master" for payment, you will have to fill up your required personal informations and the click "Proceed to Pay". You are required to fill up datas mentioned on your card and click "Proceed to Pay ". Order confirmation email with invoice will be sent to your mail box. </p>
-						<p> The currency for the use of Visa/Master card is US Dollars, "USD". </p>
+						<p><%= t('bank_transfer_pg3') %> </p>
+						<p><b><%= t('mpu') %></b></p>
+						<p><%= t('mpu_pg1') %>
+						 </p>
+						<p> <%= t('mpu_pg2') %>
+						</p>
+						<p><b><%= t('visa_master') %> </b></p>
+						<p> <%= t('visa_master_pg1') %>
+						</p>
+						<p><%= t('visa_master_pg2') %> </p>
 
 				</div>
 
 
 				<div id="shipping">
 					<p><b><%= t('shipping_delivery') %> </b></p>
-					<p> After you have made successful payment or transaction, the company will proceed to make purchase order from manufacturers/supplies and will serve for shipping and home delivery of the products to the you as per schedule. </p>
-					<p> The estimated delivery period for the item is mentioned at "Estimated Delivery " in the product page of each product. The company will notify you by email as well. The company will try its best to serve you for faster delivery. </p>
+					<p> <%= t('shipping_delivery_pg1') %></p>
+					<p> <%= t('shipping_delivery_pg2') %> </p>
 				</div>
 
 				<div id="cancel_refund">
 					<p><b><%= t('cancel') %></b></p>
-					<p> You may cancel your purchased order with the following two options.
-					If the purchased product is to be shipped from local seller, you may cancel your purchased item within 8 hours after you have submitted for purchase. For cancellation, please click "My Account" at home page, and go to "My Shopping List". Then click "Cancel Order" beside the product that you wish to cancel.  </p>
-					<p> eBuy Myanmar will not accept cancellation request after 8 hours of submitting purchase order.</p>
+					<p> 
+						<%= t('cancel_pg1') %>
+					</p>
+					<p> 
+							<%= t('cancel_pg2') %>
+					</p>
 					<p>
-					If the purchased product is to be shipped from overseas seller, you will not be able to cancel it from eBuy Myanmar page. You are required to contact the company as soon as possible and request for cancellation. </p>
-					<p>If you have made successful cancellation request for your purchase item and you also have made payment for the item previously, the company will contact you as soon as possible for the refund.</p>
+					
+						<%= t('cancel_pg3') %>
+					</p>
+					<p>
+							<%= t('cancel_pg4') %>
+					</p>
 				</div>
 
 				<div id="exchange">
 					<p><b><%= t('exchange') %> </b></p>
-					<p>You may return your purchased and delivered product to the company within 7 days due to manufacturer's fault and the company will make a new order for exchange/replacement of your product. </p>
-					<p>However, the company will not accept for return and exchange of the purchased and delivered products due to user's fault and the the item returned after 7 days upon delivery.</p>
+
+					<p><%= t('exchange_pg1') %>
+					 </p>
+					<p>
+					<%= t('exchange_pg2') %>
+					</p>
 				</div>
 
 				<div id="sell_item">
 					<p><b><%= t('sell_your_item') %></b></p>
-					<p>The company welcomes all manufacturers and suppliers for selling products on eBuy Myanmar page. If you wish to sell your items on the webpage, please click "Sell Your Items" at the home page. Then a mail box addressing eBuy Myanmar page will be appeared and you may send the mail which includes informations of product details with pictures to eBuy Myanmar.</p>
-					<p>The company will make contact and get agreement with the manufacturer and supplier on terms and conditions of selling the product.</p>
+					<p><%= t('sell_your_item_pg1') %>
+					</p>
+					<p><%= t('sell_your_item_pg2') %>
+					</p>
 				</div>
 
 				<div id="faq">
