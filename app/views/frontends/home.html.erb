@@ -12,7 +12,13 @@
 
 <div id="desktop_view">
 
+	<div class="row" id="all_the_categories">
+			<%= render 'all_categories' %>
+	</div>
+
 <div class="row" id="myhomeslider">
+
+
 
 <div class="col-md-8"> 
 
@@ -170,3 +176,49 @@
 
 
 </div>
+
+
+
+
+ <script type="text/javascript">
+	
+$("#all_categories").hover( function () {
+
+
+
+    $("#myhomeslider").hide();
+    $("#all_the_categories").show();
+  
+}, function() {
+
+  $("#all_the_categories").hide();
+      $("#myhomeslider").show();
+
+
+
+});
+
+
+// 
+
+
+$("#all_the_categories").hover( function () {
+
+
+
+    $("#myhomeslider").hide();
+    $("#all_the_categories").show();
+  
+}, function() {
+
+  $("#all_the_categories").hide();
+      $("#myhomeslider").show();
+
+
+
+});
+
+
+
+
+ </script>

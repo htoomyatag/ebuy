@@ -483,7 +483,39 @@ background-color: #0472c1;
 }
 
 
+#all_the_categories{
+	display: none;
+	
+    position: relative;
+	bottom: 38px;
 
+}
+
+
+
+#first_category {
+	height: 280px;
+}
+
+
+#second_category {
+	height: 220px;
+}
+
+
+#third_category {
+	height: 340px;
+}
+
+
+#fourth_category {
+	height: 100px;
+}
+
+
+#fifth_category {
+	height: 150px;
+}
 
 
 @media (min-width: 600px) {
