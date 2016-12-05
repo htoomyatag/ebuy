@@ -19,15 +19,16 @@
   <div class="col-md-12">
    <label>Full Title</label><br>
      <div class="field">
-       <%= f.text_field :title, :class => "form-control" %>
+       <%= f.text_field :title, :class => "form-control", 
+    required: true %>
     </div>
     <br><br>
   </div>
 
   <div class="col-md-6">
-   <label>Title</label><br>
+   <label>Short Title</label><br>
      <div class="field">
-       <%= f.text_field :short_title, :class => "form-control" %>
+       <%= f.text_field :short_title, :class => "form-control", maxlength: 10, required: true %>
     </div>
   </div>
 

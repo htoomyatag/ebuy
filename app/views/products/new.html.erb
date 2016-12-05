@@ -51,6 +51,68 @@ $("#mysubmitbutton").click(function(e) {
       document.getElementById('product_product_color').value = product_colors;
 
 
+      var title =  document.getElementById('product_title').value;
+      if (title == "") {
+          alert("Title must be filled out");
+          return false;
+      }
+
+
+       var short_title =  document.getElementById('product_short_title').value;
+      if (short_title == "") {
+          alert("Short Title must be filled out");
+          return false;
+      }
+
+
+      var product_quantity =  document.getElementById('product_quantity').value;
+      if (product_quantity == "") {
+          alert("Quantity must be filled out");
+          return false;
+      }
+
+
+      var product_actual_price =  document.getElementById('product_actual_price').value;
+      if (product_actual_price == "") {
+          alert("Actual Price must be filled out");
+          return false;
+      }
+
+
+      var product_discount_price =  document.getElementById('product_discount_price').value;
+      if (product_discount_price == "") {
+          alert("Offer Price must be filled out");
+          return false;
+      }
+
+
+      var product_start_to_sell_on =  document.getElementById('product_start_to_sell_on').value;
+      if (product_start_to_sell_on == "") {
+          alert("Product started to sell time must be filled out");
+          return false;
+      }
+
+
+
+      var product_end_on =  document.getElementById('product_end_on').value;
+      if (product_end_on == "") {
+          alert("Product sales end time must be filled out");
+          return false;
+      }
+
+
+      var product_avatar1 =  document.getElementById('product_avatar1').value;
+      if (product_avatar1 == "") {
+          alert("At least product image must be uploaded");
+          return false;
+      }
+    
+    
+    
+
+    
+
+
       
       $("#new_product").submit();
 });

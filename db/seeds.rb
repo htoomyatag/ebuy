@@ -40,15 +40,15 @@ currency_exchanges = CurrencyExchange.create([
   products = Product.create([
 
     
-  {show_at:"0",title:"tmp1",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
-  {time_sale: "1",show_at:"0",short_title:"tmpa",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
-  {time_sale: "1",show_at:"0",short_title:"tmpb",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
-  {time_sale: "1",show_at:"0",short_title:"tmpc",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
-  {time_sale: "1",show_at:"0",short_title:"tmpd",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
-  {time_sale: "1",show_at:"0",short_title:"tmpe",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
-  {time_sale: "1",show_at:"0",short_title:"tmpf",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
-  {show_at:"0",title:"tmpg",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
-  {show_at:"0",title:"tmph",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"}
+  # {show_at:"0",title:"tmp1",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
+  # {time_sale: "1",show_at:"0",short_title:"tmpa",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
+  # {time_sale: "1",show_at:"0",short_title:"tmpb",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
+  # {time_sale: "1",show_at:"0",short_title:"tmpc",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
+  # {time_sale: "1",show_at:"0",short_title:"tmpd",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
+  # {time_sale: "1",show_at:"0",short_title:"tmpe",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
+  # {time_sale: "1",show_at:"0",short_title:"tmpf",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
+  # {show_at:"0",title:"tmpg",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"},
+  # {show_at:"0",title:"tmph",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-02 12:01:00", end_on:"2016-12-02 18:58:00"}
 
   # {title:"tmp2",actual_price: "130", discount_price: "150", quantity: 10, product_category:"AuthenticBrandZone"},
   # {title:"tmp3",actual_price: "350", discount_price: "3", quantity: 10, product_category:"AuthenticBrandZone"},
