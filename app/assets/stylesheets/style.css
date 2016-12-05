@@ -460,7 +460,7 @@ background-color: #0472c1;
 
 
 #myCarousel1,#myCarousel8,#myCarousel6,#myCarousel4,#myCarousel5,#myCarousel4,#myCarousel3,#myCarousel7,#myCarousel2, #myCarouse2{
-	height: 200px;
+	height: 260px;
 }
 
 
@@ -552,6 +552,10 @@ background-color: #0472c1;
 	height: 0px;
 }
 */
+
+.img-responsive{
+	width: 200px;
+}
 
 @media (min-width: 600px) {
   #mobile_view, #mobile_view_home {
