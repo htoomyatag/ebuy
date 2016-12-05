@@ -373,7 +373,7 @@
 
 
 
-        <div class="col-md-2"><br/>
+    <div class="col-md-2"><br/>
        <label> Image 4</label><br>
          <div class="field">
             <%= f.file_field :avatar4 %>
@@ -383,7 +383,7 @@
 
 
 
-        <div class="col-md-2"><br/>
+    <div class="col-md-2"><br/>
        <label> Image 5</label><br>
          <div class="field">
             <%= f.file_field :avatar5 %>
@@ -395,13 +395,20 @@
 
 
     <div class="col-md-6">    <br/>
-     <label>Place at home page</label><br>
+     <label>Place at home page?</label><br>
        <div class="field"> 
              <%= f.check_box :show_at %>
       </div>
     </div>
 
+    <div class="col-md-6">    <br/>
+     <label>Time sales?</label><br>
+       <div class="field"> 
+             <%= f.check_box :time_sale %>
+      </div>
+    </div>
 
+ 
 
 
 

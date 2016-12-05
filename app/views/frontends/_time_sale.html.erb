@@ -1,0 +1,112 @@
+
+
+<div id="carousel-example-generic_small" class="carousel slide" data-ride="carousel">
+         
+
+
+          <div class="carousel-inner" role="listbox">
+
+            <% @time_sale_firsts.each do |product| %>
+              <div class="item active">
+                  <div class="col-md-6">
+                    <%= image_tag product.avatar1.url(:medium), :id=>"img-time_sale_img" %>
+                  </div>
+                  <div class="col-md-6"><br/><br/><br/>
+                       <a href="/product_info/<%= product.id %>">           
+                          <p id="product_title"><%= product.short_title %></p>
+                          <p id="product_price"><%= product.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                       </a>
+                  </div>
+              </div>
+            <% end %>
+
+            <% @time_sale_seconds.each do |product| %>
+              <div class="item">    
+                    <div class="col-md-6">
+                    <%= image_tag product.avatar1.url(:medium), :id=>"img-time_sale_img" %>
+                  </div>
+                  <div class="col-md-6"><br/><br/><br/>
+                       <a href="/product_info/<%= product.id %>">           
+                          <p id="product_title"><%= product.short_title %></p>
+                          <p id="product_price"><%= product.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                       </a>
+                  </div>
+              </div>
+            <% end %>
+
+            <% @time_sale_thirds.each do |product| %>
+              <div class="item">
+                  <div class="col-md-6">
+                    <%= image_tag product.avatar1.url(:medium), :id=>"img-time_sale_img" %>
+                  </div>
+                  <div class="col-md-6"><br/><br/><br/>
+                       <a href="/product_info/<%= product.id %>">           
+                          <p id="product_title"><%= product.short_title %></p>
+                          <p id="product_price"><%= product.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                       </a>
+                  </div>
+              </div>
+            <% end %>
+
+          </div>
+
+
+
+</div>
+
+
+
+
+<div id="carousel-example-generic_small" class="carousel slide" data-ride="carousel">
+         
+
+
+          <div class="carousel-inner" role="listbox">
+
+            <% @time_sale_fourths.each do |product| %>
+              <div class="item active">
+                  <div class="col-md-6">
+                    <%= image_tag product.avatar1.url(:medium), :id=>"img-time_sale_img" %>
+                  </div>
+                  <div class="col-md-6"><br/><br/><br/>
+                       <a href="/product_info/<%= product.id %>">           
+                          <p id="product_title"><%= product.short_title %></p>
+                          <p id="product_price"><%= product.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                       </a>
+                  </div>
+              </div>
+            <% end %>
+
+            <% @time_sale_fifths.each do |product| %>
+              <div class="item">    
+                    <div class="col-md-6">
+                    <%= image_tag product.avatar1.url(:medium), :id=>"img-time_sale_img" %>
+                  </div>
+                  <div class="col-md-6"><br/><br/><br/>
+                       <a href="/product_info/<%= product.id %>">           
+                          <p id="product_title"><%= product.short_title %></p>
+                          <p id="product_price"><%= product.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                       </a>
+                  </div>
+              </div>
+            <% end %>
+
+            <% @time_sale_sixths.each do |product| %>
+              <div class="item">
+                  <div class="col-md-6">
+                    <%= image_tag product.avatar1.url(:medium), :id=>"img-time_sale_img" %>
+                  </div>
+                  <div class="col-md-6"><br/><br/><br/>
+                       <a href="/product_info/<%= product.id %>">           
+                          <p id="product_title"><%= product.short_title %></p>
+                          <p id="product_price"><%= product.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                       </a>
+                  </div>
+              </div>
+            <% end %>
+
+          </div>
+
+
+
+</div>

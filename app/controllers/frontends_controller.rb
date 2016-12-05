@@ -323,7 +323,12 @@ class FrontendsController < ApplicationController
      @first_food_beverage = Product.where(:product_category => "Food&Beverage").where(:show_at => 1).last(6)
      @second_food_beverage = Product.where(:product_category => "Food&Beverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-
+     @time_sale_firsts = Product.where(:time_sale => "1").first
+     @time_sale_seconds = Product.where(:time_sale => "1")
+     @time_sale_thirds = Product.where(:time_sale => "1")
+     @time_sale_fourths = Product.where(:time_sale => "1")
+     @time_sale_fifths = Product.where(:time_sale => "1")
+     @time_sale_sixths = Product.where(:time_sale => "1")
   end
 
   # GET /frontends/1
