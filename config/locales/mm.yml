@@ -1,6 +1,7 @@
 
 
 mm:
+  view_cart: "ေငြရွင္းရန္"
   hello: "Hello world"
   welcome: "အကူအညီေပးေရး ဌာနမွ ၾကိဳဆိုပါတယ္။"
   customer_service: "ဝန္ေဆာင္မႈ"

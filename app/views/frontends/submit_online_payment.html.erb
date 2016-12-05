@@ -52,10 +52,18 @@
                      <%= line_item.product.title %>
                   </td>
                   <td>
-                     <%= line_item.product.product_color %>
+                   <% if line_item.product_color != "Choose" %>
+                     <%= line_item.product_color %>
+                   <% else %>
+                      No choosen yet
+                   <% end %>
                   </td>
                   <td>
-                     <%= line_item.product.product_size %>
+                    <% if line_item.product_color != "Choose" %>
+                     <%= line_item.product_size %>
+                    <% else %>
+                      No choosen yet
+                   <% end %>
                   </td>
                 </tr>
                  <% end %> 

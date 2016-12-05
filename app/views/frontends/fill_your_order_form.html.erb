@@ -15,10 +15,10 @@
 		          <th>#</th>
 		          <th>Product Name</th>
 		          <th>Avaiable Color
-		          	<%= @product.product_color %>
+		          	(<%= @product.product_color.gsub(",","") %>)
 		          </th>
 		          <th>Available Size
-		          	 <%= @product.product_size %>
+		          	 (<%= @product.product_size.gsub(",","") %>)
 		          </th>
 		        </tr>
 		      </thead>

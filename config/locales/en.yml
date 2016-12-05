@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  view_cart: "View cart"
   hello: "Hello world"
   welcome: "Welcome to Ebuy Myanmar Help Section"
   customer_service: "Customer service"

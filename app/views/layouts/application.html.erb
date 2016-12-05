@@ -71,7 +71,7 @@
 			</a>
 
 			<a class="navbar-brand">
-				<span class="nav_text"><%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price.to_i * @currency_exchange.to_i) %></span>
+				<span class="nav_text"></span>
 			</a>
 
          
@@ -191,8 +191,8 @@
 					 <li>
 						<a href="/cart_item?cart_id=<%= session[:cart_id] %>" id="menulink">
 						<%= image_tag "cart.png", :alt=>"profile" %>
-						<%= t("cart")%>
-						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price.to_i * @currency_exchange.to_i) %>
+						<%= t("view_cart")%>
+						
 						|</a>
 					</li>
 
@@ -226,9 +226,9 @@
 					 <li>
 						<a href="/cart_item?cart_id=<%= session[:cart_id] %>" id="menulink">
 						<%= image_tag "cart.png", :alt=>"profile" %>
-						<%= t("cart")%>
-						<%= (@cart.total_quantity) %> item(s) -   <%= (@cart.total_price.to_i * @currency_exchange.to_i) %>
-						|</a>
+						<%= t("view_cart")%>
+						
+						 &nbsp;|</a>
 					</li>
 
 		
@@ -1335,30 +1335,30 @@
 				<div class="col-md-12">
 					<div class="col-md-3">
 						<p class="fonter_headtitle"><%= t('customer_service') %></p>
-						<a class="fonter_menutitle" href="/help"><%= t("help_topics")%></a><br/>
-						<a class="fonter_menutitle" href="/how_to_buy"><%= t("how_to_buy") %></a><br/>
-						<a class="fonter_menutitle" href="/payment"><%= t("payment")%></a><br/>
-						<a class="fonter_menutitle" href="/shipment_delivery"><%= t("shipping_delivery")%></a><br/>
-						<a class="fonter_menutitle" href="/contact_us"><%= t("contact_us")%></a><br/>
-						<a class="fonter_menutitle" href="/customer_feedback"><%= t("cusstomer_feedback")%></a>
+						<%= link_to t("help_topics"), help_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("how_to_buy"), how_to_buy_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("payment"), payment_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("shipping_delivery"), shipment_delivery_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("contact_us"), contact_us_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("cusstomer_feedback"), customer_feedback_path, :class=>"fonter_menutitle" %><br/>
 					</div>
 					<div class="col-md-3">
 						<p class="fonter_headtitle"><%= t("about_ebuy")%></p>
-						<a class="fonter_menutitle" href="/about_us"><%= t("about_us")%></a><br/>
-						<a class="fonter_menutitle" href="/career_opportunity"><%= t("career")%></a><br/>
-						<a class="fonter_menutitle" href="/termns_and_condition"><%= t("termns")%></a><br/>
-						<a class="fonter_menutitle" href="/privacy_policy"><%= t("privacy")%></a><br/>
+						<%= link_to t("about_us"), about_us_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("career"), career_opportunity_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("termns"), termns_and_condition_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("privacy"), privacy_policy_path, :class=>"fonter_menutitle" %><br/>
 					</div>
 					<div class="col-md-3">
 						<p class="fonter_headtitle"><%= t("tools")%></p>
-						<a class="fonter_menutitle" href=""><%= t("join")%></a><br/>
+						<%= link_to t("join"), "www.google.com", :class=>"fonter_menutitle" %><br/>
 
 
 						<%= link_to image_tag("facebook.png", :border => 0, :alt => '', :title => ''), "https://www.facebook.com/ebuy.myanmar?fref=ts", :class => 'dock-item' %><br/><br/>
 
 					
 
-						<a class="fonter_menutitle" href=""><%= t("download")%></a><br/>
+						<%= link_to t("download"), root_path, :class=>"fonter_menutitle" %><br/>
 						<%= link_to image_tag("googleplay.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'dock-item' %><br/>
 					    <%= link_to image_tag("apple_store.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'dock-item' %><br/>
 
@@ -1368,7 +1368,7 @@
 					</div>
 					<div class="col-md-3">
 						<p class="fonter_headtitle"><%= t("sell_on")%></p>
-						<a class="fonter_menutitle" href="/request_products/new"><%= t("sell_your")%></a><br/>
+						<%= link_to t("sell_your"), new_request_product_path, :class=>"fonter_menutitle" %><br/>
 					</div>
 
 				</div>

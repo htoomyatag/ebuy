@@ -275,6 +275,11 @@ overflow-x: hidden;
 	width: 98%;
 }
 
+#btn_add_to_cart{
+
+	width: 98%;
+}
+
 .detail_tab_title{
 	color: white;
 	font-size: 18px;
@@ -555,6 +560,12 @@ background-color: #0472c1;
 
 .img-responsive{
 	width: 200px;
+}
+
+
+
+#product_quantity{
+	width: 78px;
 }
 
 @media (min-width: 600px) {

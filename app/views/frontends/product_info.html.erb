@@ -119,16 +119,16 @@
 
 			   <tr>
 			    <td style="width:60%"> <span class="mydetail_title"> Estimated Delivery </span></td>
-			    <td> <span class="mydetail_title"> <%= @product.delivery_time %> Days</span></td> 
+			    <td> <span class="mydetail_title"> <%= @product.delivery_time %></span></td> 
 			  </tr>
 
 			  <tr>
 			    <td style="width:60%"> <span class="mydetail_title">Delivery Service </span></td>
 			    <td> <span class="mydetail_title"> 
-			    		<select>
+			    		<select id="delivery_method">
 			    		  <option>Choose</option>
-						  <option>Pick up</option>
-						  <option>eBuy Delivery</option>
+						  <option value="pick_up">Pick up</option>
+						  <option value="ebuy_delivery">eBuy Delivery</option>
 						</select>
 			     </span></td> 
 			  </tr>
@@ -154,10 +154,19 @@
 
 			   <tr>
 			    <td style="width:60%"> <span class="mydetail_title">Product Size</span></td>
-			    <td > <span class="mydetail_title" id="myproduct_size"> 
+			    <td > <span class="mydetail_title" id="myproduct_size" > 
 			  
 			    </span></td> 
 			  </tr>
+
+
+			   <tr>
+			    <td style="width:60%"> <span class="mydetail_title">Order Quantity</span></td>
+			    <td> 
+			      <input id="product_quantity" >
+			    </td> 
+			  </tr>
+
 
 			 
 
@@ -173,13 +182,16 @@
 			
 		
 			  <tr>
-				  <% if Time.now.to_datetime.between?(@product.start_to_sell_on.to_datetime-1,@product.end_on.to_datetime) && Time.now.strftime("%H").to_i.between?(@product.start_to_sell_on.to_datetime.strftime("%H").to_i, @product.end_on.to_datetime.strftime("%H").to_i) %>
-					    <td>
+
+			   <td>
 					    	 <%= button_to 'Buy Now' , fill_your_order_form_path(@product),:class =>"btn btn-danger", :id=>"btn_checkout", :method => "GET" %>
 					    </td>
 					    <td>
-					    	<%= button_to 'Add to Cart' , line_items_path(:product_id => @product),:class =>"btn btn-primary", :id=>"btn_checkout" %>
+					    	 <button type="button" class="btn btn-primary" id="btn_add_to_cart">Add to Cart</button>
 					    </td> 
+					    
+				  <% if Time.now.to_datetime.between?(@product.start_to_sell_on.to_datetime-1,@product.end_on.to_datetime) && Time.now.strftime("%H").to_i.between?(@product.start_to_sell_on.to_datetime.strftime("%H").to_i, @product.end_on.to_datetime.strftime("%H").to_i) %>
+					   
 				  <% else %>
 				  	    <td>
 					    	<button type="button" class="btn btn-default" id="btn_checkout">Expire now!</button>
@@ -543,6 +555,44 @@ $( document ).ready(function() {
 });
 
 
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+	
+ $('#btn_add_to_cart').click(function() {
+ 
+
+ 		product_id = "<%= @product.id %>";
+ 		color = $( "#myProductColor option:selected" ).text();
+ 		size = $( "#myProductSize option:selected" ).text();
+ 		delivery_method = $( "#delivery_method option:selected" ).text();
+ 		product_quantity = document.getElementById("product_quantity").value;
+ 	
+  		$.ajax({
+              type: 'post',
+              url: '/line_items',
+              dataType: 'text',
+              data: {'product_id':product_id, 'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity},
+              complete: function(r){
+              
+					location.reload();              	
+
+
+              }
+           });
+
+
+
+
+
+
+    });
 
 
 </script>
