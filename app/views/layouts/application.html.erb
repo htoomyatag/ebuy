@@ -166,9 +166,14 @@
 
           		
    				     <li>
-						<a href="/" id="menulink">
-						<%= image_tag "home.png", :alt=>"profile" %>
-						<%= t("home")%> |</a>
+					
+
+						<%= link_to root_path, id:"menulink" do %>
+						  <%= image_tag "home.png", :alt=>"profile" %>
+						  <%= t("home")%> |
+						<% end %>
+
+
 					</li>
    
    			<% if buyer_signed_in? %>
@@ -182,18 +187,18 @@
 
 
    				     <li>
-						<a href="/my_account" id="menulink">
+						<%= link_to my_account_path, id:"menulink" do %>
 						<%= image_tag "profile.png", :alt=>"profile" %>
-						<%= t("my_account")%> |</a>
+						<%= t("my_account")%> |
+						<% end %>
 					</li>
 
 
 					 <li>
-						<a href="/cart_item?cart_id=<%= session[:cart_id] %>" id="menulink">
+						<%= link_to cart_item_path(:cart_id => session[:cart_id]), id:"menulink" do %>
 						<%= image_tag "cart.png", :alt=>"profile" %>
 						<%= t("view_cart")%>
-						
-						|</a>
+						|<% end %>
 					</li>
 
 
@@ -206,64 +211,76 @@
 		<!--  -->
 			        <li>
 
-						<a href="/buyers/sign_in" id="menulink">
+						<%= link_to new_buyer_session_path, id:"menulink" do %>
 						<%= image_tag "sign.png", :alt=>"sign.png" %>
-						<%= t("sign_in")%> |
-						</a>
+						<%= t("sign_in")%> 
+						|<% end %>
+
+
 					</li>
 					<li>
-						<a href="/buyers/sign_up" id="menulink">
+
+						<%= link_to new_buyer_registration_path, id:"menulink" do %>
 							<%= image_tag "register.png", :alt=>"register" %>
-							<%= t("register")%> |
-						</a>
-					</li>
-					<li>
-						<a href="#" id="menulink">
-						<%= image_tag "profile.png", :alt=>"profile" %>
-					    <%= t("my_account")%> |</a>
+							<%= t("register")%> 
+						|<% end %>
 					</li>
 
-					 <li>
-						<a href="/cart_item?cart_id=<%= session[:cart_id] %>" id="menulink">
+
+				   <li>
+						<%= link_to cart_item_path(:cart_id => session[:cart_id]), id:"menulink" do %>
 						<%= image_tag "cart.png", :alt=>"profile" %>
 						<%= t("view_cart")%>
-						
-						 &nbsp;|</a>
+						|<% end %>
 					</li>
-
 		
 
 			  <% end %>
 
 
 			<li>
-				<a href="/help" id="menulink">
-				<%= image_tag "mark.png", :alt=>"mark" %>
-				<%= t("help")%> |</a>
-			</li>
-			<li>
-				<a href="/contact_us" id="menulink">
-				<%= image_tag "phone.png", :alt=>"phone" %>
-				<%= t("contact_us")%> &nbsp;|</a>
-			</li>
-			<li>
-				<a href="/about_us" id="menulink">
-				<%= image_tag "aboutus.png", :alt=>"aboutus" %>
-				<%= t("about_us")%> &nbsp;|
-				</a>
-			</li>
-			<li>
-				<a href="#" id="menulink">
-				<%= t("language")%>
-				<%= image_tag "english_flag.png", :alt=>"english", :style => "border:1px solid #021a40;"  %>
-				<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
-				</a>
-			</li>
+				<%= link_to help_path, id:"menulink" do %>
+					<%= image_tag "mark.png", :alt=>"mark" %>
+					<%= t("help")%> |
+				 <% end %>
 
+			</li>
+			<li>
+				<%= link_to cart_item_path(:cart_id => session[:cart_id]), id:"menulink" do %>
+					<%= image_tag "cart.png", :alt=>"profile" %>
+					<%= t("view_cart")%>
+				|<% end %>
+			</li>
+			<li>
+				<%= link_to contact_us_path, id:"menulink" do %>
+					<%= image_tag "phone.png", :alt=>"phone" %>
+					<%= t("contact_us")%> &nbsp;|
+				<% end %>
+			</li>
+			<li>
+				<%= link_to about_us_path, id:"menulink" do %>
+					<%= image_tag "aboutus.png", :alt=>"aboutus" %>
+					<%= t("about_us")%> &nbsp;|
+				<% end %>
+			</li>
 			
-
-
+			
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+	            <li id="navmenu">
+					<%= link_to "/en", id:"menulink" do %>
+						<%= t("language")%>
+						<%= image_tag "english_flag.png", :alt=>"english", :style => "border:1px solid #021a40;"  %>
+					<% end %>
+				</li>
+				<li>
+
+					<%= link_to "/mm", id:"menulink" do %>
+					
+						<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
+					<% end %>
+				</li>
+			</ul>
           
         </div><!-- /.navbar-collapse -->
       </div>

@@ -53,6 +53,11 @@ overflow-x: hidden;
 
 }
 
+#navmenu{
+	position: relative;
+	left: 20px;
+}
+
 #menu_header{
 
  background-color: #3498DB;
