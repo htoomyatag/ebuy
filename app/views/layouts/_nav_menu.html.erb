@@ -16,13 +16,13 @@
 	    	<li id="all_categories"><a id="menulink"> <%= t("all_categories")%> </a></li>
 	      	<li class="dropdown">
 
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Authentic Brand Zone<span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('AllProductsonAuthenticBrandZone') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
-		          <li><a tabindex="0">All Products on Authentic Brand Zone</a></li>
+		          <li><a tabindex="0"><%= t('AllProductsonAuthenticBrandZone') %></a></li>
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Women's Fashion </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('WomensFashion') %> </a>
 
 		            <ul class="dropdown-menu">
 		              <li><a tabindex="0"><%= t('WomensApparel') %></a></li>
@@ -34,10 +34,9 @@
 		          </li>
 
 		           <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Men's Fashion </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('MensFashion') %> </a>
 
 		            <ul class="dropdown-menu">
-						<li><a tabindex="0"><%= t('MensFashion') %></a></li>
 						<li><a tabindex="0"><%= t('MensApparel') %></a></li>
 						<li><a tabindex="0"><%= t('ShoesandFootwear') %></a></li>
 						<li><a tabindex="0"><%= t('BagsandWallets') %></a></li>
@@ -49,10 +48,9 @@
 
 
 		           <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Digital </a>
+		            <a tabindex="0" data-toggle="dropdown">><%= t('DigitalMobileandElectricalAppliances') %> </a>
 
 		            <ul class="dropdown-menu">
-						<li><a tabindex="0"><%= t('DigitalMobileandElectricalAppliances') %></a></li>
 						<li><a tabindex="0"><%= t('PhonesandTablets') %></a></li>
 						<li><a tabindex="0"><%= t('ComputersandLaptops') %></a></li>
 						<li><a tabindex="0"><%= t('TVVideoandPlayer') %></a></li>
@@ -64,7 +62,7 @@
 		          </li>
 
 		           <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Home and Living </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('HomeandLiving') %> </a>
 
 					    <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('LivingRoomSupplies') %></a></li>
@@ -82,7 +80,7 @@
 
 
  				<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Health and Beauty</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('HealthandBeauty') %></a>
      					<ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('BathandBodySupplies') %></a></li>
 							<li><a tabindex="0"><%= t('SkinCare') %></a></li>
@@ -98,7 +96,7 @@
 		          </li>
 
 			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Food and Beverage</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('FoodandBeverage') %></a>
  					<ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('VegetableProducts') %></a></li>
 						<li><a tabindex="0"><%= t('Confectionery') %></a></li>
@@ -119,9 +117,8 @@
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Kid</a>
+		            <a tabindex="0" data-toggle="dropdown">><%= t('KidBabyandMaternity') %></a>
 		            <ul class="dropdown-menu">
-						<li><a tabindex="0"><%= t('KidBabyandMaternity') %></a></li>
 						<li><a tabindex="0"><%= t('KidsFashion') %></a></li>
 						<li><a tabindex="0"><%= t('BabyCare') %></a></li>
 						<li><a tabindex="0"><%= t('BabyFeeding') %></a></li>
@@ -131,7 +128,7 @@
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Sports</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('SportsOutdoorsandEntertainment') %></a>
  					<ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('IndoorSportSupplies') %></a></li>
 						<li><a tabindex="0"><%= t('OutdoorSportSupplies') %></a></li>
@@ -142,7 +139,7 @@
 
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Office and School Supplies</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('OfficeandSchoolSupplies') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('EducationSupplies') %></a></li>
 						<li><a tabindex="0"><%= t('OfficeSupplies') %></a></li>
@@ -151,7 +148,7 @@
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Lights and Lightings</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('LightsandLightings') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('LightsandLightings') %></a></li>
 						<li><a tabindex="0"><%= t('IndoorLightings') %></a></li>
@@ -160,7 +157,7 @@
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Transportation</a>
+		            <a tabindex="0" data-toggle="dropdown">><%= t('Transportation') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('Bicycles') %></a></li>
 						<li><a tabindex="0"><%= t('AutomobilesandMotorcycles') %></a></li>
@@ -168,7 +165,7 @@
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Electronic</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('ElectronicElectricalandMechanicalProducts') %></a>
  					<ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('ElectronicComponentsandParts') %></a></li>
 						<li><a tabindex="0"><%= t('ElectricalEquipmentsandParts') %></a></li>
@@ -183,15 +180,15 @@
 
 		      	    	<!-- Women's Fashion  -->
 	      	<li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Women's Fashion <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('WomensFashion') %> <span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
 		     
-		           <li><a tabindex="0">All Products on Women's Fashion</a></li>
+		           <li><a tabindex="0"><%= t('AllProductsonWomensFashion') %></a></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Women's Apparel</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('WomensApparel') %></a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('ShirtsTops') %></a></li>
 							<li><a tabindex="0"><%= t('JacketsCoats') %></a></li>
@@ -220,7 +217,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Shoes and Footwear</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('ShoesandFootwear') %></a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('Flats') %></a></li>
 							<li><a tabindex="0"><%= t('Heels') %></a></li>
@@ -237,7 +234,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Bags and Wallets</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('BagsandWallets') %></a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('Handbags') %></a></li>
 							<li><a tabindex="0"><%= t('ClutchBags') %></a></li>
@@ -259,7 +256,7 @@
 
 
 				 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Watches and Glasses</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('WatchesandGlasses') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('DigitalWatches') %></a></li>
 						<li><a tabindex="0"><%= t('CasualWatches') %></a></li>
@@ -273,7 +270,7 @@
 
 
 	  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Jewellery</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('Jewellery') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('Rings') %></a></li>
 						<li><a tabindex="0"><%= t('Earrings') %></a></li>
@@ -295,15 +292,15 @@
 
 
 		      <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" >Men's Fashion <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('MensFashion') %> <span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
 		     
-		           <li><a tabindex="0">All Products on Men's Fashion</a></li>
+		           <li><a tabindex="0"><%= t('AllProductsonMensFashion') %></a></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Men's Apparel</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('MensApparel') %></a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('ShirtsTops') %></a></li>
 							<li><a tabindex="0"><%= t('JacketsCoats') %></a></li>
@@ -327,7 +324,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Shoes and Footwear</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('ShoesandFootwear') %></a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('Casual') %></a></li>
 							<li><a tabindex="0"><%= t('Formal') %></a></li>
@@ -342,7 +339,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Bags and Wallets</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('BagsandWallets') %></a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('Handbags') %></a></li>
 							<li><a tabindex="0"><%= t('ClutchBags') %></a></li>
@@ -364,7 +361,7 @@
 
 
 				 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Watches and Glasses</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('WatchesandGlasses') %></a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('DigitalWatches') %></a></li>
 							<li><a tabindex="0"><%= t('CasualWatches') %></a></li>
@@ -378,7 +375,7 @@
 
 
 	  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Jewellery</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('Jewellery') %></a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('Rings') %></a></li>
 							<li><a tabindex="0"><%= t('Earrings') %></a></li>
@@ -407,15 +404,15 @@
 		      		      <!-- electrinics -->
 
 		      <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" > Digital & Mobile <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" > <%= t('DigitalMobileandElectricalAppliances') %> <span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
 		     
-		           <li><a tabindex="0">All Products on Digital & Mobile</a></li>
+		           <li><a tabindex="0"><%= t('AllProductsonDigitalMobileandElectricalAppliances') %></a></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Phones and Tablets </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('PhonesandTablets') %> </a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('SmartPhones') %></a></li>
 						<li><a tabindex="0"><%= t('BasicPhones') %></a></li>
@@ -427,7 +424,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Computers and Laptops</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('ComputersandLaptops') %></a>
 		            <ul class="dropdown-menu">
 		            		<li><a tabindex="0"><%= t('DesktopPCs') %></a></li>
 							<li><a tabindex="0"><%= t('Laptops') %></a></li>
@@ -438,7 +435,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> TVs, Videos and Players </a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('TVsVideosandPlayers') %> </a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('TVs') %></a></li>
 							<li><a tabindex="0"><%= t('Projectors') %></a></li>
@@ -451,7 +448,7 @@
 
 
 				 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Audio and Hi Fi</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('AudioandHiFi') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('Amplifiers') %></a></li>
 						<li><a tabindex="0"><%= t('HomeTheatres') %></a></li>
@@ -469,7 +466,7 @@
 
 
 	  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Cameras and Photos</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('CamerasandPhotos') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('CCTV') %></a></li>
 						<li><a tabindex="0"><%= t('DSLR') %></a></li>
@@ -485,7 +482,7 @@
 
 
 				  <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Gaming</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('Gaming') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('PlayStation') %></a></li>
 						<li><a tabindex="0"><%= t('Xbox') %></a></li>
@@ -494,7 +491,7 @@
 
 
 				  <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Home Electrical Appliances </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('HomeElectricalAppliances') %> </a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('CoolingandHeatingAppliances') %></a></li>
 						<li><a tabindex="0"><%= t('KitchenAppliances') %></a></li>
@@ -518,15 +515,15 @@
 
 		      <!-- Home and living -->
 		  	    <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink">Home and Living <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink"><%= t('HomeandLiving') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
 		     
-		           <li><a tabindex="0">All Products on Home and Living</a></li>
+		           <li><a tabindex="0"><%= t('AllProductsonHomeandLiving') %></a></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Living Room Appliances  </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('LivingRoomAppliances') %>  </a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('LivingRoomFurnitures') %></a></li>
 							<li><a tabindex="0"><%= t('OthersandAccessories') %></a></li>
@@ -535,7 +532,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Bedroom Products</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('BedroomProducts') %></a>
 		            <ul class="dropdown-menu">
 							<li><a tabindex="0"><%= t('Pillows') %></a></li>
 							<li><a tabindex="0"><%= t('Bolsters') %></a></li>
@@ -549,7 +546,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Bathroom Appliances </a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('BathroomAppliances') %> </a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('BathroomShelves') %></a></li>
 						<li><a tabindex="0"><%= t('Faucets') %></a></li>
@@ -563,7 +560,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Garment Care </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('GarmentCare') %> </a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('SewingMachines') %></a></li>
@@ -577,7 +574,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Kitchen and Dining  </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('KitchenandDining') %>  </a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('KitchenStorage') %></a></li>
@@ -592,7 +589,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Housekeeping  </a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('Housekeeping') %>  </a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('Mops') %></a></li>
@@ -605,7 +602,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Home Decoration</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('HomeDecoration') %></a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('Carpets') %></a></li>
@@ -623,7 +620,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Outdoor and Garden </a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('OutdoorandGarden') %> </a>
 		            <ul class="dropdown-menu">
 
 		            	<li><a tabindex="0"><%= t('OutdoorSupplies') %></a></li>
@@ -641,15 +638,15 @@
 
 
 		    <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink">Health and Beauty <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink"><%= t('HealthandBeauty') %> <span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
 		     
-		           <li><a tabindex="0">All Products on Health and Beauty</a></li>
+		           <li><a tabindex="0"><%= t('AllProductsonHealthandBeauty') %></a></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Bath and Body Care  </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('BathandBodyCare') %>  </a>
 		            <ul class="dropdown-menu">
 		            	<li><a tabindex="0"><%= t('BathCare') %></a></li>
 						<li><a tabindex="0"><%= t('BodyCare') %></a></li>
@@ -658,7 +655,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Skin Care</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('SkinCare') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('FacialMasks') %></a></li>
 						<li><a tabindex="0"><%= t('SunProtection') %></a></li>
@@ -676,7 +673,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Eye Care </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('EyeCare') %> </a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('ContactLenses') %></a></li>
 						<li><a tabindex="0"><%= t('Glasses') %></a></li>
@@ -686,7 +683,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Hair Care</a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('HairCare') %></a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('Shampoos') %></a></li>
@@ -702,7 +699,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Dental Care  </a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('DentalCare') %>  </a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('Floss') %></a></li>
@@ -715,7 +712,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Perfumes  </a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('Perfumes') %>  </a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('MensPerfumes') %></a></li>
@@ -726,7 +723,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Shaving Supplies</a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('ShavingSupplies') %></a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('ShavingCreamsGels') %></a></li>
@@ -741,7 +738,7 @@
 			
 
 				<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">Food Supplements </a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('FoodSupplements') %> </a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('DietarySupplements') %></a></li>
@@ -756,7 +753,7 @@
 
 
 				  <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> Health and Beauty Tools </a>
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('HealthandBeautyTools') %> </a>
 		            <ul class="dropdown-menu">
 
 						<li><a tabindex="0"><%= t('MakeupSets') %></a></li>
@@ -775,18 +772,18 @@
 		      <!-- food and beverage -->
 		      
 	      	<li class="dropdown" >
-		        <a tabindex="0" data-toggle="dropdown" id="menulink">Food & Beverages <span class="caret" ></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink"><%= t('FoodandBeverage') %> <span class="caret" ></span></a>
 
 
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
 		     
-		           <li><a tabindex="0">All Products on Food & Beverage</a></li>
+		           <li><a tabindex="0"><%= t('AllProductsonFoodandBeverage') %></a></li>
 
 
 					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown">Vegetable Products</a>
+							            <a tabindex="0" data-toggle="dropdown"><%= t('VegetableProducts') %></a>
 							            <ul class="dropdown-menu">
 
 											<li><a tabindex="0"><%= t('FreshVegetables') %></a></li>
@@ -799,7 +796,7 @@
 					</li>
 
 					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown">Confectionery</a>
+							            <a tabindex="0" data-toggle="dropdown"><%= t('Confectionery') %></a>
 							            <ul class="dropdown-menu">
 
 							            		<li><a tabindex="0"><%= t('Chocolates') %></a></li>
@@ -810,7 +807,7 @@
 					</li>
 
 					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown">Baked Goods</a>
+							            <a tabindex="0" data-toggle="dropdown"><%= t('BakedGoods') %></a>
 							            <ul class="dropdown-menu">
 
 												<li><a tabindex="0"><%= t('Breads') %></a></li>
@@ -822,7 +819,7 @@
 					</li>
 
 					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown">Grain Products</a>
+							            <a tabindex="0" data-toggle="dropdown"><%= t('GrainProducts') %></a>
 							            <ul class="dropdown-menu">
 
 												<li><a tabindex="0"><%= t('Cereal') %></a></li>
@@ -835,7 +832,7 @@
 
 
 					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown"> Food Ingredients</a>
+							            <a tabindex="0" data-toggle="dropdown"> <%= t('FoodIngredients') %></a>
 							            <ul class="dropdown-menu">
 
 											<li><a tabindex="0"><%= t('SeasoningsCondiments') %></a></li>
@@ -845,7 +842,7 @@
 
 
 					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown">Dairy Products</a>
+							            <a tabindex="0" data-toggle="dropdown"><%= t('DairyProducts') %></a>
 							            <ul class="dropdown-menu">
 
 											<li><a tabindex="0"><%= t('Milk') %></a></li>
@@ -861,7 +858,7 @@
 
 
 					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown">Honey Products</a>
+							            <a tabindex="0" data-toggle="dropdown"><%= t('HoneyProducts') %></a>
 							            <ul class="dropdown-menu">
 
 											<li><a tabindex="0"><%= t('Honey') %></a></li>
@@ -914,10 +911,7 @@
 					</li>
 
 
-					<li>
-							            <a tabindex="0" data-toggle="dropdown">Drinking Water</a>
-					</li>
-
+		
 
 					<li>
 							            <a tabindex="0"><%= t('DrinkingWater') %></a>
@@ -934,6 +928,377 @@
 		        </ul>
 		      </li> 
 		     
+
+		     <!--  edit frrom here -->
+
+
+		     <li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('KidBabyandMaternity') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0"><%= t('AllProductsonKidBabyandMaternity') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('KidsFashion') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0"><%= t('GirlsApparels') %></a></li>
+							<li><a tabindex="0"><%= t('BoysApparel') %></a></li>
+							<li><a tabindex="0"><%= t('OthersandAccessories') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('BabyCare') %></a>
+		            <ul class="dropdown-menu">
+							
+								<li><a tabindex="0"><%= t('Diapering') %></a></li>
+								<li><a tabindex="0"><%= t('BabyBath') %></a></li>
+								<li><a tabindex="0"><%= t('BabySkinCare') %></a></li>
+					
+					</ul>
+				  </li>
+
+
+				<li>
+					<a tabindex="0"><%= t('BabyFeedings') %></a>
+				</li>
+
+
+				<li>
+					<a tabindex="0"><%= t('Toys') %></a>
+				</li>
+
+				<li>
+					<a tabindex="0"><%= t('MaternityCare') %></a>
+				</li>
+
+
+				<li>
+					<a tabindex="0"><%= t('PostpartumCareGoods') %></a>
+				</li>
+
+		        </ul>
+
+		      </li>  
+
+		      <!--  -->
+
+		       <li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('SportsOutdoorsandEntertainment') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0"><%= t('AllProductsonSportsOutdoorsandEntertainment') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('IndoorSportSupplies') %></a>
+		            <ul class="dropdown-menu">
+
+		            			<li><a tabindex="0"><%= t('SnookerandBillboard') %></a></li>
+								<li><a tabindex="0"><%= t('SoccerTables') %></a></li>
+								<li><a tabindex="0"><%= t('Badminton') %></a></li>
+								<li><a tabindex="0"><%= t('TableTennis') %></a></li>
+								<li><a tabindex="0"><%= t('Bowling') %></a></li>
+								<li><a tabindex="0"><%= t('Chess') %></a></li>
+								<li><a tabindex="0"><%= t('Darts') %></a></li>
+								<li><a tabindex="0"><%= t('BoxingandMartialArts') %></a></li>
+								<li><a tabindex="0"><%= t('FitnessandBodyBuilding') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"> <%= t('OutdoorSportSupplies') %></a>
+		            <ul class="dropdown-menu">
+							
+							<li><a tabindex="0"><%= t('Golf') %></a></li>
+							<li><a tabindex="0"><%= t('Soccer') %></a></li>
+							<li><a tabindex="0"><%= t('Tennis') %></a></li>
+							<li><a tabindex="0"><%= t('SwimmingandDiving') %></a></li>
+							<li><a tabindex="0"><%= t('Basketball') %></a></li>
+							<li><a tabindex="0"><%= t('Volleyball') %></a></li>
+							<li><a tabindex="0"><%= t('Cycling') %></a></li>
+							<li><a tabindex="0"><%= t('OthersandAccessories') %></a></li>
+					
+					</ul>
+				  </li>
+
+
+				<li>
+					<a tabindex="0"><%= t('OutdoorRecreation') %></a>
+				</li>
+
+
+				<li>
+					<a tabindex="0"><%= t('PicnicSupplies') %></a>
+				</li>
+
+				<li>
+					<a tabindex="0"><%= t('Entertainment') %></a>
+				</li>
+
+
+				<li>
+					<a tabindex="0"><%= t('MusicalInstruments') %></a>
+				</li>
+
+		        </ul>
+		      </li>  
+
+
+		      <!--  edit from here -->
+
+
+
+		     <li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('OfficeandSchoolSupplies') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0"><%= t('AllProductsonOfficeandSchoolSupplies') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('EducationSupplies') %></a>
+		            <ul class="dropdown-menu">
+
+							<li><a tabindex="0"><%= t('Boards') %></a></li>
+							<li><a tabindex="0"><%= t('CorrectionSupplies') %></a></li>
+							<li><a tabindex="0"><%= t('Pens') %></a></li>
+							<li><a tabindex="0"><%= t('Pencils') %></a></li>
+							<li><a tabindex="0"><%= t('BooksandWritingPads') %></a></li>
+							<li><a tabindex="0"><%= t('FilingProducts') %></a></li>
+							<li><a tabindex="0"><%= t('OthersandAccessories') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('OfficeSupplies') %></a>
+		            <ul class="dropdown-menu">
+							
+							<li><a tabindex="0"><%= t('Calendar') %></a></li>
+							<li><a tabindex="0"><%= t('Map') %></a></li>
+							<li><a tabindex="0"><%= t('Magazines') %></a></li>
+							<li><a tabindex="0"><%= t('OfficeAdhesivesandTapes') %></a></li>
+							<li><a tabindex="0"><%= t('OfficeFurnitures') %></a></li>
+							<li><a tabindex="0"><%= t('OthersandAccessories') %></a></li>
+
+					
+					</ul>
+				 </li>
+
+
+				 <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('ArtSupplies') %></a>
+		            <ul class="dropdown-menu">
+							
+								<li><a tabindex="0"><%= t('ArtPaints') %></a></li>
+								<li><a tabindex="0"><%= t('ArtMarkersandBrushes') %></a></li>
+								<li><a tabindex="0"><%= t('ColouredPencils') %></a></li>
+								<li><a tabindex="0"><%= t('Palette') %></a></li>
+
+					
+					</ul>
+				 </li>
+
+		        </ul>
+
+		      </li> 
+
+
+		      <!--  -->
+		     <li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('LightsandLightings') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0"><%= t('AllProductsonLightsandLightnings') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('IndoorLightings') %></a>
+		            <ul class="dropdown-menu">
+
+							<li><a tabindex="0"><%= t('LightingBulbsandTubes') %></a></li>
+							<li><a tabindex="0"><%= t('HomeDecorationLightnings') %></a></li>
+							<li><a tabindex="0"><%= t('LEDLightings') %></a></li>
+							<li><a tabindex="0"><%= t('Torchlights') %></a></li>
+							<li><a tabindex="0"><%= t('EmergencyLightings') %></a></li>
+							<li><a tabindex="0"><%= t('ProfessionalLightings') %></a></li>
+							<li><a tabindex="0"><%= t('OthersandAccessories') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('OutdoorLightnings') %></a>
+		            <ul class="dropdown-menu">
+							
+							<li><a tabindex="0"><%= t('StreetLights') %></a></li>
+							<li><a tabindex="0"><%= t('SolarLights') %></a></li>
+							<li><a tabindex="0"><%= t('LEDOutdoorLights') %></a></li>
+							<li><a tabindex="0"><%= t('OthersandAccessories') %></a></li>
+
+					
+					</ul>
+				 </li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+
+
+		      <!--  -->
+
+		       <li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('Transportation') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0"><%= t('AllProductsonTransportation') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('Bicycles') %></a>
+		            <ul class="dropdown-menu">
+
+							<li><a tabindex="0"><%= t('ManualBikes') %></a></li>
+							<li><a tabindex="0"><%= t('ElectricBicycles') %></a></li>
+							<li><a tabindex="0"><%= t('OthersandAccessories') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('AutomobilesandMotorcycles') %></a>
+		            <ul class="dropdown-menu">
+							
+							<li><a tabindex="0"><%= t('Automobiles') %></a></li>
+							<li><a tabindex="0"><%= t('Motorcycles') %></a></li>
+							<li><a tabindex="0"><%= t('AutomobileParts') %></a></li>
+							<li><a tabindex="0"><%= t('MotorcycleParts') %></a></li>
+
+					</ul>
+				 </li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+		      <!--  -->
+
+		       <li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('TravelandDeals') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0"><%= t('AlloffersonTravelandDeals') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('Travel') %></a>
+		            <ul class="dropdown-menu">
+
+							<li><a tabindex="0"><%= t('HotelPromotion') %></a></li>
+							<li><a tabindex="0"><%= t('TravelPromotion') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('RestaurantsandCafe') %></a>
+		            <ul class="dropdown-menu">
+							
+								<li><a tabindex="0"><%= t('Restaurants') %></a></li>
+								<li><a tabindex="0"><%= t('Cafe') %></a></li>
+
+					</ul>
+				 </li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+		      <!--  -->
+		       <li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('Services') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		            <li><a tabindex="0"><%= t('AllOffersonServices') %></a></li>
+
+		          	<li><a tabindex="0"><%= t('HairBeautyandWellness') %></a></li>
+					<li><a tabindex="0"><%= t('EducationServices') %></a></li>
+					<li><a tabindex="0"><%= t('BasicEducationServices') %></a></li>
+					<li><a tabindex="0"><%= t('HigherEducationServices') %></a></li>
+					<li><a tabindex="0"><%= t('ProfessionalTrainings') %></a></li>
+					<li><a tabindex="0"><%= t('HomeTuition') %></a></li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" data-toggle="dropdown"><%= t('HomeRepairandMaintenance') %></a>
+		            <ul class="dropdown-menu">
+							
+						<li><a tabindex="0"><%= t('AirconServicing') %></a></li>
+						<li><a tabindex="0"><%= t('GeneralHomeServicing') %></a></li>
+						<li><a tabindex="0"><%= t('ElectricalandElectronicRepair') %></a></li>
+
+					</ul>
+				 </li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+		      <!--  -->
+
+		     <li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('ElectronicElectricalandMechanicalProducts') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		            <li><a tabindex="0"><%= t('AllProductsonElectronicElectricalandMechanicalProducts') %></a></li>
+
+
+				<li><a tabindex="0"><%= t('ElectronicComponentsandParts') %></a></li>
+				<li><a tabindex="0"><%= t('ElectricalEquipmentsandParts') %></a></li>
+				<li><a tabindex="0"><%= t('MechanicalProductsandTools') %></a></li>
+				<li><a tabindex="0"><%= t('SafetyEquipmentsandAccessories') %></a></li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+
+
+
+
+
+
 
 
 
