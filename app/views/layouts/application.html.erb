@@ -18,118 +18,15 @@
 <!-- mobile view -->
 
 
-		
+
 <div id="mobile_view" >
  
-
-<nav class="navbar navbar-default navbar-static-top" style="background:#E74C3C">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-left navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-          
-
-            <span>
-            <form role="search" class="form-inline" style="width: 20em; margin: 0.6em 2em;">
-			    <div class="input-group">
-			        <input type="text" class="form-control" placeholder="Search">
-			        <div class="input-group-btn">
-			            <button type="submit" class="btn btn-default">
-			               search
-			            </button>
-			        </div>
-			    </div>
-
-
-			</form> 
-
-			</span>
-
-			  <a class="navbar-brand" href="#">
-				<span class="nav_text">Language</span>
-              </a>
-
-
-			  <a class="navbar-brand" href="#">
-				<%= image_tag "english_flag.png", :alt=>"english", :style => "border:1px solid #021a40;"  %>
-              </a>
-
-             <a class="navbar-brand" href="#">
-            	<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
-            </a>
-
-              <a class="navbar-brand" href="#">
-				<span class="nav_text">Cart</span>
-              </a>
-
-            <a class="navbar-brand" href="/cart_item?cart_id=<%= session[:cart_id] %>">
-				<%= image_tag "cart.png", :alt=>"profile" %>
-			</a>
-
-			<a class="navbar-brand">
-				<span class="nav_text"></span>
-			</a>
-
-         
-              
-          
-
-
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-					 <li>
-					    <a href="#about">
-					 	  <span class="menu_title_mobile">Authentic Brand Zone</span>
-					 	</a>
-					 </li>
-					 <li>
-					 	<a href="#about">
-					 		<span class="menu_title_mobile">Women's Fashion </span>
-					 	</a>
-					 </li>
-					 <li>
-					 	<a href="#about">
-					 		<span class="menu_title_mobile">Men's Fashion </span>
-					 	</a>
-					 </li>
-					 <li>
-					 	<a href="#about">
-					 		<span class="menu_title_mobile">Digital & Mobile </span>
-					 	</a>
-					 </li>
-					 <li>
-					 	<a href="#about">
-					 		<span class="menu_title_mobile">Home and Living </span>
-					 	</a>
-					 </li>
-					 <li>
-					 	<a href="#about">
-					 		<span class="menu_title_mobile">Health and Beauty </span> 
-					 	</a>
-					 </li>
-				     <li>
-				     	<a href="#about">
-				     		<span class="menu_title_mobile">Food & Beverages </span>
-				     	</a>
-				     </li>
-            </ul>
-
-
-  
-
-
-
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
-
+	<%= render '/layouts/nav_mobile_menu' %>
 
 </div>
+
+
+
 
 
 

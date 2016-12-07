@@ -1,0 +1,1350 @@
+<nav class="navbar navbar-default navbar-static-top" style="background:#E74C3C">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-left navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+          
+
+            <span>
+            <form role="search" class="form-inline" style="width: 20em; margin: 0.6em 2em;">
+			    <div class="input-group">
+			        <input type="text" class="form-control" placeholder="Search">
+			        <div class="input-group-btn">
+			            <button type="submit" class="btn btn-default">
+			               search
+			            </button>
+			        </div>
+			    </div>
+
+
+			</form> 
+
+			</span>
+
+			  <a class="navbar-brand" href="#">
+				<span class="nav_text">Language</span>
+              </a>
+
+
+			  <a class="navbar-brand" href="#">
+				<%= image_tag "english_flag.png", :alt=>"english", :style => "border:1px solid #021a40;"  %>
+              </a>
+
+             <a class="navbar-brand" href="#">
+            	<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
+            </a>
+
+              <a class="navbar-brand" href="#">
+				<span class="nav_text">Cart</span>
+              </a>
+
+            <a class="navbar-brand" href="/cart_item?cart_id=<%= session[:cart_id] %>">
+				<%= image_tag "cart.png", :alt=>"profile" %>
+			</a>
+
+			<a class="navbar-brand">
+				<span class="nav_text"></span>
+			</a>
+
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+             <ul class="nav navbar-nav">
+	    	<!-- authentic brand zone -->
+	    	<li id="all_categories"><a id="menulink"> <%= t("all_categories")%> </a></li>
+	      	<li class="dropdown">
+
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('AllProductsonAuthenticBrandZone') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		          <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonAuthenticBrandZone') %></a></li>
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('WomensFashion') %> </a>
+
+		            <ul class="dropdown-menu">
+		              <li><a tabindex="0" id="mobile_product_link"><%= t('WomensApparel') %></a></li>
+					  <li><a tabindex="0" id="mobile_product_link"><%= t('ShoesandFootwear') %></a></li>
+					  <li><a tabindex="0" id="mobile_product_link"><%= t('BagsWallets') %></a></li>
+					  <li><a tabindex="0" id="mobile_product_link"><%= t('WatchesandGlasses') %></a></li>
+					  <li><a tabindex="0" id="mobile_product_link"><%= t('Jewellery') %></a></li>
+		            </ul>
+		          </li>
+
+		           <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('MensFashion') %> </a>
+
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MensApparel') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ShoesandFootwear') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('BagsandWallets') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('WatchesandGlasses') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Jewellery') %></a></li>
+		            </ul>
+		          </li>
+
+
+
+		           <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('DigitalMobileandElectricalAppliances') %> </a>
+
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('PhonesandTablets') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ComputersandLaptops') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('TVVideoandPlayer') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('AudioandHiFi') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('CameraandPhoto') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Gaming') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HomeAppliances') %></a></li>
+		            </ul>
+		          </li>
+
+		           <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('HomeandLiving') %> </a>
+
+					    <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('LivingRoomSupplies') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('BedroomAppliances') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('BathroomProducts') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('GarmentCare') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('KitchenandDining') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Housekeeping') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('HomeDecoration') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OutdoorandGarden') %></a></li>
+					 	</ul>
+		          </li>
+
+
+
+
+ 				<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('HealthandBeauty') %></a>
+     					<ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('BathandBodySupplies') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('SkinCare') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('EyeCare') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('HairCare') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('HandCare') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('DentalCare') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Perfumes') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ShavingSupplies') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('FoodSupplements') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('HealthandBeautyTools') %></a></li>
+	 					</ul>
+		          </li>
+
+			 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('FoodandBeverage') %></a>
+ 					<ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('VegetableProducts') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Confectionery') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('BakedGoods') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('GrainProducts') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('FoodIngredients') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('DairyProducts') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HoneyProducts') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MeatandMeatandMeatProducts') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('EggandEggProducts') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('SeafoodandSeafoodProducts') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Coffee') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('InstantFood') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('CannedFood') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('BabyFood') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Beverage') %></a></li>
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown">><%= t('KidBabyandMaternity') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('KidsFashion') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('BabyCare') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('BabyFeeding') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Toys') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MaternityCare') %></a></li>
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('SportsOutdoorsandEntertainment') %></a>
+ 					<ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('IndoorSportSupplies') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OutdoorSportSupplies') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OutdoorRecreation') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Entertainment') %></a></li>
+					</ul>
+			</li>
+
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('OfficeandSchoolSupplies') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('EducationSupplies') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OfficeSupplies') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ArtSupplies') %></a></li>
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('LightsandLightings') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('LightsandLightings') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('IndoorLightings') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OutdoorLightings') %></a></li>
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown">><%= t('Transportation') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Bicycles') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('AutomobilesandMotorcycles') %></a></li>
+					</ul>
+			</li>
+
+ 			<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('ElectronicElectricalandMechanicalProducts') %></a>
+ 					<ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ElectronicComponentsandParts') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ElectricalEquipmentsandParts') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MechanicalProductsandTools') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('SafetyEquipmentsandAccessories') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OEMProducts') %></a></li>
+					</ul>
+
+		         
+		        </ul>
+		      </li>  
+
+		      	    	<!-- Women's Fashion  -->
+	      	<li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('WomensFashion') %> <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonWomensFashion') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('WomensApparel') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ShirtsTops') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('JacketsCoats') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Jeans') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Trousers') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Leggings') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Skirts') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Shorts') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sleepwear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Fleeces') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sweatshirts') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('FormalWear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('WeddingDresses') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('BridesmaidDresses') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sleeveless') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('KoreanFashion') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('TraditionalDresses') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Underwear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Bikinis') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sportswear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Swimwear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('MaternityDresses') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('ShoesandFootwear') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Flats') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Heels') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Casual') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Formal') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('SportsShoes') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Boots') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Slippers') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sandals') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+
+	  			 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('BagsandWallets') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Handbags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ClutchBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('SlingBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Briefcases') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('WaistBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('LaptopBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('CameraBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Backpacks') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ToiletriesBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('WaterproofBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('CoolerBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ShoeBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Wallets') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('TravelLuggages') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+				 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('WatchesandGlasses') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('DigitalWatches') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('CasualWatches') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('PremiumWatches') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('SportWatches') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('WaterproofWatches') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Sunglasses') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+	  			<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('Jewellery') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Rings') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Earrings') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Necklaces') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Bracelets') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Brooches') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Charms') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('JewellerySets') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+		
+
+
+	  			
+
+		        </ul>
+		      </li>  
+
+
+		      <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('MensFashion') %> <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonMensFashion') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('MensApparel') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ShirtsTops') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('JacketsCoats') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Jeans') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Trousers') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Shorts') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sleepwear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Fleeces') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sweatshirts') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('FormalWear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('WeddingDresses') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sleeveless') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('KoreanFashion') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('TraditionalDresses') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Underwear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sportswear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Swimwear') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('ShoesandFootwear') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Casual') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Formal') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('SportsShoes') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Boots') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Slippers') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sandals') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+
+	  			 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('BagsandWallets') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Handbags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ClutchBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('SlingBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Briefcases') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('WaistBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('LaptopBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('CameraBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Backpacks') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ToiletriesBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('WaterproofBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('CoolerBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ShoeBags') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Wallets') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('TravelLuggages') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+				 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('WatchesandGlasses') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('DigitalWatches') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('CasualWatches') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('PremiumWatches') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('SportWatches') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('WaterproofWatches') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Sunglasses') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+	  			<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('Jewellery') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Rings') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Earrings') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Brooches') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Charms') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('JewellerySets') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+		
+
+
+	  			
+
+		        </ul>
+		      </li>  
+
+
+
+
+  				
+
+
+	      	
+
+		      		      <!-- electrinics -->
+
+		      <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" > <%= t('DigitalMobileandElectricalAppliances') %> <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonDigitalMobileandElectricalAppliances') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('PhonesandTablets') %> </a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('SmartPhones') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('BasicPhones') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('LandlinesCordless') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Tablets') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('ComputersandLaptops') %></a>
+		            <ul class="dropdown-menu">
+		            		<li><a tabindex="0" id="mobile_product_link"><%= t('DesktopPCs') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Laptops') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+
+	  			 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('TVsVideosandPlayers') %> </a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('TVs') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Projectors') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('BlueRay') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('DVDPlayers') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('MediaPlayers') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+				 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('AudioandHiFi') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Amplifiers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HomeTheatres') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('SoundBars') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Speakers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Headphones') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Earphones') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Microphones') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MP3Players') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('VoiceRecorders') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('StudioEquipments') %></a></li>
+					
+					</ul>
+				  </li>
+
+
+	  			<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('CamerasandPhotos') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('CCTV') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('DSLR') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Camcorders') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('CarCameras') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('CompactCameras') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ActionCameras') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('IPCameras') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('DronesDroneCameras') %></a></li>
+					</ul>
+				  </li>
+
+
+
+				  <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('Gaming') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('PlayStation') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Xbox') %></a></li>
+					</ul>
+				  </li>
+
+
+				  <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('HomeElectricalAppliances') %> </a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('CoolingandHeatingAppliances') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('KitchenAppliances') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HousekeepingAppliances') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('GarmentCare') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('LaundryCare') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('BathCare') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('PersonalCare') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('AirPurifiers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Humidifiers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Dehumidifiers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('SolarBatteries') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+		
+		        </ul>
+		      </li>  
+
+
+
+		      <!-- Home and living -->
+		  	    <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink"><%= t('HomeandLiving') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonHomeandLiving') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('LivingRoomAppliances') %>  </a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('LivingRoomFurnitures') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('BedroomProducts') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Pillows') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Bolsters') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Blankets') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Mattresses') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('BedroomFurnitures') %></a></li>
+
+					</ul>
+				  </li>
+
+
+
+	  			 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('BathroomAppliances') %> </a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('BathroomShelves') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Faucets') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ShowerCurtains') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ShowerHeads') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OralCare') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Towels') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Detergents') %></a></li>
+					</ul>
+				  </li>
+
+
+				   <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('GarmentCare') %> </a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('SewingMachines') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Needles') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('DryingRacks') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Hangers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('IroningBoards') %></a></li>
+
+					</ul>
+				  </li>
+
+
+				   <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('KitchenandDining') %>  </a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('KitchenStorage') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('CookingEquipments') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('KitchenTools') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Bakeware') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Dinnerware') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+
+					</ul>
+				  </li>
+
+
+				   <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('Housekeeping') %>  </a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Mops') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Brooms') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('FloorPolishers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('VacuumCleaners') %></a></li>
+
+					</ul>
+				  </li>
+
+
+				   <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('HomeDecoration') %></a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Carpets') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Mats') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Curtains') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Mirrors') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Paints') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Posters') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Candles') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Clocks') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ArtificialFlowersPlants') %></a></li>
+
+					</ul>
+				  </li>
+
+
+				   <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('OutdoorandGarden') %> </a>
+		            <ul class="dropdown-menu">
+
+		            	<li><a tabindex="0" id="mobile_product_link"><%= t('OutdoorSupplies') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('GardenSupplies') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Flowers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Lawn') %></a></li>
+
+				</ul>
+				  </li>
+
+
+		
+		        </ul>
+		      </li>  
+
+
+		    <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink"><%= t('HealthandBeauty') %> <span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonHealthandBeauty') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('BathandBodyCare') %>  </a>
+		            <ul class="dropdown-menu">
+		            	<li><a tabindex="0" id="mobile_product_link"><%= t('BathCare') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('BodyCare') %></a></li>
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('SkinCare') %></a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('FacialMasks') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('SunProtection') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('SkinWhitening') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('AcneCare') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Toners') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Cleansers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MoisturiserCreams') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Blusher') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MakeUp') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('AntiAgingProducts') %></a></li>
+					</ul>
+				  </li>
+
+
+
+	  			 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('EyeCare') %> </a>
+		            <ul class="dropdown-menu">
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ContactLenses') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Glasses') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('EyeDrops') %></a></li>
+					</ul>
+				  </li>
+
+
+				   <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('HairCare') %></a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Shampoos') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Conditioners') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HairCreamsGels') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HairColoring') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HairOils') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HairSprays') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HairLossPrevention') %></a></li>
+
+					</ul>
+				  </li>
+
+
+				   <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('DentalCare') %>  </a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Floss') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Toothbrushes') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Toothpastes') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MouthWashes') %></a></li>
+
+					</ul>
+				  </li>
+
+
+				   <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('Perfumes') %>  </a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MensPerfumes') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('WomensPerfumes') %></a></li>
+
+					</ul>
+				  </li>
+
+
+				   <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('ShavingSupplies') %></a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ShavingCreamsGels') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Trimmers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Shavers') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('RazorsBlades') %></a></li>
+
+					</ul>
+				  </li>
+
+
+			
+
+				<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('FoodSupplements') %> </a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('DietarySupplements') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('VitaminsMultivitamins') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('CollagenSupplements') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('WeightLoss') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('Antioxidants') %></a></li>
+
+					</ul>
+				 </li>
+
+
+
+				  <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('HealthandBeautyTools') %> </a>
+		            <ul class="dropdown-menu">
+
+						<li><a tabindex="0" id="mobile_product_link"><%= t('MakeupSets') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('EyeCareAccessories') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('LipsticksLipgloss') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('HairCareAccessories') %></a></li>
+
+					</ul>
+				  </li>
+
+
+		        </ul>
+		      </li>  
+
+
+		      <!-- food and beverage -->
+		      
+	      	<li class="dropdown" >
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink"><%= t('FoodandBeverage') %> <span class="caret" ></span></a>
+
+
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonFoodandBeverage') %></a></li>
+
+
+					<li class="dropdown-submenu">
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('VegetableProducts') %></a>
+							            <ul class="dropdown-menu">
+
+											<li><a tabindex="0" id="mobile_product_link"><%= t('FreshVegetables') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('DriedVegetables') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('CannedVegetables') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('FrozenVegetables') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('PreservedVegetables') %></a></li>
+
+										</ul>
+					</li>
+
+					<li class="dropdown-submenu">
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('Confectionery') %></a>
+							            <ul class="dropdown-menu">
+
+							            		<li><a tabindex="0" id="mobile_product_link"><%= t('Chocolates') %></a></li>
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Candy') %></a></li>
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Gum') %></a></li>
+
+										</ul>
+					</li>
+
+					<li class="dropdown-submenu">
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('BakedGoods') %></a>
+							            <ul class="dropdown-menu">
+
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Breads') %></a></li>
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Cakes') %></a></li>
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Cookies') %></a></li>
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Biscuits') %></a></li>
+
+										</ul>
+					</li>
+
+					<li class="dropdown-submenu">
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('GrainProducts') %></a>
+							            <ul class="dropdown-menu">
+
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Cereal') %></a></li>
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Noodles') %></a></li>
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Flours') %></a></li>
+												<li><a tabindex="0" id="mobile_product_link"><%= t('Snack') %></a></li>
+
+										</ul>
+					</li>
+
+
+					<li class="dropdown-submenu">
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('FoodIngredients') %></a>
+							            <ul class="dropdown-menu">
+
+											<li><a tabindex="0" id="mobile_product_link"><%= t('SeasoningsCondiments') %></a></li>
+
+										</ul>
+					</li>
+
+
+					<li class="dropdown-submenu">
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('DairyProducts') %></a>
+							            <ul class="dropdown-menu">
+
+											<li><a tabindex="0" id="mobile_product_link"><%= t('Milk') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('Cheese') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('Yogurt') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('Butter') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('MilkPowder') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('IceCream') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('CondensedMilk') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('Cream') %></a></li>
+										</ul>
+					</li>
+
+
+					<li class="dropdown-submenu">
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('HoneyProducts') %></a>
+							            <ul class="dropdown-menu">
+
+											<li><a tabindex="0" id="mobile_product_link"><%= t('Honey') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('BeePollen') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('BeeWax') %></a></li>
+											<li><a tabindex="0" id="mobile_product_link"><%= t('RoyalJelly') %></a></li>
+										</ul>
+					</li>
+
+
+					<li>
+							          	<a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('MeatProducts') %></a>
+					</li>
+
+
+
+
+
+					<li>
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('EggProducts') %></a>
+					</li>
+
+
+					<li>
+							           <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('Coffee') %></a>
+					</li>
+
+
+					<li>
+							           <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('SeafoodProducts') %></a>
+					</li>
+
+					<li>
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('InstantFood') %></a>
+					</li>
+
+
+					<li>
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('CannedFood') %></a>
+					</li>
+
+
+					<li>
+							            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('BabyFood') %></a>
+					</li>
+
+
+					<li>
+							           <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('Beverage') %></a>
+					</li>
+
+
+		
+
+					<li>
+							            <a tabindex="0" id="mobile_product_link"><%= t('DrinkingWater') %></a>
+					</li>
+
+
+					<li>
+							            <a tabindex="0" id="mobile_product_link"><%= t('Drinks') %></a>
+					</li>
+
+
+		        </ul>
+		      </li> 
+		     
+
+		     <!--  edit frrom here -->
+
+
+		     <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('KidBabyandMaternity') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonKidBabyandMaternity') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('KidsFashion') %></a>
+		            <ul class="dropdown-menu">
+							<li><a tabindex="0" id="mobile_product_link"><%= t('GirlsApparels') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('BoysApparel') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('BabyCare') %></a>
+		            <ul class="dropdown-menu">
+							
+								<li><a tabindex="0" id="mobile_product_link"><%= t('Diapering') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('BabyBath') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('BabySkinCare') %></a></li>
+					
+					</ul>
+				  </li>
+
+
+				<li>
+					<a tabindex="0" id="mobile_product_link"><%= t('BabyFeedings') %></a>
+				</li>
+
+
+				<li>
+					<a tabindex="0" id="mobile_product_link"><%= t('Toys') %></a>
+				</li>
+
+				<li>
+					<a tabindex="0" id="mobile_product_link"><%= t('MaternityCare') %></a>
+				</li>
+
+
+				<li>
+					<a tabindex="0" id="mobile_product_link"><%= t('PostpartumCareGoods') %></a>
+				</li>
+
+		        </ul>
+
+		      </li>  
+
+		      <!--  -->
+
+		       <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('SportsOutdoorsandEntertainment') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonSportsOutdoorsandEntertainment') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('IndoorSportSupplies') %></a>
+		            <ul class="dropdown-menu">
+
+		            			<li><a tabindex="0" id="mobile_product_link"><%= t('SnookerandBillboard') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('SoccerTables') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('Badminton') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('TableTennis') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('Bowling') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('Chess') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('Darts') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('BoxingandMartialArts') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('FitnessandBodyBuilding') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"> <%= t('OutdoorSportSupplies') %></a>
+		            <ul class="dropdown-menu">
+							
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Golf') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Soccer') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Tennis') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('SwimmingandDiving') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Basketball') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Volleyball') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Cycling') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+					
+					</ul>
+				  </li>
+
+
+				<li>
+					<a tabindex="0" id="mobile_product_link"><%= t('OutdoorRecreation') %></a>
+				</li>
+
+
+				<li>
+					<a tabindex="0" id="mobile_product_link"><%= t('PicnicSupplies') %></a>
+				</li>
+
+				<li>
+					<a tabindex="0" id="mobile_product_link"><%= t('Entertainment') %></a>
+				</li>
+
+
+				<li>
+					<a tabindex="0" id="mobile_product_link"><%= t('MusicalInstruments') %></a>
+				</li>
+
+		        </ul>
+		      </li>  
+
+
+		      <!--  edit from here -->
+
+
+
+		     <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('OfficeandSchoolSupplies') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonOfficeandSchoolSupplies') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('EducationSupplies') %></a>
+		            <ul class="dropdown-menu">
+
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Boards') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('CorrectionSupplies') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Pens') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Pencils') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('BooksandWritingPads') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('FilingProducts') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('OfficeSupplies') %></a>
+		            <ul class="dropdown-menu">
+							
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Calendar') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Map') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Magazines') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OfficeAdhesivesandTapes') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OfficeFurnitures') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+
+					
+					</ul>
+				 </li>
+
+
+				 <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('ArtSupplies') %></a>
+		            <ul class="dropdown-menu">
+							
+								<li><a tabindex="0" id="mobile_product_link"><%= t('ArtPaints') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('ArtMarkersandBrushes') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('ColouredPencils') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('Palette') %></a></li>
+
+					
+					</ul>
+				 </li>
+
+		        </ul>
+
+		      </li> 
+
+
+		      <!--  -->
+		     <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('LightsandLightings') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonLightsandLightnings') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('IndoorLightings') %></a>
+		            <ul class="dropdown-menu">
+
+							<li><a tabindex="0" id="mobile_product_link"><%= t('LightingBulbsandTubes') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('HomeDecorationLightnings') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('LEDLightings') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Torchlights') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('EmergencyLightings') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ProfessionalLightings') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('OutdoorLightnings') %></a>
+		            <ul class="dropdown-menu">
+							
+							<li><a tabindex="0" id="mobile_product_link"><%= t('StreetLights') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('SolarLights') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('LEDOutdoorLights') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+
+					
+					</ul>
+				 </li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+
+
+		      <!--  -->
+
+		       <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('Transportation') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonTransportation') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('Bicycles') %></a>
+		            <ul class="dropdown-menu">
+
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ManualBikes') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('ElectricBicycles') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('OthersandAccessories') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('AutomobilesandMotorcycles') %></a>
+		            <ul class="dropdown-menu">
+							
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Automobiles') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('Motorcycles') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('AutomobileParts') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('MotorcycleParts') %></a></li>
+
+					</ul>
+				 </li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+		      <!--  -->
+
+		       <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('TravelandDeals') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		           <li><a tabindex="0" id="mobile_product_link"><%= t('AlloffersonTravelandDeals') %></a></li>
+
+		          <li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('Travel') %></a>
+		            <ul class="dropdown-menu">
+
+							<li><a tabindex="0" id="mobile_product_link"><%= t('HotelPromotion') %></a></li>
+							<li><a tabindex="0" id="mobile_product_link"><%= t('TravelPromotion') %></a></li>
+			
+					</ul>
+				  </li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('RestaurantsandCafe') %></a>
+		            <ul class="dropdown-menu">
+							
+								<li><a tabindex="0" id="mobile_product_link"><%= t('Restaurants') %></a></li>
+								<li><a tabindex="0" id="mobile_product_link"><%= t('Cafe') %></a></li>
+
+					</ul>
+				 </li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+		      <!--  -->
+		       <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('Services') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		            <li><a tabindex="0" id="mobile_product_link"><%= t('AllOffersonServices') %></a></li>
+
+		          	<li><a tabindex="0" id="mobile_product_link"><%= t('HairBeautyandWellness') %></a></li>
+					<li><a tabindex="0" id="mobile_product_link"><%= t('EducationServices') %></a></li>
+					<li><a tabindex="0" id="mobile_product_link"><%= t('BasicEducationServices') %></a></li>
+					<li><a tabindex="0" id="mobile_product_link"><%= t('HigherEducationServices') %></a></li>
+					<li><a tabindex="0" id="mobile_product_link"><%= t('ProfessionalTrainings') %></a></li>
+					<li><a tabindex="0" id="mobile_product_link"><%= t('HomeTuition') %></a></li>
+
+
+		    	<li class="dropdown-submenu">
+		            <a tabindex="0" id="mobile_product_link" data-toggle="dropdown"><%= t('HomeRepairandMaintenance') %></a>
+		            <ul class="dropdown-menu">
+							
+						<li><a tabindex="0" id="mobile_product_link"><%= t('AirconServicing') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('GeneralHomeServicing') %></a></li>
+						<li><a tabindex="0" id="mobile_product_link"><%= t('ElectricalandElectronicRepair') %></a></li>
+
+					</ul>
+				 </li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+		      <!--  -->
+
+		     <li class="dropdown">
+		        <a tabindex="0" id="mobile_product_link" data-toggle="dropdown" id="menulink" ><%= t('ElectronicElectricalandMechanicalProducts') %><span class="caret"></span></a>
+
+		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+		        <ul class="dropdown-menu" role="menu">
+		     
+		            <li><a tabindex="0" id="mobile_product_link"><%= t('AllProductsonElectronicElectricalandMechanicalProducts') %></a></li>
+
+
+				<li><a tabindex="0" id="mobile_product_link"><%= t('ElectronicComponentsandParts') %></a></li>
+				<li><a tabindex="0" id="mobile_product_link"><%= t('ElectricalEquipmentsandParts') %></a></li>
+				<li><a tabindex="0" id="mobile_product_link"><%= t('MechanicalProductsandTools') %></a></li>
+				<li><a tabindex="0" id="mobile_product_link"><%= t('SafetyEquipmentsandAccessories') %></a></li>
+
+
+
+		        </ul>
+
+		      </li> 
+
+
+
+
+
+
+
+
+
+
+	    </ul>
+
+
+        </div>
+    </div>
+</nav>
