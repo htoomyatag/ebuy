@@ -1,0 +1,41 @@
+<div class="row" style="padding:10px;">
+  <div class="col-md-12">
+		<div class="well well-lg">
+			<p> Price Filter </p><hr/>
+				
+		
+			 <%= form_tag(search_result_path, :method => "get", :class=>"form-inline") do %> 
+                                   
+                   <%= text_field_tag :price_from, params[:price_from], :placeholder => "from", :class=>"form-control" %>
+
+                    <%= text_field_tag :price_to, params[:price_to], :placeholder => "to", :class=>"form-control" %>
+
+                    <button type="submit" class="btn btn-default">Search</button>
+                                 
+             <% end %>
+
+       </div>
+
+  </div>
+
+
+  <div class="col-md-12">
+
+
+
+     <% @products.each do |product| %>
+     		  <div class="col-md-2">
+	                                <a href="/product_info/<%= product.id %>">
+                                    <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive" %>
+                                     
+	                            	 <p id="product_title"><%= product.short_title %></p>
+			  	                     <p id="product_price"><%= product.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+	                            	</a>
+	            </div>
+	 
+	 <% end %>
+
+
+
+  </div>
+  </div>

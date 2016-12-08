@@ -101,6 +101,9 @@ scope "(:locale)", locale: /en|mm/ do
 
   get 'my_personal_info/:id' => 'frontends#my_personal_info', as: 'my_personal_info'
 
+  get 'product_list' => 'frontends#product_list', as: 'product_list'
+
+  
   
   resources :products
 
