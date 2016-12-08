@@ -280,7 +280,7 @@ overflow-x: hidden;
 	width: 98%;
 }
 
-#btn_add_to_cart{
+#btn_buy_now, #btn_add_to_cart{
 
 	width: 98%;
 }
@@ -494,8 +494,8 @@ background-color: #0472c1;
 
 
 #all_the_categories{
-	display: none;
 	
+	display: none;
     position: relative;
 	bottom: 38px;
 
@@ -562,6 +562,22 @@ background-color: #0472c1;
 	height: 0px;
 }
 */
+
+
+#menu_header_1, #menu_header_2{
+
+	 background-color: #3498DB;
+		 position: relative;
+		 top: -18px;
+
+
+}
+
+
+#menu_header_2{
+	display: none;
+}
+
 
 .img-responsive{
 	width: 200px;

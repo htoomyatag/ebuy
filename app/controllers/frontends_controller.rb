@@ -87,6 +87,10 @@ class FrontendsController < ApplicationController
 
   def fill_your_order_form
          @product = Product.find(params[:id])
+         @product_color = params[:product_color]
+         @product_size = params[:product_size]
+         @delivery_method = params[:delivery_method]
+         @product_quantity = params[:product_quantity]
   end
 
 

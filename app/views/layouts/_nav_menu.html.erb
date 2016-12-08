@@ -1,4 +1,4 @@
-	<nav class="navbar navbar-default" id="menu_header">
+	<nav class="navbar navbar-default" id="menu_header_1">
 	  <div class="navbar-header">
 	    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 	      <span class="sr-only">Toggle navigation</span>
@@ -13,10 +13,12 @@
 	  <div class="collapse navbar-collapse">
 	    <ul class="nav navbar-nav">
 	    	<!-- authentic brand zone -->
+
 	    	<li id="all_categories"><a id="menulink"> <%= t("all_categories")%> </a></li>
+	     	
 	      	<li class="dropdown">
 
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('AllProductsonAuthenticBrandZone') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('AuthenticBrandZone') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -117,7 +119,7 @@
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">><%= t('KidBabyandMaternity') %></a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('KidBabyandMaternity') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('KidsFashion') %></a></li>
 						<li><a tabindex="0"><%= t('BabyCare') %></a></li>
@@ -157,7 +159,7 @@
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown">><%= t('Transportation') %></a>
+		            <a tabindex="0" data-toggle="dropdown"><%= t('Transportation') %></a>
 		            <ul class="dropdown-menu">
 						<li><a tabindex="0"><%= t('Bicycles') %></a></li>
 						<li><a tabindex="0"><%= t('AutomobilesandMotorcycles') %></a></li>
@@ -769,165 +771,49 @@
 		      </li>  
 
 
-		      <!-- food and beverage -->
-		      
-	      	<li class="dropdown" >
-		        <a tabindex="0" data-toggle="dropdown" id="menulink"><%= t('FoodandBeverage') %> <span class="caret" ></span></a>
-
-
-
-		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-		        <ul class="dropdown-menu" role="menu">
-		     
-		           <li><a tabindex="0"><%= t('AllProductsonFoodandBeverage') %></a></li>
-
-
-					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown"><%= t('VegetableProducts') %></a>
-							            <ul class="dropdown-menu">
-
-											<li><a tabindex="0"><%= t('FreshVegetables') %></a></li>
-											<li><a tabindex="0"><%= t('DriedVegetables') %></a></li>
-											<li><a tabindex="0"><%= t('CannedVegetables') %></a></li>
-											<li><a tabindex="0"><%= t('FrozenVegetables') %></a></li>
-											<li><a tabindex="0"><%= t('PreservedVegetables') %></a></li>
-
-										</ul>
-					</li>
-
-					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown"><%= t('Confectionery') %></a>
-							            <ul class="dropdown-menu">
-
-							            		<li><a tabindex="0"><%= t('Chocolates') %></a></li>
-												<li><a tabindex="0"><%= t('Candy') %></a></li>
-												<li><a tabindex="0"><%= t('Gum') %></a></li>
-
-										</ul>
-					</li>
-
-					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown"><%= t('BakedGoods') %></a>
-							            <ul class="dropdown-menu">
-
-												<li><a tabindex="0"><%= t('Breads') %></a></li>
-												<li><a tabindex="0"><%= t('Cakes') %></a></li>
-												<li><a tabindex="0"><%= t('Cookies') %></a></li>
-												<li><a tabindex="0"><%= t('Biscuits') %></a></li>
-
-										</ul>
-					</li>
-
-					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown"><%= t('GrainProducts') %></a>
-							            <ul class="dropdown-menu">
-
-												<li><a tabindex="0"><%= t('Cereal') %></a></li>
-												<li><a tabindex="0"><%= t('Noodles') %></a></li>
-												<li><a tabindex="0"><%= t('Flours') %></a></li>
-												<li><a tabindex="0"><%= t('Snack') %></a></li>
-
-										</ul>
-					</li>
-
-
-					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown"> <%= t('FoodIngredients') %></a>
-							            <ul class="dropdown-menu">
-
-											<li><a tabindex="0"><%= t('SeasoningsCondiments') %></a></li>
-
-										</ul>
-					</li>
-
-
-					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown"><%= t('DairyProducts') %></a>
-							            <ul class="dropdown-menu">
-
-											<li><a tabindex="0"><%= t('Milk') %></a></li>
-											<li><a tabindex="0"><%= t('Cheese') %></a></li>
-											<li><a tabindex="0"><%= t('Yogurt') %></a></li>
-											<li><a tabindex="0"><%= t('Butter') %></a></li>
-											<li><a tabindex="0"><%= t('MilkPowder') %></a></li>
-											<li><a tabindex="0"><%= t('IceCream') %></a></li>
-											<li><a tabindex="0"><%= t('CondensedMilk') %></a></li>
-											<li><a tabindex="0"><%= t('Cream') %></a></li>
-										</ul>
-					</li>
-
-
-					<li class="dropdown-submenu">
-							            <a tabindex="0" data-toggle="dropdown"><%= t('HoneyProducts') %></a>
-							            <ul class="dropdown-menu">
-
-											<li><a tabindex="0"><%= t('Honey') %></a></li>
-											<li><a tabindex="0"><%= t('BeePollen') %></a></li>
-											<li><a tabindex="0"><%= t('BeeWax') %></a></li>
-											<li><a tabindex="0"><%= t('RoyalJelly') %></a></li>
-										</ul>
-					</li>
-
-
-					<li>
-							          	<a tabindex="0" data-toggle="dropdown"><%= t('MeatProducts') %></a>
-					</li>
+		      <li id="next_menu"><a id="menulink"><%= t("more_menus")%>
+		      &nbsp;
+		      <%= image_tag("play.png") %></a></li>
+  
+		    
 
 
 
 
 
-					<li>
-							            <a tabindex="0" data-toggle="dropdown"><%= t('EggProducts') %></a>
-					</li>
 
 
-					<li>
-							           <a tabindex="0" data-toggle="dropdown"><%= t('Coffee') %></a>
-					</li>
 
 
-					<li>
-							           <a tabindex="0" data-toggle="dropdown"><%= t('SeafoodProducts') %></a>
-					</li>
 
-					<li>
-							            <a tabindex="0" data-toggle="dropdown"><%= t('InstantFood') %></a>
-					</li>
+	    </ul>
 
 
-					<li>
-							            <a tabindex="0" data-toggle="dropdown"><%= t('CannedFood') %></a>
-					</li>
+	  </div>
+	</nav>
 
 
-					<li>
-							            <a tabindex="0" data-toggle="dropdown"><%= t('BabyFood') %></a>
-					</li>
 
 
-					<li>
-							           <a tabindex="0" data-toggle="dropdown"><%= t('Beverage') %></a>
-					</li>
+	<!--  another nav -->
 
+	<nav class="navbar navbar-default" id="menu_header_2">
+	  <div class="navbar-header">
+	    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
 
-		
+	  
+	  </div>
 
-					<li>
-							            <a tabindex="0"><%= t('DrinkingWater') %></a>
-					</li>
+	  <div class="collapse navbar-collapse">
+	    <ul class="nav navbar-nav">
+	    	<!-- authentic brand zone -->
 
-
-					<li>
-							            <a tabindex="0"><%= t('Drinks') %></a>
-					</li>
-
-
-		        </ul>
-		      </li> 
-		     
-
-		     <!--  edit frrom here -->
+	    
 
 
 		     <li class="dropdown">
@@ -1293,6 +1179,12 @@
 
 
 
+		      <li id="prev_menu"><a id="menulink"><%= t("previous_menus")%>
+		      &nbsp;
+		      <%= image_tag("play.png") %></a></li>
+
+
+
 
 
 
@@ -1305,3 +1197,38 @@
 
 	  </div>
 	</nav>
+
+
+
+	<script type="text/javascript">
+
+
+		$("#next_menu").click( function () {
+
+
+			    $("#menu_header_1").hide();
+			    $("#menu_header_2").show();
+			  
+			
+
+
+			});
+
+
+		$("#prev_menu").click( function () {
+
+
+			    $("#menu_header_2").hide();
+			    $("#menu_header_1").show();
+			  
+			
+
+
+			});
+
+
+
+	</script>
+
+
+

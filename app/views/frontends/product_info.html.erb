@@ -181,7 +181,8 @@
 			  <tr>
 
 			   <td>
-					    	 <%= button_to 'Buy Now' , fill_your_order_form_path(@product),:class =>"btn btn-danger", :id=>"btn_checkout", :method => "GET" %>
+
+					    	 <button type="button" class="btn btn-danger" id="btn_buy_now">Buy Now</button>
 					    </td>
 					    <td>
 					    	 <button type="button" class="btn btn-primary" id="btn_add_to_cart">Add to Cart</button>
@@ -593,3 +594,42 @@ $( document ).ready(function() {
 
 
 </script>
+
+<script type="text/javascript">
+
+
+
+
+
+
+ $('#btn_buy_now').click(function() {
+ 
+
+ 		product_id = "<%= @product.id %>";
+ 		color = $( "#myProductColor option:selected" ).text();
+ 		size = $( "#myProductSize option:selected" ).text();
+ 		delivery_method = $( "#delivery_method option:selected" ).text();
+ 		product_quantity = document.getElementById("product_quantity").value;
+ 	
+  		$.ajax({
+              type: 'get',
+              url: '/fill_your_order_form/'+product_id,
+              dataType: 'text',
+              data: {'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity},
+              complete: function(r){
+              
+					 var currentURL = '/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity;
+                     window.location.href = currentURL;
+
+              }
+           });
+
+
+
+
+
+
+    });
+
+
+</script
