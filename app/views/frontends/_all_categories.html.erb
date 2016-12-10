@@ -3,37 +3,38 @@
 <div class="cotainer"id="first_category">
 <div class="col-md-4">
 <span class="category_title"><%= t('AuthenticBrandZone') %></span><br/>
-<a href=""><%= t('AllProductsonAuthenticBrandZone') %></a><br/>
-<a href=""><%= t('WomensFashion') %></a><br/>
-<a href=""><%= t('MensFashion') %></a><br/>
-<a href=""><%= t('DigitalMobileandElectricalAppliances') %></a><br/>
-<a href=""><%= t('HomeandLiving') %></a><br/>
-<a href=""><%= t('HealthandBeauty') %></a><br/>
-<a href=""><%= t('FoodandBeverage') %></a><br/>
-<a href=""><%= t('KidBabyandMaternity') %></a><br/>
-<a href=""><%= t('SportsOutdoorsandEntertainment') %></a><br/>
-<a href=""><%= t('OfficeandSchoolSupplies') %></a><br/>
-<a href=""><%= t('LightsandLightings') %></a><br/>
-<a href=""><%= t('Transportation') %></a><br/>
-<a href=""><%= t('ElectronicElectricalandMechanicalProducts') %></a><br/>
+
+<%= link_to t('AllProductsonAuthenticBrandZone'), product_list_path(:category => "AuthenticBrandZone") %><br/>
+<%= link_to t('WomensFashion'), product_list_path(:category => "WomensFashion") %><br/>
+<%= link_to t('MensFashion'), product_list_path(:category => "MensFashion") %><br/>
+<%= link_to t('DigitalMobileandElectricalAppliances'), product_list_path(:category => "DigitalMobileandElectricalAppliances") %><br/>
+<%= link_to t('HomeandLiving'), product_list_path(:category => "HomeandLiving") %><br/>
+<%= link_to t('HealthandBeauty'), product_list_path(:category => "HealthandBeauty") %><br/>
+<%= link_to t('FoodandBeverage'), product_list_path(:category => "FoodandBeverage") %><br/>
+<%= link_to t('KidBabyandMaternity'), product_list_path(:category => "KidBabyandMaternity") %><br/>
+<%= link_to t('SportsOutdoorsandEntertainment'), product_list_path(:category => "SportsOutdoorsandEntertainment") %><br/>
+<%= link_to t('OfficeandSchoolSupplies'), product_list_path(:category => "OfficeandSchoolSupplies") %><br/>
+<%= link_to t('LightsandLightings'), product_list_path(:category => "LightsandLightings") %><br/>
+<%= link_to t('Transportation'), product_list_path(:category => "Transportation") %><br/>
+<%= link_to t('ElectronicElectricalandMechanicalProducts'), product_list_path(:category => "ElectronicElectricalandMechanicalProducts") %><br/>
 </div>
 <div class="col-md-4">
 <span class="category_title"><%= t('WomensFashion') %></span><br/>
-<a href=""><%= t('AllProductsonWomensFashion') %></a><br/>
-<a href=""><%= t('WomensApparel') %></a><br/>
-<a href=""><%= t('ShoesandFootwear') %></a><br/>
-<a href=""><%= t('BagsandWallets') %></a><br/>
-<a href=""><%= t('WatchesandGlasses') %></a><br/>
-<a href=""><%= t('Jewellery') %></a><br/>
+<%= link_to t('AllProductsonWomensFashion'), product_list_path(:category => "WomensFashion") %><br/>
+<%= link_to t('WomensApparel'), product_list_path(:category => "WomensApparel") %><br/>
+<%= link_to t('ShoesandFootwear'), product_list_path(:category => "ShoesandFootwear") %><br/>
+<%= link_to t('BagsandWallets'), product_list_path(:category => "BagsandWallets") %><br/>
+<%= link_to t('WatchesandGlasses'), product_list_path(:category => "WatchesandGlasses") %><br/>
+<%= link_to t('Jewellery'), product_list_path(:category => "JewellerySets") %><br/>
 </div>
 <div class="col-md-4">
 <span class="category_title"><%= t('MensFashion') %></span><br/>
-<a href=""><%= t('AllProductsonMensFashion') %></a><br/>
-<a href=""><%= t('MensApparel') %></a><br/>
-<a href=""><%= t('ShoesandFootwear') %></a><br/>
-<a href=""><%= t('BagsandWallets') %></a><br/>
-<a href=""><%= t('WatchesandGlasses') %></a><br/>
-<a href=""><%= t('Jewellery') %></a><br/>
+<%= link_to t('AllProductsonMensFashion'), product_list_path(:category => "MensFashion") %><br/>
+<%= link_to t('MensApparel'), product_list_path(:category => "MensApparel") %><br/>
+<%= link_to t('ShoesandFootwear'), product_list_path(:category => "ShoesandFootwear") %><br/>
+<%= link_to t('BagsandWallets'), product_list_path(:category => "BagsandWallets") %><br/>
+<%= link_to t('WatchesandGlasses'), product_list_path(:category => "WatchesandGlasses") %><br/>
+<%= link_to t('Jewellery'), product_list_path(:category => "JewellerySets") %><br/>
 </div>
 </div>
 
@@ -46,39 +47,38 @@
 
 <div class="col-md-4">
 <span class="category_title"><%= t('DigitalMobileandElectricalAppliances') %></span><br/>
-<a href=""><%= t('AllProductsonDigitalMobileandElectricalAppliances') %></a><br/>
-<a href=""><%= t('PhonesandTablets') %></a><br/>
-<a href=""><%= t('ComputersandLaptops') %></a><br/>
-<a href=""><%= t('TVsVideosandPlayers') %></a><br/>
-<a href=""><%= t('AudioandHiFi') %></a><br/>
-<a href=""><%= t('CamerasandPhotos') %></a><br/>
-<a href=""><%= t('Gaming') %></a><br/>
-<a href=""><%= t('HomeElectricalAppliances') %></a><br/>
+<%= link_to t('AllProductsonDigitalMobileandElectricalAppliances'), product_list_path(:category => "DigitalMobileandElectricalAppliances") %><br/>
+<%= link_to t('PhonesandTablets'), product_list_path(:category => "PhonesandTablets") %><br/>
+<%= link_to t('ComputersandLaptops'), product_list_path(:category => "ComputersandLaptops") %><br/>
+<%= link_to t('TVsVideosandPlayers'), product_list_path(:category => "TVsVideosandPlayers") %><br/>
+<%= link_to t('AudioandHiFi'), product_list_path(:category => "AudioandHiFi") %><br/>
+<%= link_to t('CamerasandPhotos'), product_list_path(:category => "CamerasandPhotos") %><br/>
+<%= link_to t('Gaming'), product_list_path(:category => "Gaming") %><br/>
+<%= link_to t('HomeElectricalAppliances'), product_list_path(:category => "HomeElectricalAppliances") %><br/>
 </div>
 <div class="col-md-4">
 <span class="category_title"><%= t('HomeandLiving') %></span><br/>
-<a href=""><%= t('AllProductsonHomeandLiving') %></a><br/>
-<a href=""><%= t('LivingRoomAppliances') %></a><br/>
-<a href=""><%= t('edroomProducts') %></a><br/>
-<a href=""><%= t('BathroomAppliances') %></a><br/>
-<a href=""><%= t('GarmentCare') %></a><br/>
-<a href=""><%= t('KitchenandDining') %></a><br/>
-<a href=""><%= t('Housekeeping') %></a><br/>
-<a href=""><%= t('HomeDecoration') %></a><br/>
-<a href=""><%= t('OutdoorandGarden') %></a><br/>
+<%= link_to t('AllProductsonHomeandLiving'), product_list_path(:category => "HomeandLiving") %><br/>
+<%= link_to t('LivingRoomAppliances'), product_list_path(:category => "LivingRoomAppliances") %><br/>
+<%= link_to t('BathroomAppliances'), product_list_path(:category => "BathroomAppliances") %><br/>
+<%= link_to t('GarmentCare'), product_list_path(:category => "GarmentCare") %><br/>
+<%= link_to t('KitchenandDining'), product_list_path(:category => "KitchenandDining") %><br/>
+<%= link_to t('Housekeeping'), product_list_path(:category => "Housekeeping") %><br/>
+<%= link_to t('HomeDecoration'), product_list_path(:category => "HomeDecoration") %><br/>
+<%= link_to t('OutdoorandGarden'), product_list_path(:category => "OutdoorandGarden") %><br/>
 </div>
 <div class="col-md-4">
 <span class="category_title"><%= t('HealthandBeauty') %></span><br/>
-<a href=""><%= t('AllProductsonHealthandBeauty') %></a><br/>
-<a href=""><%= t('BathandBodyCare') %></a><br/>
-<a href=""><%= t('SkinCare') %></a><br/>
-<a href=""><%= t('EyeCare') %></a><br/>
-<a href=""><%= t('HairCare') %></a><br/>
-<a href=""><%= t('DentalCare') %></a><br/>
-<a href=""><%= t('Perfumes') %></a><br/>
-<a href=""><%= t('ShavingSupplies') %></a><br/>
-<a href=""><%= t('FoodSupplements') %></a><br/>
-<a href=""><%= t('HealthandBeautyTools') %></a><br/>
+<%= link_to t('AllProductsonHealthandBeauty'), product_list_path(:category => "HealthandBeauty") %><br/>
+<%= link_to t('BathandBodyCare'), product_list_path(:category => "BathandBodyCare") %><br/>
+<%= link_to t('SkinCare'), product_list_path(:category => "SkinCare") %><br/>
+<%= link_to t('EyeCare'), product_list_path(:category => "EyeCare") %><br/>
+<%= link_to t('HairCare'), product_list_path(:category => "HairCare") %><br/>
+<%= link_to t('DentalCare'), product_list_path(:category => "DentalCare") %><br/>
+<%= link_to t('Perfumes'), product_list_path(:category => "Perfumes") %><br/>
+<%= link_to t('ShavingSupplies'), product_list_path(:category => "ShavingSupplies") %><br/>
+<%= link_to t('FoodSupplements'), product_list_path(:category => "FoodSupplements") %><br/>
+<%= link_to t('HealthandBeautyTools'), product_list_path(:category => "HealthandBeautyTools") %><br/>
 </div>
 </div>
 
@@ -87,39 +87,39 @@
 <div class="cotainer"id="third_category">
 <div class="col-md-4">
 <span class="category_title"><%= t('FoodandBeverage') %></span>
-<br/><a href=""><%= t('AllProductsonFoodandBeverage') %></a>
-<br/><a href=""><%= t('VegetableProducts') %></a>
-<br/><a href=""><%= t('Confectionery') %></a>
-<br/><a href=""><%= t('BakedGoods') %></a>
-<br/><a href=""><%= t('GrainProducts') %></a>
-<br/><a href=""><%= t('FoodIngredients') %></a>
-<br/><a href=""><%= t('DairyProducts') %></a>
-<br/><a href=""><%= t('HoneyProducts') %></a>
-<br/><a href=""><%= t('MeatProducts') %></a>
-<br/><a href=""><%= t('EggProducts') %></a>
-<br/><a href=""><%= t('Coffee') %></a>
-<br/><a href=""><%= t('SeafoodProducts') %></a>
-<br/><a href=""><%= t('InstantFood') %></a>
-<br/><a href=""><%= t('CannedFood') %></a>
-<br/><a href=""><%= t('BabyFood') %></a>
-<br/><a href=""><%= t('Beverage') %></a>
+<br/><%= link_to t('AllProductsonFoodandBeverage'), product_list_path(:category => "FoodandBeverage") %>
+<br/><%= link_to t('VegetableProducts'), product_list_path(:category => "VegetableProducts") %>
+<br/><%= link_to t('Confectionery'), product_list_path(:category => "Confectionery") %>
+<br/><%= link_to t('BakedGoods'), product_list_path(:category => "BakedGoods") %>
+<br/><%= link_to t('GrainProducts'), product_list_path(:category => "GrainProducts") %>
+<br/><%= link_to t('FoodIngredients'), product_list_path(:category => "FoodIngredients") %>
+<br/><%= link_to t('DairyProducts'), product_list_path(:category => "DairyProducts") %>
+<br/><%= link_to t('HoneyProducts'), product_list_path(:category => "HoneyProducts") %>
+<br/><%= link_to t('MeatProducts'), product_list_path(:category => "MeatProducts") %>
+<br/><%= link_to t('EggProducts'), product_list_path(:category => "EggProducts") %>
+<br/><%= link_to t('Coffee'), product_list_path(:category => "Coffee") %>
+<br/><%= link_to t('SeafoodProducts'), product_list_path(:category => "SeafoodProducts") %>
+<br/><%= link_to t('InstantFood'), product_list_path(:category => "InstantFood") %>
+<br/><%= link_to t('CannedFood'), product_list_path(:category => "CannedFood") %>
+<br/><%= link_to t('BabyFood'), product_list_path(:category => "BabyFood") %>
+<br/><%= link_to t('Beverage'), product_list_path(:category => "Beverage") %>
 </div>
 <div class="col-md-4">
 <span class="category_title"><%= t('KidBabyandMaternity') %></span>
-<br/><a href=""><%= t('AllProductsonKidBabyandMaternity') %></a>
-<br/><a href=""><%= t('KidsFashion') %></a>
-<br/><a href=""><%= t('BabyCare') %></a>
-<br/><a href=""><%= t('BabyFeedings') %></a>
-<br/><a href=""><%= t('Toys') %></a>
-<br/><a href=""><%= t('MaternityCare') %></a>
+<br/><%= link_to t('AllProductsonKidBabyandMaternity'), product_list_path(:category => "KidBabyandMaternity") %>
+<br/><%= link_to t('KidsFashion'), product_list_path(:category => "KidsFashion") %>
+<br/><%= link_to t('BabyCare'), product_list_path(:category => "BabyCare") %>
+<br/><%= link_to t('BabyFeedings'), product_list_path(:category => "BabyFeedings") %>
+<br/><%= link_to t('Toys'), product_list_path(:category => "Toys") %>
+<br/><%= link_to t('MaternityCare'), product_list_path(:category => "MaternityCare") %>
 </div>
 <div class="col-md-4">
 <span class="category_title"><%= t('SportsOutdoorsandEntertainment') %></span>
-<br/><a href=""><%= t('AllProductsonSportsOutdoorsandEntertainment') %></a>
-<br/><a href=""><%= t('IndoorSportSupplies') %></a>
-<br/><a href=""><%= t('OutdoorSportSupplies') %></a>
-<br/><a href=""><%= t('OutdoorRecreation') %></a>
-<br/><a href=""><%= t('Entertainment') %></a>
+<br/><%= link_to t('AllProductsonSportsOutdoorsandEntertainment'), product_list_path(:category => "SportsOutdoorsandEntertainment") %>
+<br/><%= link_to t('IndoorSportSupplies'), product_list_path(:category => "IndoorSportSupplies") %>
+<br/><%= link_to t('OutdoorSportSupplies'), product_list_path(:category => "OutdoorSportSupplies") %>
+<br/><%= link_to t('OutdoorRecreation'), product_list_path(:category => "OutdoorRecreation") %>
+<br/><%= link_to t('Entertainment'), product_list_path(:category => "Entertainment") %>
 </div>
 </div>
 
@@ -128,26 +128,26 @@
 <div class="col-md-4">
 
 <span class="category_title"><%= t('OfficeandSchoolSupplies') %></span>
-<br/><a href=""><%= t('AllProductsonOfficeandSchoolSupplies') %></a>
-<br/><a href=""><%= t('EducationSupplies') %></a>
-<br/><a href=""><%= t('OfficeSupplies') %></a>
-<br/><a href=""><%= t('ArtSupplies') %></a>
+<br/><%= link_to t('AllProductsonOfficeandSchoolSupplies'), product_list_path(:category => "OfficeandSchoolSupplies") %>
+<br/><%= link_to t('EducationSupplies'), product_list_path(:category => "EducationSupplies") %>
+<br/><%= link_to t('OfficeSupplies'), product_list_path(:category => "OfficeSupplies") %>
+<br/><%= link_to t('ArtSupplies'), product_list_path(:category => "ArtSupplies") %>
 
 </div>
 <div class="col-md-4">
 
 <span class="category_title"><%= t('LightsandLightings') %></span>
-<br/><a href=""><%= t('AllProductsonLightsandLightnings') %></a>
-<br/><a href=""><%= t('IndoorLightings') %></a>
-<br/><a href=""><%= t('OutdoorLightnings') %></a>
+<br/><%= link_to t('AllProductsonLightsandLightnings'), product_list_path(:category => "LightsandLightings") %>
+<br/><%= link_to t('IndoorLightings'), product_list_path(:category => "IndoorLightings") %>
+<br/><%= link_to t('OutdoorLightnings'), product_list_path(:category => "OutdoorLightnings") %>
 
 </div>
 <div class="col-md-4">
 
 <span class="category_title"><%= t('Transportation') %></span>
-<br/><a href=""><%= t('AllProductsonTransportation') %></a>
-<br/><a href=""><%= t('Bicycles') %></a>
-<br/><a href=""><%= t('AutomobilesandMotorcycles') %></a>
+<br/><%= link_to t('AllProductsonTransportation'), product_list_path(:category => "Transportation") %>
+<br/><%= link_to t('Bicycles'), product_list_path(:category => "Bicycles") %>
+<br/><%= link_to t('AutomobilesandMotorcycles'), product_list_path(:category => "AutomobilesandMotorcycles") %>
 
 </div>
 </div>
@@ -156,18 +156,18 @@
 <div class="col-md-4">
 
 <span class="category_title"><%= t('TravelandDeals') %></span>
-<br/><a href=""><%= t('AlloffersonTravelandDeals') %></a>
-<br/><a href=""><%= t('Travel') %></a>
-<br/><a href=""><%= t('RestaurantsandCafe') %></a>
+<br/><%= link_to t('AlloffersonTravelandDeals'), product_list_path(:category => "WomensApparel") %>
+<br/><%= link_to t('Travel'), product_list_path(:category => "Travel") %>
+<br/><%= link_to t('RestaurantsandCafe'), product_list_path(:category => "RestaurantsandCafe") %>
 
 </div>
 <div class="col-md-4">
 
 <span class="category_title"><%= t('Services') %></span>
-<br/><a href=""><%= t('AllOffersonServices') %></a>
-<br/><a href=""><%= t('HairBeautyandWellness') %></a>
-<br/><a href=""><%= t('EducationServices') %></a>
-<br/><a href=""><%= t('HomeRepairandMaintenance') %></a>
+<br/><%= link_to t('AllOffersonServices'), product_list_path(:category => "WomensApparel") %>
+<br/><%= link_to t('HairBeautyandWellness'), product_list_path(:category => "HairBeautyandWellness") %>
+<br/><%= link_to t('EducationServices'), product_list_path(:category => "EducationServices") %>
+<br/><%= link_to t('HomeRepairandMaintenance'), product_list_path(:category => "HomeRepairandMaintenance") %>
 
 </div>
 <div class="col-md-4">
@@ -175,12 +175,12 @@
 
 <span class="category_title"><%= t('ElectronicElectricalandMechanicalProducts') %></span>
 <br/>
-<a href=""><%= t('AllProductsonElectronicElectricalandMechanicalProducts') %></a>
-<br/><a href=""><%= t('ElectronicComponentsandParts') %></a>
-<br/><a href=""><%= t('ElectricalEquipmentsandParts') %></a>
-<br/><a href=""><%= t('MechanicalProductsandTools') %></a>
-<br/><a href=""><%= t('SafetyEquipmentsandAccessories') %></a>
-<br/><a href=""><%= t('OEMProducts') %></a>
+<%= link_to t('AllProductsonElectronicElectricalandMechanicalProducts'), product_list_path(:category => "WomensApparel") %>
+<br/><%= link_to t('ElectronicComponentsandParts'), product_list_path(:category => "ElectronicComponentsandParts") %>
+<br/><%= link_to t('ElectricalEquipmentsandParts'), product_list_path(:category => "ElectricalEquipmentsandParts") %>
+<br/><%= link_to t('MechanicalProductsandTools'), product_list_path(:category => "MechanicalProductsandTools") %>
+<br/><%= link_to t('SafetyEquipmentsandAccessories'), product_list_path(:category => "SafetyEquipmentsandAccessories") %>
+<br/><%= link_to t('OEMProducts'), product_list_path(:category => "OEMProducts") %>
 
 
 </div>
