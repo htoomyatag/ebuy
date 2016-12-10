@@ -37,6 +37,17 @@ currency_exchanges = CurrencyExchange.create([
     ])
 
 
+currency_exchanges = CoverImage.create([
+
+    {id: "1"},
+    {id: "2"},
+    {id: "3"}
+
+    ])
+
+
+
+
   products = Product.create([
 
     

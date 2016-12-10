@@ -1,0 +1,1 @@
+json.array! @cover_images, partial: 'cover_images/cover_image', as: :cover_image

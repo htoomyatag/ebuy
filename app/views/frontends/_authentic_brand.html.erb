@@ -1,5 +1,6 @@
  			<div class="rows">
- 			    <h4 id="slider_home_title">AuthenticBrandZone</h4><hr/>
+ 			    <h4 id="slider_home_title">AuthenticBrandZone
+                </h4><hr/>
  			</div>
   
             <div id="myCarousel1" class="carousel slide">
@@ -16,7 +17,8 @@
 	                                <a href="/product_info/<%= product.id %>">
                                     <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive" %>
 	                            	 <p id="product_title"><%= product.short_title %></p>
-			  	                     <p id="product_price"><%= product.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+			  	                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks</p>
 	                            	</a>
 	                            </div>
 	                        <% end %>
@@ -36,7 +38,8 @@
                                     <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive" %>
                                      
 	                            	 <p id="product_title"><%= product.short_title %></p>
-			  	                     <p id="product_price"><%= product.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+			  	                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
+   <%= $product_price %> Ks</p>
 	                            	</a>
 	                            </div>
 	                        <% end %>

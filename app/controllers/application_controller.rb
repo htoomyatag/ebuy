@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :ebuy_cart
   before_action :set_locale
+  helper_method :round_up
 
   
   before_filter :configure_permitted_parameters, if: :devise_controller?
@@ -20,6 +21,7 @@ class ApplicationController < ActionController::Base
   def ebuy_cart
     @cart = current_cart
     @currency_exchange = CurrencyExchange.pluck(:currency_rate).last
+
   end
 
   def set_locale
@@ -29,6 +31,12 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { locale: I18n.locale }
   end
+
+
+
+
+
+
 
  private
   def current_cart
@@ -47,6 +55,13 @@ class ApplicationController < ActionController::Base
       session[:cart_id] = nil
       cart
   end
+
+
+
+
+
+
+
 
 
 end

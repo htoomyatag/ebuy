@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :cover_images
 scope "(:locale)", locale: /en|mm/ do
   resources :currency_exchanges
   resources :wish_lists

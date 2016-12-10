@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205073547) do
+ActiveRecord::Schema.define(version: 20161208161545) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username"
@@ -75,6 +75,15 @@ ActiveRecord::Schema.define(version: 20161205073547) do
     t.string   "discount_percentage"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+  end
+
+  create_table "cover_images", force: :cascade do |t|
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "cover_photo_file_name"
+    t.string   "cover_photo_content_type"
+    t.integer  "cover_photo_file_size"
+    t.datetime "cover_photo_updated_at"
   end
 
   create_table "currency_exchanges", force: :cascade do |t|

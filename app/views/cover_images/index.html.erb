@@ -1,0 +1,35 @@
+
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="col-md-12">
+    <h3> Cover Images
+    </h3><hr/>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th colspan="1"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+         <% @cover_images.each do |cover_image| %>
+          <tr>
+            <td> <%= image_tag cover_image.cover_photo.url(:medium), :id => "product_image_info" %></td>
+             <td><%= link_to 'Change', edit_cover_image_path(cover_image) %></td>
+           
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+    </div>
+
+   
+
+    </div>
+</div>

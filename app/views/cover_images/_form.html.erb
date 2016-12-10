@@ -1,0 +1,30 @@
+<%= form_for(@cover_image) do |f| %>
+  <% if @cover_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cover_image.errors.count, "error") %> prohibited this cover_image from being saved:</h2>
+
+      <ul>
+      <% @cover_image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="col-md-6">
+   <label>Cover Images</label><br>
+     <div class="field">
+       <%= f.file_field :cover_photo %><br/>
+       <p style="color:blue;">Suggested width = 885 px,
+       height = 360 px </p>
+    </div>
+  </div>
+
+
+
+   <div class="col-md-12"><br/>
+      <%= f.submit :class=>"btn btn-default" %>
+   
+  </div>
+<% end %>

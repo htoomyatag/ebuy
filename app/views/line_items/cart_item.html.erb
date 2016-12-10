@@ -25,7 +25,11 @@ eBuy checkout list
                           </a>
                         </td>
                         <td >x <%= line_item.quantity %></td>
-                        <td ><%= (line_item.total_price.to_i * @currency_exchange.to_i) %> MMK</td>
+                        <td >
+                          <%= line_item.total_price.to_i  %>
+                   
+                        Ks
+                        </td>
                         <td ><%= link_to 'remove',line_item, method: :delete, data: { confirm: 'Are you sure?' } ,:class=>"btn btn-danger" %></td>
                       </tr>
          <% end %> 
@@ -96,7 +100,7 @@ eBuy checkout list
 
    <div class="col-md-12">
   <br/><br/>
-    Total Price: <%= (@cart.total_price * @currency_exchange.to_i) %> Ks
+    Total Price: <%= (@cart.total_price) %> Ks
     <input type="button" id="opener" class="btn btn-small" value="Get Coupons"> 
     <br/> <br/>
 
@@ -200,7 +204,7 @@ eBuy checkout list
  
 
     coupon_code = document.getElementById("coupon_code").value;
-    limitation = "<%= (@cart.total_price * @currency_exchange.to_i) %>";
+    limitation = "<%= @cart.total_price  %>";
 
 
       $.ajax({
@@ -221,7 +225,7 @@ eBuy checkout list
 
                   if (raw_discount_price == "{:discount_price=>[]}"){
                   
-                    document.getElementById("total_price").value = " <%= (@cart.total_price * @currency_exchange.to_i) %>"
+                    document.getElementById("total_price").value = " <%= @cart.total_price %>"
 
 
                   } else {
@@ -254,7 +258,7 @@ eBuy checkout list
   
 $(document).ready(function(){ 
 
-  document.getElementById("total_price").value = "<%= (@cart.total_price * @currency_exchange.to_i) %>";
+  document.getElementById("total_price").value = "<%= @cart.total_price %>";
 
 });
 

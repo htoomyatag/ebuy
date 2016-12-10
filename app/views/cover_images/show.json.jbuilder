@@ -1,0 +1,1 @@
+json.partial! "cover_images/cover_image", cover_image: @cover_image

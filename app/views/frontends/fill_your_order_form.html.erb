@@ -126,8 +126,10 @@
 	 </div>
 
       <h3 style="text-align:center;"> Total Product Price: 
-         <input class="form-control" type="text" name="total_price" id="total_price" value="<%= @product.discount_price.to_i * @currency_exchange.to_i %>" style="display:none;">
-       <%= (@product.discount_price.to_i * @currency_exchange.to_i) %> Ks
+        
+       <% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
+                    <%= $product_price %> Ks
+        <input class="form-control" type="text" name="total_price" id="total_price" value="<%= $product_price %>" style="display:none;">
       </h3>
 	  <div class="col-md-12">
 
