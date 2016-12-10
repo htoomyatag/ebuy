@@ -17,7 +17,8 @@
                   <div class="col-md-6"><br/><br/><br/>
                        <a href="/product_info/<%= @time_sale_firsts.id %>">           
                           <p id="product_title"><%= @time_sale_firsts.short_title %></p>
-                          <p id="product_price"><%= @time_sale_firsts.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                          <p id="product_price"><% round_up(@time_sale_firsts.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks</p>
                        </a>
                   </div>
               </div>

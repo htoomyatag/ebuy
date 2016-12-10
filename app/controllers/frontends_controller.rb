@@ -371,6 +371,11 @@ class FrontendsController < ApplicationController
      @time_sale_fourths = Product.where(:time_sale => "1").fourth
      @time_sale_fifths = Product.where(:time_sale => "1").fifth
      @time_sale_sixths = Product.where(:time_sale => "1").last
+
+     @first_cover_images = CoverImage.all.first
+     @second_cover_images = CoverImage.all.second
+     @third_cover_images = CoverImage.all.third
+     
   end
 
   # GET /frontends/1
