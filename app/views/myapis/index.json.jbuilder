@@ -1,0 +1,1 @@
+json.array! @myapis, partial: 'myapis/myapi', as: :myapi

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Myapis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @myapis.each do |myapi| %>
+      <tr>
+        <td><%= link_to 'Show', myapi %></td>
+        <td><%= link_to 'Edit', edit_myapi_path(myapi) %></td>
+        <td><%= link_to 'Destroy', myapi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Myapi', new_myapi_path %>

@@ -1,0 +1,1 @@
+json.partial! "myapis/myapi", myapi: @myapi

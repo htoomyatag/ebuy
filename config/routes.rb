@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
 
+  resources :myapis
+  match "product_by_category" => "myapis#product_by_category", as: :product_by_category, via: [:get, :post]
+
+
+
+
   resources :cover_images
-scope "(:locale)", locale: /en|mm/ do
+  scope "(:locale)", locale: /en|mm/ do
   resources :currency_exchanges
   resources :wish_lists
   resources :request_products
