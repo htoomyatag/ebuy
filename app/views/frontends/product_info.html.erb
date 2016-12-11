@@ -190,13 +190,15 @@
 
 			   <td>
 
+			     <% if Time.now.to_datetime.between?(@product.start_to_sell_on.to_datetime-1,@product.end_on.to_datetime) && Time.now.strftime("%H").to_i.between?(@product.start_to_sell_on.to_datetime.strftime("%H").to_i, @product.end_on.to_datetime.strftime("%H").to_i) %>
+
 					    	 <button type="button" class="btn btn-danger" id="btn_buy_now">Buy Now</button>
 					    </td>
 					    <td>
 					    	 <button type="button" class="btn btn-primary" id="btn_add_to_cart">Add to Cart</button>
 					    </td> 
 					    
-				  <% if Time.now.to_datetime.between?(@product.start_to_sell_on.to_datetime-1,@product.end_on.to_datetime) && Time.now.strftime("%H").to_i.between?(@product.start_to_sell_on.to_datetime.strftime("%H").to_i, @product.end_on.to_datetime.strftime("%H").to_i) %>
+				
 					   
 				  <% else %>
 				  	    <td>
