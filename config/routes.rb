@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :myapis
   match "product_by_category" => "myapis#product_by_category", as: :product_by_category, via: [:get, :post]
   match "product_by_id" => "myapis#product_by_id", as: :product_by_id, via: [:get, :post]
+  match "all_products" => "myapis#all_products", as: :all_products, via: [:get, :post]
+  match "customer_review" => "myapis#customer_review", as: :customer_review, via: [:get, :post]
+  match "my_info" => "myapis#my_info", as: :my_info, via: [:get, :post]
+  match "edit_my_info" => "myapis#edit_my_info", as: :edit_my_info, via: [:get, :post]
 
 
 

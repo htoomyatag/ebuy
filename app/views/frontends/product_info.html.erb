@@ -362,6 +362,11 @@
 									  <div class="field">
 									    <%= f.text_area :buyer_comment, :class => "form-control", :rows => "5" %>
 									  </div><br/>
+									    <div class="field" style="display:none;">
+									    <%= f.label :buyer_name %><br>
+									    <%= f.text_field :buyer_name, :value => current_buyer.buyer_name %>
+									  </div>
+
 									  <div class="field" style="display:none;">
 									    <%= f.label :product_id %><br>
 									    <%= f.number_field :product_id, :value => @product.id %>
