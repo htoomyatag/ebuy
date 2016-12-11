@@ -123,7 +123,10 @@ protect_from_forgery with: :null_session
           :buyer_name => params[:new_buyer_name],
           :buyer_phone  => params[:new_buyer_phone],
           :buyer_township => params[:new_buyer_township],
-          :buyer_address => params[:new_buyer_address]
+          :buyer_address => params[:new_buyer_address],
+          :email => params[:email],
+          :password => params[:password],
+          :password_confirmation => params[:password]
       )
 
 
