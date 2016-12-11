@@ -41,12 +41,12 @@ $("#mysubmitbutton").click(function(e) {
       document.getElementById('product_description').value = b;
 
 
-            var product_sizes = $('#tags span').text();
-      document.getElementById('product_product_size').value = product_sizes;
+      var product_sizes = $('#tags span').text();
+      document.getElementById('product_product_size').value = product_sizes.replace(",,", "");
 
 
       var product_colors = $('#tags_color span').text();
-      document.getElementById('product_product_color').value = product_colors;
+      document.getElementById('product_product_color').value = product_colors.replace(",,", "");
 
 
       

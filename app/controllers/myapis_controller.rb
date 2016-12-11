@@ -19,6 +19,42 @@ protect_from_forgery with: :null_session
    end
 
 
+  def product_by_id
+
+    @products = Product.where(:id => params[:id])
+    respond_to do |format|
+          my_primary_json = {:product => @products.to_json(
+            :only => [
+                          :description, 
+                          :notice,
+                          :product_size, 
+                          :product_color, 
+                          :delivery_rate, 
+                          :product_video,
+                          :delivery_time,
+                          :pick_up, 
+                          :ebuy_delivery,
+                          :product_category, 
+                          :title,
+                          :actual_price, 
+                          :discount_price,
+                          :quantity,
+                          :specsq,
+                          :specsa, 
+                          :question, 
+                          :answer
+                      ], :methods => [:avatar1,:avatar2,:avatar3,:avatar4,:avatar5])}
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          a = '"['
+          b = ']"'
+          my_third_json = my_seconday_json.gsub(a , "[")
+          my_fourth_json = my_third_json.gsub(b , "]")
+          format.json {render json: my_primary_json}
+          format.text {render text: my_fourth_json}
+    end
+   end
+
+
 
   def index
     @myapis = Myapi.all

@@ -44,11 +44,11 @@ $("#mysubmitbutton").click(function(e) {
 
 
       var product_sizes = $('#tags span').text();
-      document.getElementById('product_product_size').value = product_sizes;
+      document.getElementById('product_product_size').value = product_sizes.replace(",,", "");
 
 
       var product_colors = $('#tags_color span').text();
-      document.getElementById('product_product_color').value = product_colors;
+      document.getElementById('product_product_color').value = product_colors.replace(",,", "");
 
 
       var title =  document.getElementById('product_title').value;

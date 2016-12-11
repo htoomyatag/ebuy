@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :myapis
   match "product_by_category" => "myapis#product_by_category", as: :product_by_category, via: [:get, :post]
+  match "product_by_id" => "myapis#product_by_id", as: :product_by_id, via: [:get, :post]
 
 
 
