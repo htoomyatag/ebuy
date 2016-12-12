@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   match "customer_review" => "myapis#customer_review", as: :customer_review, via: [:get, :post]
   match "my_info" => "myapis#my_info", as: :my_info, via: [:get, :post]
   match "edit_my_info" => "myapis#edit_my_info", as: :edit_my_info, via: [:get, :post]
+  match "my_shoppinglist" => "myapis#my_shoppinglist", as: :my_shoppinglist, via: [:get, :post]
+
+
 
 
 

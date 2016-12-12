@@ -166,6 +166,15 @@
 
 
 			   <tr>
+			    <td style="width:60%"> <span class="mydetail_title"> Product Model</span></td>
+			    <td> 
+			    <span class="mydetail_title" id="myproduct_model">
+			  
+			    </span></td> 
+			  </tr>
+
+
+			   <tr>
 			    <td style="width:60%"> <span class="mydetail_title">Order Quantity</span></td>
 			    <td> 
 			      <input id="product_quantity" >
@@ -552,6 +561,31 @@ $( document ).ready(function() {
 	//Create and append select list
 	var selectList = document.createElement("select");
 	selectList.setAttribute("id", "myProductSize");
+	myDiv.appendChild(selectList);
+
+
+	//Create and append the options
+	for(var i = 0; i < str_array.length; i++) {
+	    var option = document.createElement("option");
+	    option.setAttribute("value", str_array[i]);
+	    option.text = str_array[i];
+	    selectList.appendChild(option);
+	}
+
+
+	// create products model
+	var myDiv = document.getElementById("myproduct_model");
+
+	//Create array of options to be added
+
+	var str = "Choose,"+"<%= @product.product_model.gsub(',,','') rescue '-' %>";
+	var str_array = str.split(',');
+
+
+
+	//Create and append select list
+	var selectList = document.createElement("select");
+	selectList.setAttribute("id", "myProductModel");
 	myDiv.appendChild(selectList);
 
 

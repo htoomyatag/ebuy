@@ -51,6 +51,10 @@ $("#mysubmitbutton").click(function(e) {
       document.getElementById('product_product_color').value = product_colors.replace(",,", "");
 
 
+      var product_models = $('#tags_model span').text();
+      document.getElementById('product_product_model').value = product_models.replace(",,", "");
+
+
       var title =  document.getElementById('product_title').value;
       if (title == "") {
           alert("Title must be filled out");

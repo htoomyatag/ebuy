@@ -474,7 +474,7 @@ background-color: #0472c1;
 }
 
 
-#myProductSize,#myProductColor{
+#myProductSize,#myProductColor, #myProductModel{
 	background-color: white;
 	color: gray;
 	margin-top: 5px;
@@ -587,6 +587,7 @@ background-color: #0472c1;
 
 #product_quantity{
 	width: 78px;
+	margin-top: 10px;
 }
 
 

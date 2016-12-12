@@ -80,6 +80,25 @@
   </div>
 
 
+  
+  <div class="col-md-6"><br/><br/>
+   <label>Model</label><br>
+     <div class="field">
+
+
+      <div id="tags_model">
+        <input type="text" value="" placeholder="Add a model"/>
+      </div>
+
+
+     <input id="product_product_model" name="product[product_model]"  />
+
+     
+    </div>
+  </div>
+
+
+
      <div class="col-md-12">
         <br/><br/>
      </div>
@@ -900,6 +919,33 @@ $(function(){ // DOM ready
 </script>
 
 
+<script type="text/javascript">
+  
+$(function(){ // DOM ready
+
+  // ::: TAGS BOX
+
+  $("#tags_model input").on({
+    focusout : function() {
+      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var txt = mytxt+",";
+      if(txt) $("<span/>", {text:txt.toLowerCase(), insertBefore:this});
+      this.value = "";
+    },
+    keyup : function(ev) {
+      // if: comma|enter (delimit more keyCodes with | pipe)
+      if(/(188|13)/.test(ev.which)) $(this).focusout(); 
+    }
+  });
+  $('#tags_model').on('click', 'span', function() {
+    $(this).remove(); 
+  });
+
+});
+
+</script>
+
+
 <style type="text/css">
   
 
@@ -931,6 +977,50 @@ $(function(){ // DOM ready
  font-size:11px;
 }
 #tags_color > input{
+  background:#eee;
+  border:0;
+  margin:4px;
+  padding:7px;
+  width:auto;
+}
+
+</style>
+
+
+
+
+
+<style type="text/css">
+  
+
+#tags_model{
+  float:left;
+  border:1px solid #ccc;
+  padding:5px;
+  font-family:Arial;
+}
+#tags_model > span{
+  cursor:pointer;
+  display:block;
+  float:left;
+  color:#fff;
+  background:#3498DB;
+  padding:5px;
+  padding-right:25px;
+  margin:4px;
+}
+#tags_model > span:hover{
+  opacity:0.7;
+}
+#tags_model > span:after{
+ position:absolute;
+ content:"×";
+ border:1px solid;
+ padding:2px 5px;
+ margin-left:3px;
+ font-size:11px;
+}
+#tags_model > input{
   background:#eee;
   border:0;
   margin:4px;
