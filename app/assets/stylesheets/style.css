@@ -19,16 +19,18 @@ overflow-x: hidden;
 #my_logo{
 	position: relative;
 	left: 20px;
-	height: 150px;
+	height: 225px;
+	top: -25px;
 }
 
 
 #ebuy_title{
-	font-size: 35px;
+	font-size: 65px;
 	color: #3498DB;
 	position: relative;
-    left: -35px;
-    top: -20px;
+    left: -28px;
+    top: -25px;
+  
 
 }
 
@@ -36,11 +38,24 @@ overflow-x: hidden;
 #ebuy_second {
 
 	color: #3498DB;
-	font-size: 15px;
+	font-size: 45px;
 	font-weight: bold;
 	position: relative;
-    left: 10px;
-    top: -20px;
+	top: -35px;
+
+   
+}
+
+#search_bar{
+	position: relative;
+	top: -35px;
+	left: 100px;
+	width: 50%;
+}
+
+#company_address{
+	position: relative;
+	top: 20px;
 }
 
 
@@ -568,7 +583,7 @@ background-color: #0472c1;
 
 	 background-color: #3498DB;
 		 position: relative;
-		 top: -18px;
+		 top: -28px;
 
 
 }
