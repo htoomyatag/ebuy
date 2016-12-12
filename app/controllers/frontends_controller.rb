@@ -233,6 +233,11 @@ class FrontendsController < ApplicationController
 
 
      @product = Product.find(params[:id])
+
+     @start_day = @product.start_to_sell_on.strftime("%Y-%m-%d %I:%M:%S +0630")
+     @end_day = @product.end_on.strftime("%Y-%m-%d %I:%M:%S +0630")
+  
+
      @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").last(6)
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6) 
 
