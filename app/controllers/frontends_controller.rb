@@ -76,7 +76,9 @@ class FrontendsController < ApplicationController
               :product_name => params[:product_name],
               :product_size => params[:product_size],
               :product_color => params[:product_color],
-              :product_message => params[:product_message]
+              :product_message => params[:product_message],
+              :product_model => params[:product_model],
+              :product_quantity => params[:product_quantity]
          )
 
      

@@ -14,9 +14,10 @@
                   <thead>
                     <tr>
                       <th>Product Name</th>
+                      <th>Product Model</th>
                       <th>Color</th>
-                      <th>Size
-                      </th>
+                      <th>Size </th>
+                      <th>Qty </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -24,11 +25,17 @@
                       <td>  
                         <%= @order.product_name %>
                       </td>
+                        <td>
+                          <%= @order.product_model %>
+                      </td>
                       <td>
                           <%= @order.product_color %>
                       </td>
                       <td>
                           <%= @order.product_size %>
+                      </td>
+                       <td>
+                          <%= @order.product_quantity %>
                       </td>
                     </tr>
              
@@ -41,9 +48,10 @@
               <thead>
                 <tr>
                   <th>Product Name</th>
+                  <th>Model</th>
                   <th>Color</th>
-                  <th>Size
-                  </th>
+                  <th>Size</th>
+                  <th>Qty</th>
                 </tr>
               </thead>
               <tbody>
@@ -53,10 +61,16 @@
                      <%= line_item.product.title %>
                   </td>
                   <td>
+                     <%= line_item.product.product_model %>
+                  </td>
+                  <td>
                      <%= line_item.product.product_color %>
                   </td>
                   <td>
                      <%= line_item.product.product_size %>
+                  </td>
+                   <td>
+                     <%= line_item.product.quantity %>
                   </td>
                 </tr>
                  <% end %> 

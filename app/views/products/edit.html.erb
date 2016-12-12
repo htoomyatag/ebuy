@@ -4,7 +4,8 @@
 <div class="panel panel-default">
   <div class="panel-body">
     		<div class="col-md-12">
-    		<h3>Edit Product</h3>
+    		<h3>Edit Product
+        </h3>
     		<hr/>
     		</div>
 			   <%= render 'form' %>
@@ -32,13 +33,35 @@
 $("#mysubmitbutton").click(function(e) {
   e.preventDefault();
 
-
+// notice
       var a = editor.container.firstChild.innerHTML;
-      document.getElementById('product_notice').value = a;
+       if (a == "<p><br></p>") {
+
+         document.getElementById('product_notice').value = '<%= @product.notice.html_safe %>';
+       }
+       else if (a == "<%= @product.notice %>"){
+                document.getElementById('product_notice').value = '<%= @product.notice.html_safe %>';
+       }
+       else{
+         document.getElementById('product_notice').value = a;
+       }
 
 
+// descitpon
        var b = editor_desc.container.firstChild.innerHTML;
-      document.getElementById('product_description').value = b;
+
+       if (b == "<p><br></p>") {
+
+         document.getElementById('product_description').value = '<%= @product.description.html_safe %>';
+
+       }
+       else if (b == "<%= @product.description %>"){
+                document.getElementById('product_description').value = '<%= @product.description.html_safe %>';
+       }
+       else{
+         document.getElementById('product_description').value = b;
+       }
+
 
 
       var product_sizes = $('#tags span').text();
@@ -59,4 +82,24 @@ $("#mysubmitbutton").click(function(e) {
 
 
 
+
+
 </script>
+
+
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+
+
+    document.getElementById("editor_desc").getElementsByClassName("ql-editor ql-blank")[0].innerHTML = "<%= @product.description.gsub('"',"'").html_safe %>";
+    document.getElementById("editor").getElementsByClassName("ql-editor ql-blank")[0].innerHTML = "<%= @product.notice.gsub('"',"'").html_safe %>";
+
+
+
+});
+
+
+</script>
+
+

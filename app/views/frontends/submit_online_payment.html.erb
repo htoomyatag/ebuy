@@ -48,17 +48,17 @@
               <thead>
                 <tr>
                   <th>Product Name</th>
-                   <th>Product Model</th>
+                  <th>Product Model</th>
                   <th>Color</th>
-                  <th>Size
-                  </th>
+                  <th>Size</th>
+                  <th>Qty</th>
                 </tr>
               </thead>
               <tbody>
                 <% @line_items.each do |line_item| %>
                 <tr>
                   <td>  
-                     <%= line_item.product.title %>
+                     <%= line_item.product.short_title %>
                   </td>
                    <td>  
                      <%= line_item.product.product_model %>
@@ -76,6 +76,9 @@
                     <% else %>
                       No choosen yet
                    <% end %>
+                  </td>
+                   <td>  
+                     <%= line_item.product.quantity %>
                   </td>
                 </tr>
                  <% end %> 
@@ -304,6 +307,8 @@
               var product_size = " <%= params[:product_size] %>";
               var product_color = "<%= params[:product_color] %>";
               var product_message = "<%= params[:product_message] %>";
+              var product_model = "<%= params[:product_model] %>";
+              var product_quantity = "<%= params[:product_quantity] %>";
 
 
               $.ajax({
@@ -318,6 +323,8 @@
                        "&product_name="+product_name+
                        "&product_size="+product_size+
                        "&product_color="+product_color+
+                       "&product_model="+product_model+
+                       "&product_quantity="+product_quantity+
                        "&product_message="+product_message,
 
                       complete: function(r){
@@ -346,6 +353,8 @@
               var buyer_city = "<%= params[:customer_city] %>";
               var buyer_address = "<%= params[:customer_house] %>";
               var cart_id = "<%= params[:cart_id] %>";
+              var product_model = "<%= params[:product_model] %>";
+              var product_quantity = "<%= params[:product_quantity] %>";
               var order_status =   "unpaid";
               var payment_type = "CashOnDelivery";
 
@@ -368,6 +377,8 @@
                        "&product_name="+product_name+
                        "&product_size="+product_size+
                        "&product_color="+product_color+
+                       "&product_model="+product_model+
+                       "&product_quantity="+product_quantity+
                        "&product_message="+product_message,
 
                       complete: function(r){
