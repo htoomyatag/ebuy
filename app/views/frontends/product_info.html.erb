@@ -176,7 +176,8 @@
 			   <tr>
 			    <td style="width:60%"> <span class="mydetail_title">Order Quantity</span></td>
 			    <td> 
-			      <input id="product_quantity" >
+			      <select id="product_quantity">  
+			      </select>
 			    </td> 
 			  </tr>
 
@@ -524,6 +525,19 @@
 $( document ).ready(function() {
 
 
+
+var min = 1,
+    max = '<%= @product.quantity %>',
+    select = document.getElementById('product_quantity');
+
+for (var i = min; i<=max; i++){
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.innerHTML = i;
+    select.appendChild(opt);
+}
+
+
 // create products
 	var myDiv = document.getElementById("myproduct_color");
 
@@ -683,4 +697,7 @@ $( document ).ready(function() {
     });
 
 
-</script
+</script>
+
+
+
