@@ -46,7 +46,7 @@
                 <td><%= product.actual_price %> SGD</td>
                 <td><%= product.discount_price %> SGD</td>
                 <td><%= product.product_category %></td>
-                <% if Time.now.to_datetime.between?(product.start_to_sell_on.to_datetime-1,product.end_on.to_datetime) && Time.now.strftime("%H").to_i.between?(product.start_to_sell_on.to_datetime.strftime("%H").to_i, product.end_on.to_datetime.strftime("%H").to_i) %>
+                <% if Time.current.utc.localtime.between?(product.start_to_sell_on.strftime("%Y-%m-%d %I:%M:%S +0630"),product.end_on.strftime("%Y-%m-%d %I:%M:%S +0630")) %>
                   <td> <p id="running">Running </p></td>
                 <% else %>
                    <td><p id="expire"> Expired </p></td>

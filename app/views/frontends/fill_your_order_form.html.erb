@@ -15,10 +15,12 @@
 		        <tr>
 		          <th>#</th>
 		          <th>Name</th>
+		          <th>Model</th>
 		          <th>Color</th>
 		          <th>Size</th>
 		          <th>Quantity</th>
 		          <th>Delivery</th>
+
 		         
 		        </tr>
 		      </thead>
@@ -27,6 +29,10 @@
 		          <th scope="row">1</th>
 		          <td>  <%= @product.short_title %>
 		           <input class="form-control" type="text" name="product_name" id="product_name" value="<%= @product.short_title %>" style="display:none;">
+		          </td>
+
+		           <td><%= @product_model %>
+		          	 <input class="form-control" type="text" name="product_model" id="product_model" value="<%= @product_model %>" style="display:none;">
 		          </td>
 
 		          <td><%= @product_color %>
@@ -41,6 +47,7 @@
 		          <td><%= @delivery_method %>
 		          	 <input class="form-control" type="text" name="product_delivery_method" id="product_delivery_method" value="<%= @delivery_method %>" style="display:none;">
 		          </td>
+		          
 		        </tr>
 		 
 		      </tbody>

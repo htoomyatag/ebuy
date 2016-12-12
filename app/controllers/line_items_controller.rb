@@ -30,7 +30,8 @@ class LineItemsController < ApplicationController
       delivery_method = params[:delivery_method]
       size = params[:product_size]
       quantity = params[:product_quantity].to_i
-      @line_item = @cart.add_item(product.id,size,color,delivery_method,quantity)
+      product_model = params[:product_model]
+      @line_item = @cart.add_item(product.id,size,color,delivery_method,quantity,product_model)
       respond_to do |format|
             if @line_item.save
               format.html { redirect_to request.referer }
@@ -90,6 +91,6 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      params.require(:line_item).permit(:product_id, :cart_id, :buyer_id, :quantity, :product_size, :product_color, :delivery_method)
+      params.require(:line_item).permit(:product_model,:product_id, :cart_id, :buyer_id, :quantity, :product_size, :product_color, :delivery_method)
     end
 end

@@ -13,9 +13,10 @@
                   <thead>
                     <tr>
                       <th>Product Name</th>
+                      <th>Model</th>
                       <th>Color</th>
-                      <th>Size
-                      </th>
+                      <th>Size</th>
+                      <th>Qty</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -23,11 +24,18 @@
                       <td>  
                         <%= params[:product_name] %>
                       </td>
+                       <td>
+                        <%= params[:product_model] %>
+                      </td>
                       <td>
                           <%= params[:product_color] %>
                       </td>
                       <td>
                           <%= params[:product_size] %>
+                      </td>
+                     
+                      <td>
+                        <%= params[:product_quantity] %>
                       </td>
                     </tr>
              
@@ -40,6 +48,7 @@
               <thead>
                 <tr>
                   <th>Product Name</th>
+                   <th>Product Model</th>
                   <th>Color</th>
                   <th>Size
                   </th>
@@ -50,6 +59,9 @@
                 <tr>
                   <td>  
                      <%= line_item.product.title %>
+                  </td>
+                   <td>  
+                     <%= line_item.product.product_model %>
                   </td>
                   <td>
                    <% if line_item.product_color != "Choose" %>

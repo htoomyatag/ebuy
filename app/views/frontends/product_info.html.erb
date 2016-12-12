@@ -18,7 +18,6 @@
   <div class="col-md-12">
 
    <% if Time.current.utc.localtime.between?(@start_day,@end_day) %>
-   
 		<h4 class="detailpage_link">
 		  	Home > <%= @product.product_category %> > <%= @product.short_title %> > eBuy00<%= @product.id %> 
 		</h4><br/>
@@ -660,15 +659,17 @@ $( document ).ready(function() {
  		size = $( "#myProductSize option:selected" ).text();
  		delivery_method = $( "#delivery_method option:selected" ).text();
  		product_quantity = document.getElementById("product_quantity").value;
+
+ 		product_model =  $( "#myProductModel option:selected" ).text();
  	
   		$.ajax({
               type: 'get',
               url: '/fill_your_order_form/'+product_id,
               dataType: 'text',
-              data: {'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity},
+              data: {'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity, 'product_model':product_model},
               complete: function(r){
               
-					 var currentURL = '/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity;
+					 var currentURL = '/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity+ '&product_model=' + product_model;
                      window.location.href = currentURL;
 
               }
