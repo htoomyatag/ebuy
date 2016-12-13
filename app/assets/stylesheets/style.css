@@ -25,11 +25,11 @@ overflow-x: hidden;
 
 
 #ebuy_title{
-	font-size: 65px;
+	font-size: 55px;
 	color: #3498DB;
 	position: relative;
     left: -28px;
-    top: -25px;
+    top: -10px;
   
 
 }
@@ -38,17 +38,17 @@ overflow-x: hidden;
 #ebuy_second {
 
 	color: #3498DB;
-	font-size: 45px;
+	font-size: 35px;
 	font-weight: bold;
 	position: relative;
-	top: -35px;
+	top: -20px;
 
    
 }
 
 #search_bar{
 	position: relative;
-	top: -35px;
+	
 	left: 100px;
 	width: 50%;
 }
