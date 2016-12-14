@@ -261,7 +261,17 @@
 
 			<div class="col-md-12"><br/>
 				<p class="fonter_head2title"> <%= t("payment_method")%> </p><br/>
-				<%= image_tag("visa-master-mpu.jpg", :id => "payment_logo") %><br/><br/><br/>
+				<%= image_tag("visa.jpg", :id => "payment_logo") %>
+				<%= image_tag("master.jpg", :id => "payment_logo") %>
+				<%= image_tag("mpu.jpg", :id => "payment_logo") %>
+
+				<%= link_to use_bank_transfer_path, id:"menulink" do %>
+					<%= image_tag("bank.jpg", :id => "payment_logo") %>
+				<% end %>
+				<%= link_to use_cash_deposit_path, id:"menulink" do %>
+					<%= image_tag("cash_deposit.jpg", :id => "payment_logo") %>
+				<% end %>
+				<br/><br/><br/>
 			</div>
 
 		

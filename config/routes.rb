@@ -118,6 +118,7 @@ Rails.application.routes.draw do
 
   get 'product_list' => 'frontends#product_list', as: 'product_list'
 
+
   
   
   resources :products
