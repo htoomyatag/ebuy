@@ -46,7 +46,7 @@ class FrontendsController < ApplicationController
 
   end
 
-  def use_cash_on_delivery
+  def use_cash_deposit
 
   end
   

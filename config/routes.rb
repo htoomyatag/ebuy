@@ -98,7 +98,7 @@ Rails.application.routes.draw do
 
   get 'use_mpu' => 'frontends#use_mpu'
 
-  get 'use_cash_on_delivery' => 'frontends#use_cash_on_delivery'
+  get 'use_cash_deposit' => 'frontends#use_cash_deposit'
 
   get 'use_bank_transfer' => 'frontends#use_bank_transfer'
 

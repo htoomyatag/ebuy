@@ -42,6 +42,10 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
 
+
+
+  @my_product_size =  '<span>'+@product.product_size.gsub(",",',</span><span>')+"<input type='text' >" 
+  @product_size = @my_product_size.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add size'>")
   respond_to do |format|
   if @product.save
     format.html { render :edit }

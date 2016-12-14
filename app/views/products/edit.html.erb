@@ -5,6 +5,9 @@
   <div class="panel-body">
     		<div class="col-md-12">
     		<h3>Edit Product
+        <br>
+        <%= @raw_product %>
+
         </h3>
     		<hr/>
     		</div>
@@ -91,9 +94,33 @@ $("#mysubmitbutton").click(function(e) {
   
   $(document).ready(function(){
 
-
+  
     document.getElementById("editor_desc").getElementsByClassName("ql-editor ql-blank")[0].innerHTML = "<%= @product.description.gsub('"',"'").html_safe %>";
     document.getElementById("editor").getElementsByClassName("ql-editor ql-blank")[0].innerHTML = "<%= @product.notice.gsub('"',"'").html_safe %>";
+
+    document.getElementById("tags").innerHTML =  "<%= @product_size.html_safe %>";
+
+    $(function(){ // DOM ready
+
+  // ::: TAGS BOX
+
+  $("#tags input").on({
+    focusout : function() {
+      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var txt = mytxt+",";
+      if(txt) $("<span/>", {text:txt, insertBefore:this});
+      this.value = "";
+    },
+    keyup : function(ev) {
+      // if: comma|enter (delimit more keyCodes with | pipe)
+      if(/(188|13)/.test(ev.which)) $(this).focusout(); 
+    }
+  });
+  $('#tags').on('click', 'span', function() {
+    $(this).remove(); 
+  });
+
+});
 
 
 

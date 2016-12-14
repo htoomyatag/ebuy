@@ -97,7 +97,7 @@
 			  <tr>
 			    <td style="width:60%"> <span class="mydetail_title">Actual Price</span></td>
 			    <td > <span class="mydetail_title"> 
-			    	<% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
+			    	<% round_up(@product.actual_price.to_i * @currency_exchange.to_i)  %>
                     <%= $product_price %> Ks
 
 			     </span></td> 
