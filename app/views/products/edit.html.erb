@@ -99,12 +99,35 @@ $("#mysubmitbutton").click(function(e) {
     document.getElementById("editor").getElementsByClassName("ql-editor ql-blank")[0].innerHTML = "<%= @product.notice.gsub('"',"'").html_safe %>";
 
     document.getElementById("tags").innerHTML =  "<%= @product_size.html_safe %>";
+    document.getElementById("tags_model").innerHTML =  "<%= @product_model.html_safe %>";
+    document.getElementById("tags_color").innerHTML =  "<%= @product_color.html_safe %>";
+
+
+
 
     $(function(){ // DOM ready
 
   // ::: TAGS BOX
 
-  $("#tags input").on({
+      $("#tags input").on({
+        focusout : function() {
+          var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+          var txt = mytxt+",";
+          if(txt) $("<span/>", {text:txt, insertBefore:this});
+          this.value = "";
+        },
+        keyup : function(ev) {
+          // if: comma|enter (delimit more keyCodes with | pipe)
+          if(/(188|13)/.test(ev.which)) $(this).focusout(); 
+        }
+      });
+      $('#tags').on('click', 'span', function() {
+        $(this).remove(); 
+      });
+
+
+
+       $("#tags_color input").on({
     focusout : function() {
       var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
       var txt = mytxt+",";
@@ -116,9 +139,29 @@ $("#mysubmitbutton").click(function(e) {
       if(/(188|13)/.test(ev.which)) $(this).focusout(); 
     }
   });
-  $('#tags').on('click', 'span', function() {
+  $('#tags_color').on('click', 'span', function() {
     $(this).remove(); 
   });
+
+
+    $("#tags_model input").on({
+    focusout : function() {
+      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var txt = mytxt+",";
+      if(txt) $("<span/>", {text:txt, insertBefore:this});
+      this.value = "";
+    },
+    keyup : function(ev) {
+      // if: comma|enter (delimit more keyCodes with | pipe)
+      if(/(188|13)/.test(ev.which)) $(this).focusout(); 
+    }
+  });
+  $('#tags_model').on('click', 'span', function() {
+    $(this).remove(); 
+  });
+
+
+
 
 });
 

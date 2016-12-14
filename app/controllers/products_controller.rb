@@ -43,9 +43,29 @@ class ProductsController < ApplicationController
   def edit
 
 
-
+  if @product.product_size != ""
   @my_product_size =  '<span>'+@product.product_size.gsub(",",',</span><span>')+"<input type='text' >" 
   @product_size = @my_product_size.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add size'>")
+  else
+    @product_size = "<input type='text' value='' placeholder='Add size'>"
+  end
+
+  if @product.product_model != ""
+  @my_product_model =  '<span>'+@product.product_model.gsub(",",',</span><span>')+"<input type='text' >" 
+  @product_model = @my_product_model.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add model'>")
+  else
+    @product_model = "<input type='text' value='' placeholder='Add model'>"
+  end
+
+  if @product.product_color != ""
+  @my_product_color =  '<span>'+@product.product_color.gsub(",",',</span><span>')+"<input type='text' >" 
+  @product_color = @my_product_color.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add color'>")
+  else
+    @product_color = "<input type='text' value='' placeholder='Add color'>"
+  end
+
+
+
   respond_to do |format|
   if @product.save
     format.html { render :edit }
