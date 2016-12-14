@@ -828,7 +828,7 @@ $(function(){ // DOM ready
     focusout : function() {
       var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
       var txt = mytxt+",";
-      if(txt) $("<span/>", {text:txt.toLowerCase(), insertBefore:this});
+      if(txt) $("<span/>", {text:txt, insertBefore:this});
       this.value = "";
     },
     keyup : function(ev) {
@@ -902,7 +902,7 @@ $(function(){ // DOM ready
     focusout : function() {
       var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
       var txt = mytxt+",";
-      if(txt) $("<span/>", {text:txt.toLowerCase(), insertBefore:this});
+      if(txt) $("<span/>", {text:txt, insertBefore:this});
       this.value = "";
     },
     keyup : function(ev) {
@@ -929,7 +929,7 @@ $(function(){ // DOM ready
     focusout : function() {
       var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
       var txt = mytxt+",";
-      if(txt) $("<span/>", {text:txt.toLowerCase(), insertBefore:this});
+      if(txt) $("<span/>", {text:txt, insertBefore:this});
       this.value = "";
     },
     keyup : function(ev) {
