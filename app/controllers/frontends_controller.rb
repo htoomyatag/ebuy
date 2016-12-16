@@ -5,7 +5,7 @@ class FrontendsController < ApplicationController
   # GET /frontends.json
  
   def product_list
-      @products = Product.where("product_subcategory = ? or product_category = ?", params[:category],params[:category])
+      @products = Product.where("product_subcategory = ? or product_category = ? or product_childsubcategory = ?", params[:category],params[:category],params[:category])
       # @products = Product.all
   end
 
