@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
 
 
+
+
   resources :cover_images
   scope "(:locale)", locale: /en|mm/ do
   resources :currency_exchanges
@@ -39,6 +41,8 @@ Rails.application.routes.draw do
   get 'cart_item' => 'line_items#cart_item', as: 'cart_item'
 
   resources :orders
+
+   match "order_complete" => "orders#order_complete", as: :order_complete, via: [:get, :post]
 
 
 

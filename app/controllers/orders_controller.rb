@@ -13,6 +13,11 @@ class OrdersController < ApplicationController
   end
 
 
+  def order_complete
+
+  end
+
+
 
    
 

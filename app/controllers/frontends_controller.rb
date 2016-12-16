@@ -3,7 +3,8 @@ class FrontendsController < ApplicationController
   before_filter :authenticate_buyer!, only: [:my_account, :my_order_list,:my_cancel_list,:cancel_order,:my_order_detail,:my_shopping_list]
   # GET /frontends
   # GET /frontends.json
- 
+
+
   def product_list
       @products = Product.where("product_subcategory = ? or product_category = ? or product_childsubcategory = ?", params[:category],params[:category],params[:category])
       # @products = Product.all
