@@ -32,43 +32,58 @@
 
 
 <div class="container"> 
-<h3 class="mydetail_title"> titletitletitletitletitletitle</h3>
+<h3 class="mydetail_title"> <%= @product.short_title %> </h3>
 
 <br/>
-<p> <span class="mydetail_title">Size: </span> 
-	<%= @product.product_size %></p>
+<p> 
+    <span class="mydetail_title">Size: </span> 
+    <span class="mydetail_title" id="myproduct_size" > 
+    </span>
+</p>
 <p> <span class="mydetail_title">Color: </span>
-<%= @product.product_color %></p>
+    <span class="mydetail_title" id="myproduct_color">
+    </span>
+</p>
+<p> <span class="mydetail_title">Model: </span>
+    <span class="mydetail_title" id="myproduct_model">    
+    </span>
+</p>
 
 <hr/>
 <p><span class="mydetail_title"> Actual Price:</span>
-<%= @product.actual_price %> Ks</p>
+<% round_up(@product.actual_price.to_i * @currency_exchange.to_i)  %>
+<%= $product_price %> Ks
+</p>
 
 <p><span class="mydetail_title"> Offer Price:</span>
-<%= @product.discount_price %> Ks</p>
+  <% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
+  <%= $product_price %> Ks
+</p>
 <hr/> 
 
 <p> <span class="mydetail_title"> Shipping from </span>
 Overseas
 </p>
 <p> <span class="mydetail_title">Delivery rate: </span>
-<%= @product.delivery_rate %> Ks</p>
+<%= @product.delivery_rate %></p>
 
 <p> <span class="mydetail_title">Estimate delivery:</span>
- <%= @product.delivery_time %> days</p>
+ <%= @product.delivery_time %> </p>
 
 <p><span class="mydetail_title"> Delivery service: </span>
 						<select>
 			    		  <option>Choose</option>
-						  <option>Pick up</option>
-						  <option>eBuy Delivery</option>
+						    <option>Pick up</option>
+						    <option>eBuy Delivery</option>
 						</select>
 
 </p>
 <hr/>
 
 <p> <span class="mydetail_title">Quantity: </span>
-<%= @product.quantity %></p>
+      <select id="product_quantity">  
+      </select>
+</p>
 <hr/>
 
 <a href="/product_detail_mobiview/<%= @product.id %>" class="btn btn-primary btn-lg btn-block" role="button">Product Detail</a>
@@ -92,29 +107,47 @@ Overseas
 
 <br/>
 <div class="row">
-  <div class="col-xs-3 col-md-3">
-
-    <%= button_to 'Buy Now' , fill_your_order_form_path(@product),:class =>"btn btn-danger", :id=>"footer_button", :method => "GET" %>
 
 
-  </div>
-  <div class="col-xs-3 col-md-3">
 
 
-    <%= button_to 'Add to Cart' , line_items_path(:product_id => @product),:class =>"btn btn-primary", :id=>"footer_button" %>
+  <% if Time.current.utc.localtime.between?(@start_day,@end_day) %>
+
+      
+      <div class="col-xs-3 col-md-3">
+          <%= button_to 'Buy Now' , fill_your_order_form_path(@product),:class =>"btn btn-danger", :id=>"footer_button", :method => "GET" %>
+      </div>
+      <div class="col-xs-3 col-md-3">
+          <%= button_to 'Add to Cart' , line_items_path(:product_id => @product),:class =>"btn btn-primary", :id=>"footer_button" %>
+      </div>
+         
+  <% else %>
 
 
-  </div>
-  <div class="col-xs-3 col-md-3">
+      <div class="col-xs-3 col-md-3">
+                <button type="button" class="btn btn-default" id="btn_checkout">Expire now!</button>
+    </div>
+     <div class="col-xs-3 col-md-3">
+                  <button type="button" class="btn btn-default" id="btn_checkout">Expire now!</button>
+    </div>
 
+
+  <% end %>
+
+
+
+    <div class="col-xs-3 col-md-3">
      <%= button_to 'Wish list' , add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id),:class =>"btn btn-info", :id=>"footer_button" %>
+    </div>
+    <div class="col-xs-3 col-md-3">
+      <button href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" id="footer_button" class="btn btn-default" target="_blank"> Share</button>
+    </div>
 
 
-  </div>
-  <div class="col-xs-3 col-md-3">
-
-     <button href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" id="footer_button" class="btn btn-default" target="_blank"> Share</button>
 
 
-  </div>
+
+
+
+  
 </div>
