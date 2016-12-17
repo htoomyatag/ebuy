@@ -369,7 +369,10 @@ li .active {
 
 
 #small_slide {
-	margin: 10px;
+    
+    width:250px;
+    height:200px;
+
 }
 
 #small_slide_img {
