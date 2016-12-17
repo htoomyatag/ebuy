@@ -1,6 +1,6 @@
 class FrontendsController < ApplicationController
   before_action :set_frontend, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_buyer!, only: [:my_account, :my_order_list,:my_cancel_list,:cancel_order,:my_order_detail,:my_shopping_list]
+  before_filter :authenticate_buyer!, only: [:my_account, :my_order_list,:my_cancel_list,:cancel_order,:my_order_detail,:my_shopping_list, :add_to_wish_list]
   # GET /frontends
   # GET /frontends.json
 

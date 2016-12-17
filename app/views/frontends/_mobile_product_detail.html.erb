@@ -121,20 +121,20 @@ Overseas
 
       
       <div class="col-xs-3 col-md-3">
-          <%= button_to 'Buy Now' , fill_your_order_form_path(@product),:class =>"btn btn-danger", :id=>"footer_button", :method => "GET" %>
+           <button type="button" class="btn btn-danger" id="btn_buy_now" style="width: 130%;height:50px;">Buy Now</button>
       </div>
       <div class="col-xs-3 col-md-3">
-          <%= button_to 'Add to Cart' , line_items_path(:product_id => @product),:class =>"btn btn-primary", :id=>"footer_button" %>
+         <button type="button" class="btn btn-primary" id="btn_add_to_cart" style="width: 130%;height:50px;">Add to Cart</button>
       </div>
          
   <% else %>
 
 
       <div class="col-xs-3 col-md-3">
-                <button type="button" class="btn btn-default" id="btn_checkout">Expire now!</button>
+          <button type="button" class="btn btn-default" id="btn_checkout">Expire now!</button>
     </div>
      <div class="col-xs-3 col-md-3">
-                  <button type="button" class="btn btn-default" id="btn_checkout">Expire now!</button>
+            <button type="button" class="btn btn-default" id="btn_checkout">Expire now!</button>
     </div>
 
 
@@ -143,10 +143,12 @@ Overseas
 
 
     <div class="col-xs-3 col-md-3">
-     <%= button_to 'Wish list' , add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id),:class =>"btn btn-info", :id=>"footer_button" %>
+     <%= button_to 'Wish list' , add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id), :class =>"btn btn-info", :style=>"width: 130%;height:50px;" %>
+
+     
     </div>
     <div class="col-xs-3 col-md-3">
-      <button href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" id="footer_button" class="btn btn-default" target="_blank"> Share</button>
+      <button href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" class="btn btn-default" style="width: 130%;height:50px;" target="_blank"> Share</button>
     </div>
 
 
