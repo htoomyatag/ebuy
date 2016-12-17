@@ -645,6 +645,52 @@ background-color: #0472c1;
 
 }
 
+
+
+
+#pcmenulink {
+	font-size: 9px;
+	color: white;
+}
+
+
+
+#ebuy_pctitle{
+
+    font-size: 35px;
+	color: #3498DB;
+	position: relative;
+   left: 18px;
+    top: 20px;
+
+}
+
+
+#ebuy_pcsecond{
+
+
+	color: #3498DB;
+	font-size: 25px;
+	font-weight: bold;
+	position: relative;
+	top: 25px;
+	left: 28px;
+
+}
+
+
+
+
+#mypcmenulink {
+	color: white;
+	font-size: 9px;
+	
+
+
+}
+
+
+
 @media (min-width: 600px) {
   #mobile_view, #mobile_view_home {
     display: none; /* This is how it looks on desktop */

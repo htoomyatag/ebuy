@@ -11,12 +11,6 @@ Rails.application.routes.draw do
   match "my_shoppinglist" => "myapis#my_shoppinglist", as: :my_shoppinglist, via: [:get, :post]
 
 
-
-
-
-
-
-
   resources :cover_images
   scope "(:locale)", locale: /en|mm/ do
   resources :currency_exchanges
@@ -123,7 +117,8 @@ Rails.application.routes.draw do
   get 'product_list' => 'frontends#product_list', as: 'product_list'
 
 
-  
+  get 'pc_version' => 'frontends#pc_version', as: 'pc_version'
+
   
   resources :products
 

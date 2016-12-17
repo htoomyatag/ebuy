@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>eBuymyanmar</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="shortcut icon" href="<%= asset_path 'fav.png'%>">
+  <%= javascript_include_tag 'jquery.min.js' %>
+  <%= javascript_include_tag 'jquery_ujs.js' %>
+  <%= javascript_include_tag 'jquery.zoom.min.js' %>
+  <%= javascript_include_tag 'bootstrap.min.js' %>
+  <%= javascript_include_tag 'bootstrap-submenu.min.js' %>
+  <%= csrf_meta_tags %>
+ 
+  
+</head>
+
+
+  <nav class="navbar navbar-default" id="mynav">
+      <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+     
+
+      <div class="col-xs-12">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+        
+          <ul class="nav navbar-nav">
+
+          		
+   				     <li>
+					
+
+						<%= link_to root_path, id:"pcmenulink" do %>
+						  <%= image_tag "home.png", :alt=>"profile" %>
+						  <%= t("home")%> |
+						<% end %>
+
+
+					</li>
+   
+   			<% if buyer_signed_in? %>
+
+   					 <li>
+						<a href="#" id="pcmenulink">
+						Hello <b> <%= current_buyer.buyer_name %>!</b>
+						</a>
+					</li>
+
+
+
+   				     <li>
+						<%= link_to my_account_path, id:"pcmenulink" do %>
+						<%= image_tag "profile.png", :alt=>"profile" %>
+						<%= t("my_account")%> |
+						<% end %>
+					</li>
+
+
+					 <li>
+						<%= link_to cart_item_path(:cart_id => session[:cart_id]), id:"pcmenulink" do %>
+						<%= image_tag "cart.png", :alt=>"profile" %>
+						<%= t("view_cart")%>
+						|<% end %>
+					</li>
+
+
+
+					<li>
+						<%= link_to "Log Out", destroy_buyer_session_path, method: :delete, :id=>"pcmenulink"  %>
+					</li>
+					
+		    <% else %>
+		<!--  -->
+			        <li>
+
+						<%= link_to new_buyer_session_path, id:"pcmenulink" do %>
+						<%= image_tag "sign.png", :alt=>"sign.png" %>
+						<%= t("sign_in")%> 
+						|<% end %>
+
+
+					</li>
+					<li>
+
+						<%= link_to new_buyer_registration_path, id:"pcmenulink" do %>
+							<%= image_tag "register.png", :alt=>"register" %>
+							<%= t("register")%> 
+						|<% end %>
+					</li>
+
+
+				   <li>
+						<%= link_to cart_item_path(:cart_id => session[:cart_id]), id:"pcmenulink" do %>
+						<%= image_tag "cart.png", :alt=>"profile" %>
+						<%= t("view_cart")%>
+						|<% end %>
+					</li>
+		
+
+			  <% end %>
+
+
+			<li>
+				<%= link_to help_path, id:"pcmenulink" do %>
+					<%= image_tag "mark.png", :alt=>"mark" %>
+					<%= t("help")%> |
+				 <% end %>
+
+			</li>
+			<li>
+				<%= link_to cart_item_path(:cart_id => session[:cart_id]), id:"pcmenulink" do %>
+					<%= image_tag "cart.png", :alt=>"profile" %>
+					<%= t("view_cart")%>
+				|<% end %>
+			</li>
+			<li>
+				<%= link_to contact_us_path, id:"pcmenulink" do %>
+					<%= image_tag "phone.png", :alt=>"phone" %>
+					<%= t("contact_us")%> &nbsp;|
+				<% end %>
+			</li>
+			<li>
+				<%= link_to about_us_path, id:"pcmenulink" do %>
+					<%= image_tag "aboutus.png", :alt=>"aboutus" %>
+					<%= t("about_us")%> &nbsp;|
+				<% end %>
+			</li>
+			
+			
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+	            <li id="navmenu">
+					<%= link_to "/en", id:"pcmenulink" do %>
+						<%= t("language")%>
+						<%= image_tag "english_flag.png", :alt=>"english", :style => "border:1px solid #021a40;"  %>
+					<% end %>
+				</li>
+				<li>
+
+					<%= link_to "/mm", id:"pcmenulink" do %>
+					
+						<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
+					<% end %>
+				</li>
+			</ul>
+          
+        </div><!-- /.navbar-collapse -->
+      </div>
+    
+    </nav>
+
+
+       <%= render '/layouts/pc_header' %>
+  	  <%= render '/layouts/pc_nav_menu' %>
+
+
+    
+
+<body>
+
+			<%= yield %>
+
+</body>
+
+
+
+<div id="desktop_view">
+
+<footer>
+	
+
+	<div id="my_navfooter">
+
+				<div class="col-xs-12">
+					<div class="col-xs-3">
+						<p class="fonter_headtitle"><%= t('customer_service') %></p>
+						
+						<%= link_to t("help_topics"), help_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("how_to_buy"), how_to_buy_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("payment"), payment_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("shipping_delivery"), shipment_delivery_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("contact_us"), contact_us_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("cusstomer_feedback"), customer_feedback_path, :class=>"fonter_menutitle" %><br/>
+					</div>
+					<div class="col-xs-3">
+						<p class="fonter_headtitle"><%= t("about_ebuy")%></p>
+						<%= link_to t("about_us"), about_us_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("career"), career_opportunity_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("termns"), termns_and_condition_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to t("privacy"), privacy_policy_path, :class=>"fonter_menutitle" %><br/>
+					</div>
+					<div class="col-xs-3">
+						<p class="fonter_headtitle"><%= t("tools")%></p>
+						<%= link_to t("join"), "www.google.com", :class=>"fonter_menutitle" %><br/>
+
+
+						<%= link_to image_tag("facebook.png", :border => 0, :alt => '', :title => ''), "https://www.facebook.com/ebuy.myanmar?fref=ts", :class => 'dock-item' %><br/><br/>
+
+			
+						<%= link_to t("download"), root_path, :class=>"fonter_menutitle" %><br/>
+						<%= link_to image_tag("googleplay.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'dock-item' %><br/>
+					    <%= link_to image_tag("apple_store.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'dock-item' %><br/>
+
+					</div>
+					<div class="col-xs-3">
+						<p class="fonter_headtitle"><%= t("sell_on")%></p>
+						<%= link_to t("sell_your"), new_request_product_path, :class=>"fonter_menutitle" %><br/>
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<div class="col-xs-12"><br/>
+				<p class="fonter_head2title"> <%= t("payment_method")%> </p><br/>
+				<%= image_tag("visa.jpg", :id => "payment_logo") %>
+				<%= image_tag("master.jpg", :id => "payment_logo") %>
+				<%= image_tag("mpu.jpg", :id => "payment_logo") %>
+
+				<%= link_to use_bank_transfer_path, id:"menulink" do %>
+					<%= image_tag("bank.jpg", :id => "payment_logo") %>
+				<% end %>
+				<%= link_to use_cash_deposit_path, id:"menulink" do %>
+					<%= image_tag("cash_deposit.jpg", :id => "payment_logo") %>
+				<% end %>
+				<br/><br/><br/>
+			</div>
+
+		
+			<div class="col-xs-12">
+			     <a href=""> wwww.eBuymyanmar.com </a>
+			  
+			      <span id="copy_right">
+			      	Copy right reserved by eBuy Myanmar Co.Ltd.
+			      </span>
+
+
+			     
+
+			</div>
+
+
+			
+</footer>
+			
+</div>
+</div>

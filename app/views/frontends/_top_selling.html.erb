@@ -8,11 +8,11 @@
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="item active">
-                         <div class="col-md-12" style="width:98%;margin-left:14px;">
+                         <div class="col-xs-12" style="width:98%;margin-left:14px;">
 
                        
 	       					<% @first_authentic_products.each do |product| %>
-	                            <div class="col-md-2">
+	                            <div class="col-xs-2">
 	                                <a href="/product_info/<%= product.id %>">
                                     <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive",  :id => "homepg_product" %>
 	                            	 <p id="product_title"><%= product.short_title %></p>
@@ -28,11 +28,11 @@
                     </div>
                     <!--/item-->
                     <div class="item">
-                         <div class="col-md-12">
+                         <div class="col-xs-12">
 
 
                         	<% @second_authentic_products.each do |product| %>
-	                            <div class="col-md-2">
+	                            <div class="col-xs-2">
 	                                <a href="/product_info/<%= product.id %>">
                                      <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive",  :id => "homepg_product" %>
 	                            	 <p id="product_title"><%= product.short_title %></p>

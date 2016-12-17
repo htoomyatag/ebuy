@@ -1,8 +1,48 @@
 class FrontendsController < ApplicationController
   before_action :set_frontend, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_buyer!, only: [:my_account, :my_order_list,:my_cancel_list,:cancel_order,:my_order_detail,:my_shopping_list, :add_to_wish_list]
+  layout :layout_per_action
   # GET /frontends
   # GET /frontends.json
+
+
+  def pc_version
+
+         @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).last(6)
+     @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+ 
+
+     @first_women_fashion_products = Product.where(:product_category => "WomenFashion").where(:show_at => 1).last(6)
+     @second_women_fashion_products = Product.where(:product_category => "WomenFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+
+     @first_men_fashion_products = Product.where(:product_category => "MenFashion").where(:show_at => 1).last(6)
+     @second_men_fashion_products = Product.where(:product_category => "MenFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+
+     @first_digital_marketings = Product.where(:product_category => "Digital&Mobile").where(:show_at => 1).last(6)
+     @second_digital_marketings = Product.where(:product_category => "Digital&Mobile").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+
+     @first_home_livings = Product.where(:product_category => "Home&Living").where(:show_at => 1).last(6)
+     @second_home_livings = Product.where(:product_category => "Home&Living").where.not(id: 1).limit(6).where(:show_at => 1).last(6) 
+
+     @first_health_beauty = Product.where(:product_category => "Health&Beauty").where(:show_at => 1).last(6)
+     @second_health_beauty = Product.where(:product_category => "Health&Beauty").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+
+     @first_food_beverage = Product.where(:product_category => "Food&Beverage").where(:show_at => 1).last(6)
+     @second_food_beverage = Product.where(:product_category => "Food&Beverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+
+     @time_sale_firsts = Product.where(:time_sale => "1").first
+     @time_sale_seconds = Product.where(:time_sale => "1").second
+     @time_sale_thirds = Product.where(:time_sale => "1").third
+     @time_sale_fourths = Product.where(:time_sale => "1").fourth
+     @time_sale_fifths = Product.where(:time_sale => "1").fifth
+     @time_sale_sixths = Product.where(:time_sale => "1").last
+
+     @first_cover_images = CoverImage.all.first
+     @second_cover_images = CoverImage.all.second
+     @third_cover_images = CoverImage.all.third
+
+
+  end
 
 
   def product_list
@@ -451,4 +491,15 @@ class FrontendsController < ApplicationController
     def frontend_params
       params.fetch(:frontend, {})
     end
+
+    # Choose layout according to action
+    def layout_per_action
+      if action_name == "pc_version"
+        "site_layout"
+      else
+        "application"
+      end
+    end
+
+
 end
