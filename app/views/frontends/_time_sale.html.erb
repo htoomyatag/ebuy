@@ -35,7 +35,10 @@
                   <div class="col-md-6"><br/><br/><br/>
                        <a href="/product_info/<%= @time_sale_seconds.id %>">           
                           <p id="product_title"><%= @time_sale_seconds.short_title %></p>
-                          <p id="product_price"><%= @time_sale_seconds.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                          <p id="product_price">
+                          <% round_up(@time_sale_seconds.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+                          </p>
                        </a>
                   </div>
               </div>
@@ -53,7 +56,10 @@
                   <div class="col-md-6"><br/><br/><br/>
                        <a href="/product_info/<%= @time_sale_thirds.id %>">           
                           <p id="product_title"><%= @time_sale_thirds.short_title %></p>
-                          <p id="product_price"><%= @time_sale_thirds.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                          <p id="product_price">
+                             <% round_up(@time_sale_thirds.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+                          </p>
                        </a>
                   </div>
               </div>
@@ -86,7 +92,10 @@
                   <div class="col-md-6"><br/><br/><br/>
                        <a href="/product_info/<%= @time_sale_firsts.id %>">           
                           <p id="product_title"><%= @time_sale_fourths.short_title %></p>
-                          <p id="product_price"><%= @time_sale_fourths.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                          <p id="product_price">
+                             <% round_up(@time_sale_thirds.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+                          </p>
                        </a>
                   </div>
               </div>
@@ -103,7 +112,10 @@
                   <div class="col-md-6"><br/><br/><br/>
                        <a href="/product_info/<%= @time_sale_seconds.id %>">           
                           <p id="product_title"><%= @time_sale_fifths.short_title %></p>
-                          <p id="product_price"><%= @time_sale_fifths.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                          <p id="product_price">
+                             <% round_up(@time_sale_fifths.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+                          </p>
                        </a>
                   </div>
               </div>
@@ -121,7 +133,10 @@
                   <div class="col-md-6"><br/><br/><br/>
                        <a href="/product_info/<%= @time_sale_sixths.id %>">           
                           <p id="product_title"><%= @time_sale_sixths.short_title %></p>
-                          <p id="product_price"><%= @time_sale_sixths.discount_price.to_i * @currency_exchange.to_i %> Ks</p>
+                          <p id="product_price">
+                               <% round_up(@time_sale_sixths.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+                          </p>
                        </a>
                   </div>
               </div>

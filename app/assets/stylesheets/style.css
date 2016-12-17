@@ -355,6 +355,12 @@ li .active {
 	margin: 10px;
 }
 
+#small_slide_img {
+	width:250px;
+    height:200px;
+
+}
+
 
 #carousel-example-generic_small {
   margin: -8px;

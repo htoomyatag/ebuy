@@ -69,37 +69,205 @@
 <div class="row" style="padding:10px;">
   
 
+<h4 id="slider_home_title"> Time sales</h4>
 
-<h4 id="slider_home_title">AuthenticBrandZone</h4>
-<% @first_authentic_products.each do |product| %>
 	                            
 
 
 	<div class="col-xs-6 col-md-4">
 
-  		<div class="panel panel-default">
+  		
 
-			  <a href="/product_info/<%= product.id %>"><%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
-			  </a>
+			   <a href="/product_info/<%= @time_sale_firsts.id %>">
+			   	<%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
+			   </a>
 			  
 			  <div class="panel-heading" id="panel_header">
 
 			    <span id="product_title_mobile">
-			    	<%= product.short_title %>
+			    	<%= @time_sale_firsts.short_title %>
 			    </span><br/>
 
 			    <span id="product_title_price"> 
-			    	 <%= product.discount_price.to_i * @currency_exchange.to_i %>  Ks
+			    	<% round_up(@time_sale_firsts.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
 			     </span>
 			  </div>
 
 
-		</div>
 
   	</div>
 
-<% end %>
 
+    <div class="col-xs-6 col-md-4">
+
+  	
+
+			   <a href="/product_info/<%= @time_sale_seconds.id %>">
+			   	<%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
+			   </a>
+			  
+			  <div class="panel-heading" id="panel_header">
+
+			    <span id="product_title_mobile">
+			    	<%= @time_sale_seconds.short_title %>
+			    </span><br/>
+
+			    <span id="product_title_price"> 
+			    	  	 <% round_up(@time_sale_seconds.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+			     </span>
+			  </div>
+
+
+	
+
+  	</div>
+
+
+
+  		<div class="col-xs-6 col-md-4">
+
+  		
+
+			   <a href="/product_info/<%= @time_sale_thirds.id %>">
+			   	<%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
+			   </a>
+			  
+			  <div class="panel-heading" id="panel_header">
+
+			    <span id="product_title_mobile">
+			    		<%= @time_sale_thirds.short_title %>
+			    </span><br/>
+
+			    <span id="product_title_price"> 
+			    	 <% round_up(@time_sale_thirds.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+			     </span>
+			  </div>
+
+
+	
+
+  	</div>
+
+
+    <div class="col-xs-6 col-md-4">
+
+  		
+
+			   <a href="/product_info/<%= @time_sale_fourths.id %>">
+			   	<%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
+			   </a>
+			  
+			  <div class="panel-heading" id="panel_header">
+
+			    <span id="product_title_mobile">
+			    		<%= @time_sale_fourths.short_title %>
+			    </span><br/>
+
+			    <span id="product_title_price"> 
+			    	 <% round_up(@time_sale_fourths.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+			     </span>
+			  </div>
+
+
+
+  	</div>
+
+
+  		<div class="col-xs-6 col-md-4">
+
+  	
+
+			   <a href="/product_info/<%= @time_sale_fifths.id %>">
+			   	<%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
+			   </a>
+			  
+			  <div class="panel-heading" id="panel_header">
+
+			    <span id="product_title_mobile">
+			    		 <%= @time_sale_fifths.short_title %>
+			    </span><br/>
+
+			    <span id="product_title_price"> 
+			    	 <% round_up(@time_sale_fifths.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+			     </span>
+			  </div>
+
+
+		
+
+  	</div>
+
+
+    <div class="col-xs-6 col-md-4">
+
+  		
+
+			   <a href="/product_info/<%= @time_sale_sixths.id %>">
+			   	<%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
+			   </a>
+			  
+			  <div class="panel-heading" id="panel_header">
+
+			    <span id="product_title_mobile">
+			    	   <%= @time_sale_sixths.short_title %>
+			    </span><br/>
+
+			    <span id="product_title_price"> 
+			    	 <% round_up(@time_sale_sixths.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+			     </span>
+			  </div>
+
+
+
+
+  	</div>
+
+
+
+<div style="height:850px;">
+
+</div>
+
+
+
+
+<h4 id="slider_home_title">
+AuthenticBrandZone</h4>
+		<div class="row" style="padding:10px;">
+				<% @first_authentic_products.each do |product| %>
+					                            
+
+
+							<div class="col-xs-6 col-md-4"  >
+						  		
+
+
+									  <a href="/product_info/<%= product.id %>">
+									  	   <%= image_tag(product.avatar1.url, :id => "small_slide_img",:class=>"img-responsive") %>
+									  </a>
+									  
+									  <div class="panel-heading" id="panel_header">
+
+									    <span id="product_title_mobile">
+									    	<%= product.short_title %>
+									    </span><br/>
+
+									    <span id="product_title_price"> 
+									    	 <%= product.discount_price.to_i * @currency_exchange.to_i %>  Ks
+									     </span>
+									  </div>
+
+						
+						  	</div>
+
+				<% end %>
+		</div>
 
 
 
@@ -110,7 +278,7 @@
 
 	<div class="col-xs-6 col-md-4">
 
-  		<div class="panel panel-default">
+  	
 
 			   <a href="/product_info/<%= product.id %>">
 			   <%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
@@ -128,8 +296,7 @@
 			  </div>
 
 
-		</div>
-
+		
   	</div>
 
 <% end %>
@@ -143,7 +310,7 @@
 
 	<div class="col-xs-6 col-md-4">
 
-  		<div class="panel panel-default">
+  	
 
 			   <a href="/product_info/<%= product.id %>">
 			   <%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
@@ -161,7 +328,7 @@
 			  </div>
 
 
-		</div>
+
 
   	</div>
 
@@ -174,7 +341,7 @@
 
 	<div class="col-xs-6 col-md-4">
 
-  		<div class="panel panel-default">
+  		
 
 			   <a href="/product_info/<%= product.id %>">
 			   <%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
@@ -192,7 +359,6 @@
 			  </div>
 
 
-		</div>
 
   	</div>
 
@@ -205,7 +371,7 @@
 
 	<div class="col-xs-6 col-md-4">
 
-  		<div class="panel panel-default">
+  		
 
 			   <a href="/product_info/<%= product.id %>">
 			   <%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
@@ -223,7 +389,6 @@
 			  </div>
 
 
-		</div>
 
   	</div>
 
@@ -236,8 +401,7 @@
 
 	<div class="col-xs-6 col-md-4">
 
-  		<div class="panel panel-default">
-
+  		
 			   <a href="/product_info/<%= product.id %>">
 			   <%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
 			   </a>
@@ -254,7 +418,6 @@
 			  </div>
 
 
-		</div>
 
   	</div>
 
@@ -267,7 +430,7 @@
 
 	<div class="col-xs-6 col-md-4">
 
-  		<div class="panel panel-default">
+  	
 
 			   <a href="/product_info/<%= product.id %>">
 			   <%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
@@ -285,7 +448,6 @@
 			  </div>
 
 
-		</div>
 
   	</div>
 
@@ -298,7 +460,7 @@
 
 	<div class="col-xs-6 col-md-4">
 
-  		<div class="panel panel-default">
+  		
 
 			   <a href="/product_info/<%= product.id %>">
 			   <%= image_tag("1004.jpg", :id => "small_slide",:class=>"img-responsive") %>
@@ -315,8 +477,6 @@
 			     </span>
 			  </div>
 
-
-		</div>
 
   	</div>
 
