@@ -42,22 +42,34 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
 
+  if !@product.notice.nil?
+    @product_notice = @product.notice 
+  else
+    @product_notice = "<p>No data</p>"
+  end
 
-  if @product.product_size != ""
+
+  if !@product.description.nil?
+    @product_description = @product.description
+  else
+    @product_description= "<p>No data</p>"
+  end
+  
+  if !@product.product_size.nil?
   @my_product_size =  '<span>'+@product.product_size.gsub(",",',</span><span>')+"<input type='text' >" 
   @product_size = @my_product_size.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add size'>")
   else
     @product_size = "<input type='text' value='' placeholder='Add size'>"
   end
 
-  if @product.product_model != ""
+  if !@product.product_model.nil?
   @my_product_model =  '<span>'+@product.product_model.gsub(",",',</span><span>')+"<input type='text' >" 
   @product_model = @my_product_model.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add model'>")
   else
     @product_model = "<input type='text' value='' placeholder='Add model'>"
   end
 
-  if @product.product_color != ""
+  if !@product.product_color.nil?
   @my_product_color =  '<span>'+@product.product_color.gsub(",",',</span><span>')+"<input type='text' >" 
   @product_color = @my_product_color.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add color'>")
   else
