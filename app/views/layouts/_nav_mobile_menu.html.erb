@@ -56,66 +56,71 @@
 	    	<!-- authentic brand zone -->
 
 	     	
+	      				 <ul class="nav navbar-nav">
+	    	<!-- authentic brand zone -->
+
+	    	<li id="all_categories"><a id="themenulink"> <%= t("all_categories")%> </a></li>
+	     	
 	      	<li class="dropdown">
 
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('AuthenticBrandZone') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('AuthenticBrandZone') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
 		          <li><%= link_to t('AllProductsonAuthenticBrandZone'), product_list_path(:category => "AuthenticBrandZone") %></li>
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('WomensFashion') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('WomensFashion') %> </a>
 
 		            <ul class="dropdown-menu">
 
-		              <li><%= link_to t('WomensApparel'), product_list_path(:category => "WomensApparel") %></li>
-					  <li><%= link_to t('ShoesandFootwear'), product_list_path(:category => "ShoesandFootwear") %></li>
-					  <li><%= link_to t('BagsWallets'), product_list_path(:category => "BagsWallets") %></li>
-					  <li><%= link_to t('WatchesandGlasses'), product_list_path(:category => "WatchesandGlasses") %></li>
-					  <li><%= link_to t('Jewellery'), product_list_path(:category => "Jewellery") %></li>
+		              <li><%= link_to t('WomensApparel'), product_list_path(:category => "authentic_brand_zoneWomensApparel") %></li>
+					  <li><%= link_to t('ShoesandFootwear'), product_list_path(:category => "authentic_brand_zoneWomenShoesandFootwear") %></li>
+					  <li><%= link_to t('BagsWallets'), product_list_path(:category => "authentic_brand_zoneWomenBagsWallets") %></li>
+					  <li><%= link_to t('WatchesandGlasses'), product_list_path(:category => "authentic_brand_zoneWomenWatchesandGlasses") %></li>
+					  <li><%= link_to t('Jewellery'), product_list_path(:category => "authentic_brand_zoneWomenJewellery") %></li>
 		            </ul>
 		          </li>
 
 		           <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('MensFashion') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('MensFashion') %> </a>
 
 		            <ul class="dropdown-menu">
-						<li><%= link_to t('MensApparel'), product_list_path(:category => "MensApparel") %></li>
-						<li><%= link_to t('ShoesandFootwear'), product_list_path(:category => "ShoesandFootwear") %></li>
-						<li><%= link_to t('BagsandWallets'), product_list_path(:category => "BagsandWallets") %></li>
-						<li><%= link_to t('WatchesandGlasses'), product_list_path(:category => "WatchesandGlasses") %></li>
-						<li><%= link_to t('Jewellery'), product_list_path(:category => "Jewellery") %></li>
+						<li><%= link_to t('MensApparel'), product_list_path(:category => "authentic_brand_zoneMensApparel") %></li>
+						<li><%= link_to t('ShoesandFootwear'), product_list_path(:category => "authentic_brand_zoneMenShoesandFootwear") %></li>
+						<li><%= link_to t('BagsandWallets'), product_list_path(:category => "authentic_brand_zoneMenBagsandWallets") %></li>
+						<li><%= link_to t('WatchesandGlasses'), product_list_path(:category => "authentic_brand_zoneMenWatchesandGlasses") %></li>
+						<li><%= link_to t('Jewellery'), product_list_path(:category => "authentic_brand_zoneMenJewellery") %></li>
 		            </ul>
 		          </li>
 
 
 
 		           <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('DigitalMobileandElectricalAppliances') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('DigitalMobileandElectricalAppliances') %> </a>
 
 		            <ul class="dropdown-menu">
-						<li><%= link_to t('PhonesandTablets'), product_list_path(:category => "PhonesandTablets") %></li>
-						<li><%= link_to t('ComputersandLaptops'), product_list_path(:category => "ComputersandLaptops") %></li>
-						<li><%= link_to t('TVVideoandPlayer'), product_list_path(:category => "TVVideoandPlayer") %></li>
-						<li><%= link_to t('AudioandHiFi'), product_list_path(:category => "AudioandHiFi") %></li>
-						<li><%= link_to t('CameraandPhoto'), product_list_path(:category => "CameraandPhoto") %></li>
-						<li><%= link_to t('Gaming'), product_list_path(:category => "Gaming") %></li>
-						<li><%= link_to t('HomeAppliances'), product_list_path(:category => "HomeAppliances") %></li>
+						<li><%= link_to t('PhonesandTablets'), product_list_path(:category => "authentic_brand_zonePhonesandTablets") %></li>
+						<li><%= link_to t('ComputersandLaptops'), product_list_path(:category => "authentic_brand_zoneComputersandLaptops") %></li>
+						<li><%= link_to t('TVVideoandPlayer'), product_list_path(:category => "authentic_brand_zoneTVVideoandPlayer") %></li>
+						<li><%= link_to t('AudioandHiFi'), product_list_path(:category => "authentic_brand_zoneAudioandHiFi") %></li>
+						<li><%= link_to t('CameraandPhoto'), product_list_path(:category => "authentic_brand_zoneCameraandPhoto") %></li>
+						<li><%= link_to t('Gaming'), product_list_path(:category => "authentic_brand_zoneGaming") %></li>
+						<li><%= link_to t('HomeAppliances'), product_list_path(:category => "authentic_brand_zoneHomeAppliances") %></li>
 		            </ul>
 		          </li>
 
 		           <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('HomeandLiving') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('HomeandLiving') %> </a>
 
 					    <ul class="dropdown-menu">
-							<li><%= link_to t('LivingRoomSupplies'), product_list_path(:category => "LivingRoomSupplies") %></li>
-							<li><%= link_to t('BedroomAppliances'), product_list_path(:category => "BedroomAppliances") %></li>
-							<li><%= link_to t('BathroomProducts'), product_list_path(:category => "BathroomProducts") %></li>
-							<li><%= link_to t('GarmentCare'), product_list_path(:category => "GarmentCare") %></li>
-							<li><%= link_to t('KitchenandDining'), product_list_path(:category => "KitchenandDining") %></li>
-							<li><%= link_to t('Housekeeping'), product_list_path(:category => "Housekeeping") %></li>
-							<li><%= link_to t('HomeDecoration'), product_list_path(:category => "HomeDecoration") %></li>
-							<li><%= link_to t('OutdoorandGarden'), product_list_path(:category => "OutdoorandGarden") %></li>
+							<li><%= link_to t('LivingRoomSupplies'), product_list_path(:category => "authentic_brand_zoneLivingRoomSupplies") %></li>
+							<li><%= link_to t('BedroomAppliances'), product_list_path(:category => "authentic_brand_zoneBedroomAppliances") %></li>
+							<li><%= link_to t('BathroomProducts'), product_list_path(:category => "authentic_brand_zoneBathroomProducts") %></li>
+							<li><%= link_to t('GarmentCare'), product_list_path(:category => "authentic_brand_zoneGarmentCare") %></li>
+							<li><%= link_to t('KitchenandDining'), product_list_path(:category => "authentic_brand_zoneKitchenandDining") %></li>
+							<li><%= link_to t('Housekeeping'), product_list_path(:category => "authentic_brand_zoneHousekeeping") %></li>
+							<li><%= link_to t('HomeDecoration'), product_list_path(:category => "authentic_brand_zoneHomeDecoration") %></li>
+							<li><%= link_to t('OutdoorandGarden'), product_list_path(:category => "authentic_brand_zoneOutdoorandGarden") %></li>
 					 	</ul>
 		          </li>
 
@@ -123,107 +128,109 @@
 
 
  				<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('HealthandBeauty') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('HealthandBeauty') %></a>
      					<ul class="dropdown-menu">
-							<li><%= link_to t('BathandBodySupplies'), product_list_path(:category => "BathandBodySupplies") %></li>
-							<li><%= link_to t('SkinCare'), product_list_path(:category => "SkinCare") %></li>
-							<li><%= link_to t('EyeCare'), product_list_path(:category => "EyeCare") %></li>
-							<li><%= link_to t('HairCare'), product_list_path(:category => "HairCare") %></li>
-							<li><%= link_to t('HandCare'), product_list_path(:category => "HandCare") %></li>
-							<li><%= link_to t('DentalCare'), product_list_path(:category => "DentalCare") %></li>
-							<li><%= link_to t('Perfumes'), product_list_path(:category => "Perfumes") %></li>
-							<li><%= link_to t('ShavingSupplies'), product_list_path(:category => "ShavingSupplies") %></li>
-							<li><%= link_to t('FoodSupplements'), product_list_path(:category => "FoodSupplements") %></li>
-							<li><%= link_to t('HealthandBeautyTools'), product_list_path(:category => "HealthandBeautyTools") %></li>
+							<li><%= link_to t('BathandBodySupplies'), product_list_path(:category => "authentic_brand_zoneBathandBodySupplies") %></li>
+							<li><%= link_to t('SkinCare'), product_list_path(:category => "authentic_brand_zoneSkinCare") %></li>
+							<li><%= link_to t('EyeCare'), product_list_path(:category => "authentic_brand_zoneEyeCare") %></li>
+							<li><%= link_to t('HairCare'), product_list_path(:category => "authentic_brand_zoneHairCare") %></li>
+							<li><%= link_to t('HandCare'), product_list_path(:category => "authentic_brand_zoneHandCare") %></li>
+							<li><%= link_to t('DentalCare'), product_list_path(:category => "authentic_brand_zoneDentalCare") %></li>
+							<li><%= link_to t('Perfumes'), product_list_path(:category => "authentic_brand_zonePerfumes") %></li>
+							<li><%= link_to t('ShavingSupplies'), product_list_path(:category => "authentic_brand_zoneShavingSupplies") %></li>
+							<li><%= link_to t('FoodSupplements'), product_list_path(:category => "authentic_brand_zoneFoodSupplements") %></li>
+							<li><%= link_to t('HealthandBeautyTools'), product_list_path(:category => "authentic_brand_zoneHealthandBeautyTools") %></li>
 	 					</ul>
 		       </li>
 
+		       	
 			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('FoodandBeverage') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('FoodandBeverage') %></a>
  					<ul class="dropdown-menu">
-						<li><%= link_to t('VegetableProducts'), product_list_path(:category => "VegetableProducts") %></li>
-						<li><%= link_to t('Confectionery'), product_list_path(:category => "Confectionery") %></li>
-						<li><%= link_to t('BakedGoods'), product_list_path(:category => "BakedGoods") %></li>
-						<li><%= link_to t('GrainProducts'), product_list_path(:category => "GrainProducts") %></li>
-						<li><%= link_to t('FoodIngredients'), product_list_path(:category => "FoodIngredients") %></li>
-						<li><%= link_to t('DairyProducts'), product_list_path(:category => "DairyProducts") %></li>
-						<li><%= link_to t('HoneyProducts'), product_list_path(:category => "HoneyProducts") %></li>
-						<li><%= link_to t('MeatandMeatandMeatProducts'), product_list_path(:category => "MeatandMeatandMeatProducts") %></li>
-						<li><%= link_to t('EggandEggProducts'), product_list_path(:category => "EggandEggProducts") %></li>
-						<li><%= link_to t('SeafoodandSeafoodProducts'), product_list_path(:category => "SeafoodandSeafoodProducts") %></li>
-						<li><%= link_to t('Coffee'), product_list_path(:category => "Coffee") %></li>
-						<li><%= link_to t('InstantFood'), product_list_path(:category => "InstantFood") %></li>
-						<li><%= link_to t('CannedFood'), product_list_path(:category => "CannedFood") %></li>
-						<li><%= link_to t('BabyFood'), product_list_path(:category => "BabyFood") %></li>
-						<li><%= link_to t('Beverage'), product_list_path(:category => "Beverage") %></li>
+						<li><%= link_to t('VegetableProducts'), product_list_path(:category => "authentic_brand_zoneVegetableProducts") %></li>
+						<li><%= link_to t('Confectionery'), product_list_path(:category => "authentic_brand_zoneConfectionery") %></li>
+						<li><%= link_to t('BakedGoods'), product_list_path(:category => "authentic_brand_zoneBakedGoods") %></li>
+						<li><%= link_to t('GrainProducts'), product_list_path(:category => "authentic_brand_zoneGrainProducts") %></li>
+						<li><%= link_to t('FoodIngredients'), product_list_path(:category => "authentic_brand_zoneFoodIngredients") %></li>
+						<li><%= link_to t('DairyProducts'), product_list_path(:category => "authentic_brand_zoneDairyProducts") %></li>
+						<li><%= link_to t('HoneyProducts'), product_list_path(:category => "authentic_brand_zoneHoneyProducts") %></li>
+						<li><%= link_to t('MeatandMeatandMeatProducts'), product_list_path(:category => "authentic_brand_zoneMeatandMeatandMeatProducts") %></li>
+						<li><%= link_to t('EggandEggProducts'), product_list_path(:category => "authentic_brand_zoneEggandEggProducts") %></li>
+						<li><%= link_to t('SeafoodandSeafoodProducts'), product_list_path(:category => "authentic_brand_zoneSeafoodandSeafoodProducts") %></li>
+						<li><%= link_to t('Coffee'), product_list_path(:category => "authentic_brand_zoneCoffee") %></li>
+						<li><%= link_to t('InstantFood'), product_list_path(:category => "authentic_brand_zoneInstantFood") %></li>
+						<li><%= link_to t('CannedFood'), product_list_path(:category => "authentic_brand_zoneCannedFood") %></li>
+						<li><%= link_to t('BabyFood'), product_list_path(:category => "authentic_brand_zoneBabyFood") %></li>
+						<li><%= link_to t('Beverage'), product_list_path(:category => "authentic_brand_zoneBeverage") %></li>
 					</ul>
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('KidBabyandMaternity') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('KidBabyandMaternity') %></a>
 		            <ul class="dropdown-menu">
-						<li><%= link_to t('KidsFashion'), product_list_path(:category => "KidsFashion") %></li>
-						<li><%= link_to t('BabyCare'), product_list_path(:category => "BabyCare") %></li>
-						<li><%= link_to t('BabyFeeding'), product_list_path(:category => "BabyFeeding") %></li>
-						<li><%= link_to t('Toys'), product_list_path(:category => "Toys") %></li>
-						<li><%= link_to t('MaternityCare'), product_list_path(:category => "MaternityCare") %></li>
+						<li><%= link_to t('KidsFashion'), product_list_path(:category => "authentic_brand_zoneKidsFashion") %></li>
+						<li><%= link_to t('BabyCare'), product_list_path(:category => "authentic_brand_zoneBabyCare") %></li>
+						<li><%= link_to t('BabyFeeding'), product_list_path(:category => "authentic_brand_zoneBabyFeeding") %></li>
+						<li><%= link_to t('Toys'), product_list_path(:category => "authentic_brand_zoneToys") %></li>
+						<li><%= link_to t('MaternityCare'), product_list_path(:category => "authentic_brand_zoneMaternityCare") %></li>
 					</ul>
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('SportsOutdoorsandEntertainment') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('SportsOutdoorsandEntertainment') %></a>
  					<ul class="dropdown-menu">
-						<li><%= link_to t('IndoorSportSupplies'), product_list_path(:category => "IndoorSportSupplies") %></li>
-						<li><%= link_to t('OutdoorSportSupplies'), product_list_path(:category => "OutdoorSportSupplies") %></li>
-						<li><%= link_to t('OutdoorRecreation'), product_list_path(:category => "OutdoorRecreation") %></li>
-						<li><%= link_to t('Entertainment'), product_list_path(:category => "Entertainment") %></li>
+						<li><%= link_to t('IndoorSportSupplies'), product_list_path(:category => "authentic_brand_zoneIndoorSportSupplies") %></li>
+						<li><%= link_to t('OutdoorSportSupplies'), product_list_path(:category => "authentic_brand_zoneOutdoorSportSupplies") %></li>
+						<li><%= link_to t('OutdoorRecreation'), product_list_path(:category => "authentic_brand_zoneOutdoorRecreation") %></li>
+						<li><%= link_to t('Entertainment'), product_list_path(:category => "authentic_brand_zoneEntertainment") %></li>
 					</ul>
 			</li>
 
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('OfficeandSchoolSupplies') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('OfficeandSchoolSupplies') %></a>
 		            <ul class="dropdown-menu">
-						<li><%= link_to t('EducationSupplies'), product_list_path(:category => "EducationSupplies") %></li>
-						<li><%= link_to t('OfficeSupplies'), product_list_path(:category => "OfficeSupplies") %></li>
-						<li><%= link_to t('ArtSupplies'), product_list_path(:category => "ArtSupplies") %></li>
+						<li><%= link_to t('EducationSupplies'), product_list_path(:category => "authentic_brand_zoneEducationSupplies") %></li>
+						<li><%= link_to t('OfficeSupplies'), product_list_path(:category => "authentic_brand_zoneOfficeSupplies") %></li>
+						<li><%= link_to t('ArtSupplies'), product_list_path(:category => "authentic_brand_zoneArtSupplies") %></li>
 					</ul>
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('LightsandLightings') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('LightsandLightings') %></a>
 		            <ul class="dropdown-menu">
-						<li><%= link_to t('LightsandLightings'), product_list_path(:category => "LightsandLightings") %></li>
-						<li><%= link_to t('IndoorLightings'), product_list_path(:category => "IndoorLightings") %></li>
-						<li><%= link_to t('OutdoorLightings'), product_list_path(:category => "OutdoorLightings") %></li>
+						<li><%= link_to t('LightsandLightings'), product_list_path(:category => "authentic_brand_zoneLightsandLightings") %></li>
+						<li><%= link_to t('IndoorLightings'), product_list_path(:category => "authentic_brand_zoneIndoorLightings") %></li>
+						<li><%= link_to t('OutdoorLightings'), product_list_path(:category => "authentic_brand_zoneOutdoorLightings") %></li>
 					</ul>
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('Transportation') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('Transportation') %></a>
 		            <ul class="dropdown-menu">
-						<li><%= link_to t('Bicycles'), product_list_path(:category => "Bicycles") %></li>
-						<li><%= link_to t('AutomobilesandMotorcycles'), product_list_path(:category => "AutomobilesandMotorcycles") %></li>
+						<li><%= link_to t('Bicycles'), product_list_path(:category => "authentic_brand_zoneBicycles") %></li>
+						<li><%= link_to t('AutomobilesandMotorcycles'), product_list_path(:category => "authentic_brand_zoneAutomobilesandMotorcycles") %></li>
 					</ul>
 			</li>
 
  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('ElectronicElectricalandMechanicalProducts') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('ElectronicElectricalandMechanicalProducts') %></a>
  					<ul class="dropdown-menu">
-						<li><%= link_to t('ElectronicComponentsandParts'), product_list_path(:category => "ElectronicComponentsandParts") %></li>
-						<li><%= link_to t('ElectricalEquipmentsandParts'), product_list_path(:category => "ElectricalEquipmentsandParts") %></li>
-						<li><%= link_to t('MechanicalProductsandTools'), product_list_path(:category => "MechanicalProductsandTools") %></li>
-						<li><%= link_to t('SafetyEquipmentsandAccessories'), product_list_path(:category => "SafetyEquipmentsandAccessories") %></li>
-						<li><%= link_to t('OEMProducts'), product_list_path(:category => "OEMProducts") %></li>
+						<li><%= link_to t('ElectronicComponentsandParts'), product_list_path(:category => "authentic_brand_zoneElectronicComponentsandParts") %></li>
+						<li><%= link_to t('ElectricalEquipmentsandParts'), product_list_path(:category => "authentic_brand_zoneElectricalEquipmentsandParts") %></li>
+						<li><%= link_to t('MechanicalProductsandTools'), product_list_path(:category => "authentic_brand_zoneMechanicalProductsandTools") %></li>
+						<li><%= link_to t('SafetyEquipmentsandAccessories'), product_list_path(:category => "authentic_brand_zoneSafetyEquipmentsandAccessories") %></li>
+						<li><%= link_to t('OEMProducts'), product_list_path(:category => "authentic_brand_zoneOEMProducts") %></li>
 					</ul>
 
 		         
 		        </ul>
 		      </li>  
 
+
 		      	    	<!-- Women's Fashion  -->
 	      	<li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('WomensFashion') %> <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('WomensFashion') %> <span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -231,7 +238,7 @@
 		           <li><%= link_to t('AllProductsonWomensFashion'), product_list_path(:category => "WomensFashion") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('WomensApparel') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('WomensApparel') %></a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('ShirtsTops'), product_list_path(:category => "ShirtsTops") %></li>
 							<li><%= link_to t('JacketsCoats'), product_list_path(:category => "JacketsCoats") %></li>
@@ -260,7 +267,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('ShoesandFootwear') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('ShoesandFootwear') %></a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('Flats'), product_list_path(:category => "Flats") %></li>
 							<li><%= link_to t('Heels'), product_list_path(:category => "Heels") %></li>
@@ -277,7 +284,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('BagsandWallets') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('BagsandWallets') %></a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('Handbags'), product_list_path(:category => "Handbags") %></li>
 							<li><%= link_to t('ClutchBags'), product_list_path(:category => "ClutchBags") %></li>
@@ -299,7 +306,7 @@
 
 
 				 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('WatchesandGlasses') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('WatchesandGlasses') %></a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('DigitalWatches'), product_list_path(:category => "DigitalWatches") %></li>
 						<li><%= link_to t('CasualWatches'), product_list_path(:category => "CasualWatches") %></li>
@@ -313,7 +320,7 @@
 
 
 	  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('Jewellery') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('Jewellery') %></a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('Rings'), product_list_path(:category => "Rings") %></li>
 						<li><%= link_to t('Earrings'), product_list_path(:category => "Earrings") %></li>
@@ -335,7 +342,7 @@
 
 
 		      <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('MensFashion') %> <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('MensFashion') %> <span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -343,7 +350,7 @@
 		           <li><%= link_to t('AllProductsonMensFashion'), product_list_path(:category => "MensFashion") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('MensApparel') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('MensApparel') %></a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('ShirtsTops'), product_list_path(:category => "ShirtsTops") %></li>
 							<li><%= link_to t('JacketsCoats'), product_list_path(:category => "JacketsCoats") %></li>
@@ -366,7 +373,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('ShoesandFootwear') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('ShoesandFootwear') %></a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('Casual'), product_list_path(:category => "Casual") %></li>
 							<li><%= link_to t('Formal'), product_list_path(:category => "Formal") %></li>
@@ -380,7 +387,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('BagsandWallets') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('BagsandWallets') %></a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('Handbags'), product_list_path(:category => "Sandals") %></li>
 							<li><%= link_to t('ClutchBags'), product_list_path(:category => "ClutchBags") %></li>
@@ -402,7 +409,7 @@
 
 
 				 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('WatchesandGlasses') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('WatchesandGlasses') %></a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('DigitalWatches'), product_list_path(:category => "DigitalWatches") %></li>
 							<li><%= link_to t('CasualWatches'), product_list_path(:category => "CasualWatches") %></li>
@@ -415,7 +422,7 @@
 
 
 	  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('Jewellery') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('Jewellery') %></a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('Rings'), product_list_path(:category => "Rings") %></li>
 							<li><%= link_to t('Earrings'), product_list_path(:category => "Earrings") %></li>
@@ -443,7 +450,7 @@
 		      		      <!-- electrinics -->
 
 		      <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" > <%= t('DigitalMobileandElectricalAppliances') %> <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" > <%= t('DigitalMobileandElectricalAppliances') %> <span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -451,7 +458,7 @@
 		           <li><%= link_to t('AllProductsonDigitalMobileandElectricalAppliances'), product_list_path(:category => "DigitalMobileandElectricalAppliances") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('PhonesandTablets') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('PhonesandTablets') %> </a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('SmartPhones'), product_list_path(:category => "SmartPhones") %></li>
 						<li><%= link_to t('BasicPhones'), product_list_path(:category => "BasicPhones") %></li>
@@ -463,7 +470,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('ComputersandLaptops') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('ComputersandLaptops') %></a>
 		            <ul class="dropdown-menu">
 		            		<li><%= link_to t('DesktopPCs'), product_list_path(:category => "DesktopPCs") %></li>
 							<li><%= link_to t('Laptops'), product_list_path(:category => "DesktopPCs") %></li>
@@ -473,7 +480,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('TVsVideosandPlayers') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('TVsVideosandPlayers') %> </a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('TVs'), product_list_path(:category => "TVs") %></li>
 							<li><%= link_to t('Projectors'), product_list_path(:category => "Projectors") %></li>
@@ -486,7 +493,7 @@
 
 
 				 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('AudioandHiFi') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('AudioandHiFi') %></a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('Amplifiers'), product_list_path(:category => "Amplifiers") %></li>
 						<li><%= link_to t('HomeTheatres'), product_list_path(:category => "HomeTheatres") %></li>
@@ -504,7 +511,7 @@
 
 
 	  			<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('CamerasandPhotos') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('CamerasandPhotos') %></a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('CCTV'), product_list_path(:category => "CCTV") %></li>
 						<li><%= link_to t('DSLR'), product_list_path(:category => "DSLR") %></li>
@@ -520,7 +527,7 @@
 
 
 				  <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('Gaming') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('Gaming') %></a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('PlayStation'), product_list_path(:category => "PlayStation") %></li>
 						<li><%= link_to t('Xbox'), product_list_path(:category => "Xbox") %></li>
@@ -529,7 +536,7 @@
 
 
 				  <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('HomeElectricalAppliances') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('HomeElectricalAppliances') %> </a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('CoolingandHeatingAppliances'), product_list_path(:category => "CoolingandHeatingAppliances") %></li>
 						<li><%= link_to t('KitchenAppliances'), product_list_path(:category => "KitchenAppliances") %></li>
@@ -552,7 +559,7 @@
 
 		      <!-- Home and living -->
 		  	    <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink"><%= t('HomeandLiving') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink"><%= t('HomeandLiving') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -560,7 +567,7 @@
 		           <li><%= link_to t('AllProductsonHomeandLiving'), product_list_path(:category => "HomeandLiving") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('LivingRoomAppliances') %>  </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('LivingRoomAppliances') %>  </a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('LivingRoomFurnitures'), product_list_path(:category => "LivingRoomFurnitures") %></li>
 					</ul>
@@ -568,7 +575,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('BedroomProducts') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('BedroomProducts') %></a>
 		            <ul class="dropdown-menu">
 
 							<li><%= link_to t('Pillows'), product_list_path(:category => "Pillows") %></li>
@@ -583,7 +590,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('BathroomAppliances') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('BathroomAppliances') %> </a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('BathroomShelves'), product_list_path(:category => "BathroomShelves") %></li>
 						<li><%= link_to t('Faucets'), product_list_path(:category => "Faucets") %></li>
@@ -597,7 +604,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('GarmentCare') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('GarmentCare') %> </a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('SewingMachines'), product_list_path(:category => "SewingMachines") %></li>
@@ -611,7 +618,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('KitchenandDining') %>  </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('KitchenandDining') %>  </a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('KitchenStorage'), product_list_path(:category => "KitchenStorage") %></li>
@@ -625,7 +632,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('Housekeeping') %>  </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('Housekeeping') %>  </a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('Mops'), product_list_path(:category => "Mops") %></li>
@@ -638,7 +645,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('HomeDecoration') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('HomeDecoration') %></a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('Carpets'), product_list_path(:category => "Carpets") %></li>
@@ -656,7 +663,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('OutdoorandGarden') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('OutdoorandGarden') %> </a>
 		            <ul class="dropdown-menu">
 
 		            	<li><%= link_to t('OutdoorSupplies'), product_list_path(:category => "OutdoorSupplies") %></li>
@@ -674,7 +681,7 @@
 
 
 		    <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink"><%= t('HealthandBeauty') %> <span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink"><%= t('HealthandBeauty') %> <span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -682,7 +689,7 @@
 		           <li><%= link_to t('AllProductsonHealthandBeauty'), product_list_path(:category => "HealthandBeauty") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('BathandBodyCare') %>  </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('BathandBodyCare') %>  </a>
 		            <ul class="dropdown-menu">
 		            	<li><%= link_to t('BathCare'), product_list_path(:category => "BathCare") %></li>
 						<li><%= link_to t('BodyCare'), product_list_path(:category => "BodyCare") %></li>
@@ -691,7 +698,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('SkinCare') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('SkinCare') %></a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('FacialMasks'), product_list_path(:category => "FacialMasks") %></li>
 						<li><%= link_to t('SunProtection'), product_list_path(:category => "SunProtection") %></li>
@@ -709,7 +716,7 @@
 
 
 	  			 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('EyeCare') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('EyeCare') %> </a>
 		            <ul class="dropdown-menu">
 						<li><%= link_to t('ContactLenses'), product_list_path(:category => "ContactLenses") %></li>
 						<li><%= link_to t('Glasses'), product_list_path(:category => "Glasses") %></li>
@@ -719,7 +726,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('HairCare') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('HairCare') %></a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('Shampoos'), product_list_path(:category => "Shampoos") %></li>
@@ -735,7 +742,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('DentalCare') %>  </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('DentalCare') %>  </a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('Floss'), product_list_path(:category => "Floss") %></li>
@@ -748,7 +755,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('Perfumes') %>  </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('Perfumes') %>  </a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('MensPerfumes'), product_list_path(:category => "MensPerfumes") %></li>
@@ -759,7 +766,7 @@
 
 
 				   <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('ShavingSupplies') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('ShavingSupplies') %></a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('ShavingCreamsGels'), product_list_path(:category => "ShavingCreamsGels") %></li>
@@ -774,7 +781,7 @@
 			
 
 				<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('FoodSupplements') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('FoodSupplements') %> </a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('DietarySupplements'), product_list_path(:category => "DietarySupplements") %></li>
@@ -789,7 +796,7 @@
 
 
 				  <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('HealthandBeautyTools') %> </a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('HealthandBeautyTools') %> </a>
 		            <ul class="dropdown-menu">
 
 						<li><%= link_to t('MakeupSets'), product_list_path(:category => "MakeupSets") %></li>
@@ -805,8 +812,11 @@
 		      </li>  
 
 
-		        <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('KidBabyandMaternity') %><span class="caret"></span></a>
+
+
+
+		     <li class="dropdown">
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('KidBabyandMaternity') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -814,7 +824,7 @@
 		           <li><%= link_to t('AllProductsonKidBabyandMaternity'), product_list_path(:category => "KidBabyandMaternity") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('KidsFashion') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('KidsFashion') %></a>
 		            <ul class="dropdown-menu">
 							<li><%= link_to t('GirlsApparels'), product_list_path(:category => "GirlsApparels") %></li>
 							<li><%= link_to t('BoysApparel'), product_list_path(:category => "BoysApparel") %></li>
@@ -825,7 +835,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('BabyCare') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('BabyCare') %></a>
 		            <ul class="dropdown-menu">
 							
 								<li><%= link_to t('Diapering'), product_list_path(:category => "Diapering") %></li>
@@ -861,7 +871,7 @@
 		      <!--  -->
 
 		       <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('SportsOutdoorsandEntertainment') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('SportsOutdoorsandEntertainment') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -869,7 +879,7 @@
 		           <li><%= link_to t('AllProductsonSportsOutdoorsandEntertainment'), product_list_path(:category => "SportsOutdoorsandEntertainment") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('IndoorSportSupplies') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('IndoorSportSupplies') %></a>
 		            <ul class="dropdown-menu">
 
 		            			<li><%= link_to t('SnookerandBillboard'), product_list_path(:category => "SnookerandBillboard") %></li>
@@ -887,7 +897,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"> <%= t('OutdoorSportSupplies') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('OutdoorSportSupplies') %></a>
 		            <ul class="dropdown-menu">
 							
 							<li><%= link_to t('Golf'), product_list_path(:category => "Golf") %></li>
@@ -929,7 +939,7 @@
 
 
 		     <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('OfficeandSchoolSupplies') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('OfficeandSchoolSupplies') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -937,7 +947,7 @@
 		           <li><%= link_to t('AllProductsonOfficeandSchoolSupplies'), product_list_path(:category => "OfficeandSchoolSupplies") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('EducationSupplies') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('EducationSupplies') %></a>
 		            <ul class="dropdown-menu">
 
 							<li><%= link_to t('Boards'), product_list_path(:category => "Boards") %></li>
@@ -953,7 +963,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('OfficeSupplies') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('OfficeSupplies') %></a>
 		            <ul class="dropdown-menu">
 							
 							<li><%= link_to t('Calendar'), product_list_path(:category => "Calendar") %></li>
@@ -968,7 +978,7 @@
 
 
 				 <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('ArtSupplies') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('ArtSupplies') %></a>
 		            <ul class="dropdown-menu">
 							
 								<li><%= link_to t('ArtPaints'), product_list_path(:category => "ArtPaints") %></li>
@@ -987,7 +997,7 @@
 
 		      <!--  -->
 		     <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('LightsandLightings') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('LightsandLightings') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -995,7 +1005,7 @@
 		           <li><%= link_to t('AllProductsonLightsandLightnings'), product_list_path(:category => "LightsandLightings") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('IndoorLightings') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('IndoorLightings') %></a>
 		            <ul class="dropdown-menu">
 
 							<li><%= link_to t('LightingBulbsandTubes'), product_list_path(:category => "LightingBulbsandTubes") %></li>
@@ -1011,7 +1021,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('OutdoorLightnings') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('OutdoorLightnings') %></a>
 		            <ul class="dropdown-menu">
 							
 							<li><%= link_to t('StreetLights'), product_list_path(:category => "StreetLights") %></li>
@@ -1033,7 +1043,7 @@
 		      <!--  -->
 
 		       <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('Transportation') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('Transportation') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -1041,7 +1051,7 @@
 		           <li><%= link_to t('AllProductsonTransportation'), product_list_path(:category => "Transportation") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('Bicycles') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('Bicycles') %></a>
 		            <ul class="dropdown-menu">
 
 							<li><%= link_to t('ManualBikes'), product_list_path(:category => "ManualBikes") %></li>
@@ -1052,7 +1062,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('AutomobilesandMotorcycles') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('AutomobilesandMotorcycles') %></a>
 		            <ul class="dropdown-menu">
 							
 							<li><%= link_to t('Automobiles'), product_list_path(:category => "Automobiles") %></li>
@@ -1072,7 +1082,7 @@
 		      <!--  -->
 
 		       <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('TravelandDeals') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('TravelandDeals') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -1080,7 +1090,7 @@
 		           <li><%= link_to t('AlloffersonTravelandDeals'), product_list_path(:category => "TravelandDeals") %></li>
 
 		          <li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('Travel') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('Travel') %></a>
 		            <ul class="dropdown-menu">
 
 							<li><%= link_to t('HotelPromotion'), product_list_path(:category => "HotelPromotion") %></li>
@@ -1091,7 +1101,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('RestaurantsandCafe') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('RestaurantsandCafe') %></a>
 		            <ul class="dropdown-menu">
 							
 								<li><%= link_to t('Restaurants'), product_list_path(:category => "Restaurants") %></li>
@@ -1108,7 +1118,7 @@
 
 		      <!--  -->
 		       <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('Services') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('Services') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -1124,7 +1134,7 @@
 
 
 		    	<li class="dropdown-submenu">
-		            <a tabindex="0" data-toggle="dropdown"><%= t('HomeRepairandMaintenance') %></a>
+		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('HomeRepairandMaintenance') %></a>
 		            <ul class="dropdown-menu">
 							
 						<li><%= link_to t('AirconServicing'), product_list_path(:category => "AirconServicing") %></li>
@@ -1143,7 +1153,7 @@
 		      <!--  -->
 
 		     <li class="dropdown">
-		        <a tabindex="0" data-toggle="dropdown" id="menulink" ><%= t('ElectronicElectricalandMechanicalProducts') %><span class="caret"></span></a>
+		        <a tabindex="0" data-toggle="dropdown" class="mysubmenu" id="themenulink" ><%= t('ElectronicElectricalandMechanicalProducts') %><span class="caret"></span></a>
 
 		        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
 		        <ul class="dropdown-menu" role="menu">
@@ -1171,8 +1181,6 @@
 
 
 
-
-
 	    </ul>
 
 
@@ -1185,7 +1193,7 @@
 
 <style>
 
-li > a > span{
+a {
 	color: white;
 }
 

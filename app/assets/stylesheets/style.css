@@ -73,6 +73,13 @@ overflow-x: hidden;
 
 }
 
+
+#themenulink{
+	color: white;
+	font-size: 11px;
+
+}
+
 #navmenu{
 	position: relative;
 	left: 20px;
