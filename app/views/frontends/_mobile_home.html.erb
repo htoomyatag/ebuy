@@ -17,11 +17,22 @@
 							<span class="nav_text">Register </span>
 						</a>
 
+						<% if !buyer_signed_in? %>
 
-						<a href="/buyers/sign_up" id="mobile_menu_link">
-							<%= image_tag "profile.png", :alt=>"profile" %>
-							<span class="nav_text">My Account</span>
-						</a>
+								<a href="/buyers/sign_up" id="mobile_menu_link">
+									<%= image_tag "profile.png", :alt=>"profile" %>
+									<span class="nav_text">My Account</span>
+								</a>
+
+						<% else %>
+
+
+								<a href="/my_account" id="mobile_menu_link">
+									<%= image_tag "profile.png", :alt=>"profile" %>
+									<span class="nav_text">My Account</span>
+								</a>
+
+						<% end %>
 
 
 						<a href="/contact_us" id="mobile_menu_link">
