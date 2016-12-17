@@ -12,23 +12,23 @@ class FrontendsController < ApplicationController
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
  
 
-     @first_women_fashion_products = Product.where(:product_category => "WomenFashion").where(:show_at => 1).last(6)
-     @second_women_fashion_products = Product.where(:product_category => "WomenFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_women_fashion_products = Product.where(:product_category => "WomensFashion").where(:show_at => 1).last(6)
+     @second_women_fashion_products = Product.where(:product_category => "WomensFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_men_fashion_products = Product.where(:product_category => "MenFashion").where(:show_at => 1).last(6)
-     @second_men_fashion_products = Product.where(:product_category => "MenFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_men_fashion_products = Product.where(:product_category => "MensFashion").where(:show_at => 1).last(6)
+     @second_men_fashion_products = Product.where(:product_category => "MensFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_digital_marketings = Product.where(:product_category => "Digital&Mobile").where(:show_at => 1).last(6)
-     @second_digital_marketings = Product.where(:product_category => "Digital&Mobile").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where(:show_at => 1).last(6)
+     @second_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_home_livings = Product.where(:product_category => "Home&Living").where(:show_at => 1).last(6)
-     @second_home_livings = Product.where(:product_category => "Home&Living").where.not(id: 1).limit(6).where(:show_at => 1).last(6) 
+     @first_home_livings = Product.where(:product_category => "HomeandLiving").where(:show_at => 1).last(6)
+     @second_home_livings = Product.where(:product_category => "HomeandLiving").where.not(id: 1).limit(6).where(:show_at => 1).last(6) 
 
-     @first_health_beauty = Product.where(:product_category => "Health&Beauty").where(:show_at => 1).last(6)
-     @second_health_beauty = Product.where(:product_category => "Health&Beauty").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_health_beauty = Product.where(:product_category => "HealthandBeauty").where(:show_at => 1).last(6)
+     @second_health_beauty = Product.where(:product_category => "HealthandBeauty").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_food_beverage = Product.where(:product_category => "Food&Beverage").where(:show_at => 1).last(6)
-     @second_food_beverage = Product.where(:product_category => "Food&Beverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_food_beverage = Product.where(:product_category => "FoodandBeverage").where(:show_at => 1).last(6)
+     @second_food_beverage = Product.where(:product_category => "FoodandBeverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
      @time_sale_firsts = Product.where(:time_sale => "1").first
      @time_sale_seconds = Product.where(:time_sale => "1").second
@@ -391,28 +391,27 @@ class FrontendsController < ApplicationController
 
   def home
      
-
-     @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).last(6)
+         @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).last(6)
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
  
 
-     @first_women_fashion_products = Product.where(:product_category => "WomenFashion").where(:show_at => 1).last(6)
-     @second_women_fashion_products = Product.where(:product_category => "WomenFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_women_fashion_products = Product.where(:product_category => "WomensFashion").where(:show_at => 1).last(6)
+     @second_women_fashion_products = Product.where(:product_category => "WomensFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_men_fashion_products = Product.where(:product_category => "MenFashion").where(:show_at => 1).last(6)
-     @second_men_fashion_products = Product.where(:product_category => "MenFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_men_fashion_products = Product.where(:product_category => "MensFashion").where(:show_at => 1).last(6)
+     @second_men_fashion_products = Product.where(:product_category => "MensFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_digital_marketings = Product.where(:product_category => "Digital&Mobile").where(:show_at => 1).last(6)
-     @second_digital_marketings = Product.where(:product_category => "Digital&Mobile").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where(:show_at => 1).last(6)
+     @second_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_home_livings = Product.where(:product_category => "Home&Living").where(:show_at => 1).last(6)
-     @second_home_livings = Product.where(:product_category => "Home&Living").where.not(id: 1).limit(6).where(:show_at => 1).last(6) 
+     @first_home_livings = Product.where(:product_category => "HomeandLiving").where(:show_at => 1).last(6)
+     @second_home_livings = Product.where(:product_category => "HomeandLiving").where.not(id: 1).limit(6).where(:show_at => 1).last(6) 
 
-     @first_health_beauty = Product.where(:product_category => "Health&Beauty").where(:show_at => 1).last(6)
-     @second_health_beauty = Product.where(:product_category => "Health&Beauty").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_health_beauty = Product.where(:product_category => "HealthandBeauty").where(:show_at => 1).last(6)
+     @second_health_beauty = Product.where(:product_category => "HealthandBeauty").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_food_beverage = Product.where(:product_category => "Food&Beverage").where(:show_at => 1).last(6)
-     @second_food_beverage = Product.where(:product_category => "Food&Beverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+     @first_food_beverage = Product.where(:product_category => "FoodandBeverage").where(:show_at => 1).last(6)
+     @second_food_beverage = Product.where(:product_category => "FoodandBeverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
      @time_sale_firsts = Product.where(:time_sale => "1").first
      @time_sale_seconds = Product.where(:time_sale => "1").second
@@ -424,7 +423,8 @@ class FrontendsController < ApplicationController
      @first_cover_images = CoverImage.all.first
      @second_cover_images = CoverImage.all.second
      @third_cover_images = CoverImage.all.third
-     
+
+
   end
 
   # GET /frontends/1
