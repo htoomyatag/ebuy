@@ -294,7 +294,7 @@ class FrontendsController < ApplicationController
 
   def search_result
         if !params[:title].nil?
-        @products = Product.where("title LIKE ?", params[:title]).limit(10) 
+        @products = Product.where("title LIKE ? or short_title LIKE ?", params[:title], params[:title]).limit(10) 
         elsif !params[:price_from].nil?
         @products = Product.where(:discount_price => params[:price_from]..params[:price_to]).limit(10) 
         end

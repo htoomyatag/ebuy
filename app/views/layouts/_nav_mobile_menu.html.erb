@@ -10,9 +10,9 @@
           
 
             <span>
-            <form role="search" class="form-inline" style="width: 20em; margin: 0.6em 2em;">
+             <%= form_tag(search_result_path, :method => "get", :class=>"form-inline", :style=>"width: 20em; margin: 0.6em 2em;") do %> 
 			    <div class="input-group">
-			        <input type="text" class="form-control" placeholder="Search">
+			          <%= text_field_tag :title, params[:title], :placeholder => "Search products", :class=>"form-control" %>
 			        <div class="input-group-btn">
 			            <button type="submit" class="btn btn-default">
 			               search
@@ -20,8 +20,7 @@
 			        </div>
 			    </div>
 
-
-			</form> 
+		    <% end %>
 
 			</span>
 
