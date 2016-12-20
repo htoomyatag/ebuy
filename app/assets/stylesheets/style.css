@@ -314,9 +314,10 @@ overflow-x: hidden;
 	width: 98%;
 }
 
-#btn_buy_now, #btn_add_to_cart{
+#btn_buy_now_desktop, #btn_add_to_cart_desktop, #btn_buy_now_mobile, #btn_add_to_cart_mobile {
 
 	width: 98%;
+	
 }
 
 .detail_tab_title{

@@ -209,10 +209,10 @@
 			  
 			     <% if Time.current.utc.localtime.between?(@start_day,@end_day) %>
 
-					    	 <button type="button" class="btn btn-danger" id="btn_buy_now">Buy Now</button>
+					    	 <button type="button" class="btn btn-danger" id="btn_buy_now_desktop">Buy Now</button>
 					    </td>
 					    <td>
-					    	 <button type="button" class="btn btn-primary" id="btn_add_to_cart">Add to Cart</button>
+					    	 <button type="button" class="btn btn-primary" id="btn_add_to_cart_desktop">Add to Cart</button>
 					    </td> 
 					    
 				
@@ -696,7 +696,7 @@ for (var i = min; i<=max; i++){
 
 <script type="text/javascript">
 	
- $('#btn_add_to_cart').click(function() {
+ $('#btn_add_to_cart_desktop').click(function() {
  
 
  		product_id = "<%= @product.id %>";
@@ -735,7 +735,7 @@ for (var i = min; i<=max; i++){
 
 
 
- $('#btn_buy_now').click(function() {
+ $('#btn_buy_now_desktop').click(function() {
  
 
  		product_id = "<%= @product.id %>";
@@ -768,6 +768,87 @@ for (var i = min; i<=max; i++){
 
 
 </script>
+
+
+
+
+<script type="text/javascript">
+	
+ $('#btn_add_to_cart_mobile').click(function() {
+ 
+
+ 		product_id = "<%= @product.id %>";
+ 		color = $( "#myProductColor option:selected" ).text();
+ 		size = $( "#myProductSize option:selected" ).text();
+ 		delivery_method = $( "#delivery_method option:selected" ).text();
+ 		product_quantity = document.getElementById("product_quantity").value;
+ 	
+  		$.ajax({
+              type: 'post',
+              url: '/line_items',
+              dataType: 'text',
+              data: {'product_id':product_id, 'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity},
+              complete: function(r){
+              
+					location.reload();              	
+
+
+              }
+           });
+
+
+
+
+
+
+    });
+
+
+</script>
+
+<script type="text/javascript">
+
+
+
+
+
+
+ $('#btn_buy_now_mobile').click(function() {
+ 
+
+ 		product_id = "<%= @product.id %>";
+ 		color = $( "#myProductColor option:selected" ).text();
+ 		size = $( "#myProductSize option:selected" ).text();
+ 		delivery_method = $( "#delivery_method option:selected" ).text();
+ 		product_quantity = document.getElementById("product_quantity").value;
+
+ 		product_model =  $( "#myProductModel option:selected" ).text();
+ 	
+  		$.ajax({
+              type: 'get',
+              url: '/fill_your_order_form/'+product_id,
+              dataType: 'text',
+              data: {'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity, 'product_model':product_model},
+              complete: function(r){
+              
+					 var currentURL = '/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity+ '&product_model=' + product_model;
+                     window.location.href = currentURL;
+
+              }
+           });
+
+
+
+
+
+
+    });
+
+
+</script>
+
+
+
 
 
 
