@@ -64,9 +64,9 @@
 
    				<%  if buyer_signed_in?  %>
 
-								<a href="/view_image/<%= @product.id %>" id="chat_user"> 
+								<span id="chat_user"> 
 							       <%= image_tag "chat.png" %>  with seller
-							   </a>
+							   </span>
 
 			    <%  else  %>
 			    <%  end  %>	
@@ -781,7 +781,7 @@ for (var i = min; i<=max; i++){
   <div class="popup-box chat-popup" id="mychatbox"  style="display:none;">
 
     <div class="popup-head">
-        <div class="popup-head-left"><%= @theadmin %></div>
+        <div class="popup-head-left"><%= "Seller" %></div>
         <div class="popup-head-right">
           <a href="#" id="close_chat">✕</a>
         </div>
@@ -803,6 +803,9 @@ for (var i = min; i<=max; i++){
     
 
   </div>
+
+
+
 
 
 
@@ -834,7 +837,7 @@ for (var i = min; i<=max; i++){
 
 				      $.ajax({
 				              type: 'get',
-				              url: "send_to_pusher?message="+message+"&recipient_id="+recipient_id+"&sender_id="+sender_id+"&channels="+mychannel,
+				              url: "/send_to_pusher?message="+message+"&recipient_id="+recipient_id+"&sender_id="+sender_id+"&channels="+mychannel,
 				              complete: function(r){
 
 

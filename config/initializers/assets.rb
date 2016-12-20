@@ -25,3 +25,4 @@ Rails.application.config.assets.precompile += %w( jquery.zoom.min.js )
 
 Rails.application.config.assets.precompile += %w( quill.js )
 Rails.application.config.assets.precompile += %w( quill.snow.css )
+Rails.application.config.assets.precompile += %w( pusher.min.js )

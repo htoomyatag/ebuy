@@ -427,6 +427,61 @@ class FrontendsController < ApplicationController
 
   end
 
+
+  def send_to_pusher
+
+    require 'pusher'
+
+    pusher_client = Pusher::Client.new(
+
+      app_id: '206905',
+      key: 'b218d631b3532773d67f',
+      secret: '0915071b6a6cdb0a636f'
+    );
+
+
+      Pusher.trigger(params[:channels], 'my_event', {
+      message: params[:message],
+      channels: params[:channels].gsub(/\s+/, "")
+    })
+
+
+    @conversation = Conversation.create(:sender_id => params[:sender_id] , :recipient_id => params[:recipient_id])
+    @message = Message.create(:conversation_code => params[:channels],:buyer_id => params[:sender_id], :body => params[:message] , :conversation_id => @conversation.id)
+
+
+
+
+
+  end
+
+
+
+    def chat_with
+
+
+      if params[:buyer_id]
+        
+        @buyers = Buyer.where("id = ?", params[:buyer_id])
+
+        @buyer_name = User.where("id = ?", params[:user_id]).pluck(:name)
+        @raw_buyer_name = @buyer_name.to_s.gsub("[", "")
+        @raw_buyer_name2 = @raw_buyer_name.to_s.gsub("]", "")
+        @my_buyer_name = @raw_buyer_name2.to_s.gsub("\"", "")
+
+        code = @my_buyer_name.to_s+@theadmin
+        @products = Product.where("id = ?", params[:product_id])
+        @messages = Message.where(:conversation_code => code)
+
+
+     end
+
+  end
+
+
+
+  
+
   # GET /frontends/1
   # GET /frontends/1.json
   def show

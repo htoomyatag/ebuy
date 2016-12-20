@@ -8,22 +8,20 @@ class AdminsController < ApplicationController
 
     def chat_to_seller
         
-        @users = BUyer.where("id = ?", params[:id])
+        @buyers = Buyer.where("id = ?", params[:id])
 
-        @user_name = Buyer.where("id = ?", params[:buyer_id]).pluck(:buyer_name)
-        @raw_user_name = @user_name.to_s.gsub("[", "")
-        
-        @raw_user_name2 = @raw_user_name.to_s.gsub("]", "")
-        @my_user_name = @raw_user_name2.to_s.gsub("\"", "")
 
-        code_one = current_user.buyer_name.to_s+@my_user_name
-        code_two = @my_user_name+current_user.buyer_name.to_s
+        @buyer_name = Buyer.where("id = ?", params[:buyer_id]).pluck(:buyer_name)
+        @raw_buyer_name = @buyer_name.to_s.gsub("[", "")
+        @raw_buyer_name2 = @raw_buyer_name.to_s.gsub("]", "")
+        @my_buyer_name = @raw_buyer_name2.to_s.gsub("\"", "")
 
-        @products = Product.where("user_id = ?", params[:user_id])
-        @sender_messages = Message.where(:conversation_code => code_one)
-        @receiver_messages = Message.where(:conversation_code => code_two)
+        code = @my_buyer_name.to_s+@theadmin
 
-        @messages = Message.where.any_of(@sender_messages, @receiver_messages)
+        @products = Product.where("id = ?", params[:product_id])
+
+     
+        @messages = Message.where(:conversation_code => code)
 
     
 
