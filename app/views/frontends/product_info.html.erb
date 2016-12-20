@@ -59,6 +59,20 @@
 
   				  <a href="/view_image/<%= @product.id %>" id="view_img"> View images in zoom</a>
 
+  			
+
+
+   				<%  if buyer_signed_in?  %>
+
+								<a href="/view_image/<%= @product.id %>" id="chat_user"> 
+							       <%= image_tag "chat.png" %>  with seller
+							   </a>
+
+			    <%  else  %>
+			    <%  end  %>	
+
+
+
   		</div>
 
 
@@ -755,5 +769,143 @@ for (var i = min; i<=max; i++){
 
 </script>
 
+
+
+<!-- chat -->
+
+
+<!--  chat box -->
+
+
+
+  <div class="popup-box chat-popup" id="mychatbox"  style="display:none;">
+
+    <div class="popup-head">
+        <div class="popup-head-left"><%= @theadmin %></div>
+        <div class="popup-head-right">
+          <a href="#" id="close_chat">✕</a>
+        </div>
+    </div>
+
+   
+
+
+    <div class="popup_foot">
+
+     <div id="msg_box">
+       <p id="text_msg"></p>
+     </div>
+
+
+      <input class="form-control" id="message" rows="1"></textarea>
+      <input class="btn btn-default" type="button" value="Send" id="send" style="display:none;">
+    </div>
+    
+
+  </div>
+
+
+
+
+  <%  if buyer_signed_in?  %>
+
+			<script type="text/javascript">
+				  
+				$(document).ready(function () {
+				    //$('#dialog').dialog(); 
+				    $('#chat_user').click(function () {
+				        $('#mychatbox').show();
+				        return false;
+				    });
+
+				    $('#close_chat').click(function () {
+				        $('#mychatbox').hide();
+				        return false;
+				    });
+
+				    $('#send').click(function () {
+				        
+				      var message = document.getElementById("message").value;
+				      var mychannel = "<%= current_buyer.buyer_name.to_s + @theadmin %>";
+				      var sender_id = "<%= current_buyer.id %>";
+				      var recipient_id = "1";
+
+
+
+				      $.ajax({
+				              type: 'get',
+				              url: "send_to_pusher?message="+message+"&recipient_id="+recipient_id+"&sender_id="+sender_id+"&channels="+mychannel,
+				              complete: function(r){
+
+
+				                      $("#text_msg").append("<b> You: "+message+"</b><br/> ");
+				                      $("#msg_box").scrollTop($("#msg_box")[0].scrollHeight);
+				                   
+
+				              }
+				           });
+
+
+
+				    });
+
+
+
+
+
+				});
+
+				</script>
+
+
+				<script type="text/javascript">
+				  
+				 // Enable pusher logging - don't include this in production
+				    Pusher.log = function(message) {
+				      if (window.console && window.console.log) {
+				        window.console.log(message);
+				      }
+				    };
+
+				    var pusher = new Pusher('b218d631b3532773d67f', {
+				      encrypted: true
+				    });
+
+
+				     var my_channel = "<%= @theadmin + current_buyer.buyer_name.to_s %>";
+				  
+
+				    var channel = pusher.subscribe(my_channel);
+				    channel.bind('my_event', function(data) {
+
+				          $("#text_msg").append("<b id='receiver'>"+"<%= @theadmin %>: "+data.message+"</b><br/> ");
+				                 
+				    });
+
+				</script>
+
+
+
+
+
+
+
+				<script type="text/javascript">
+				  
+
+					$('#message').keypress(function (e) {
+					  if (e.which == 13) {
+					    $("#send").click()
+					    $('#message').val('');
+					  }
+					});
+
+				</script>
+
+
+		
+
+
+ <% end %>
 
 

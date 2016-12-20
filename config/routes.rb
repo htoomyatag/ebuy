@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  resources :conversations do
+    resources :messages
+  end
+
   resources :myapis
   match "product_by_category" => "myapis#product_by_category", as: :product_by_category, via: [:get, :post]
   match "product_by_id" => "myapis#product_by_id", as: :product_by_id, via: [:get, :post]
@@ -118,6 +122,14 @@ Rails.application.routes.draw do
 
 
   get 'pc_version' => 'frontends#pc_version', as: 'pc_version'
+
+
+
+
+  get 'chat_with' => 'frontends#chat_with', :as => :chat_with
+
+  get 'chat_to_seller' => "admins#chat_to_seller", :as => :chat_to_seller
+
 
   
   resources :products

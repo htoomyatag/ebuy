@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
   def ebuy_cart
     @cart = current_cart
     @currency_exchange = CurrencyExchange.pluck(:currency_rate).last
+    @theadmin = "theadmin"
 
   end
 
