@@ -58,7 +58,7 @@
 #panel_header{
 
 
-   background:rgba(0,0,0,0.5);
+   background:white;
     color: white;
     opacity: 150;
 
@@ -93,12 +93,19 @@
 }
 
 
-#product_title_mobile, #product_title_price{
+#product_title_mobile{
 	font-size: 12px;
 	text-align: center;
+	color: #337ab7;
 
 }
 
+#product_title_price{
+	font-size: 12px;
+	text-align: center;
+	color: #E74C3C;
+
+}
 
 
 .menu_title_mobile{

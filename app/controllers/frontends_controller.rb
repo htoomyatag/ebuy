@@ -8,7 +8,7 @@ class FrontendsController < ApplicationController
 
   def pc_version
 
-         @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).last(6)
+    @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).last(6)
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
  
 
@@ -30,7 +30,7 @@ class FrontendsController < ApplicationController
      @first_food_beverage = Product.where(:product_category => "FoodandBeverage").where(:show_at => 1).last(6)
      @second_food_beverage = Product.where(:product_category => "FoodandBeverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @time_sale_firsts = Product.where(:time_sale => "1").first
+     @time_sale_firsts = Product.where(:time_sale => "1").first unless @time_sale_firsts.nil
      @time_sale_seconds = Product.where(:time_sale => "1").second
      @time_sale_thirds = Product.where(:time_sale => "1").third
      @time_sale_fourths = Product.where(:time_sale => "1").fourth
