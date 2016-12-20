@@ -128,7 +128,7 @@ Rails.application.routes.draw do
   get "send_to_pusher" => "frontends#send_to_pusher", :as => :send_to_pusher
   get 'chat_with' => 'frontends#chat_with', :as => :chat_with
 
-  get 'chat_to_seller' => "admins#chat_to_seller", :as => :chat_to_seller
+  get 'chat_to_seller' => "frontends#chat_to_seller", :as => :chat_to_seller
 
 
   

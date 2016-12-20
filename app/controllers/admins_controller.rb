@@ -6,27 +6,6 @@ class AdminsController < ApplicationController
   # GET /admins
   # GET /admins.json
 
-    def chat_to_seller
-        
-        @buyers = Buyer.where("id = ?", params[:id])
-
-
-        @buyer_name = Buyer.where("id = ?", params[:buyer_id]).pluck(:buyer_name)
-        @raw_buyer_name = @buyer_name.to_s.gsub("[", "")
-        @raw_buyer_name2 = @raw_buyer_name.to_s.gsub("]", "")
-        @my_buyer_name = @raw_buyer_name2.to_s.gsub("\"", "")
-
-        code = @my_buyer_name.to_s+@theadmin
-
-        @products = Product.where("id = ?", params[:product_id])
-
-     
-        @messages = Message.where(:conversation_code => code)
-
-    
-
-
-  end
 
 
   def index

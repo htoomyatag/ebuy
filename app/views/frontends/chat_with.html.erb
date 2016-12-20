@@ -1,4 +1,4 @@
-  <%= render 'layouts/defaultnav' %>  
+
 <div class="row">
 <br/><br/>
 <div class="col-md-12">
@@ -10,16 +10,10 @@
                 <div>
                  <% @messages.each do |message| %>
                   
-                    <% if current_buyer.id == message.buyer_id %>
-                       <span style="color:black;"><b>You:<%= message.body %></b></span>
-                       <span style="float:right;"><%= message.created_at.strftime("at %I:%M%p  on %m/%d/%Y") %> </span>
-                       <br/>
-                    <% else %>
+                  
                         <span style="color:red;"><b><%= message.buyer.buyer_name %>:<%= message.body %></b> </span>
                         <span style="float:right;"><%= message.created_at.strftime("at %I:%M%p  on %m/%d/%Y") %> </span>
                        <br/>
-                    <% end %>
-
 
                   
                   <% end %> 
@@ -55,13 +49,13 @@
           encrypted: true
         });
 
-        var my_channel = "<%= buyer.buyer_name.to_s.split.join + current_buyer.name.to_s.split.join %>";
+        var my_channel = "<%= buyer.buyer_name.to_s.split.join+@theadmin %>";
 
       
         var channel = pusher.subscribe(my_channel);
         channel.bind('my_event', function(data) {
 
-            $("#text_msg").append("<b id='receiver'><%= buyer.name.to_s %>: "+data.message+"</b><br/> ");
+            $("#text_msg").append("<b id='receiver'><%= buyer.buyer_name.to_s %>: "+data.message+"</b><br/> ");
                      
         });
 
@@ -76,9 +70,9 @@
             $('#my_send_btn').click(function () {
                 
               var message = document.getElementById("my_msg_btn").value;
-              var mychannel = "<%= current_buyer.name.to_s.split.join + buyer.name.to_s.split.join %>";
-              var sender_id = "<%= current_buyer.id %>";
-              var recipient_id = "<%= buyer.id %>";
+              var mychannel = "<%= @theadmin+buyer.buyer_name.to_s.split.join %>";
+              var sender_id = "<%= buyer.id %>";
+              var recipient_id = "1";
 
               $.ajax({
                       type: 'get',

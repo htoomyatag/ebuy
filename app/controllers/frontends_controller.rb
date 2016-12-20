@@ -6,6 +6,57 @@ class FrontendsController < ApplicationController
   # GET /frontends.json
 
 
+
+  def chat_with
+
+
+      if params[:buyer_id]
+        
+        @buyers = Buyer.where("id = ?", params[:buyer_id])
+
+        @buyer_name = Buyer.where("id = ?", params[:buyer_id]).pluck(:name)
+        @raw_buyer_name = @buyer_name.to_s.gsub("[", "")
+        @raw_buyer_name2 = @raw_buyer_name.to_s.gsub("]", "")
+        @my_buyer_name = @raw_buyer_name2.to_s.gsub("\"", "")
+
+        code = @theadmin+@my_buyer_name
+
+        @products = Product.where("product_id = ?", params[:product_id])
+        @messages = Message.where(:conversation_code => code)
+
+     end
+
+  end
+
+
+
+
+def chat_to_seller
+        
+        @buyers = Buyer.where("id = ?", params[:id])
+
+
+        @buyer_name = Buyer.where("id = ?", params[:buyer_id]).pluck(:buyer_name)
+        @raw_buyer_name = @buyer_name.to_s.gsub("[", "")
+        @raw_buyer_name2 = @raw_buyer_name.to_s.gsub("]", "")
+        @my_buyer_name = @raw_buyer_name2.to_s.gsub("\"", "")
+
+        code = @my_buyer_name.to_s+@theadmin
+
+        @products = Product.where("id = ?", params[:product_id])
+
+     
+        @messages = Message.where(:conversation_code => code)
+
+    
+
+
+  end
+
+
+
+
+
   def pc_version
 
     @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).last(6)
@@ -464,7 +515,7 @@ class FrontendsController < ApplicationController
         
         @buyers = Buyer.where("id = ?", params[:buyer_id])
 
-        @buyer_name = User.where("id = ?", params[:user_id]).pluck(:name)
+        @buyer_name = Buyer.where("id = ?", params[:buyer_id]).pluck(:buyer_name)
         @raw_buyer_name = @buyer_name.to_s.gsub("[", "")
         @raw_buyer_name2 = @raw_buyer_name.to_s.gsub("]", "")
         @my_buyer_name = @raw_buyer_name2.to_s.gsub("\"", "")

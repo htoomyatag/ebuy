@@ -1,3 +1,4 @@
+
 <div class="row">
 <br/><br/>
 <div class="col-md-12">
@@ -9,12 +10,12 @@
                 <div>
                  <% @messages.each do |message| %>
                   
-                    <% if current_buyer.id == message.buyer_id %>
+                    <% if current_.id == message.buyer_id %>
                        <span style="color:black;"><b>You:<%= message.body %></b></span>
                        <span style="float:right;"><%= message.created_at.strftime("at %I:%M%p  on %m/%d/%Y") %> </span>
                        <br/>
                     <% else %>
-                        <span style="color:red;"><b><%= message.buyer.buyer_name %>:<%= message.body %></b> </span>
+                        <span style="color:red;"><b><%= message.current_buyer.buyer_name %>:<%= message.body %></b> </span>
                         <span style="float:right;"><%= message.created_at.strftime("at %I:%M%p  on %m/%d/%Y") %> </span>
                        <br/>
                     <% end %>
@@ -40,8 +41,6 @@
 </div>
 
 
-<% @buyers.each do |buyer| %>
-
     <script type="text/javascript">
       
      // Enable pusher logging - don't include this in production
@@ -55,13 +54,13 @@
           encrypted: true
         });
 
-        var my_channel = "<%= buyer.buyer_name.to_s.split.join + current_buyer.buyer_name.to_s.split.join %>";
+        var my_channel = "<%= @theadmin+current_buyer.buyer_name.to_s.split.join %>";
 
       
         var channel = pusher.subscribe(my_channel);
         channel.bind('my_event', function(data) {
 
-            $("#text_msg").append("<b id='receiver'><%= buyer.buyer_name.to_s %>: "+data.message+"</b><br/> ");
+            $("#text_msg").append("<b id='receiver'><%= current_buyer.buyer_name.to_s %>: "+data.message+"</b><br/> ");
                      
         });
 
@@ -76,14 +75,14 @@
             $('#my_send_btn').click(function () {
                 
               var message = document.getElementById("my_msg_btn").value;
-              var mychannel = "<%= current_buyer.buyer_name.to_s.split.join + buyer.buyer_name.to_s.split.join %>";
+              var my_channel = "<%= current_buyer.buyer_name.to_s.split.join+@theadmin %>";
               var sender_id = "<%= current_buyer.id %>";
-              var recipient_id = "<%= buyer.id %>";
+              var recipient_id = 1;
 
 
               $.ajax({
                       type: 'get',
-                      url: "send_to_pusher?message="+message+"&recipient_id="+recipient_id+"&sender_id="+sender_id+"&channels="+mychannel,
+                      url: "send_to_pusher?message="+message+"&recipient_id="+recipient_id+"&sender_id="+sender_id+"&channels="+my_channel,
                       complete: function(r){
 
                           $("#text_msg").append("<b>You: "+message+"</b><br/> ");
@@ -92,7 +91,7 @@
                       }
                    });
 
-               		
+                  
                 
             });
 
@@ -100,7 +99,19 @@
 
 </script>
 
-<% end %> 
+
+  <script type="text/javascript">
+          
+
+          $('#my_msg_btn').keypress(function (e) {
+            if (e.which == 13) {
+              $("#my_send_btn").click()
+              $('#my_msg_btn').val('');
+            }
+          });
+
+        </script>
+
 
 
    
