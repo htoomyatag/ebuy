@@ -19,6 +19,13 @@
 		display: block;
 }
 
+#small_slide {
+    
+    width:250px;
+    height:180px;
+
+}
+
 
 
 .navbar-toggle.navbar-left {
