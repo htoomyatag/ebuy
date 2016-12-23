@@ -35,7 +35,7 @@
   </div>
   
   <div class="col-md-6">
-   <label>Discount Price</label><br>
+   <label>Offer Price</label><br>
     <div class="field">
       <%= f.text_field :discount_price, :class => "form-control" %>
     </div>
@@ -44,7 +44,7 @@
   <div class="col-md-6">
    <label>Product Category</label><br>
     <div class="field">
-      <%= f.select(:product_category, Product::PRODUCTCATEGORY) %>
+       <%= f.text_field :product_category, :class => "form-control" %>
     </div>
   </div>
 
@@ -60,13 +60,13 @@
 
     <div class="col-md-6">
        <div class="field">
-         <%= f.text_field :specs, multiple: true, :class => "form-control" %>
+         <%= f.text_field :specs, multiple: true, :class => "form-control" %><br/>
       </div>
     </div>
     
     <div class="col-md-6">
       <div class="field">
-         <%= f.text_field :specs, multiple: true, :class => "form-control" %>
+         <%= f.text_field :specs, multiple: true, :class => "form-control" %><br/>
       </div>
     </div>
 
@@ -109,19 +109,15 @@
 
 
 
-    <div class="col-md-12">
-      <h3> Seller Option
-      </h3>
-       <hr/>
-    </div>
-
 
       <div class="col-md-6"><br/>
-       <label>Start to sell on</label><br>
+       <label> Timeplan</label><br>
          <div class="field">
-            <%= f.date_field :start_to_sell_on, :class => "form-control" %>
+            <%= f.text_field :start_to_sell_on, :class => "form-control" %>
         </div>
     </div>
+
+
 
   
 
@@ -138,13 +134,14 @@
     </div>
   </div>
 <% end %>
-</div>
+</div><br/><br/><br/>
 
 <script type="text/javascript">
   
 $( "#add_btn" ).click(function() {
 
-    var textarea =  $('<div class="col-md-6"><div class="field"><input multiple="multiple" class="form-control" type="text" name="product[specs][]" id="product_specs"></div></div>  <div class="col-md-6"><div class="field"><input multiple="multiple" class="form-control" type="text" name="product[specs][]" id="product_specs"></div></div><br/><hr/>');
+    var textarea =  $('<div class="col-md-6"><div class="field"><input multiple="multiple" class="form-control" type="text" name="product[specs][]" id="product_specs"><br/></div></div><br/><div class="col-md-6"><div class="field"><input multiple="multiple" class="form-control" type="text" name="product[specs][]" id="product_specs"><br/></div></div><br/>');
+
     $('#cont').append(textarea);
 
 
