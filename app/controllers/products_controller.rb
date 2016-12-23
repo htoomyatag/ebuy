@@ -56,22 +56,30 @@ class ProductsController < ApplicationController
   end
   
   if !@product.product_size.nil?
-  @my_product_size =  '<span>'+@product.product_size.gsub(",",',</span><span>')+"<input type='text' >" 
-  @product_size = @my_product_size.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add size'>")
+
+    @my_product_size = '<span>'+@product.product_size.gsub(',',',</span><span>')+'</span>'
+    @product_size = @my_product_size.gsub("<span></span>","")+"<input type='text' placeholder='Add size'>"
+
+
   else
     @product_size = "<input type='text' value='' placeholder='Add size'>"
   end
 
   if !@product.product_model.nil?
-  @my_product_model =  '<span>'+@product.product_model.gsub(",",',</span><span>')+"<input type='text' >" 
-  @product_model = @my_product_model.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add model'>")
+
+    @my_product_model = '<span>'+@product.product_model.gsub(',',',</span><span>')+'</span>'
+    @product_model = @my_product_model.gsub("<span></span>","")+"<input type='text' placeholder='Add model'>"
+
+
   else
     @product_model = "<input type='text' value='' placeholder='Add model'>"
   end
 
   if !@product.product_color.nil?
-  @my_product_color =  '<span>'+@product.product_color.gsub(",",',</span><span>')+"<input type='text' >" 
-  @product_color = @my_product_color.gsub("<input type='text' >","</span><span>,</span><input type='text' placeholder='Add color'>")
+
+    @my_product_color = '<span>'+@product.product_color.gsub(',',',</span><span>')+'</span>'
+    @product_color = @my_product_color.gsub("<span></span>","")+"<input type='text' placeholder='Add color'>"
+
   else
     @product_color = "<input type='text' value='' placeholder='Add color'>"
   end

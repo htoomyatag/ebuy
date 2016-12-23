@@ -8,6 +8,8 @@
         <br>
         <%= @raw_product %>
 
+
+
         </h3>
     		<hr/>
     		</div>
@@ -32,12 +34,19 @@
 
 
 
+</script>
+
+<script>
+
 
 $("#mysubmitbutton").click(function(e) {
   e.preventDefault();
 
 // notice
-      var a = editor.container.firstChild.innerHTML;
+
+
+
+      var a = document.getElementById('editor').firstChild.innerHTML;
        if (a == "<p><br></p>") {
 
          document.getElementById('product_notice').value = '<%= @product_notice.html_safe %>';
@@ -51,7 +60,7 @@ $("#mysubmitbutton").click(function(e) {
 
 
 // descitpon
-       var b = editor_desc.container.firstChild.innerHTML;
+       var b = document.getElementById('editor_desc').firstChild.innerHTML;
 
        if (b == "<p><br></p>") {
 
@@ -68,66 +77,66 @@ $("#mysubmitbutton").click(function(e) {
 
 
       var product_sizes = $('#tags_size span').text();
-      document.getElementById('product_product_size').value = product_sizes.replace(",,", "");
+      document.getElementById('product_product_size').value = product_sizes;
 
 
       var product_colors = $('#tags_color span').text();
-      document.getElementById('product_product_color').value = product_colors.replace(",,", "");
+      document.getElementById('product_product_color').value = product_colors;
 
 
       var product_models = $('#tags_model span').text();
-      document.getElementById('product_product_model').value = product_models.replace(",,", "");
+      document.getElementById('product_product_model').value = product_models;
 
 
 
-       var title =  document.getElementById('product_title').value;
-      if (title == "") {
-          alert("Title must be filled out");
-          return false;
-      }
+      //  var title =  document.getElementById('product_title').value;
+      // if (title == "") {
+      //     alert("Title must be filled out");
+      //     return false;
+      // }
 
 
-       var short_title =  document.getElementById('product_short_title').value;
-      if (short_title == "") {
-          alert("Short Title must be filled out");
-          return false;
-      }
+      //  var short_title =  document.getElementById('product_short_title').value;
+      // if (short_title == "") {
+      //     alert("Short Title must be filled out");
+      //     return false;
+      // }
 
 
-      var product_quantity =  document.getElementById('product_quantity').value;
-      if (product_quantity == "") {
-          alert("Quantity must be filled out");
-          return false;
-      }
+      // var product_quantity =  document.getElementById('product_quantity').value;
+      // if (product_quantity == "") {
+      //     alert("Quantity must be filled out");
+      //     return false;
+      // }
 
 
-      var product_actual_price =  document.getElementById('product_actual_price').value;
-      if (product_actual_price == "") {
-          alert("Actual Price must be filled out");
-          return false;
-      }
+      // var product_actual_price =  document.getElementById('product_actual_price').value;
+      // if (product_actual_price == "") {
+      //     alert("Actual Price must be filled out");
+      //     return false;
+      // }
 
 
-      var product_discount_price =  document.getElementById('product_discount_price').value;
-      if (product_discount_price == "") {
-          alert("Offer Price must be filled out");
-          return false;
-      }
+      // var product_discount_price =  document.getElementById('product_discount_price').value;
+      // if (product_discount_price == "") {
+      //     alert("Offer Price must be filled out");
+      //     return false;
+      // }
 
 
-      var product_start_to_sell_on =  document.getElementById('product_start_to_sell_on').value;
-      if (product_start_to_sell_on == "") {
-          alert("Product started to sell time must be filled out");
-          return false;
-      }
+      // var product_start_to_sell_on =  document.getElementById('product_start_to_sell_on').value;
+      // if (product_start_to_sell_on == "") {
+      //     alert("Product started to sell time must be filled out");
+      //     return false;
+      // }
 
 
 
-      var product_end_on =  document.getElementById('product_end_on').value;
-      if (product_end_on == "") {
-          alert("Product sales end time must be filled out");
-          return false;
-      }
+      // var product_end_on =  document.getElementById('product_end_on').value;
+      // if (product_end_on == "") {
+      //     alert("Product sales end time must be filled out");
+      //     return false;
+      // }
 
 
 
@@ -151,7 +160,7 @@ $("#mysubmitbutton").click(function(e) {
     document.getElementById("editor_desc").getElementsByClassName("ql-editor ql-blank")[0].innerHTML = "<%= @product_description.gsub('"',"'").html_safe %>";
     document.getElementById("editor").getElementsByClassName("ql-editor ql-blank")[0].innerHTML = "<%= @product_notice.gsub('"',"'").html_safe %>";
 
-    document.getElementById("tags").innerHTML =  "<%= @product_size.html_safe %>";
+    document.getElementById("tags_size").innerHTML =  "<%= @product_size.html_safe %>";
     document.getElementById("tags_model").innerHTML =  "<%= @product_model.html_safe %>";
     document.getElementById("tags_color").innerHTML =  "<%= @product_color.html_safe %>";
 
@@ -165,8 +174,8 @@ $("#mysubmitbutton").click(function(e) {
       $("#tags_size input").on({
         focusout : function() {
           var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
-          var txt = mytxt+",";
-          if(txt) $("<span/>", {text:txt, insertBefore:this});
+          var txt = mytxt;
+          if(txt) $("<span/>", {text:txt+",", insertBefore:this});
           this.value = "";
         },
         keyup : function(ev) {
@@ -183,8 +192,8 @@ $("#mysubmitbutton").click(function(e) {
        $("#tags_color input").on({
     focusout : function() {
       var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
-      var txt = mytxt+",";
-      if(txt) $("<span/>", {text:txt, insertBefore:this});
+      var txt = mytxt;
+      if(txt) $("<span/>", {text:txt+",", insertBefore:this});
       this.value = "";
     },
     keyup : function(ev) {
@@ -200,8 +209,8 @@ $("#mysubmitbutton").click(function(e) {
     $("#tags_model input").on({
     focusout : function() {
       var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
-      var txt = mytxt+",";
-      if(txt) $("<span/>", {text:txt, insertBefore:this});
+      var txt = mytxt;
+      if(txt) $("<span/>", {text:txt+",", insertBefore:this});
       this.value = "";
     },
     keyup : function(ev) {
