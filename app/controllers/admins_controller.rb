@@ -6,6 +6,9 @@ class AdminsController < ApplicationController
   # GET /admins
   # GET /admins.json
 
+  def other_request_products
+    @request_products = RequestProduct.all
+  end
 
 
   def index

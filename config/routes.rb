@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   resources :admins
   get 'dashboard' => 'admins#dashboard'
   get 'buyer_list' => 'admins#buyer_list'
-  
+  get 'other_request_products' => 'admins#other_request_products'  
 
   resources :comments
   resources :coupons

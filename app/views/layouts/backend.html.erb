@@ -91,10 +91,16 @@
                            <li class="list-group-item">
                             <%= link_to 'Buyer listing', buyer_list_path %>
                           </li>
+
+                          <li class="list-group-item">
+                            <%= link_to "Requested Products", other_request_products_path  %>
+                          </li>
+
                         
                           <li class="list-group-item">
                             <%= link_to "Account Setting", edit_admin_registration_path  %>
                           </li>
+
                           <li class="list-group-item">
                              <%= link_to "Log Out", destroy_admin_session_path, method: :delete  %>
                           </li>

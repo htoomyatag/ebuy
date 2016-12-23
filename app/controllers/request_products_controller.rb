@@ -60,7 +60,7 @@ class RequestProductsController < ApplicationController
   def destroy
     @request_product.destroy
     respond_to do |format|
-      format.html { redirect_to request_products_url, notice: 'Request product was successfully destroyed.' }
+      format.html { redirect_to other_request_products_path, notice: 'Request product was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

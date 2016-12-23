@@ -48,9 +48,6 @@
     </div>
   </div>
 
-
-   
-  
   <div class="col-md-12">
     <h3>Specifications 
     <input class="btn btn-default" type="button" id="add_btn" value="Add">
@@ -101,9 +98,11 @@
 
 
     <div class="col-md-6"><br/>
-       <label>Delivery time</label><br>
+       <label>Delivery time</label>
+       <span> For example 7 days 10 days etc</span>
+       <br>
          <div class="field">
-            <%= f.number_field :delivery_time, :class => "form-control" %>
+            <%= f.text_field :delivery_time, :class => "form-control" %>
         </div>
     </div>
 
@@ -111,7 +110,9 @@
 
 
       <div class="col-md-6"><br/>
-       <label> Timeplan</label><br>
+       <label> Timeplan</label>
+       <span> For example 20 june 2017 to 21 August 2017 etc</span>
+       <br>
          <div class="field">
             <%= f.text_field :start_to_sell_on, :class => "form-control" %>
         </div>
