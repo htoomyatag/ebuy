@@ -1,5 +1,5 @@
 <div id="mobile_view_home">
-	<%= render 'mobile_product_detail' %>
+  <%= render 'mobile_product_detail' %>
 </div>
 
 
@@ -450,7 +450,7 @@
   <%= render 'related_item' %><br/><br/>
 
   <div style="background:blue;height:5px;"></div>
-  <%= render 'recommended_item' %>
+  <%= render 'recommended_item' %><br/><br/>
 
   <div style="background:blue;height:5px;">
 
@@ -613,7 +613,7 @@ for (var i = min; i<=max; i++){
 
 	//Create array of options to be added
 
-	var str = "Choose,"+"<%= @product.product_color.gsub(',,','') rescue '-' %>";
+	var str = "Choose,"+"<%= @product.product_color.chomp(',') rescue '-' %>";
 	var str_array = str.split(',');
 
 
@@ -637,7 +637,7 @@ for (var i = min; i<=max; i++){
 
 	//Create array of options to be added
 
-	var str = "Choose,"+"<%= @product.product_size.gsub(',,','') rescue '-' %>";
+	var str = "Choose,"+"<%= @product.product_size.chomp(',') rescue '-' %>";
 	var str_array = str.split(',');
 
 
@@ -662,7 +662,7 @@ for (var i = min; i<=max; i++){
 
 	//Create array of options to be added
 
-	var str = "Choose,"+"<%= @product.product_model.gsub(',,','') rescue '-' %>";
+	var str = "Choose,"+"<%= @product.product_model.chomp(',') rescue '-' %>";
 	var str_array = str.split(',');
 
 
@@ -690,6 +690,8 @@ for (var i = min; i<=max; i++){
 
 </script>
 
+<!-- mobile -->
+
 
 
 
@@ -703,13 +705,15 @@ for (var i = min; i<=max; i++){
  		color = $( "#myProductColor option:selected" ).text();
  		size = $( "#myProductSize option:selected" ).text();
  		delivery_method = $( "#delivery_method option:selected" ).text();
- 		product_quantity = document.getElementById("product_quantity").value;
+ 		product_quantity =  $( "#product_quantity option:selected" ).text();
+
+ 		product_model =  $( "#myProductModel option:selected" ).text();
  	
   		$.ajax({
               type: 'post',
               url: '/line_items',
               dataType: 'text',
-              data: {'product_id':product_id, 'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity},
+              data: {'product_id':product_id, 'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity, 'product_model':product_model},
               complete: function(r){
               
 					location.reload();              	
@@ -742,85 +746,9 @@ for (var i = min; i<=max; i++){
  		color = $( "#myProductColor option:selected" ).text();
  		size = $( "#myProductSize option:selected" ).text();
  		delivery_method = $( "#delivery_method option:selected" ).text();
- 		product_quantity = document.getElementById("product_quantity").value;
+ 		
+ 		product_quantity =  $( "#product_quantity option:selected" ).text();
 
- 		product_model =  $( "#myProductModel option:selected" ).text();
- 	
-  		$.ajax({
-              type: 'get',
-              url: '/fill_your_order_form/'+product_id,
-              dataType: 'text',
-              data: {'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity, 'product_model':product_model},
-              complete: function(r){
-              
-					 var currentURL = '/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity+ '&product_model=' + product_model;
-                     window.location.href = currentURL;
-
-              }
-           });
-
-
-
-
-
-
-    });
-
-
-</script>
-
-
-
-
-<script type="text/javascript">
-	
- $('#btn_add_to_cart_mobile').click(function() {
- 
-
- 		product_id = "<%= @product.id %>";
- 		color = $( "#myProductColor option:selected" ).text();
- 		size = $( "#myProductSize option:selected" ).text();
- 		delivery_method = $( "#delivery_method option:selected" ).text();
- 		product_quantity = document.getElementById("product_quantity").value;
- 	
-  		$.ajax({
-              type: 'post',
-              url: '/line_items',
-              dataType: 'text',
-              data: {'product_id':product_id, 'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity},
-              complete: function(r){
-              
-					location.reload();              	
-
-
-              }
-           });
-
-
-
-
-
-
-    });
-
-
-</script>
-
-<script type="text/javascript">
-
-
-
-
-
-
- $('#btn_buy_now_mobile').click(function() {
- 
-
- 		product_id = "<%= @product.id %>";
- 		color = $( "#myProductColor option:selected" ).text();
- 		size = $( "#myProductSize option:selected" ).text();
- 		delivery_method = $( "#delivery_method option:selected" ).text();
- 		product_quantity = document.getElementById("product_quantity").value;
 
  		product_model =  $( "#myProductModel option:selected" ).text();
  	

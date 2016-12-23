@@ -2,13 +2,13 @@
 
 <div class="panel panel-default">
   <div class="panel-body">
-    		<div class="col-md-12">
-    		<h3>New Product</h3>
-    		<hr/>
-    		</div>
+        <div class="col-md-12">
+        <h3>New Product</h3>
+        <hr/>
+        </div>
 
-			<%= render 'form' %>
-			
+      <%= render 'form' %>
+      
 
   </div>
 </div>
@@ -20,11 +20,11 @@ $(function(){ // DOM ready
 
   // ::: TAGS BOX
 
-  $("#tags input").on({
+  $("#tags_size input").on({
     focusout : function() {
       var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
-      var txt = mytxt+",";
-      if(txt) $("<span/>", {text:txt, insertBefore:this});
+      var txt = mytxt;
+      if(txt) $("<span/>", {text:txt+",", insertBefore:this});
       this.value = "";
     },
     keyup : function(ev) {
@@ -32,7 +32,44 @@ $(function(){ // DOM ready
       if(/(188|13)/.test(ev.which)) $(this).focusout(); 
     }
   });
-  $('#tags').on('click', 'span', function() {
+  $('#tags_size').on('click', 'span', function() {
+    $(this).remove(); 
+  });
+
+
+
+    $("#tags_color input").on({
+    focusout : function() {
+      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var txt = mytxt;
+      if(txt) $("<span/>", {text:txt+",", insertBefore:this});
+      this.value = "";
+    },
+    keyup : function(ev) {
+      // if: comma|enter (delimit more keyCodes with | pipe)
+      if(/(188|13)/.test(ev.which)) $(this).focusout(); 
+    }
+  });
+  $('#tags_color').on('click', 'span', function() {
+    $(this).remove(); 
+  });
+
+
+
+
+    $("#tags_model input").on({
+    focusout : function() {
+      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var txt = mytxt;
+      if(txt) $("<span/>", {text:txt+",", insertBefore:this});
+      this.value = "";
+    },
+    keyup : function(ev) {
+      // if: comma|enter (delimit more keyCodes with | pipe)
+      if(/(188|13)/.test(ev.which)) $(this).focusout(); 
+    }
+  });
+  $('#tags_model').on('click', 'span', function() {
     $(this).remove(); 
   });
 
@@ -41,8 +78,16 @@ $(function(){ // DOM ready
 </script>
 
 
+<script type="text/javascript">
+  
+
+</script>
+
 
 <script>
+
+
+
   var editor = new Quill('#editor', {
     modules: { toolbar: '#toolbar' },
     theme: 'snow'
@@ -53,89 +98,96 @@ $(function(){ // DOM ready
     modules: { toolbar: '#toolbar_desc' },
     theme: 'snow'
   });
+   
 
+</script>
 
-
+<script>
 
 $("#mysubmitbutton").click(function(e) {
   e.preventDefault();
 
 
-      var a = editor.container.firstChild.innerHTML;
-      document.getElementById('product_notice').value = a;
 
 
-       var b = editor_desc.container.firstChild.innerHTML;
-      document.getElementById('product_description').value = b;
 
 
-      var product_sizes = $('#tags span').text();
-      document.getElementById('product_product_size').value = product_sizes.replace(",,", "");
+      var product_sizes = $('#tags_size span').text();
+      document.getElementById('product_product_size').value = product_sizes;
 
 
       var product_colors = $('#tags_color span').text();
-      document.getElementById('product_product_color').value = product_colors.replace(",,", "");
+      document.getElementById('product_product_color').value = product_colors;
 
 
       var product_models = $('#tags_model span').text();
-      document.getElementById('product_product_model').value = product_models.replace(",,", "");
-
-
-      var title =  document.getElementById('product_title').value;
-      if (title == "") {
-          alert("Title must be filled out");
-          return false;
-      }
-
-
-       var short_title =  document.getElementById('product_short_title').value;
-      if (short_title == "") {
-          alert("Short Title must be filled out");
-          return false;
-      }
-
-
-      var product_quantity =  document.getElementById('product_quantity').value;
-      if (product_quantity == "") {
-          alert("Quantity must be filled out");
-          return false;
-      }
-
-
-      var product_actual_price =  document.getElementById('product_actual_price').value;
-      if (product_actual_price == "") {
-          alert("Actual Price must be filled out");
-          return false;
-      }
-
-
-      var product_discount_price =  document.getElementById('product_discount_price').value;
-      if (product_discount_price == "") {
-          alert("Offer Price must be filled out");
-          return false;
-      }
-
-
-      var product_start_to_sell_on =  document.getElementById('product_start_to_sell_on').value;
-      if (product_start_to_sell_on == "") {
-          alert("Product started to sell time must be filled out");
-          return false;
-      }
+      document.getElementById('product_product_model').value = product_models;
 
 
 
-      var product_end_on =  document.getElementById('product_end_on').value;
-      if (product_end_on == "") {
-          alert("Product sales end time must be filled out");
-          return false;
-      }
+      //    var a = editor.container.firstChild.innerHTML;
+      // document.getElementById('product_notice').value = a;
 
 
-      var product_avatar1 =  document.getElementById('product_avatar1').value;
-      if (product_avatar1 == "") {
-          alert("At least product image must be uploaded");
-          return false;
-      }
+      //  var b = editor_desc.container.firstChild.innerHTML;
+      // document.getElementById('product_description').value = b;
+
+
+      // var title =  document.getElementById('product_title').value;
+      // if (title == "") {
+      //     alert("Title must be filled out");
+      //     return false;
+      // }
+
+
+      //  var short_title =  document.getElementById('product_short_title').value;
+      // if (short_title == "") {
+      //     alert("Short Title must be filled out");
+      //     return false;
+      // }
+
+
+      // var product_quantity =  document.getElementById('product_quantity').value;
+      // if (product_quantity == "") {
+      //     alert("Quantity must be filled out");
+      //     return false;
+      // }
+
+
+      // var product_actual_price =  document.getElementById('product_actual_price').value;
+      // if (product_actual_price == "") {
+      //     alert("Actual Price must be filled out");
+      //     return false;
+      // }
+
+
+      // var product_discount_price =  document.getElementById('product_discount_price').value;
+      // if (product_discount_price == "") {
+      //     alert("Offer Price must be filled out");
+      //     return false;
+      // }
+
+
+      // var product_start_to_sell_on =  document.getElementById('product_start_to_sell_on').value;
+      // if (product_start_to_sell_on == "") {
+      //     alert("Product started to sell time must be filled out");
+      //     return false;
+      // }
+
+
+
+      // var product_end_on =  document.getElementById('product_end_on').value;
+      // if (product_end_on == "") {
+      //     alert("Product sales end time must be filled out");
+      //     return false;
+      // }
+
+
+      // var product_avatar1 =  document.getElementById('product_avatar1').value;
+      // if (product_avatar1 == "") {
+      //     alert("At least product image must be uploaded");
+      //     return false;
+      // }
     
     
     

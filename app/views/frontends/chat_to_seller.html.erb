@@ -10,7 +10,7 @@
                 <div>
                  <% @messages.each do |message| %>
                   
-                    <% if current_.id == message.buyer_id %>
+                    <% if current_buyer.id == message.buyer_id %>
                        <span style="color:black;"><b>You:<%= message.body %></b></span>
                        <span style="float:right;"><%= message.created_at.strftime("at %I:%M%p  on %m/%d/%Y") %> </span>
                        <br/>

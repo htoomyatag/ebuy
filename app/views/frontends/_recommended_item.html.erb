@@ -1,26 +1,29 @@
- 			<div class="rows">
- 			<h4 id="slider_home_title">Recommended Item</h4><hr/>
- 			</div>
+
+
+
+        <div class="rows">
+          <h4 id="slider_home_title">Recommended Item</h4><hr/>
+      </div>
   
-            <div id="myCarousel10" class="carousel slide">
+            <div id="myCarousel6" class="carousel slide">
                 
 
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="item active">
-                          <div class="col-md-12" style="width:98%;margin-left:14px;">
+                           <div class="col-md-12" style="width:98%;margin-left:14px;">
 
                        
-	       					<% @first_authentic_products.each do |product| %>
-	                            <div class="col-md-2">
-	                                <a href="/product_info/<%= product.id %>">
-                                        <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive", :id=> "myavatar" %>
-	                            	 <p id="product_title"><%= product.short_title %></p>
-			  	                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
-   <%= $product_price %> Ks</p>
-	                            	</a>
-	                            </div>
-	                        <% end %>
+                    <% @first_authentic_products.each do |product| %>
+                              <div class="col-md-2">
+                                  <a href="/product_info/<%= product.id %>">
+                                    <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive", :id=> "myavatar" %>
+                                 <p id="product_title"><%= product.short_title %></p>
+                                  <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks</p>
+                                </a>
+                              </div>
+                          <% end %>
 
                                                
                         </div>
@@ -28,23 +31,23 @@
                     </div>
                     <!--/item-->
                     <div class="item">
-                          <div class="col-md-12">
+                        <div class="ccol-md-12">
 
 
-                        	<% @second_authentic_products.each do |product| %>
-	                            <div class="col-md-2">
-	                                <a href="/product_info/<%= product.id %>">
-                                    <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive", :id=> "myavatar" %>
-	                            	 <p id="product_title"><%= product.short_title %></p>
-			  	                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
-   <%= $product_price %> Ks</p>
-	                            	</a>
-	                            </div>
-	                        <% end %>
-                       			
-                       		
+                            <% @second_authentic_products.each do |product| %>
+                              <div class="col-md-2">
+                                  <a href="/product_info/<%= product.id %>">
+                                     <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive", :id=> "myavatar" %>
+                                 <p id="product_title"><%= product.short_title %></p>
+                                  <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
+                                            <%= $product_price %> Ks</p>
+                                </a>
+                              </div>
+                          <% end %>
+                            
+                          
                              
-                        	
+                          
                          
                         </div>
                         <!--/row-->
@@ -54,14 +57,15 @@
                     <!--/item-->
                 </div>
                 <!--/carousel-inner-->
-				 <a class="left carousel-control" id="arrow_crousel" href="#myCarousel10" role="button" data-slide="prev">
-				     <%= image_tag("leftarrow.png", :style=>"float:left;") %>
-				  </a>
+         <a class="left carousel-control" id="arrow_crousel" href="#myCarousel10" role="button" data-slide="prev">
+             <%= image_tag("leftarrow.png", :style=>"float:left;") %>
+          </a>
 
-				  <a class="right carousel-control" id="arrow_crousel" href="#myCarousel10" role="button" data-slide="next">
-				  	  <%= image_tag("rightarrow.png", :style=>"float:right;") %>
-				  </a>
+          <a class="right carousel-control" id="arrow_crousel" href="#myCarousel10" role="button" data-slide="next">
+              <%= image_tag("rightarrow.png", :style=>"float:right;") %>
+          </a>
 
             </div>
             <!--/myCarousel-->
  
+

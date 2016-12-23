@@ -19,17 +19,17 @@
 
 				<p>
 				  <strong>Size:</strong>
-				  <%= @product.product_size.gsub(",,", "") rescue "-" %>
+				  <%= @product.product_size.gsub(",", " ") rescue "-" %>
 				</p>
 
 				<p>
 				  <strong>Color:</strong>
-				  <%= @product.product_color.gsub(",,", "") rescue "-" %>
+				  <%= @product.product_color.gsub(",", " ") rescue "-" %>
 				</p>
 
 				<p>
 				  <strong>Model:</strong>
-				  <%= @product.product_model.gsub(",,", "") rescue "-" %>
+				  <%= @product.product_model.gsub(",", " ") rescue "-" %>
 				</p>
 
 

@@ -33,10 +33,10 @@ class FrontendsController < ApplicationController
 
 def chat_to_seller
         
-        @buyers = Buyer.where("id = ?", params[:id])
+        @buyers = Buyer.where("id = ?", current_buyer.id)
 
 
-        @buyer_name = Buyer.where("id = ?", params[:buyer_id]).pluck(:buyer_name)
+        @buyer_name = Buyer.where("id = ?", current_buyer.id).pluck(:buyer_name)
         @raw_buyer_name = @buyer_name.to_s.gsub("[", "")
         @raw_buyer_name2 = @raw_buyer_name.to_s.gsub("]", "")
         @my_buyer_name = @raw_buyer_name2.to_s.gsub("\"", "")
@@ -191,6 +191,8 @@ def chat_to_seller
          @delivery_method = params[:delivery_method]
          @product_quantity = params[:product_quantity]
          @product_model = params[:product_model]
+
+         @coupons = Coupon.all
   end
 
 

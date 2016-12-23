@@ -67,7 +67,7 @@ $("#mysubmitbutton").click(function(e) {
 
 
 
-      var product_sizes = $('#tags span').text();
+      var product_sizes = $('#tags_size span').text();
       document.getElementById('product_product_size').value = product_sizes.replace(",,", "");
 
 
@@ -162,7 +162,7 @@ $("#mysubmitbutton").click(function(e) {
 
   // ::: TAGS BOX
 
-      $("#tags input").on({
+      $("#tags_size input").on({
         focusout : function() {
           var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
           var txt = mytxt+",";
@@ -174,7 +174,7 @@ $("#mysubmitbutton").click(function(e) {
           if(/(188|13)/.test(ev.which)) $(this).focusout(); 
         }
       });
-      $('#tags').on('click', 'span', function() {
+      $('#tags_size').on('click', 'span', function() {
         $(this).remove(); 
       });
 

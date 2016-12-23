@@ -19,8 +19,7 @@
   <div class="col-md-12">
    <label>Full Title</label><br>
      <div class="field">
-       <%= f.text_field :title, :class => "form-control", 
-    required: true %>
+       <%= f.text_field :title, :class => "form-control" %>
     </div>
     <br><br>
   </div>
@@ -28,7 +27,7 @@
   <div class="col-md-6">
    <label>Short Title</label><br>
      <div class="field">
-       <%= f.text_field :short_title, :class => "form-control", maxlength: 18, required: true %>
+       <%= f.text_field :short_title, :class => "form-control", maxlength: 18%>
     </div>
   </div>
 
@@ -52,7 +51,7 @@
      <div class="field">
 
 
-      <div id="tags">
+      <div id="tags_size">
         <input type="text" value="" placeholder="Add a size"/>
       </div>
 
@@ -1007,18 +1006,19 @@ $("#product_other_avatar5").change(function(){
 
 
 
-
-
 <style type="text/css">
   
 
-#tags{
+
+
+#tags_size{
   float:left;
   border:1px solid #ccc;
   padding:5px;
   font-family:Arial;
 }
-#tags > span{
+
+#tags_size > span{
   cursor:pointer;
   display:block;
   float:left;
@@ -1028,10 +1028,11 @@ $("#product_other_avatar5").change(function(){
   padding-right:25px;
   margin:4px;
 }
-#tags > span:hover{
+#tags_size > span:hover{
   opacity:0.7;
 }
-#tags > span:after{
+
+#tags_size > span:after{
  position:absolute;
  content:"×";
  border:1px solid;
@@ -1039,7 +1040,8 @@ $("#product_other_avatar5").change(function(){
  margin-left:3px;
  font-size:11px;
 }
-#tags > input{
+
+#tags_size > input{
   background:#eee;
   border:0;
   margin:4px;
@@ -1047,71 +1049,9 @@ $("#product_other_avatar5").change(function(){
   width:auto;
 }
 
-</style>
 
 
 
-<!-- color dynamic -->
-
-
-
-
-<script type="text/javascript">
-  
-$(function(){ // DOM ready
-
-  // ::: TAGS BOX
-
-  $("#tags_color input").on({
-    focusout : function() {
-      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
-      var txt = mytxt+",";
-      if(txt) $("<span/>", {text:txt, insertBefore:this});
-      this.value = "";
-    },
-    keyup : function(ev) {
-      // if: comma|enter (delimit more keyCodes with | pipe)
-      if(/(188|13)/.test(ev.which)) $(this).focusout(); 
-    }
-  });
-  $('#tags_color').on('click', 'span', function() {
-    $(this).remove(); 
-  });
-
-});
-
-</script>
-
-
-<script type="text/javascript">
-  
-$(function(){ // DOM ready
-
-  // ::: TAGS BOX
-
-  $("#tags_model input").on({
-    focusout : function() {
-      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
-      var txt = mytxt+",";
-      if(txt) $("<span/>", {text:txt, insertBefore:this});
-      this.value = "";
-    },
-    keyup : function(ev) {
-      // if: comma|enter (delimit more keyCodes with | pipe)
-      if(/(188|13)/.test(ev.which)) $(this).focusout(); 
-    }
-  });
-  $('#tags_model').on('click', 'span', function() {
-    $(this).remove(); 
-  });
-
-});
-
-</script>
-
-
-<style type="text/css">
-  
 
 #tags_color{
   float:left;
@@ -1148,14 +1088,7 @@ $(function(){ // DOM ready
   width:auto;
 }
 
-</style>
 
-
-
-
-
-<style type="text/css">
-  
 
 #tags_model{
   float:left;
@@ -1192,4 +1125,10 @@ $(function(){ // DOM ready
   width:auto;
 }
 
+
 </style>
+
+
+
+
+

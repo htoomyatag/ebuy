@@ -43,15 +43,15 @@
 <br/>
 <p> 
     <span class="mydetail_title">Size: </span> 
-    <span class="mydetail_title" id="myproduct_size" > 
+    <span class="mydetail_title" id="myproductmobile_size" > 
     </span>
 </p>
 <p> <span class="mydetail_title">Color: </span>
-    <span class="mydetail_title" id="myproduct_color">
+    <span class="mydetail_title" id="myproductmobile_color">
     </span>
 </p>
 <p> <span class="mydetail_title">Model: </span>
-    <span class="mydetail_title" id="myproduct_model">    
+    <span class="mydetail_title" id="myproductmobile_model">    
     </span>
 </p>
 
@@ -87,7 +87,7 @@
 <hr/>
 
 <p> <span class="mydetail_title">Quantity: </span>
-      <select id="product_quantity">  
+      <select id="myProductMobileQty">  
       </select>
 </p>
 <hr/>
@@ -159,3 +159,194 @@
 
   
 </div>
+
+
+
+
+<script type="text/javascript">
+  
+
+
+$( document ).ready(function() {
+
+
+
+
+
+var min = 1,
+    max = '<%= @product.quantity %>',
+    select = document.getElementById('myProductMobileQty');
+
+for (var i = min; i<=max; i++){
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.innerHTML = i;
+    select.appendChild(opt);
+}
+
+
+
+// create products
+  var myDiv = document.getElementById("myproductmobile_color");
+
+  //Create array of options to be added
+
+  var str = "Choose,"+"<%= @product.product_color.chomp(',') rescue '-' %>";
+  var str_array = str.split(',');
+
+
+
+  //Create and append select list
+  var selectList = document.createElement("select");
+  selectList.setAttribute("id", "myProductMobileColor");
+  myDiv.appendChild(selectList);
+
+
+  //Create and append the options
+  for(var i = 0; i < str_array.length; i++) {
+      var option = document.createElement("option");
+      option.setAttribute("value", str_array[i]);
+      option.text = str_array[i];
+      selectList.appendChild(option);
+  }
+
+// create products_sizes
+  var myDiv = document.getElementById("myproductmobile_size");
+
+  //Create array of options to be added
+
+  var str = "Choose,"+"<%= @product.product_size.chomp(',') rescue '-' %>";
+  var str_array = str.split(',');
+
+
+
+  //Create and append select list
+  var selectList = document.createElement("select");
+  selectList.setAttribute("id", "myProductMobileSize");
+  myDiv.appendChild(selectList);
+
+
+  //Create and append the options
+  for(var i = 0; i < str_array.length; i++) {
+      var option = document.createElement("option");
+      option.setAttribute("value", str_array[i]);
+      option.text = str_array[i];
+      selectList.appendChild(option);
+  }
+
+
+  // create products model
+  var myDiv = document.getElementById("myproductmobile_model");
+
+  //Create array of options to be added
+
+  var str = "Choose,"+"<%= @product.product_model.chomp(',') rescue '-' %>";
+  var str_array = str.split(',');
+
+
+
+  //Create and append select list
+  var selectList = document.createElement("select");
+  selectList.setAttribute("id", "myProductMobileModel");
+  myDiv.appendChild(selectList);
+
+
+  //Create and append the options
+  for(var i = 0; i < str_array.length; i++) {
+      var option = document.createElement("option");
+      option.setAttribute("value", str_array[i]);
+      option.text = str_array[i];
+      selectList.appendChild(option);
+  }
+
+
+
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+  
+ $('#btn_add_to_cart_mobile').click(function() {
+ 
+
+    product_id = "<%= @product.id %>";
+    color = $( "#myProductMobileColor option:selected" ).text();
+    size = $( "#myProductMobileSize option:selected" ).text();
+    delivery_method = $( "#delivery_method option:selected" ).text();
+    product_quantity =  $( "#myProductMobileQty option:selected" ).text();
+
+    product_model =  $( "#myProductMobileModel option:selected" ).text();
+  
+      $.ajax({
+              type: 'post',
+              url: '/line_items',
+              dataType: 'text',
+              data: {'product_id':product_id, 'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity, 'product_model':product_model},
+              complete: function(r){
+              
+          location.reload();                
+
+
+              }
+           });
+
+
+
+
+
+    });
+
+
+</script>
+
+<script type="text/javascript">
+
+
+
+
+
+
+ $('#btn_buy_now_mobile').click(function() {
+ 
+
+
+
+    product_id = "<%= @product.id %>";
+    color = $( "#myProductMobileColor option:selected" ).text();
+    size = $( "#myProductMobileSize option:selected" ).text();
+    delivery_method = $( "#delivery_method option:selected" ).text();
+    product_quantity =  $( "#myProductMobileQty option:selected" ).text();
+    product_model =  $( "#myProductMobileModel option:selected" ).text();
+  
+      $.ajax({
+              type: 'get',
+              url: '/fill_your_order_form/'+product_id,
+              dataType: 'text',
+              data: {'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity, 'product_model':product_model},
+              complete: function(r){
+              
+           var currentURL = '/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity+ '&product_model=' + product_model;
+                     window.location.href = currentURL;
+
+              }
+           });
+
+
+
+
+
+
+    });
+
+
+</script>
+

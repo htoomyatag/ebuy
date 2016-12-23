@@ -1,3 +1,6 @@
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+
 <div class="container">
 	<h3 style="text-align:center;">Order form </h3><hr/>
 
@@ -132,12 +135,41 @@
 		 
 	 </div>
 
-      <h3 style="text-align:center;"> Total Product Price: 
-        
-       <% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
+
+
+
+
+
+   <div class="col-md-12">
+		  <br/><br/>
+		    Total Price:  <% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
                     <%= $product_price %> Ks
-        <input class="form-control" type="text" name="total_price" id="total_price" value="<%= $product_price %>" style="display:none;">
-      </h3>
+		    <input type="button" id="opener" class="btn btn-small" value="Get Coupons"> 
+		    <br/> <br/>
+
+		    Coupon Code:
+		    <input id="coupon_code"   >
+		      <input type="button" id="send_coupon" class="btn btn-default" value="Use"> 
+		    <br/> <br/>
+		    Final Price:
+
+		     <input class="form-control" type="text" name="total_price" id="total_price" >
+
+
+
+		 
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 	  <div class="col-md-12">
 
 	     <br/> <br/> <br/>
@@ -157,6 +189,147 @@
 
 
 
+
+
+
+
 </div>
 
 	  <br/>	  <br/>	  <br/>
+
+
+
+
+
+
+
+	  <div id="dialog1" title="Coupon list" hidden="hidden" style="width:900px;">
+
+
+   <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Coupon</th>
+          <th>Percentage</th>
+          <th>limit</th>
+          <th>Expire on</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @coupons.each do |coupon| %>
+          <tr>
+            <td><%= coupon.title %></td>
+            <td><%= coupon.discount_percentage %></td>
+            <td><%= coupon.limitation %></td>
+            <td><%= coupon.expire_date %></td>
+            <td> 
+            <button id="apply_co" value="<%= coupon.title %>" onClick='reply_click(this)'> Add</button>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+
+
+ 
+
+
+</div>
+
+
+ <script>
+
+    $(function () {
+      $( "#dialog1" ).dialog({
+         resizable: false,
+         autoOpen: false,
+         width: 'auto'
+
+      });
+      
+      $("#opener").click(function() {
+        $("#dialog1").dialog('open');
+      });
+    });
+
+  </script>
+
+
+<script type="text/javascript">
+
+    function reply_click(objButton)
+    {
+        var code = objButton.value;
+        document.getElementById("coupon_code").value = code;
+    }
+
+</script>
+
+
+<script type="text/javascript">
+  
+ $('#send_coupon').click(function() {
+ 
+
+    coupon_code = document.getElementById("coupon_code").value;
+    limitation = "<%= $product_price  %>";
+
+
+      $.ajax({
+              type: 'get',
+              url: '/use_coupon',
+              dataType: 'text',
+              data: {'title':coupon_code, 'limitation':limitation},
+              complete: function(r){
+              
+                  raw_discount_price = r.responseText;
+                  clean_discount_price = raw_discount_price.replace('{:discount_price=>["', "");
+                  discount_percent = clean_discount_price.replace('"]}', "");
+                 
+                  // couopon calculation
+                  var percentage = parseFloat(discount_percent/100);
+                  var descrease_amount =  parseInt(percentage*limitation);
+                  var actual_amount = parseInt(limitation-descrease_amount);
+
+                  if (raw_discount_price == "{:discount_price=>[]}"){
+                  
+                    document.getElementById("total_price").value = " <%= $product_price %>"
+
+
+                  } else {
+
+                    document.getElementById("total_price").value = actual_amount;
+                    
+                  }
+                  
+         
+
+
+
+              }
+           });
+
+
+
+
+
+
+    });
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+  
+$(document).ready(function(){ 
+
+  document.getElementById("total_price").value = "<%= $product_price %>";
+
+});
+
+</script>
