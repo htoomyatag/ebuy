@@ -37,6 +37,16 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+
+       # order number
+   @product_number = Product.maximum(:id)
+   if @product_number.nil?
+      @myproduct_number =  1001
+   else
+      @myproduct_number = Product.maximum(:id) + 1
+   end
+
+
   end
 
   # GET /products/1/edit
@@ -142,7 +152,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:ship_from,:product_childsubcategory,:product_model, :time_sale,:short_title,:show_at,:description, :notice, :product_code_1,:product_code_2,:product_code_3,:product_code_4,:product_code_5,:other_avatar1,:other_avatar2,:other_avatar3,:other_avatar4,:other_avatar5,:avatar1,:avatar2,:avatar3,:avatar4,:avatar5,:product_subcategory, :end_on, :product_size, :product_color, :delivery_rate, :product_video,:start_to_sell_on, :delivery_time,:pick_up, :ebuy_delivery,:product_category, :title, :actual_price, :discount_price, :quantity, specsq: [], specsa: [], question: [], answer: [])
+      params.require(:product).permit(:id, :ship_from,:product_childsubcategory,:product_model, :time_sale,:short_title,:show_at,:description, :notice, :product_code_1,:product_code_2,:product_code_3,:product_code_4,:product_code_5,:other_avatar1,:other_avatar2,:other_avatar3,:other_avatar4,:other_avatar5,:avatar1,:avatar2,:avatar3,:avatar4,:avatar5,:product_subcategory, :end_on, :product_size, :product_color, :delivery_rate, :product_video,:start_to_sell_on, :delivery_time,:pick_up, :ebuy_delivery,:product_category, :title, :actual_price, :discount_price, :quantity, specsq: [], specsa: [], question: [], answer: [])
     end
 end
 

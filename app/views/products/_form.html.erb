@@ -17,6 +17,15 @@
 
 
   <div class="col-md-12">
+   <label>Product Number</label><br>
+     <div class="field">
+       <%= f.text_field :id, :class => "form-control", :value =>  @myproduct_number, :disabled => true %>
+    </div>
+    <br><br>
+  </div>
+
+
+  <div class="col-md-12">
    <label>Full Title</label><br>
      <div class="field">
        <%= f.text_field :title, :class => "form-control" %>
