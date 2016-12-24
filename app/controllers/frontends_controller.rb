@@ -81,12 +81,12 @@ def chat_to_seller
      @first_food_beverage = Product.where(:product_category => "FoodandBeverage").where(:show_at => 1).last(6)
      @second_food_beverage = Product.where(:product_category => "FoodandBeverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @time_sale_firsts = Product.where(:time_sale => "1").first unless @time_sale_firsts.nil
-     @time_sale_seconds = Product.where(:time_sale => "1").second
-     @time_sale_thirds = Product.where(:time_sale => "1").third
-     @time_sale_fourths = Product.where(:time_sale => "1").fourth
-     @time_sale_fifths = Product.where(:time_sale => "1").fifth
-     @time_sale_sixths = Product.where(:time_sale => "1").last
+     # @time_sale_firsts = Product.where(:time_sale => "1").first unless @time_sale_firsts.nil
+     # @time_sale_seconds = Product.where(:time_sale => "1").second
+     # @time_sale_thirds = Product.where(:time_sale => "1").third
+     # @time_sale_fourths = Product.where(:time_sale => "1").fourth
+     # @time_sale_fifths = Product.where(:time_sale => "1").fifth
+     # @time_sale_sixths = Product.where(:time_sale => "1").last
 
      @first_cover_images = CoverImage.all.first
      @second_cover_images = CoverImage.all.second
