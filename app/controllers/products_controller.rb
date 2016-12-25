@@ -52,6 +52,46 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
 
+
+  if !@product.specsq.nil?
+
+    @my_product_specsq = @product.specsq.to_s
+    @specsq = @product.specsq.to_s.gsub('"','')
+
+
+  else
+    @specsq = ""
+  end
+
+
+  if !@product.specsa.nil?
+
+    @my_product_specsa = @product.specsa.to_s
+    @specsa = @product.specsa.to_s.gsub('"','')
+
+
+  else
+    @specsa = ""
+  end
+
+
+  if !@product.question.nil?
+    @question = @product.question.to_s.gsub('"','')
+  else
+    @question = ""
+  end
+
+
+  if !@product.answer.nil?
+    @answer = @product.answer.to_s.gsub('"','')
+  else
+    @answer = ""
+  end
+
+
+
+
+
   if !@product.notice.nil?
     @product_notice = @product.notice 
   else

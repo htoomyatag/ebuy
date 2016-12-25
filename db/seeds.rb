@@ -48,18 +48,18 @@ currency_exchanges = CoverImage.create([
 
 
 
-  # products = Product.create([
+  products = Product.create([
 
     
-  # {time_sale: "1",show_at:"0",title:"Casio Ladies' Watches( LTP series)",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00", delivery_time: "1-2 Weeks" },
-  # {time_sale: "1",show_at:"0",title:"Perfume Emblem INTENSE for Men, MontBlanc Men EDT Spray 100 ml BRAND NEW FRAGRANCE 3 Pcs Set",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
-  # {time_sale: "1",show_at:"0",title:"SK-II RNA Power - Anti-Aging Moisturiser. Formulated with Pitera Radical New Age Complex",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
-  # {time_sale: "1",show_at:"0",title:"100% AUTHENTIC, MICHAEL KORS, SELMA MEDIUM MESSENGER BAG, SAFFIANO LEATHER, Saffiano Bag, Satchel Bag, Crossbody",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
-  # {time_sale: "1",show_at:"0",title:"GUESS Celebrity Sunglasse 100% Authentic High Quality Unisex UV400 Eyeglasses Steel Frame Eyewear",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
-  # {time_sale: "1",show_at:"0",title:"Coach 100% Authentic, Crossbody, Satchel, Tote,  Wristlet,  Wallet,  Clutch ",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
-  # {show_at:"0",title:"Slazenger 2016 Brand Sneakers, High Quality Women and Men Shoes, Walking  Shoes, Running  Shoes, Couple Shoes",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
-  # {show_at:"0",title:"Car MP3 Audio Player, Bluetooth FM Transmitter, Wireless FM Modulator, Car Kit HandsFree USB Charger",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
-  # {show_at:"0",title:"2016 New Wear Bluetooth Smart Health Phone Watch With Sim Card Smartwatch, Only For Android Wearable Device Phone",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
+  {time_sale: "1",show_at:"0",title:"Casio Ladies' Watches( LTP series)",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00", delivery_time: "1-2 Weeks" },
+  {time_sale: "1",show_at:"0",title:"Perfume Emblem INTENSE for Men, MontBlanc Men EDT Spray 100 ml BRAND NEW FRAGRANCE 3 Pcs Set",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
+  {time_sale: "1",show_at:"0",title:"SK-II RNA Power - Anti-Aging Moisturiser. Formulated with Pitera Radical New Age Complex",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
+  {time_sale: "1",show_at:"0",title:"100% AUTHENTIC, MICHAEL KORS, SELMA MEDIUM MESSENGER BAG, SAFFIANO LEATHER, Saffiano Bag, Satchel Bag, Crossbody",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
+  {time_sale: "1",show_at:"0",title:"GUESS Celebrity Sunglasse 100% Authentic High Quality Unisex UV400 Eyeglasses Steel Frame Eyewear",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
+  {time_sale: "1",show_at:"0",title:"Coach 100% Authentic, Crossbody, Satchel, Tote,  Wristlet,  Wallet,  Clutch ",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
+  {show_at:"0",title:"Slazenger 2016 Brand Sneakers, High Quality Women and Men Shoes, Walking  Shoes, Running  Shoes, Couple Shoes",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
+  {show_at:"0",title:"Car MP3 Audio Player, Bluetooth FM Transmitter, Wireless FM Modulator, Car Kit HandsFree USB Charger",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
+  {show_at:"0",title:"2016 New Wear Bluetooth Smart Health Phone Watch With Sim Card Smartwatch, Only For Android Wearable Device Phone",actual_price: "", discount_price: "", quantity: 10, product_category:"", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00",delivery_time: "1-2 Weeks"},
   
   # # {time_sale: "1",show_at:"0",short_title:"tmpa",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00"},
   # # {time_sale: "1",show_at:"0",short_title:"tmpb",actual_price: "120", discount_price: "10", quantity: 10, product_category:"AuthenticBrandZone", start_to_sell_on:"2016-12-05 12:01:00", end_on:"2016-12-30 18:58:00"},
@@ -181,6 +181,6 @@ currency_exchanges = CoverImage.create([
   # # {title:"tmp14",actual_price: "12", discount_price: "210", quantity: 10, product_category:"Food&Beverage"}
 
 
-  # ])
+  ])
 
 

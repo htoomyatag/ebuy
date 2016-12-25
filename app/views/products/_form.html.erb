@@ -247,19 +247,20 @@
         <br/><br/><br/><hr/>
         <h3>Specifications 
         <input class="btn btn-default" type="button" id="add_btn" value="Add">
+  
         </h3>
          <hr/>
       </div>
 
 
 
-        <div class="col-md-6">
+        <div class="col-md-6" id="oldspec1">
            <div class="field">
              <%= f.text_field :specsq, multiple: true, :class => "form-control", :placeholder => "field" %>
           </div>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-6" id="oldspec2">
           <div class="field">
              <%= f.text_field :specsa, multiple: true, :class => "form-control", :placeholder => "value"  %>
           </div>
@@ -268,6 +269,19 @@
 
         <div id='cont' >
 
+        </div>
+
+        <div class="col-md-6">
+        <div id='cont_q' >
+
+        </div>
+        </div>
+
+
+        <div class="col-md-6">
+        <div id='cont_a' >
+
+        </div>
         </div>
 
         <!--  question ans answer -->
@@ -282,22 +296,38 @@
       </div>
 
 
+    <div id="oldquestionandanswer">
 
-        <div class="col-md-12">
+        <div class="col-md-12" >
            <div class="field">
              <%= f.text_field :question, multiple: true, :class => "form-control", :placeholder => "Question" %>
           </div>
         </div>
         
-        <div class="col-md-12">
+        <div class="col-md-12" >
           <div class="field"><br/>
              <%= f.text_field :answer, multiple: true, :class => "form-control", :placeholder => "Answer" %>
           </div>
         </div>
+  </div>
 
 
         <div id='cont2' >
 
+        </div>
+
+
+        <div class="col-md-6">
+          <div id='contquestion_q' >
+
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div id='contanswer_a' >
+
+          </div>
         </div>
 
 
@@ -508,7 +538,7 @@ $( "#add_btn" ).click(function() {
 
 $( "#add_btn_2" ).click(function() {
 
-    var textarea =  $('<div class="col-md-12"><div class="field"><br/><input multiple="multiple" class="form-control" type="text" name="product[question][]" id="product_question"></div></div> <div class="col-md-12"><div class="field"><br/><input multiple="multiple" class="form-control" type="text" name="product[answer][]" id="product_answer"></div></div><br/><hr/>');
+    var textarea =  $('<div class="col-md-12"><div class="field"><br/><input multiple="multiple" class="form-control" type="text" name="product[question][]" id="product_question" placeholder="question"></div></div> <div class="col-md-12"><div class="field"><br/><input multiple="multiple" class="form-control" type="text" name="product[answer][]" id="product_answer" placeholder="answer"></div></div><br/><hr/>');
     $('#cont2').append(textarea);
 
 

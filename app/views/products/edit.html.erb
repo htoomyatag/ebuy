@@ -5,6 +5,7 @@
   <div class="panel-body">
     		<div class="col-md-12">
     		<h3>Edit Product
+        <%= @product.specsq %>
         <br>
         <%= @raw_product %>
 
@@ -163,6 +164,83 @@ $("#mysubmitbutton").click(function(e) {
     document.getElementById("tags_size").innerHTML =  "<%= @product_size.html_safe %>";
     document.getElementById("tags_model").innerHTML =  "<%= @product_model.html_safe %>";
     document.getElementById("tags_color").innerHTML =  "<%= @product_color.html_safe %>";
+
+
+// product spec
+
+ 
+   $("#oldspec1").remove();
+   $("#oldspec2").remove();
+
+  var raw_specq_array = "<%= @specsq %>"
+  var specq_array = raw_specq_array.split(',');
+
+  var raw_speca_array = "<%= @specsa %>"
+  var speca_array = raw_speca_array.split(',');
+
+
+  for (var i = 0; i < specq_array.length; i++) {
+
+      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsq][]" id="product_specsq" value='+specq_array[i].replace("]","").replace("[","")+'>');
+      $('#cont_q').append(textarea);
+        
+    }
+
+
+
+  for (var i = 0; i < speca_array.length; i++) {
+
+      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsa][]" id="product_specsa" value='+speca_array[i].replace("]","").replace("[","")+'>');
+      $('#cont_a').append(textarea);
+        
+    }
+
+
+
+
+  // 
+
+
+
+
+  // product question
+
+ 
+   $("#oldquestion").remove();
+   $("#oldquestionandanswer").remove();
+
+
+  var raw_question_array = "<%= @question %>"
+  var question_array = raw_question_array.split(',');
+
+  var raw_answer_array = "<%= @answer %>"
+  var answer_array = raw_answer_array.split(',');
+
+
+ 
+
+for (var i = 0; i < question_array.length; i++) {
+
+      var textarea =  $('<br/><input multiple="multiple" class="form-control" type="text" name="product[question][]" id="product_question" value='+question_array[i].replace("]","").replace("[","")+'>');
+      $('#contquestion_q').append(textarea);
+        
+    }
+
+
+
+  for (var i = 0; i < answer_array.length; i++) {
+
+      var textarea =  $('<br/><input multiple="multiple" class="form-control" type="text" name="product[answer][]" id="product_answer" value='+answer_array[i].replace("]","").replace("[","")+'>');
+      $('#contanswer_a').append(textarea);
+        
+    }
+
+
+  // 
+
+
+
+
 
 
 
