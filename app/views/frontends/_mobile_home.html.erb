@@ -8,20 +8,20 @@
     
 						<a href="/buyers/sign_in" id="mobile_menu_link">
 							<%= image_tag "sign.png", :alt=>"sign.png" %>
-							<span class="nav_text">Sign in </span>
+							<span class="nav_text"><%= t('sign_in') %> </span>
 						</a>
 
 
 						<a href="/buyers/sign_up" id="mobile_menu_link">
 							<%= image_tag "register.png", :alt=>"register" %>
-							<span class="nav_text">Register </span>
+							<span class="nav_text"><%= t('register') %> </span>
 						</a>
 
 						<% if !buyer_signed_in? %>
 
 								<a href="/buyers/sign_up" id="mobile_menu_link">
 									<%= image_tag "profile.png", :alt=>"profile" %>
-									<span class="nav_text">My Account</span>
+									<span class="nav_text"><%= t('my_account') %></span>
 								</a>
 
 						<% else %>
@@ -29,7 +29,7 @@
 
 								<a href="/my_account" id="mobile_menu_link">
 									<%= image_tag "profile.png", :alt=>"profile" %>
-									<span class="nav_text">My Account</span>
+									<span class="nav_text"><%= t('my_account') %></span>
 								</a>
 
 						<% end %>
@@ -37,7 +37,7 @@
 
 						<a href="/contact_us" id="mobile_menu_link">
 							<%= image_tag "phone.png", :alt=>"phone" %>
-							<span class="nav_text">Contact Us</span>
+							<span class="nav_text"><%= t('contact_us') %></span>
 						</a>
 					
 
@@ -80,7 +80,7 @@
 <div class="row" style="padding:10px;">
   
 
-<h4 id="slider_home_title"> Time sales</h4>
+<h4 id="slider_home_title"> <%= t('time_sale') %></h4>
 
 	                            
 
@@ -256,7 +256,9 @@
 
 
 <h4 id="slider_home_title">
-AuthenticBrandZone</h4>
+
+<%= t('AuthenticBrandZone') %>
+</h4>
 		<div class="row" style="padding:10px;">
 				<% @first_authentic_products.each do |product| %>
 					                            
@@ -325,7 +327,9 @@ AuthenticBrandZone</h4>
 
 
 
-<h4 id="slider_home_title">Men Fashions</h4>
+<h4 id="slider_home_title">
+<%= t('MensFashion') %>
+</h4>
 <div class="row" style="padding:10px;">
 <% @first_men_fashion_products.each do |product| %>
 	                            
@@ -358,7 +362,9 @@ AuthenticBrandZone</h4>
 <% end %>
 </div>
 
-<h4 id="slider_home_title"> Digital & Mobile</h4>
+<h4 id="slider_home_title"> 
+<%= t('DigitalMobileandElectricalAppliances') %>
+</h4>
 <div class="row" style="padding:10px;" >
 <% @first_digital_marketings.each do |product| %>
 	                            
@@ -390,7 +396,9 @@ AuthenticBrandZone</h4>
 <% end %>
 </div>
 
-<h4 id="slider_home_title"> Home & Living</h4>
+<h4 id="slider_home_title"> 
+<%= t('HomeandLiving') %>
+</h4>
 <div class="row" style="padding:10px;" >
 	<% @first_home_livings.each do |product| %>
 	                            
@@ -422,7 +430,9 @@ AuthenticBrandZone</h4>
 <% end %>
 </div>
 
-<h4 id="slider_home_title"> Health & Beauty</h4>
+<h4 id="slider_home_title">
+	<%= t('HealthandBeauty') %>
+</h4>
 <div class="row" style="padding:10px;">
 	<% @first_health_beauty.each do |product| %>
 	                            
@@ -453,7 +463,9 @@ AuthenticBrandZone</h4>
 <% end %>
 </div>
 
-<h4 id="slider_home_title"> Food & Beverages</h4>
+<h4 id="slider_home_title"> 
+	<%= t('FoodandBeverage') %>
+</h4>
 <div class="row" style="padding:10px;">
 	<% @first_food_beverage.each do |product| %>
 	                            
@@ -485,7 +497,9 @@ AuthenticBrandZone</h4>
 <% end %>
 </div>
 
-<h4 id="slider_home_title"> Top Selling</h4>
+<h4 id="slider_home_title"> 
+<%= t('Top_Selling') %>
+</h4>
 <div class="row" style="padding:10px;">
 <% @first_authentic_products.each do |product| %>
 	                            
@@ -523,37 +537,44 @@ AuthenticBrandZone</h4>
 
 
 <ul class="list-group">
-<li class="list-group-item active" >Customer service</li>
-<li class="list-group-item"><a href="/help">Help topics</a></li>
-<li class="list-group-item"><a href="/how_to_buy">How to buy</a></li>
-<li class="list-group-item"><a href="/payment">Payment</a></li>
-<li class="list-group-item"><a href="/shipment_delivery">Shipping & Delivery</a></li>
-<li class="list-group-item"><a href="/contact_us">Contact Us</a></li>
-<li class="list-group-item"><a href="/customer_feedback">Customer Feedback</a></li>
+<li class="list-group-item active" ><%= t('customer_service') %></p></li>
+
+
+		<li class="list-group-item"><%= link_to t("help_topics"), help_path %></li>
+	    <li class="list-group-item"><%= link_to t("how_to_buy"), how_to_buy_path %></li>
+		<li class="list-group-item"><%= link_to t("payment"), payment_path %></li>
+		<li class="list-group-item"><%= link_to t("shipping_delivery"), shipment_delivery_path %></li>
+		<li class="list-group-item"><%= link_to t("contact_us"), contact_us_path %></li>
+		<li class="list-group-item"><%= link_to t("cusstomer_feedback"), customer_feedback_path %></li>
+
 </ul>
 
 <ul class="list-group">
-<li class="list-group-item active">About eBuy Myanmar</li>
-<li class="list-group-item"><a href="/about_us">About Us</a></li>
-<li class="list-group-item"><a href="/career_opportunity">Career Opportunities</a></li>
-<li class="list-group-item"><a href="/termns_and_condition">Terms and Conditions</a></li>
-<li class="list-group-item"><a href="/privacy_policy">Privacy Policy</a></li>
+<li class="list-group-item active"><%= t("about_ebuy")%></li>
+        
+
+        <li class="list-group-item"><%= link_to t("about_us"), about_us_path %></li>
+		<li class="list-group-item"><%= link_to t("career"), career_opportunity_path %></li>
+		<li class="list-group-item"><%= link_to t("termns"), termns_and_condition_path %></li>
+		<li class="list-group-item"><%= link_to t("privacy"), privacy_policy_path %></li>
+
 </ul>
 
 <ul class="list-group">
-<li class="list-group-item active">Tools</li>
-<li class="list-group-item"><a href="/help">Join on Facebook</a></li>
-<li class="list-group-item"><a href="/help">Download the App</a></li>
+<li class="list-group-item active"><%= t("tools")%></li>
+<li class="list-group-item"><a href="/help"><%= t("join")%></a></li>
+<li class="list-group-item"><a href="/help"><%= t("download")%></a></li>
+
 </ul>
 
 <ul class="list-group">
-<li class="list-group-item active">Sell on eBuy Myammar</li>
-<li class="list-group-item"><a href="/request_products/new">Sell your items</a></li>
+<li class="list-group-item active"><%= t("sell_on")%></li>
+<li class="list-group-item"><%= link_to t("sell_your"), new_request_product_path %><br/></li>
 </ul>
 
 	
 <div class="col-xs-12">
-			     <a href="/pc_version"> View on Mobile version </a><br/><br/><br/>
+			     <a href="/pc_version"> View on Desktop version </a><br/><br/><br/>
 </div>
 
 

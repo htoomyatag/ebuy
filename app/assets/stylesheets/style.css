@@ -15,6 +15,11 @@ overflow-x: hidden;
 }
 
 
+#mysubmenucolor{
+	color: white;
+}
+
+
 #homepg_product{
 	height: 150px;
 	width: 200px;
@@ -73,8 +78,8 @@ overflow-x: hidden;
 #menulink {
 
 
-		color: white;
-	font-size: 9px;
+    color: white;
+	font-size: 14px;
 	
 
 

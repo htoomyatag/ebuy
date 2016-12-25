@@ -25,7 +25,9 @@
 			</span>
 
 			  <a class="navbar-brand" href="#">
-				<span class="nav_text">Language</span>
+				<span class="nav_text">
+				<%= t('language') %>
+				</span>
               </a>
 
 
@@ -38,7 +40,7 @@
             </a>
 
               <a class="navbar-brand" href="#">
-				<span class="nav_text">Cart</span>
+				<span class="nav_text"><%= t('cart') %></span>
               </a>
 
             <a class="navbar-brand" href="/cart_item?cart_id=<%= session[:cart_id] %>">
@@ -59,7 +61,7 @@
 	      				 <ul class="nav navbar-nav">
 	    	<!-- authentic brand zone -->
 
-	    	<li id="all_categories"><a id="themenulink"> <%= t("all_categories")%> </a></li>
+	    	
 	     	
 	      	<li class="dropdown">
 
