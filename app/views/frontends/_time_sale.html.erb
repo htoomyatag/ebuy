@@ -10,8 +10,9 @@
               <div class="item active">
 
                   <div class="col-md-6">
-                      
+                       <a href="/product_info/<%= @time_sale_firsts.id %>">
                         <%= image_tag @time_sale_firsts.avatar1.url(:medium), :id=>"time_sale_img" %>
+                       </a>
                
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
@@ -30,7 +31,9 @@
               <% if !@time_sale_seconds.nil? %>
               <div class="item">
                   <div class="col-md-6">
+                   <a href="/product_info/<%= @time_sale_seconds.id %>">
                         <%= image_tag @time_sale_seconds.avatar1.url(:medium), :id=>"time_sale_img" %>
+                  </a>
                    
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
@@ -50,9 +53,9 @@
               <% if !@time_sale_thirds.nil? %>
               <div class="item">
                   <div class="col-md-6">
-                     
+                      <a href="/product_info/<%= @time_sale_thirds.id %>">
                           <%= image_tag "avatar_product.png", :id =>"time_sale_img" %>
-               
+                      </a>
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
                        <a href="/product_info/<%= @time_sale_thirds.id %>">           
@@ -87,8 +90,9 @@
            <% if !@time_sale_fourths.nil? %>
               <div class="item active">
                   <div class="col-md-6">
-
+                       <a href="/product_info/<%= @time_sale_fourths.id %>">
                         <%= image_tag @time_sale_fourths.avatar1.url(:medium), :id=>"time_sale_img" %>
+                      </a>
                    
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
@@ -107,8 +111,9 @@
               <% if !@time_sale_fifths.nil? %>
               <div class="item">
                   <div class="col-md-6">
-
+                     <a href="/product_info/<%= @time_sale_fifths.id %>">
                         <%= image_tag @time_sale_fifths.avatar1.url(:medium), :id=>"time_sale_img" %>
+                      </a>
                     
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
@@ -127,9 +132,9 @@
               <% if !@time_sale_sixths.nil? %>
               <div class="item">
                   <div class="col-md-6">
-
+                     <a href="/product_info/<%= @time_sale_sixths.id %>">
                         <%= image_tag @time_sale_sixths.avatar1.url(:medium), :id=>"time_sale_img" %>
-                   
+                      </a>
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
                        <a href="/product_info/<%= @time_sale_sixths.id %>">           
@@ -149,6 +154,7 @@
 
 
 </div>
+
 
 
 

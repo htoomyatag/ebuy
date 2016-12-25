@@ -21,10 +21,16 @@
 
 #small_slide {
     
-    width:250px;
-    height:180px;
+    width:210px;
+    height:150px;
+
+
 
 }
+
+
+
+
 
 
 
@@ -135,8 +141,8 @@
 
 
 #receive_myimg{
-	height: 405px;
-	width: 380px;
+	height: 300px;
+	width: 300px;
 	position: relative;
 	left: 35px;
 	background-color: #e5e5e5;
