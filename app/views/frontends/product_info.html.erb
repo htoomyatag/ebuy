@@ -212,7 +212,9 @@
 					    	 <button type="button" class="btn btn-danger" id="btn_buy_now_desktop">Buy Now</button>
 					    </td>
 					    <td>
-					    	 <button type="button" class="btn btn-primary" id="btn_add_to_cart_desktop">Add to Cart</button>
+					    	 <button type="button" class="btn btn-primary" id="btn_add_to_cart_desktop">
+					    	  <%= image_tag "cart_icon.png", :id => "app_icon" %> &nbsp;Add to Cart
+					    	 </button>
 					    </td> 
 					    
 				
@@ -227,15 +229,19 @@
 				  <% end %>
 
 			    <td>
-			    	 <%= button_to 'Add to Wish list' , add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id),:class =>"btn btn-info", :id=>"btn_checkout" %>
 
-
+			    	 <%= link_to add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id), :class =>"btn btn-info", :id=>"btn_checkout", :method => :post do %>
+						  <%= image_tag("love_icon.png", :id => "app_icon") %>
+						  <span>Add to Wishlist</span>
+						<% end %>
 
 
 			    </td>
 			    <td>
 
-			    	  <a href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" id="btn_checkout" class="btn btn-default" target="_blank"> Share this item</a>
+			    	  <a href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" id="btn_checkout" class="btn btn-default" target="_blank"> 
+			    	  <%= image_tag "share.png", :id => "app_icon" %> &nbsp;
+			    	   Share this item</a>
 			    	  
 
 			    	
