@@ -20,6 +20,13 @@ overflow-x: hidden;
 }
 
 
+#english_flag{
+	border:1px solid #021a40;
+	height: 20px;
+	width: 30px;
+}
+
+
 #homepg_product{
 	height: 150px;
 	width: 200px;
@@ -329,12 +336,19 @@ overflow-x: hidden;
 	color: white;
 	font-size: 18px;
 	text-align: center;
+    border-style: none;
 }
+
+
+
 
 
 #tab_detail{
 	background-color: #0070c0;
 	width: 24%;
+	 margin-right: -15px;
+	 padding-bottom: -15px;
+	 height: 45px;
 }
 
 
@@ -348,6 +362,17 @@ overflow-x: hidden;
 li .active {
 	background-color: red;
 }
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: #555;
+  cursor: default;
+  background-color: #eee;
+  border: transparent;
+  border-bottom-color: transparent;
+
+}
+
 
 
 #search_parm{
