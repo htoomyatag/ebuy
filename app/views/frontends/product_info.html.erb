@@ -64,9 +64,10 @@
 
    				<%  if buyer_signed_in?  %>
 
-								<span id="chat_user"> 
-							       <%= image_tag "chat.png" %>  with seller
-							   </span>
+					<p id="chat_user"> 
+						<%= image_tag "chat.png" %>
+						chat  with seller
+					</p>
 
 			    <%  else  %>
 			    <%  end  %>	
@@ -268,19 +269,19 @@
 		  <div>
 
 			  <ul class="nav nav-tabs" role="tablist">
-			    <li role="presentation" class="active" id="tab_detail"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="detail_tab_title" > Product Detail</a></li>
+			    <li role="presentation" class="active" id="tab_detail"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="detail_tab_title" > <%= t("Product_Detail")%> </a></li>
 
 			     <li class="detail_tab_titlea">&nbsp;</li>
 
-			    <li role="presentation" id="tab_detail"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="detail_tab_title"> Customer Review </a></li>
+			    <li role="presentation" id="tab_detail"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="detail_tab_title"> <%= t("Customer_Review")%> </a></li>
 
 			    <li class="detail_tab_titlea">&nbsp;</li>
 
-			    <li role="presentation" id="tab_detail"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="detail_tab_title"> Question & Answer</a></li>
+			    <li role="presentation" id="tab_detail"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="detail_tab_title"> <%= t("Question_&_Answer") %></a></li>
 
 			     <li class="detail_tab_titlea">&nbsp;</li>
 
-			    <li role="presentation" id="tab_detail"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"class="detail_tab_title"  style="width:105%;"> Notice & Policy</a></li>
+			    <li role="presentation" id="tab_detail"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"class="detail_tab_title"  style="width:105%;"><%= t("Notice_&_Policy") %> </a></li>
 			  </ul>
 
 			  <!-- Tab panes -->
