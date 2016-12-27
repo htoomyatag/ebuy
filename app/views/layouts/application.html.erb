@@ -154,6 +154,9 @@
 	           
 
 
+	<% if request.original_url.include? "/en" %>
+
+
 		            <li id="navmenu">
 						<%= link_to request.original_url.gsub("mm","en"), id:"menulink" do %>
 							<%= t("language")%>
@@ -166,6 +169,27 @@
 							<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
 						<% end %>
 					</li>
+
+  	<% else %>
+
+
+  			         <li id="navmenu">
+						<%= link_to "/en", id:"menulink" do %>
+							<%= t("language")%>
+							<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag"  %>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to "/mm", id:"menulink" do %>
+						
+							<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
+						<% end %>
+					</li>
+
+
+
+
+  	<% end %>
 
 	 
 
