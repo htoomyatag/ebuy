@@ -90,28 +90,8 @@
       <select id="myProductMobileQty">  
       </select>
 </p>
-<hr/>
-
-<a href="/product_detail_mobiview/<%= @product.id %>" class="btn btn-primary btn-lg btn-block" role="button">Product Detail</a>
-
-<a href="/customer_review_mobiview/<%= @product.id %>" class="btn btn-primary btn-lg btn-block" role="button">
-  Customer Review
-</a>
 
 
-<a href="/productqanda_mobiview/<%= @product.id %>" class="btn btn-primary btn-lg btn-block" role="button">
-  Question & Answer
-</a>
-
-<a href="/notice_mobiview/<%= @product.id %>" class="btn btn-primary btn-lg btn-block" role="button">
-  Notice & Policy
-</a>
-
-
-
-</div>
-
-<br/>
 <div class="row">
 
 
@@ -168,6 +148,50 @@
 
   
 </div>
+
+
+<hr/>
+
+
+
+<br/><br/>
+    <h4 style="color:#337ab7;"> Description of Product</h4><hr/>
+    <center>
+         <%= render 'product_detail_mobiview' %>
+    </center>
+ 
+ 
+    <br/><br/>
+    <h4 style="color:#337ab7;"> Customer Review
+    <span style="float:right;font-size:14px;font-style:italic;" id="more_customer_review_btn"> More customer reviews</span>
+    </h4><hr/>
+
+ 
+    <%= render 'customer_review_mobiview' %>
+
+
+<br/><br/>
+    <h4 style="color:#337ab7;"> Question & Answer </h4><hr/>
+
+    <%= render 'productqanda_mobiview' %>
+ 
+
+<br/><br/>
+    <h4 style="color:#337ab7;">   Notice & Policy </h4><hr/>
+    <center>
+    <%= render 'notice_mobiview' %>
+    </center>
+
+</div>
+
+
+
+
+
+</div>
+
+<br/>
+
 
 
 
@@ -359,3 +383,31 @@ for (var i = min; i<=max; i++){
 
 </script>
 
+
+
+
+
+            <script type="text/javascript">
+
+                $("#more_customer_review_btn").click(function(){
+
+                      $("#customer_review").hide();
+                      $("#more_customer_review").show();
+
+
+                  });
+
+
+                $("#btn_feedback").click(function(){
+
+                     location.reload();
+
+
+                  });
+
+
+
+
+                
+
+            </script>

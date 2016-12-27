@@ -17,7 +17,7 @@
 
    <% if Time.current.utc.localtime.between?(@start_day,@end_day) %>
 		<h4 class="detailpage_link">
-		  	Home > <%= @product.product_category %> > <%= @product.short_title %> > eBuy00<%= @product.id %> 
+		  	Home > <%= @product.product_category %> > <%= @product.short_title %> > <%= @product.id %> 
 		</h4><br/>
 	
 	<% else %>
@@ -66,7 +66,7 @@
 
 					<p id="chat_user"> 
 						<%= image_tag "chat.png" %>
-						chat  with seller
+						Chat  With Seller
 					</p>
 
 			    <%  else  %>
@@ -106,15 +106,15 @@
 			    <td style="width:60%"> <span class="mydetail_title"><%= t("Actual_Price")%></span></td>
 			    <td > <span class="mydetail_title"> 
 			    	<% round_up(@product.actual_price.to_i * @currency_exchange.to_i)  %>
-                    <%= $product_price %> Ks
+                    <strike><%= $product_price %> Ks </strike>
 
 			     </span></td> 
 			  </tr>
 			  <tr>
-			    <td style="width:60%"> <%= t("Offer_Price")%></td>
+			    <td style="width:60%"><span style="color:#d9534f;"> <%= t("Offer_Price")%> </span></td>
 			    <td> 
 			    	<% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
-                    <%= $product_price %> Ks
+                    <span style="color:#d9534f;"> <%= $product_price %> Ks</span>
 
 			    </td> 
 			  </tr>
@@ -210,11 +210,12 @@
 			  
 			     <% if Time.current.utc.localtime.between?(@start_day,@end_day) %>
 
-					    	 <button type="button" class="btn btn-danger" id="btn_buy_now_desktop">Buy Now</button>
+					    	 <button type="button" class="btn btn-danger" id="btn_buy_now_desktop"><%= t("BuyNow")%></button>
 					    </td>
 					    <td>
 					    	 <button type="button" class="btn btn-primary" id="btn_add_to_cart_desktop">
-					    	  <%= image_tag "cart_icon.png", :id => "app_icon" %> &nbsp;Add to Cart
+					    	  <%= image_tag "cart_icon.png", :id => "app_icon" %> &nbsp;
+					    	  <%= t("AddtoCart")%>
 					    	 </button>
 					    </td> 
 					    
@@ -233,7 +234,7 @@
 
 			    	 <%= link_to add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id), :class =>"btn btn-info", :id=>"btn_checkout", :method => :post do %>
 						  <%= image_tag("love_icon.png", :id => "app_icon") %>
-						  <span>Add to Wishlist</span>
+						  <span><%= t("AddtoWishlist")%></span>
 						<% end %>
 
 
@@ -242,7 +243,7 @@
 
 			    	  <a href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" id="btn_checkout" class="btn btn-default" target="_blank"> 
 			    	  <%= image_tag "share.png", :id => "app_icon" %> &nbsp;
-			    	   Share this item</a>
+			    	   <%= t("Sharethisitem")%></a>
 			    	  
 
 			    	
@@ -290,7 +291,7 @@
 			   
 			   		 <div class="col-md-12"> 
 
-			   		 	 <div class="col-md-6"> 
+			   		 	
 			   		 	 <br/><br/>
 			   		 	  <% if !@product.specsq.nil? or !@product.specsa.nil? %>
 			   		 	 <table class="table table-bordered">
@@ -315,17 +316,29 @@
 							 <% end %>
 
 							 <% if !@product.description.nil? %>
-						    	<%= @product.description.html_safe %>
+							 <center>
+							 	<%= @product.description.html_safe %>
+							 </center>
+							
+						    	
 						    <% end %>
 
 
 			   		 	 		    
 				
-			   		 	 </div>
+			   		 
 
-			   		 	  <div class="col-md-6"> 
 
-			   		 	  		 <% if !@product.product_video.nil? %>
+			   		 	  	
+			   		 	
+
+
+			   		 </div>
+
+			   		<div class="col-md-12"> 
+
+
+			   		 	 <% if !@product.product_video.nil? %>
 
 							    	<center>
 							    			<br/>
@@ -336,10 +349,8 @@
 
 							     <% end %>
 
-			   		 	 </div>
+				    </div>
 
-
-			   		 </div>
 				
 
 

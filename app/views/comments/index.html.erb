@@ -1,31 +1,39 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Comments</h1>
+<!--  -->
 
-<table>
-  <thead>
-    <tr>
-      <th>Product name</th>
-      <th>Buyer comment</th>
-      <th>Buyer</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.product_name %></td>
-        <td><%= comment.buyer_comment %></td>
-        <td><%= comment.buyer_id %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="col-md-12">
+    <h3>Comments listings
+    </h3><hr/>
 
-<br>
+    <table class="table">
+          <thead>
+            <tr>
+                <th>Product name</th>
+                <th>Buyer comment</th>
+                <th>Buyer</th>
+                <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<%= link_to 'New Comment', new_comment_path %>
+          <tbody>
+           <% @comments.each do |comment| %>
+              <tr>
+                <td><%= comment.product_name %></td>
+                <td><%= comment.buyer_comment %></td>
+                <td><%= comment.buyer.buyer_name %></td>
+                <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+    </table>
+
+    <br>
+    </div>
+
+   
+
+    </div>
+</div>

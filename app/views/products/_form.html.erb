@@ -17,9 +17,11 @@
 
 
   <div class="col-md-12">
-   <label>Product Number</label><br>
-     <div class="field">
-       <%= f.text_field :id, :class => "form-control", :value =>  @myproduct_number, :disabled => true %>
+   <label>Product Number: <%= @myproduct_number %>
+   </label><br>
+
+     <div class="field" style="display:none;">
+       <%= f.text_field :id, :class => "form-control", :value =>  @myproduct_number %>
     </div>
     <br><br>
   </div>
@@ -168,10 +170,7 @@
         <button class="ql-image"></button>
         <button class="ql-direction"></button>
 
-
-
-         <select class="ql-align">
-            
+        <select class="ql-align">
               <option value="center"></option>
               <option value="right"></option>
               <option value="justify"></option>

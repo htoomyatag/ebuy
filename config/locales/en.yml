@@ -729,7 +729,7 @@ en:
   Delivery_Rate: "Delivery Rate"
   Estimated_Delivery: "Delivery"
   Delivery_Service: "Delivery Service"
-  Product_Color: "Product"
+  Product_Color: "Product Color"
   Product_Size: "Product Size"
   Product_Model: "Product Model"
   Order Quantity: "Order Quantity"
@@ -737,7 +737,13 @@ en:
   Customer_Review: "Customer Review"
   Question_&_Answer: "Question & Answer"
   Notice_&_Policy: "Notice & Policy"
-
+  BuyNow: "Buy Now"
+  AddtoCart: "Add to Cart"
+  AddtoWishlist: "Add to Wish list"
+  Sharethisitem:  "Share this item"
+  RelatedItem: "Related Item"
+  RecommendedItem: "Recommended Item"
+  CompanyRegistrationNumber: "Copy right reserved by eBuy Myanmar Co.Ltd. Company Registration Number 2345/2016-2017(YK)"
 
 
 

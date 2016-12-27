@@ -1,7 +1,7 @@
 
 
 mm:
-  view_cart: "ေငြရွင္းရန္"
+  view_cart: "ေစ်းျခင္း"
   hello: "Hello world"
   welcome: "အကူအညီေပးေရး ဌာနမွ ၾကိဳဆိုပါတယ္။"
   customer_service: "ဝန္ေဆာင္မႈ"
@@ -25,7 +25,7 @@ mm:
   payment: "ေငြေပးေခ်မႈ"
   shipping_delivery: "သယ္ယူပို႕ေဆာင္ေရး"
   cusstomer_feedback: "အၾကံျပဳရန္"
-  about_ebuy: "အီးဘိုင္း အေၾကာင္း"
+  about_ebuy: "eBuy Myanmar အေၾကာင္း"
   career: "အလုပ္အကိုင္ အခြင့္အလမ္း"
   termns: "စည္းကမ္းသက္မွတ္ခ်က္မ်ား"
   privacy: "ကာကြယ္မႉ ေပၚလဆီ"
@@ -723,7 +723,7 @@ mm:
   Actual_Price: "မူလေရာင္းေစ်း"
   Offer_Price: "ကမ္းလွမ္းေစ်း"
   Shipping_From: "တင္သြင္းမည့္ ႏိုင္ငံ (မွ)"
-  Delivery_Rate: "သယ္ယူစာရိတ္"
+  Delivery_Rate: "သယ္ယူစရိတ္"
   Estimated_Delivery: "ခန္႕မွန္းပို႕ေဆာင္ရန္ၾကာခ်ိန္"
   Delivery_Service: "သယ္ယူပို႕ေဆာင္ေရး ဝန္ေဆာင္မႉ"
   Product_Color: "ကုန္ပစၥည္း အေရာင္"
@@ -734,3 +734,10 @@ mm:
   Customer_Review: "ဝယ္ယူသူ၏သုံးသပ္ခ်က္"
   Question_&_Answer: "အေမးအေျဖ"
   Notice_&_Policy: "စည္းကမ္းသတ္မွတ္ခ်က္မ်ား"
+  BuyNow: "ယခုဝယ္ယူမည္"
+  AddtoCart: "ေစ်းျခင္းထဲသို႕ထည့္မည္"
+  AddtoWishlist: "ၾကိဳက္ႏွစ္သက္ေသာ စာရင္းသို႕ထည့္မည္"
+  Sharethisitem:  "မွ်ေဝမည္"
+  RelatedItem: "ဆက္စပ္ကုန္ပစၥည္းမ်ား"
+  RecommendedItem: "အၾကံျပဳထားေသာ ကုန္ပစၥည္းမ်ား"
+  CompanyRegistrationNumber: "Copy right reserved by eBuy Myanmar Co.Ltd.  ကုမၸဏီ မွတ္ပုံတင္အမွတ္ ၂၃၄၅/၂၀၁၆-၂၀၁၇ ( ရ က )"

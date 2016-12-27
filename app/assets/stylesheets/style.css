@@ -430,8 +430,9 @@ li .active {
 
 
 #buyer_comment{
-	font-size: 16px;
+	font-size: 14px;
 	padding-top: 10px;
+	color: gray;
 }
 
 
@@ -541,8 +542,8 @@ background-color: #0472c1;
 #chat_user{
 
 	position: relative;
-	left: 130px;
-	font-size: 14px;
+	left: 135px;
+	font-size: 13px;
 	font-weight: bold;
 	top: 10px;
 	

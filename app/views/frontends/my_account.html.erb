@@ -11,7 +11,9 @@
   <div class="col-md-3">
   		
   		<div class="panel panel-primary">
-		  <div class="panel-heading"> My information</div>
+		  <div class="panel-heading"> My information
+		  <%= t("Product_Color")%>
+		  </div>
 		  <div class="panel-body">
 		  	  <%= link_to 'View Account info', my_personal_info_path(:id => current_buyer.id) %>
 		  </div>

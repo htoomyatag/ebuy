@@ -340,7 +340,8 @@ def chat_to_seller
 
 
       @comment = Comment.new
-      @comments = Comment.where(:product_id => @product.id)
+      @comments = Comment.where(:product_id => @product.id).last(3)
+      @allcomments = Comment.where(:product_id => @product.id)
 
 
   end

@@ -53,6 +53,11 @@ class ProductsController < ApplicationController
   def edit
 
 
+  
+    @myproduct_number =  @product.id
+ 
+
+
   if !@product.specsq.nil?
 
     @my_product_specsq = @product.specsq.to_s

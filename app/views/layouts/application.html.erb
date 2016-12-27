@@ -151,19 +151,30 @@
 			
           </ul>
           <ul class="nav navbar-nav navbar-right">
-	            <li id="navmenu">
-					<%= link_to "/en", id:"menulink" do %>
-						<%= t("language")%>
-						<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag"  %>
-					<% end %>
-				</li>
-				<li>
+	           
 
-					<%= link_to "/mm", id:"menulink" do %>
-					
-						<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
-					<% end %>
-				</li>
+
+		            <li id="navmenu">
+						<%= link_to request.original_url.gsub("mm","en"), id:"menulink" do %>
+							<%= t("language")%>
+							<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag"  %>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to request.original_url.gsub("en","mm"), id:"menulink" do %>
+						
+							<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
+						<% end %>
+					</li>
+
+	 
+
+
+	          
+
+
+
+
 			</ul>
           
         </div><!-- /.navbar-collapse -->
@@ -279,7 +290,8 @@
 			     <a href=""> wwww.eBuymyanmar.com </a>
 			  
 			      <span id="copy_right">
-			      	Copy right reserved by eBuy Myanmar Co.Ltd. Company Registration Number 2345/2016-2017(YK)
+			        <%= t("CompanyRegistrationNumber")%>
+			      	
 
 			      </span>
 

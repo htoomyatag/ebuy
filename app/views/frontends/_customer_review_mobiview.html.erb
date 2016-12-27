@@ -1,13 +1,39 @@
-
+<div id="customer_review">
 			    		<% @comments.each do |comment| %>
+			    		      <p>
+						        <span style="text-align:left;color:#0472c1;"><%= comment.buyer.buyer_name %> </span>
+						       	<span style="float:right;font-size:14px;"><%= comment.created_at.strftime("%Y/%m/%d") %></span>
+						      </p>
+						    
+						
 						     <p id="buyer_comment"> 
 						     	<%= comment.buyer_comment %>
 						      </p>
-						      <p>
-						      (<%= comment.buyer.buyer_name %>) 
-						      </p>
+						      <hr/>
+						     
 
 						<% end %>
+</div>
+
+
+<div id="more_customer_review" style="display:none;">
+						<% @allcomments.each do |comment| %>
+			    		      <p>
+						        <span style="text-align:left;color:#0472c1;"><%= comment.buyer.buyer_name %> </span>
+						       	<span style="float:right;font-size:14px;"><%= comment.created_at.strftime("%Y/%m/%d") %></span>
+						      </p>
+						    
+						
+						     <p id="buyer_comment"> 
+						     	<%= comment.buyer_comment %>
+						      </p>
+						      <hr/>
+						     
+
+						<% end %>
+</div>
+
+
 						<div id="the_feed"> </div>
 
 
@@ -48,3 +74,6 @@
 						
 
 						<% end %>
+
+
+
