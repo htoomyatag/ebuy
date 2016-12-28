@@ -5,7 +5,8 @@
 <div class="container"> 
 
 <h4 style="text-align:center;"> 
-eBuy checkout list
+
+  <%= t("eBuy_checkout_list")%>
 
 
  </h4>
@@ -48,14 +49,14 @@ eBuy checkout list
 
       <div class="col-md-6">
   
-        <h4> Personal Information</h4><hr>
+        <h4>   <%= t("Personal_Information")%> </h4><hr>
       <div class="field">
-        <p> Your Name</p>
+        <p> <%= t("Your_Name") %></p>
         <input class="form-control" type="text" name="customer_name" id="customer_name">
 
       </div><br>
       <div class="field">
-        <p>Your Email</p>
+        <p><%= t("Your_Email") %></p>
         <input class="form-control" type="text" name="customer_email" id="customer_email">
       </div><br>
      
@@ -69,25 +70,25 @@ eBuy checkout list
 
    <div class="col-md-6">
   
-        <h4> Delivery Address</h4><hr>
+        <h4><%= t("Delivery_Address") %></h4><hr>
       <div class="field">
-         <p>Phone</p>
+         <p><%= t("Phone") %></p>
          <input class="form-control" type="text" name="customer_phone" id="customer_phone">
       </div><br>
      
       <div class="field">
-        <p> House Number, Street</p>
+        <p> <%= t("House Number, Street") %></p>
          <input class="form-control" type="text" name="customer_house" id="customer_house">
       </div><br>
 
        <div class="field">
-        <p>Township</p>
+        <p><%= t("Township") %></p>
         <input class="form-control" type="text" name="customer_township" id="customer_township">
       </div><br>
 
 
        <div class="field">
-        <p>City</p>
+        <p><%= t("City") %></p>
         <input class="form-control" type="text" name="customer_city" id="customer_city">
       </div><br>
 
@@ -100,15 +101,15 @@ eBuy checkout list
 
    <div class="col-md-12">
   <br/><br/>
-    Total Price: <%= (@cart.total_price) %> Ks
+    <%= t("Total_Price") %>: <%= (@cart.total_price) %> Ks
     <input type="button" id="opener" class="btn btn-small" value="Get Coupons"> 
     <br/> <br/>
 
-    Coupon Code:
+    <%= t("Coupon_Code") %>:
     <input id="coupon_code"   >
       <input type="button" id="send_coupon" class="btn btn-default" value="Use"> 
     <br/> <br/>
-    Final Price:
+      <%= t("Final Price") %>:
     <input id="total_price" name="total_price" placeholder="checkout_price">
 
 
@@ -138,11 +139,11 @@ eBuy checkout list
    <table class="table table-hover">
       <thead>
         <tr>
-          <th>Coupon</th>
-          <th>Percentage</th>
-          <th>limit</th>
-          <th>Expire on</th>
-          <th>Action</th>
+          <th> <%= t("Coupon") %></th>
+          <th> <%= t("Percentage") %></th>
+          <th> <%= t("Limit") %></th>
+          <th> <%= t("Expire_on") %></th>
+          <th> <%= t("Action") %></th>
         </tr>
       </thead>
       <tbody>

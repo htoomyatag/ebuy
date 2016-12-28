@@ -35,8 +35,9 @@ en:
   about_us: "About Us"
   language: "Language"
   address_1: "No. 221/59, 1 st /2 nd /3 rd Floor, Shwe Wah Myay Street, Baho Middle Road,"
-  phone1: "Tel : 09 779825801,"
-  phone2: "09779825802"
+  phone1: "09 779825801,"
+  phone2: "09 779825802"
+  tel: "Tel:"
   email: "email"
   address_2: "Mayangone Township,Yangon, Myanmar"
   website: "website"
@@ -716,7 +717,7 @@ en:
   SafetyEquipmentsandAccessories: "Safety Equipments & Accessories"
   OEMProducts:  "OEM Products"
   previous_menus: "previous menus"
-  more_menus: "more menu"
+  more_menus: "More menu"
   career_opportunity: "Career Opportunities"
   career_desc: "Currently, there is no career opportunity available."
   bank_account_for_bank_transfer:
@@ -745,7 +746,7 @@ en:
   RelatedItem: "Related Item"
   RecommendedItem: "Recommended Item"
   CompanyRegistrationNumber: "Copy right reserved by eBuy Myanmar Co.Ltd. Company Registration Number 2345/2016-2017(YK)"
-
+  CompanyRegistrationNumberMobile: "Company Registration Number 2345/2016-2017(YK)"
 
 
 

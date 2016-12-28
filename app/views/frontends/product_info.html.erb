@@ -103,7 +103,7 @@
 
 			  
 			  <tr>
-			    <td style="width:60%"> <span class="mydetail_title"><%= t("Actual_Price")%></span></td>
+			    <td style="width:60%"> <span class="mydetail_title"><%= t("Actual_Price")%>:</span></td>
 			    <td > <span class="mydetail_title"> 
 			    	<% round_up(@product.actual_price.to_i * @currency_exchange.to_i)  %>
                     <strike><%= $product_price %> Ks </strike>
@@ -111,7 +111,7 @@
 			     </span></td> 
 			  </tr>
 			  <tr>
-			    <td style="width:60%"><span style="color:#d9534f;"> <%= t("Offer_Price")%> </span></td>
+			    <td style="width:60%"><span style="color:#d9534f;"> <%= t("Offer_Price")%>:</span></td>
 			    <td> 
 			    	<% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
                     <span style="color:#d9534f;"> <%= $product_price %> Ks</span>
@@ -124,23 +124,23 @@
 		   <table style="width:100%">
 			  
 			  <tr>
-			    <td style="width:60%"> <span class="mydetail_title"><%= t("Shipping_From")%></span></td>
+			    <td style="width:60%"> <span class="mydetail_title"><%= t("Shipping_From")%>:</span></td>
 			    <td> <span class="mydetail_title"> <%= @product.ship_from %> </span></td> 
 			  </tr>
 			  <tr>
-			    <td style="width:60%"><span class="mydetail_title"><%= t("Delivery_Rate")%> </span></td>
+			    <td style="width:60%"><span class="mydetail_title"><%= t("Delivery_Rate")%>:</span></td>
 			    <td> <span class="mydetail_title">  <%= @product.delivery_rate %></span></td> 
 			  </tr>
 
 			   <tr>
-			    <td style="width:60%"> <span class="mydetail_title"><%= t("Estimated_Delivery")%> </span></td>
+			    <td style="width:60%"> <span class="mydetail_title"><%= t("Estimated_Delivery")%>:</span></td>
 			    <td> <span class="mydetail_title"> <%= @product.delivery_time %></span></td> 
 			  </tr>
 
 			  <tr>
-			    <td style="width:60%"> <span class="mydetail_title"><%= t("Delivery_Service")%> </span></td>
+			    <td style="width:60%"> <span class="mydetail_title"><%= t("Delivery_Service")%>:</span></td>
 			    <td> <span class="mydetail_title"> 
-			    		<select id="delivery_method">
+			    		<select id="delivery_method" >
 			    		  <option>Choose</option>
 						  <option value="pick_up">Pick up</option>
 						  <option value="ebuy_delivery">eBuy Delivery</option>
@@ -156,7 +156,7 @@
 
 
 			  <tr>
-			    <td style="width:60%"> <span class="mydetail_title"><%= t("Product_Color")%> </span></td>
+			    <td style="width:60%"> <span class="mydetail_title"><%= t("Product_Color")%>:</span></td>
 			    <td> 
 			    <span class="mydetail_title" id="myproduct_color">
 			  
@@ -165,7 +165,7 @@
 
 
 			   <tr>
-			    <td style="width:60%"> <span class="mydetail_title"><%= t("Product_Size")%></span></td>
+			    <td style="width:60%"> <span class="mydetail_title"><%= t("Product_Size")%>:</span></td>
 			    <td > <span class="mydetail_title" id="myproduct_size" > 
 			  
 			    </span></td> 
@@ -173,7 +173,7 @@
 
 
 			   <tr>
-			    <td style="width:60%"> <span class="mydetail_title"><%= t("Product_Model")%> </span></td>
+			    <td style="width:60%"> <span class="mydetail_title"><%= t("Product_Model")%>:</span></td>
 			    <td> 
 			    <span class="mydetail_title" id="myproduct_model">
 			  
@@ -182,7 +182,7 @@
 
 
 			   <tr>
-			    <td style="width:60%"> <span class="mydetail_title"><%= t("Order_Quantity")%></span></td>
+			    <td style="width:60%"> <span class="mydetail_title"><%= t("Order_Quantity")%>:</span></td>
 			    <td> 
 			      <select id="product_quantity">  
 			      </select>

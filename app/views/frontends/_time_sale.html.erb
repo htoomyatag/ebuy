@@ -7,23 +7,25 @@
           <div class="carousel-inner" role="listbox" id="time_sale_scroll">
 
              <% if !@time_sale_firsts.nil? %>
-              <div class="item active">
 
-                  <div class="col-md-6">
-                       <a href="/product_info/<%= @time_sale_firsts.id %>">
-                        <%= image_tag @time_sale_firsts.avatar1.url(:medium), :id=>"time_sale_img" %>
-                       </a>
-               
-                  </div>
-                  <div class="col-md-6"><br/><br/><br/>
-                       <a href="/product_info/<%= @time_sale_firsts.id %>">           
-                          <p id="product_title"><%= @time_sale_firsts.short_title %></p>
-                          <p id="product_price"><% round_up(@time_sale_firsts.discount_price.to_i * @currency_exchange.to_i)  %>
-                                        <%= $product_price %> Ks</p>
-                       </a>
-                  </div>
+             
+                  <div class="item active">
 
-              </div>
+                      <div class="col-md-6">
+                           <a href="/product_info/<%= @time_sale_firsts.id %>">
+                            <%= image_tag @time_sale_firsts.avatar1.url(:medium), :id=>"time_sale_img" %>
+                           </a>
+                   
+                      </div>
+                      <div class="col-md-6"><br/><br/><br/>
+                           <a href="/product_info/<%= @time_sale_firsts.id %>">           
+                              <p id="product_title"><%= @time_sale_firsts.short_title %></p>
+                              <p id="product_price"><% round_up(@time_sale_firsts.discount_price.to_i * @currency_exchange.to_i)  %>
+                                            <%= $product_price %> Ks</p>
+                           </a>
+                      </div>
+
+                  </div>
 
               <% end %>
 
@@ -96,10 +98,10 @@
                    
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
-                       <a href="/product_info/<%= @time_sale_firsts.id %>">           
+                       <a href="/product_info/<%= @time_sale_fourths.id %>">           
                           <p id="product_title"><%= @time_sale_fourths.short_title %></p>
                           <p id="product_price">
-                             <% round_up(@time_sale_thirds.discount_price.to_i * @currency_exchange.to_i)  %>
+                             <% round_up(@time_sale_fourths.discount_price.to_i * @currency_exchange.to_i)  %>
                                         <%= $product_price %> Ks
                           </p>
                        </a>
@@ -117,7 +119,7 @@
                     
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
-                       <a href="/product_info/<%= @time_sale_seconds.id %>">           
+                       <a href="/product_info/<%= @time_sale_fifths.id %>">           
                           <p id="product_title"><%= @time_sale_fifths.short_title %></p>
                           <p id="product_price">
                              <% round_up(@time_sale_fifths.discount_price.to_i * @currency_exchange.to_i)  %>

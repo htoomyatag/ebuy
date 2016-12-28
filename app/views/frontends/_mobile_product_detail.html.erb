@@ -43,15 +43,15 @@
 <br/>
 <p> 
     <span class="mydetail_title">Size: </span> 
-    <span class="mydetail_title" id="myproductmobile_size" > 
+    <span class="mydetail_title_size" id="myproductmobile_size" > 
     </span>
 </p>
 <p> <span class="mydetail_title">Color: </span>
-    <span class="mydetail_title" id="myproductmobile_color">
+    <span class="mydetail_title_color" id="myproductmobile_color">
     </span>
 </p>
 <p> <span class="mydetail_title">Model: </span>
-    <span class="mydetail_title" id="myproductmobile_model">    
+    <span class="mydetail_title_model" id="myproductmobile_model">    
     </span>
 </p>
 
@@ -67,7 +67,7 @@
 </p>
 <hr/> 
 
-<p> <span class="mydetail_title"> Shipping from </span>
+<p> <span class="mydetail_title"> Shipping from: </span>
  <%= @product.ship_from %>
 </p>
 <p> <span class="mydetail_title">Delivery rate: </span>
@@ -77,8 +77,8 @@
  <%= @product.delivery_time %> </p>
 
 <p><span class="mydetail_title"> Delivery service: </span>
-						<select>
-			    		  <option>Choose</option>
+						<select style="color: gray;font-weight: bold;">
+			    		  <option >Choose</option>
 						    <option>Pick up</option>
 						    <option>eBuy Delivery</option>
 						</select>
@@ -87,7 +87,7 @@
 <hr/>
 
 <p> <span class="mydetail_title">Quantity: </span>
-      <select id="myProductMobileQty">  
+      <select id="myProductMobileQty" style="color: gray;font-weight: bold;">  
       </select>
 </p>
 

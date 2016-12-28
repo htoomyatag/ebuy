@@ -15,16 +15,16 @@
 				<span style="font-size:12px;"><%= t("address_2")%></span><br/>
 				
 				<span style="font-size:12px;">
-					<a href="tel:09779825801" style="color:black;"><%= t("phone1")%></a>
-					<a href="tel:09779825802" style="color:black;"><%= t("phone2")%></a>
+					<%= t("tel")%> <a href="tel:09779825801"><%= t("phone1")%></a>
+					<a href="tel:09779825802"><%= t("phone2")%></a>
 				</span><br/>
 				
 				<span  style="font-size:12px;">
-						<%= t("email")%>
+						<%= t("email")%>:
 						<a href="">enquire@eBuymyanmar.com </a>
 				</span><br/>
 				<span  style="font-size:12px;">
-						<%= t("website")%> : 
+						<%= t("website")%>: 
 						<a href="">www.eBuymyanmar.com </a>
 				</span>
 				 
@@ -332,7 +332,7 @@
 
 
 
-<h4 id="slider_home_title">Women Fashions</h4>
+<h4 id="slider_home_title">	<%= t('WomensFashion') %></h4>
 <div class="row" style="padding:10px;">
 <% @first_women_fashion_products.each do |product| %>
 	                            
@@ -619,5 +619,8 @@
 </div>
 
 
+
+
+     
 &nbsp;Copy right reserved by eBuy Myanmar Co.Ltd.<br/> 
-&nbsp;Company Registration Number 2345/2016-2017(YK)
+&nbsp; <%= t("CompanyRegistrationNumberMobile")%>

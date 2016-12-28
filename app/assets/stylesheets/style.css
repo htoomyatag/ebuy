@@ -15,6 +15,31 @@ overflow-x: hidden;
 }
 
 
+
+#delivery_method{
+
+	background-color: white;
+  color: gray;
+  margin-top: 5px;
+  width: 75px;
+
+
+}
+
+
+#product_quantity{
+
+	background-color: white;
+  color: gray;
+  margin-top: 5px;
+  width: 50px;
+
+
+}
+
+
+
+
 #mysubmenucolor{
 	color: white;
 }
@@ -426,6 +451,12 @@ li .active {
 .mydetail_title{
 	color: #0472c1;
 
+}
+
+
+.mydetail_title_model, .mydetail_title_size, .mydetail_title_color{
+	color: gray;
+   font-weight: bold;
 }
 
 
