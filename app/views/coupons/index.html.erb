@@ -11,6 +11,7 @@
           <th>Title</th>
           <th>Expire date</th>
           <th>Limitation</th>
+          <th>Discount Percent</th>
           <th colspan="2"></th>
         </tr>
       </thead>
@@ -21,6 +22,7 @@
             <td><%= coupon.title %></td>
             <td><%= coupon.expire_date %></td>
             <td><%= coupon.limitation %></td>
+            <td><%= coupon.discount_percentage %></td>
             <td><%= link_to 'Edit', edit_coupon_path(coupon) %></td>
             <td><%= link_to 'Destroy', coupon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>

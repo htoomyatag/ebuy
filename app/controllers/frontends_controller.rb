@@ -313,7 +313,7 @@ def chat_to_seller
   
   def use_coupon
 
-    @raw_coupon = Coupon.where("title = ?", params[:title]).where("limitation > ?", params[:limitation]).pluck(:discount_percentage)
+    @raw_coupon = Coupon.where("title = ?", params[:title]).where("limitation < ?", params[:limitation]).pluck(:discount_percentage)
     render :text => {:discount_price => @raw_coupon }
 # date filter sat yay yan
   end

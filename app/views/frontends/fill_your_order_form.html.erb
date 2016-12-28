@@ -142,7 +142,7 @@
 
    <div class="col-md-12">
 		  <br/><br/>
-		    Total Price:  <% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
+		    Total Price:  <% round_up(@product.discount_price.to_i * @currency_exchange.to_i * @product_quantity.to_i)  %>
                     <%= $product_price %> Ks
 		    <input type="button" id="opener" class="btn btn-small" value="Get Coupons"> 
 		    <br/> <br/>
