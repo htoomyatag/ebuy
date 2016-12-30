@@ -105,7 +105,7 @@ class ProductsController < ApplicationController
 
 
   if !@product.description.nil?
-    @product_description = @product.description
+    @product_description = @product.description.to_s.gsub("'","")
   else
     @product_description= "<p>No data</p>"
   end

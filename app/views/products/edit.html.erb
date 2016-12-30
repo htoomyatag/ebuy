@@ -45,6 +45,20 @@
 $("#mysubmitbutton").click(function(e) {
   e.preventDefault();
 
+
+
+      var product_sizes = $('#tags_size span').text();
+      document.getElementById('product_product_size').value = product_sizes;
+
+
+
+      var product_colors = $('#tags_color span').text();
+      document.getElementById('product_product_color').value = product_colors;
+
+
+      var product_models = $('#tags_model span').text();
+      document.getElementById('product_product_model').value = product_models;
+
 // notice
 
 
@@ -79,16 +93,7 @@ $("#mysubmitbutton").click(function(e) {
 
 
 
-      var product_sizes = $('#tags_size span').text();
-      document.getElementById('product_product_size').value = product_sizes;
-
-
-      var product_colors = $('#tags_color span').text();
-      document.getElementById('product_product_color').value = product_colors;
-
-
-      var product_models = $('#tags_model span').text();
-      document.getElementById('product_product_model').value = product_models;
+    
 
 
 
@@ -314,40 +319,3 @@ for (var i = 0; i < question_array.length; i++) {
 
 </script>
 
-
-
-
-<!-- rich text paste -->
-
-<script type="text/javascript">
-  
-
-  // $(document).ready(function(){
-  //       //put yer code in here
-
-  //       ['paste'].forEach(function(event) {
-  //           document.addEventListener(event, function(e) {
-  //               e.preventDefault();
-  //               var pastedText = undefined;
-
-  //               if (window.clipboardData && window.clipboardData.getData) { // IE
-
-  //                   pastedText = window.clipboardData.getData('Text');
-
-  //               } else if (e.clipboardData && e.clipboardData.getData) {
-
-  //                   pastedText = e.clipboardData.getData('text/html');
-
-  //               }
-
-  //               $("#editor_desc").html(pastedText);
-  //               document.getElementById("editor_desc").getElementsByClassName("ql-editor ql-blank")[0].html(pastedText);
-
-            
-
-  //           });
-  //       });
-
-  //   });
-
-</script>
