@@ -1,13 +1,13 @@
 <div id="search_result_height">
   <div class="col-md-12">
-			<div class="well well-lg">
+			<div class="well well-lg" id="key_word_search">
 				<b> Keyword Search </b>
 				<span id="search_parm"><%= params[:title] %></span>
 			</div> 
   </div>
 
   <div class="col-md-12">
-		<div class="well well-lg">
+		<div class="well well-lg" id="key_word_search">
 			<p> Price Filter </p><hr/>
 				
 		
@@ -43,10 +43,23 @@
 			      <tbody>
 			        <% @products.each do |product| %>
 			          <tr>
-			            <td><%= image_tag("avatar_product") %></td>
+			            <td>
+
+			            		  <%= link_to product_info_path(product.id) do %>
+                                       <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive" %>
+                                    <% end %>
+
+
+			            </td>
 			            <td><%= product.short_title %></td>
-			            <td><%= product.actual_price %></td>
-			            <td><%= product.discount_price %></td>
+			            <td>
+			            	<% round_up(product.actual_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+			            </td>
+			            <td>
+			            	<% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+			            </td>
 			            <td><%= product.quantity %></td>
 			          </tr>
 			        <% end %>

@@ -38,6 +38,11 @@ overflow-x: hidden;
 }
 
 
+#all_cate_menu_link{
+	font-size: 14px;
+}
+
+
 
 
 #mysubmenucolor{
@@ -627,17 +632,17 @@ background-color: #0472c1;
 
 
 #first_category {
-	height: 220px;
+	height: 270px;
 }
 
 
 #second_category {
-	height: 170px;
+	height: 230px;
 }
 
 
 #third_category {
-	height: 250px;
+	height: 330px;
 }
 
 
@@ -772,6 +777,27 @@ background-color: #0472c1;
 #app_icon{
 	height: 20px;
     width: 20px;
+}
+
+
+li { cursor: pointer; cursor: hand; }
+
+
+.dropdown-menu>li>a:hover {
+	background-color: #0472c1;
+	color: white;
+}
+
+
+#mysubmit_search:hover{
+	cursor: pointer; cursor: hand;
+
+}
+
+
+#key_word_search{
+	background-color: #3498DB;
+	color: white;
 }
 
 

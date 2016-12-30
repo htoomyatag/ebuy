@@ -38,11 +38,13 @@
 	  <div class="col-md-5"></div>
 	  <div class="col-md-8" id="search_bar">
 
-	  		<%= form_tag(search_result_path, :method => "get") do %> 
+	  		<%= form_tag(search_result_path, :method => "get", :id => "search_result") do %> 
                                    
                         <div class="input-group"> 
+
                                 <%= text_field_tag :title, params[:title], :placeholder => "search for products and brands", :class=>"form-control" %>
-                               <div class="input-group-addon" type="submit"> 
+
+                               <div class="input-group-addon" type="submit" id="mysubmit_search"> 
                                		Search
                                </div>
 
@@ -58,3 +60,20 @@
  </div>
 
 
+
+
+
+<script type="text/javascript">
+
+	window.onload = function() {
+
+	    document.getElementById('mysubmit_search').onclick = function() {
+
+	
+	        document.getElementById('search_result').submit();
+	        return false;
+	    };
+	};
+
+
+</script>

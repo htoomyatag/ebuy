@@ -13,12 +13,17 @@
                        
 	       					<% @first_health_beauty.each do |product| %>
 	                            <div class="col-md-2">
-	                                <a href="/product_info/<%= product.id %>">
-                                        <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive",  :id => "homepg_product" %>
-	                            	 <p id="product_title"><%= product.short_title %></p>
-			  	                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
-   <%= $product_price %> Ks</p>
-	                            	</a>
+	                                 
+                                     <%= link_to product_info_path(product.id) do %>
+                                    
+                                       <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive", :id => "homepg_product" %>
+                                     <p id="product_title"><%= product.short_title %></p>
+                                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks</p>
+
+                                    <% end %>
+
+
 	                            </div>
 	                        <% end %>
 
@@ -33,12 +38,17 @@
 
                         	<% @second_health_beauty.each do |product| %>
 	                            <div class="col-md-2">
-	                                <a href="/product_info/<%= product.id %>">
-                                        <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive",  :id => "homepg_product" %>
-	                            	 <p id="product_title"><%= product.short_title %></p>
-			  	                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
-   <%= $product_price %> Ks</p>
-	                            	</a>
+	                                   
+                                       <%= link_to product_info_path(product.id) do %>
+                                    
+                                       <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive", :id => "homepg_product" %>
+                                     <p id="product_title"><%= product.short_title %></p>
+                                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks</p>
+
+                                    <% end %>
+
+                                    
 	                            </div>
 	                        <% end %>
                        			
