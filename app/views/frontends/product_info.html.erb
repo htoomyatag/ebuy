@@ -105,6 +105,8 @@
 			  <tr>
 			    <td style="width:60%"> <span class="mydetail_title"><%= t("Actual_Price")%>:</span></td>
 			    <td > <span class="mydetail_title"> 
+
+			    
 			    	<% round_up(@product.actual_price.to_i * @currency_exchange.to_i)  %>
                     <strike><%= $product_price %> Ks </strike>
 
@@ -113,6 +115,7 @@
 			  <tr>
 			    <td style="width:60%"><span style="color:#d9534f;"> <%= t("Offer_Price")%>:</span></td>
 			    <td> 
+			  
 			    	<% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
                     <span style="color:#d9534f;"> <%= $product_price %> Ks</span>
 
