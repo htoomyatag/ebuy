@@ -18,7 +18,7 @@
       <tbody>
          <% @cover_images.each do |cover_image| %>
           <tr>
-            <td> <%= image_tag cover_image.cover_photo.url(:medium), :id => "product_image_info" %></td>
+            <td> <%= image_tag cover_image.cover_photo.url(:medium), :id => "product_cover_info" %></td>
              <td><%= link_to 'Change', edit_cover_image_path(cover_image) %></td>
            
           </tr>

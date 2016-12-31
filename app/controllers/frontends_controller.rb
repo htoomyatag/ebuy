@@ -162,6 +162,7 @@ def chat_to_seller
               :buyer_township => params[:buyer_township],
               :buyer_city => params[:buyer_city],
               :buyer_address => params[:buyer_address],
+              :delivery_method => params[:delivery_method],
               :cart_id =>  params[:cart_id].to_i,
               :order_status => "unpaid",
               :payment_type => params[:payment_type],

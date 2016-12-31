@@ -255,8 +255,7 @@
               var cart_id = "<%= params[:cart_id] %>";
               var order_status =   "unpaid";
               var payment_type = "MPU";
-
-
+              var delivery_method = "<%= params[:product_delivery_method] %>";
               var product_name = "<%= params[:product_name] %>";
               var product_size = " <%= params[:product_size] %>";
               var product_color = "<%= params[:product_color] %>";
@@ -271,6 +270,7 @@
                        "&buyer_township="+buyer_township+
                        "&buyer_city="+buyer_city+
                        "&buyer_address="+buyer_address+
+                       "&delivery_method="+delivery_method+
                        "&cart_id="+cart_id+
                        "&product_name="+product_name+
                        "&product_size="+product_size+
@@ -310,7 +310,7 @@
               var cart_id = "<%= params[:cart_id] %>";
               var order_status =   "unpaid";
               var payment_type = "BankTransfer";
-
+              var delivery_method = "<%= params[:product_delivery_method] %>";
 
               var product_name = "<%= params[:product_name] %>";
               var product_size = " <%= params[:product_size] %>";
@@ -328,6 +328,7 @@
                        "&buyer_township="+buyer_township+
                        "&buyer_city="+buyer_city+
                        "&buyer_address="+buyer_address+
+                        "&delivery_method="+delivery_method+
                        "&cart_id="+cart_id+
                        "&product_name="+product_name+
                        "&product_size="+product_size+
@@ -366,8 +367,7 @@
               var product_quantity = "<%= params[:product_quantity] %>";
               var order_status =   "unpaid";
               var payment_type = "CashOnDelivery";
-
-
+              var delivery_method = "<%= params[:product_delivery_method] %>";
               var product_name = "<%= params[:product_name] %>";
               var product_size = " <%= params[:product_size] %>";
               var product_color = "<%= params[:product_color] %>";
@@ -382,6 +382,7 @@
                        "&buyer_township="+buyer_township+
                        "&buyer_city="+buyer_city+
                        "&buyer_address="+buyer_address+
+                         "&delivery_method="+delivery_method+
                        "&cart_id="+cart_id+
                        "&product_name="+product_name+
                        "&product_size="+product_size+
