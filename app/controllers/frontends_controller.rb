@@ -233,6 +233,7 @@ def chat_to_seller
    end
 
    #product description
+   @delivery_method = params[:delivery_method]
    @my_product_desc = params[:product_name].to_s;
    #product_price
       @total = params[:total_price];

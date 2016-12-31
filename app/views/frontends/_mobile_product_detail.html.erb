@@ -41,42 +41,43 @@
 <h3 class="mydetail_title"> <%= @product.short_title %> </h3>
 
 <br/>
-<p> 
-    <span class="mydetail_title">Size: </span> 
-    <span class="mydetail_title_size" id="myproductmobile_size" > 
-    </span>
-</p>
-<p> <span class="mydetail_title">Color: </span>
+<p> <span class="mydetail_title"><%= t("Product_Color")%>: </span>
     <span class="mydetail_title_color" id="myproductmobile_color">
     </span>
 </p>
-<p> <span class="mydetail_title">Model: </span>
+<p> 
+    <span class="mydetail_title"><%= t("Product_Size")%>: </span> 
+    <span class="mydetail_title_size" id="myproductmobile_size" > 
+    </span>
+</p>
+
+<p> <span class="mydetail_title"><%= t("Product_Model")%>: </span>
     <span class="mydetail_title_model" id="myproductmobile_model">    
     </span>
 </p>
 
 <hr/>
-<p><span class="mydetail_title"> Actual Price:</span>
+<p><span class="mydetail_title"><%= t("Actual_Price")%>:</span>
 <% round_up(@product.actual_price.to_i * @currency_exchange.to_i)  %>
  <strike><%= $product_price %> Ks</strike>
 </p>
 
-<p><span class="mydetail_title"> Offer Price:</span>
+<p><span class="mydetail_title"><%= t("Offer_Price")%>:</span>
   <% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
   <%= $product_price %> Ks
 </p>
 <hr/> 
 
-<p> <span class="mydetail_title"> Shipping from: </span>
+<p> <span class="mydetail_title"> <%= t("Shipping_From")%>: </span>
  <%= @product.ship_from %>
 </p>
-<p> <span class="mydetail_title">Delivery rate: </span>
+<p> <span class="mydetail_title"> <%= t("Delivery_Service")%>: </span>
 <%= @product.delivery_rate %></p>
 
-<p> <span class="mydetail_title">Estimate delivery:</span>
+<p> <span class="mydetail_title"><%= t("Estimated_Delivery")%>:</span>
  <%= @product.delivery_time %> </p>
 
-<p><span class="mydetail_title"> Delivery service: </span>
+<p><span class="mydetail_title"> <%= t("Delivery_Service")%>: </span>
 						<select style="color: gray;font-weight: bold;">
 			    		  <option >Choose</option>
 						    <option>Pick up</option>
@@ -86,7 +87,7 @@
 </p>
 <hr/>
 
-<p> <span class="mydetail_title">Quantity: </span>
+<p> <span class="mydetail_title"><%= t("Order_Quantity")%>: </span>
       <select id="myProductMobileQty" style="color: gray;font-weight: bold;">  
       </select>
 </p>
@@ -101,12 +102,12 @@
 
       
       <div class="col-xs-3 col-md-3">
-           <button type="button" class="btn btn-danger" id="btn_buy_now_mobile" style="width: 130%;height:50px;">Buy</button>
+           <button type="button" class="btn btn-danger" id="btn_buy_now_mobile" style="width: 130%;height:50px;"><%= t("Buy")%></button>
       </div>
       <div class="col-xs-3 col-md-3">
          <button type="button" class="btn btn-primary" id="btn_add_to_cart_mobile" style="width: 130%;height:50px;">
            <%= image_tag "cart_icon.png", :id => "app_icon" %> &nbsp;
-         Cart</button>
+         <%= t("Cart")%></button>
       </div>
          
   <% else %>
@@ -129,7 +130,7 @@
 
            <%= button_to add_to_wish_list_path(:product_name => @product.title, :product_id => @product.id), :class =>"btn btn-info", :style=>"width: 130%;height:50px;", :method => :post do %>
               <%= image_tag("love_icon.png", :id => "app_icon") %>
-              <span>Wish</span>
+              <span><%= t("Wish")%></span>
             <% end %>
 
      
@@ -137,7 +138,7 @@
     <div class="col-xs-3 col-md-3">
       <button href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" class="btn btn-default" style="width: 130%;height:50px;" target="_blank"> 
         <%= image_tag "share.png", :id => "app_icon" %> &nbsp;
-      Share</button>
+       <%= t("Share")%></button>
     </div>
 
 
@@ -155,14 +156,14 @@
 
 
 <br/><br/>
-    <h4 style="color:#337ab7;"> Description of Product</h4><hr/>
+    <h4 style="color:#337ab7;"> <%= t("Product_Detail")%></h4><hr/>
     <center>
          <%= render 'product_detail_mobiview' %>
     </center>
  
  
     <br/><br/>
-    <h4 style="color:#337ab7;"> Customer Review
+    <h4 style="color:#337ab7;"> <%= t("Customer_Review")%>
     <span style="float:right;font-size:14px;font-style:italic;" id="more_customer_review_btn"> More customer reviews</span>
     </h4><hr/>
 
@@ -171,20 +172,20 @@
 
 
 <br/><br/>
-    <h4 style="color:#337ab7;"> Question & Answer </h4><hr/>
+    <h4 style="color:#337ab7;">  <%= t("Question_&_Answer") %> </h4><hr/>
 
     <%= render 'productqanda_mobiview' %>
  
 
 <br/><br/>
-    <h4 style="color:#337ab7;">   Notice & Policy </h4><hr/>
+    <h4 style="color:#337ab7;">  <%= t("Notice_&_Policy") %> </h4><hr/>
     <center>
     <%= render 'notice_mobiview' %>
     </center>
 
 
 <br/><br/>
-    <h4 style="color:#337ab7;"> Product Video </h4><hr/>
+    <h4 style="color:#337ab7;"><%= t("product_video") %>  </h4><hr/>
 
      <% if !@product.product_video.nil? %>
 

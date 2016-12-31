@@ -22,15 +22,22 @@
                         </td>
                         <td >
                           <a href="#">
-                            <%= line_item.product.short_title %>
+                            <%= line_item.product.short_title %><br/>
+
+                            <span style="color:black;">Product Size: </span><%= line_item.product_size %><br/>
+                            <span style="color:black;">Product Color: </span><%= line_item.product_color %><br/>
+                            <span style="color:black;">Product Model: </span> <%= line_item.product_model %><br/>
+
                           </a>
                         </td>
                         <td >x <%= line_item.quantity %></td>
                         <td >
-                          <%= line_item.total_price.to_i  %>
-                   
-                        Ks
+                          <%= line_item.total_price.to_i  %> Ks
                         </td>
+                         <td >
+                          <%= line_item.delivery_method  %>
+                        </td>
+
                         <td ><%= link_to 'remove',line_item, method: :delete, data: { confirm: 'Are you sure?' } ,:class=>"btn btn-danger" %></td>
                       </tr>
          <% end %> 
@@ -53,7 +60,7 @@
       <div class="field">
         <p> <%= t("Your_Name") %></p>
         <input class="form-control" type="text" name="customer_name" id="customer_name">
-
+       
       </div><br>
       <div class="field">
         <p><%= t("Your_Email") %></p>

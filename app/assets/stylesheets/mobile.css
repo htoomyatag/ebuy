@@ -33,9 +33,16 @@
 
 
 #all_catemobile_menu_link {
+
+	color: black;
+}
+
+#all_catemobile_menu_link:hover {
 	color: white;
+	background-color: #337ab7;
 	padding-left: 30px;
 }
+
 
 
 

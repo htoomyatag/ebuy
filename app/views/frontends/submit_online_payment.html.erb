@@ -17,6 +17,7 @@
                       <th>Color</th>
                       <th>Size</th>
                       <th>Qty</th>
+                      <th>Delivery</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -37,6 +38,10 @@
                       <td>
                         <%= params[:product_quantity] %>
                       </td>
+
+                      <td>
+                        <%= params[:product_delivery_method] %>
+                      </td>
                     </tr>
              
                   </tbody>
@@ -52,6 +57,7 @@
                   <th>Color</th>
                   <th>Size</th>
                   <th>Qty</th>
+                  <th>Delivery</th>
                 </tr>
               </thead>
               <tbody>
@@ -61,7 +67,7 @@
                      <%= line_item.product.short_title %>
                   </td>
                    <td>  
-                     <%= line_item.product.product_model %>
+                     <%= line_item.product_model %>
                   </td>
                   <td>
                    <% if line_item.product_color != "Choose" %>
@@ -79,6 +85,9 @@
                   </td>
                    <td>  
                      <%= line_item.quantity %>
+                  </td>
+                   <td>  
+                     <%= line_item.delivery_method %>
                   </td>
                 </tr>
                  <% end %> 
