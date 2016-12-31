@@ -59,23 +59,23 @@
 <hr/>
 <p><span class="mydetail_title"><%= t("Actual_Price")%>:</span>
 <% round_up(@product.actual_price.to_i * @currency_exchange.to_i)  %>
- <strike><%= $product_price %> Ks</strike>
+ <span class="mydetail_title"><strike><%= $product_price %> Ks</strike></span>
 </p>
 
-<p><span class="mydetail_title"><%= t("Offer_Price")%>:</span>
+<p><span style="color:#d9534f;"><%= t("Offer_Price")%>:</span>
   <% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
-  <%= $product_price %> Ks
+  <span style="color:#d9534f;"><%= $product_price %> Ks </span>
 </p>
 <hr/> 
 
 <p> <span class="mydetail_title"> <%= t("Shipping_From")%>: </span>
- <%= @product.ship_from %>
+ <span class="mydetail_title"><%= @product.ship_from %> </span>
 </p>
 <p> <span class="mydetail_title"> <%= t("Delivery_Service")%>: </span>
 <%= @product.delivery_rate %></p>
 
 <p> <span class="mydetail_title"><%= t("Estimated_Delivery")%>:</span>
- <%= @product.delivery_time %> </p>
+<span class="mydetail_title"> <%= @product.delivery_time %></span> </p>
 
 <p><span class="mydetail_title"> <%= t("Delivery_Service")%>: </span>
 						<select style="color: gray;font-weight: bold;">
@@ -160,6 +160,33 @@
     <center>
          <%= render 'product_detail_mobiview' %>
     </center>
+
+
+    <br/><br/>
+
+     <% if !@product.specsq.nil? or !@product.specsa.nil? %>
+               <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Fields</th>
+                        <th>Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <% @product.specsq.zip ( @product.specsa).each do |question, answer| %>
+                      <tr>
+                        <td><%= question %></td>
+                        <td><%= answer %></td>
+                      </tr>
+                     <% end %>
+                     
+                     
+                    </tbody>
+              </table>
+
+    <% end %>
+
+
  
  
     <br/><br/>

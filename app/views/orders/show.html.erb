@@ -18,6 +18,7 @@
                       <th>Color</th>
                       <th>Size </th>
                       <th>Qty </th>
+                      <th>Delivery </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -37,6 +38,9 @@
                        <td>
                           <%= @order.product_quantity %>
                       </td>
+                      <td>
+                          delivery
+                      </td>
                     </tr>
              
                   </tbody>
@@ -52,6 +56,7 @@
                   <th>Color</th>
                   <th>Size</th>
                   <th>Qty</th>
+                  <th>Delivery </th>
                 </tr>
               </thead>
               <tbody>
@@ -61,16 +66,19 @@
                      <%= line_item.product.title %>
                   </td>
                   <td>
-                     <%= line_item.product.product_model %>
+                     <%= line_item.product_model %>
                   </td>
                   <td>
-                     <%= line_item.product.product_color %>
+                     <%= line_item.product_color %>
                   </td>
                   <td>
-                     <%= line_item.product.product_size %>
+                     <%= line_item.product_size %>
                   </td>
                    <td>
-                     <%= line_item.product.quantity %>
+                     <%= line_item.quantity %>
+                  </td>
+                   <td>
+                     <%= line_item.delivery_method %>
                   </td>
                 </tr>
                  <% end %> 
