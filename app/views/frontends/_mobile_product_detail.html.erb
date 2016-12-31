@@ -58,7 +58,7 @@
 <hr/>
 <p><span class="mydetail_title"> Actual Price:</span>
 <% round_up(@product.actual_price.to_i * @currency_exchange.to_i)  %>
-<%= $product_price %> Ks
+ <strike><%= $product_price %> Ks</strike>
 </p>
 
 <p><span class="mydetail_title"> Offer Price:</span>
@@ -181,6 +181,21 @@
     <center>
     <%= render 'notice_mobiview' %>
     </center>
+
+
+<br/><br/>
+    <h4 style="color:#337ab7;"> Product Video </h4><hr/>
+
+     <% if !@product.product_video.nil? %>
+
+                    <center>
+                        <br/>
+                      <iframe width="400" height="300" src="<%= "http://www.youtube.com/embed/"+@product.product_video.to_s %>">
+                      </iframe>
+                      </br/>
+                    </center>
+
+            <% end %>
 
 </div>
 

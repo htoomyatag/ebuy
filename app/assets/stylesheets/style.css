@@ -27,6 +27,20 @@ overflow-x: hidden;
 }
 
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+
+.navbar-default .navbar-toggle:hover{
+    background-color: #0472c1;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	  background-color: #0472c1;
+}
+
+
 #product_quantity{
 
 	background-color: white;
