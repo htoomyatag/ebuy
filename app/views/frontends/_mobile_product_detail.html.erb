@@ -38,7 +38,7 @@
 
 
 <div class="container"> 
-<h3 class="mydetail_title"> <%= @product.short_title %> </h3>
+<h3 class="mydetail_title" style="font-size:16px;"> <%= @product.title %> </h3>
 
 <br/>
 <p> <span class="mydetail_title"><%= t("Product_Color")%>: </span>
@@ -72,7 +72,7 @@
  <span class="mydetail_title"><%= @product.ship_from %> </span>
 </p>
 <p> <span class="mydetail_title"> <%= t("Delivery_Service")%>: </span>
-<%= @product.delivery_rate %></p>
+<span class="mydetail_title"><%= @product.delivery_rate %></span></p>
 
 <p> <span class="mydetail_title"><%= t("Estimated_Delivery")%>:</span>
 <span class="mydetail_title"> <%= @product.delivery_time %></span> </p>
@@ -158,11 +158,6 @@
 <br/><br/>
     <h4 style="color:#337ab7;"> <%= t("Product_Detail")%></h4><hr/>
     <center>
-         <%= render 'product_detail_mobiview' %>
-    </center>
-
-
-    <br/><br/>
 
      <% if !@product.specsq.nil? or !@product.specsa.nil? %>
                <table class="table table-bordered">
@@ -185,6 +180,22 @@
               </table>
 
     <% end %>
+         <%= render 'product_detail_mobiview' %>
+    </center>
+
+
+     <% if !@product.product_video.nil? %>
+
+                    <center>
+                        <br/>
+                      <iframe width="400" height="300" src="<%= "http://www.youtube.com/embed/"+@product.product_video.to_s %>">
+                      </iframe>
+                      </br/>
+                    </center>
+
+            <% end %>
+
+
 
 
  
@@ -211,19 +222,8 @@
     </center>
 
 
-<br/><br/>
-    <h4 style="color:#337ab7;"><%= t("product_video") %>  </h4><hr/>
 
-     <% if !@product.product_video.nil? %>
-
-                    <center>
-                        <br/>
-                      <iframe width="400" height="300" src="<%= "http://www.youtube.com/embed/"+@product.product_video.to_s %>">
-                      </iframe>
-                      </br/>
-                    </center>
-
-            <% end %>
+    
 
 </div>
 

@@ -7,6 +7,7 @@
   <%= javascript_include_tag 'jquery.min.js' %>
   <%= javascript_include_tag 'jquery_ujs.js' %>
   <%= javascript_include_tag 'jquery.zoom.min.js' %>
+  <%= javascript_include_tag 'jquery.zoom.min.js' %>
   <%= javascript_include_tag 'pusher.min.js' %>
   <%= javascript_include_tag 'bootstrap.min.js' %>
   <%= javascript_include_tag 'bootstrap-submenu.min.js' %>
@@ -158,6 +159,20 @@
 
 
 		            <li id="navmenu">
+						<%= link_to request.original_url.gsub("mm","en"), id:"menulink" do %>
+							<%= t("language")%>
+							<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag"  %>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to request.original_url.gsub("en","mm"), id:"menulink" do %>
+						
+							<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
+						<% end %>
+					</li>
+	<% elsif request.original_url.include? "/mm" %>
+
+	  			 <li id="navmenu">
 						<%= link_to request.original_url.gsub("mm","en"), id:"menulink" do %>
 							<%= t("language")%>
 							<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag"  %>

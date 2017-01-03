@@ -626,13 +626,13 @@
 	
 <div class="col-xs-12">
 				<!-- for mobile -->
-			     <a href="/pc_version"> View on Desktop version </a><br/><br/><br/>
+			     <a href="/pc_version" id="for_mobile"> View on Desktop version </a><br/><br/><br/>
 </div>
 
 
 <div class="col-xs-12">
 				<!-- for desktop -->
-			     <a href="/"> View on Desktop version </a><br/><br/><br/>
+			     <a href="/" id="for_desktop"> View on Desktop version </a><br/><br/><br/>
 </div>
 
 
@@ -642,3 +642,29 @@
      
 &nbsp;Copy right reserved by eBuy Myanmar Co.Ltd.<br/> 
 &nbsp; <%= t("CompanyRegistrationNumberMobile")%>
+
+
+
+
+
+
+<script type="text/javascript">
+	
+$(document).ready(function() {
+
+
+
+if(jQuery.browser.mobile)
+{
+   console.log('You are using a mobile device!');
+}
+else
+{
+   console.log('You are not using a mobile device!');
+}
+
+});
+
+
+
+</script>
