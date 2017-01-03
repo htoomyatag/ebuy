@@ -140,7 +140,7 @@
 	            <li id="navmenu">
 					<%= link_to "/en", id:"pcmenulink" do %>
 						<%= t("language")%>
-						<%= image_tag "english_flag.png", :alt=>"english", :style => "border:1px solid #021a40;"  %>
+						<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag"  %>
 					<% end %>
 				</li>
 				<li>
@@ -262,3 +262,12 @@
 			
 </div>
 </div>
+
+
+<style type="text/css">
+	
+#product_title{
+	font-size: 9px;
+}
+
+</style>

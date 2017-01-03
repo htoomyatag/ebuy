@@ -16,7 +16,7 @@
                            <div class="col-md-12" style="width:98%;margin-left:14px;">
 
                        
-                    <% @first_authentic_products.each do |product| %>
+                    <% @first_recommend_products.each do |product| %>
                               <div class="col-md-2">
                                   <a href="/product_info/<%= product.id %>">
                                     <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive", :id=> "myavatar" %>
@@ -36,7 +36,7 @@
                         <div class="ccol-md-12">
 
 
-                            <% @second_authentic_products.each do |product| %>
+                            <% @second_recommend_products.each do |product| %>
                               <div class="col-md-2">
                                   <a href="/product_info/<%= product.id %>">
                                      <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive", :id=> "myavatar" %>

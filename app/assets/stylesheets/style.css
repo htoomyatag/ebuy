@@ -815,6 +815,12 @@ li { cursor: pointer; cursor: hand; }
 }
 
 
+#all_catemobile_menu_linkheader{
+	font-size: 16px;
+	color: #0472c1;
+}
+
+
 @media (min-width: 600px) {
   #mobile_view, #mobile_view_home {
     display: none; /* This is how it looks on desktop */

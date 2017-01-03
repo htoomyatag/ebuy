@@ -340,6 +340,10 @@ def chat_to_seller
      @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").last(6)
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6) 
 
+     @first_recommend_products = Product.where(:admin_recommend => "1").last(6)
+     @second_recommend_products = Product.where(:admin_recommend => "1").where.not(id: 1).limit(6) 
+
+
 
       @comment = Comment.new
       @comments = Comment.where(:product_id => @product.id).last(3)
