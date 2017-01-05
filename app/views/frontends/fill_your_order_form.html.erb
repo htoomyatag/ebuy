@@ -274,7 +274,7 @@
  
 
     coupon_code = document.getElementById("coupon_code").value;
-    limitation = "<%= $product_price  %>";
+    limitation = "<%= $product_price.to_i * @product_quantity.to_i %>";
 
 
       $.ajax({

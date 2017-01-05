@@ -30,7 +30,10 @@
 
                           </a>
                         </td>
-                        <td >x <%= line_item.quantity %></td>
+                        <td >
+                        <% round_up(line_item.product.discount_price.to_i * @currency_exchange.to_i)  %>
+                              <%= $product_price %> x <%= line_item.quantity %>
+                        </td>
                         <td >
                           <%= line_item.total_price.to_i  %> Ks
                         </td>

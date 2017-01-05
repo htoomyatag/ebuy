@@ -78,7 +78,7 @@
 <span class="mydetail_title"> <%= @product.delivery_time %></span> </p>
 
 <p><span class="mydetail_title"> <%= t("Delivery_Service")%>: </span>
-						<select style="color: gray;font-weight: bold;">
+						<select style="color: gray;font-weight: bold;" id="delivery_method_mobile">
 			    		  <option >Choose</option>
 						    <option>Pick up</option>
 						    <option>eBuy Delivery</option>
@@ -360,7 +360,7 @@ for (var i = min; i<=max; i++){
     product_id = "<%= @product.id %>";
     color = $( "#myProductMobileColor option:selected" ).text();
     size = $( "#myProductMobileSize option:selected" ).text();
-    delivery_method = $( "#delivery_method option:selected" ).text();
+    delivery_method = $( "#delivery_method_mobile option:selected" ).text();
     product_quantity =  $( "#myProductMobileQty option:selected" ).text();
 
     product_model =  $( "#myProductMobileModel option:selected" ).text();
@@ -402,7 +402,7 @@ for (var i = min; i<=max; i++){
     product_id = "<%= @product.id %>";
     color = $( "#myProductMobileColor option:selected" ).text();
     size = $( "#myProductMobileSize option:selected" ).text();
-    delivery_method = $( "#delivery_method option:selected" ).text();
+    delivery_method = $( "#delivery_method_mobile option:selected" ).text();
     product_quantity =  $( "#myProductMobileQty option:selected" ).text();
     product_model =  $( "#myProductMobileModel option:selected" ).text();
   
