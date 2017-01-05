@@ -98,7 +98,7 @@ class ProductsController < ApplicationController
 
 
   if !@product.notice.nil?
-    @product_notice = @product.notice 
+    @product_notice = @product.notice.to_s.gsub("'","") 
   else
     @product_notice = "<p>No data</p>"
   end
