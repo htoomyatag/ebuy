@@ -38,11 +38,15 @@
 	  <div class="col-md-5"></div>
 	  <div class="col-md-8" id="search_bar">
 
+
+
+
 	  		<%= form_tag(search_result_path, :method => "get", :id => "search_result") do %> 
                                    
                         <div class="input-group"> 
 
-                                <%= text_field_tag :title, params[:title], :placeholder => "search for products and brands", :class=>"form-control" %>
+
+                                <%= text_field_tag :mytitle, params[:title], :placeholder => "search for products and brands", :class=>"form-control" %>
 
                                <div class="input-group-addon" type="submit" id="mysubmit_search"> 
                                		Search
@@ -53,14 +57,14 @@
               <% end %>
 
 
+
+
+
 	  </div>
 
 
 
  </div>
-
-
-
 
 
 <script type="text/javascript">
@@ -73,7 +77,28 @@
 	        document.getElementById('search_result').submit();
 	        return false;
 	    };
+   
 	};
 
 
 </script>
+
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+
+  	var rawdatalist = "<%= raw @myproductlist %>";
+  	 var mydatalist = rawdatalist.split(',');
+
+    var availableTags = mydatalist;
+    $( "#mytitle" ).autocomplete({
+      source: availableTags
+    });
+  } );
+
+
+
+
+
+  </script>

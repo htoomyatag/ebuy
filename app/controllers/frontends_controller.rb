@@ -394,8 +394,8 @@ def chat_to_seller
   end
 
   def search_result
-        if !params[:title].nil?
-        @products = Product.where("title LIKE ? or short_title LIKE ?", params[:title], params[:title]).limit(10) 
+        if !params[:mytitle].nil?
+        @products = Product.where("title LIKE ? or short_title LIKE ?", params[:mytitle], params[:mytitle]).limit(10) 
         elsif !params[:price_from].nil?
         @products = Product.where(:discount_price => params[:price_from]..params[:price_to]).limit(10) 
         end
