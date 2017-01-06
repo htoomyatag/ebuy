@@ -22,6 +22,7 @@
 		          <th>Color</th>
 		          <th>Size</th>
 		          <th>Quantity</th>
+		          <th>Price</th>
 		          <th>Delivery</th>
 
 		         
@@ -46,6 +47,11 @@
 		          </td>
 		          <td><%= @product_quantity %>
 		          	 <input class="form-control" type="text" name="product_quantity" id="product_quantity" value="<%= @product_quantity %>" style="display:none;">
+		          </td>
+		           <td>
+		           <% round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
+                   <%= @product_quantity %> X <%= round_up(@product.discount_price.to_i * @currency_exchange.to_i)  %>
+                   = <%= $product_price.to_i * @product_quantity.to_i %> Ks
 		          </td>
 		          <td><%= @delivery_method %>
 		          	 <input class="form-control" type="text" name="product_delivery_method" id="product_delivery_method" value="<%= @delivery_method %>" style="display:none;">

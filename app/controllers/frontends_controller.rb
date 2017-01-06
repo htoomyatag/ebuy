@@ -172,7 +172,7 @@ def chat_to_seller
               :product_message => params[:product_message],
               :product_model => params[:product_model],
               :product_quantity => params[:product_quantity],
-              :total_price => params[:total_price]
+              :thetotal_price => params[:thetotal_price]
          )
 
      
