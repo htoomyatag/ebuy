@@ -483,7 +483,7 @@ my_length = length-3
      @first_men_fashion_products = Product.where(:product_category => "MensFashion").where(:show_at => 1).first(6)
      @second_men_fashion_products = Product.where(:product_category => "MensFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").first(:show_at => 1).last(6)
+     @first_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where(:show_at => 1).first(6)
      @second_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
      @first_home_livings = Product.where(:product_category => "HomeandLiving").where(:show_at => 1).first(6)
