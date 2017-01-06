@@ -59,26 +59,26 @@ def chat_to_seller
 
   def pc_version
 
-    @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).last(6)
+    @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).first(6)
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
  
 
-     @first_women_fashion_products = Product.where(:product_category => "WomensFashion").where(:show_at => 1).last(6)
+     @first_women_fashion_products = Product.where(:product_category => "WomensFashion").where(:show_at => 1).first(6)
      @second_women_fashion_products = Product.where(:product_category => "WomensFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_men_fashion_products = Product.where(:product_category => "MensFashion").where(:show_at => 1).last(6)
+     @first_men_fashion_products = Product.where(:product_category => "MensFashion").where(:show_at => 1).first(6)
      @second_men_fashion_products = Product.where(:product_category => "MensFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where(:show_at => 1).last(6)
+     @first_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where(:show_at => 1).first(6)
      @second_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_home_livings = Product.where(:product_category => "HomeandLiving").where(:show_at => 1).last(6)
+     @first_home_livings = Product.where(:product_category => "HomeandLiving").where(:show_at => 1).first(6)
      @second_home_livings = Product.where(:product_category => "HomeandLiving").where.not(id: 1).limit(6).where(:show_at => 1).last(6) 
 
-     @first_health_beauty = Product.where(:product_category => "HealthandBeauty").where(:show_at => 1).last(6)
+     @first_health_beauty = Product.where(:product_category => "HealthandBeauty").where(:show_at => 1).first(6)
      @second_health_beauty = Product.where(:product_category => "HealthandBeauty").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_food_beverage = Product.where(:product_category => "FoodandBeverage").where(:show_at => 1).last(6)
+     @first_food_beverage = Product.where(:product_category => "FoodandBeverage").where(:show_at => 1).first(6)
      @second_food_beverage = Product.where(:product_category => "FoodandBeverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
      # @time_sale_firsts = Product.where(:time_sale => "1").first unless @time_sale_firsts.nil
@@ -473,26 +473,26 @@ my_length = length-3
 
   def home
      
-         @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).last(6)
+         @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).first(6)
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
  
 
-     @first_women_fashion_products = Product.where(:product_category => "WomensFashion").where(:show_at => 1).last(6)
+     @first_women_fashion_products = Product.where(:product_category => "WomensFashion").where(:show_at => 1).first(6)
      @second_women_fashion_products = Product.where(:product_category => "WomensFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_men_fashion_products = Product.where(:product_category => "MensFashion").where(:show_at => 1).last(6)
+     @first_men_fashion_products = Product.where(:product_category => "MensFashion").where(:show_at => 1).first(6)
      @second_men_fashion_products = Product.where(:product_category => "MensFashion").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where(:show_at => 1).last(6)
+     @first_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").first(:show_at => 1).last(6)
      @second_digital_marketings = Product.where(:product_category => "DigitalMobileandElectricalAppliances").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_home_livings = Product.where(:product_category => "HomeandLiving").where(:show_at => 1).last(6)
+     @first_home_livings = Product.where(:product_category => "HomeandLiving").where(:show_at => 1).first(6)
      @second_home_livings = Product.where(:product_category => "HomeandLiving").where.not(id: 1).limit(6).where(:show_at => 1).last(6) 
 
-     @first_health_beauty = Product.where(:product_category => "HealthandBeauty").where(:show_at => 1).last(6)
+     @first_health_beauty = Product.where(:product_category => "HealthandBeauty").where(:show_at => 1).first(6)
      @second_health_beauty = Product.where(:product_category => "HealthandBeauty").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
-     @first_food_beverage = Product.where(:product_category => "FoodandBeverage").where(:show_at => 1).last(6)
+     @first_food_beverage = Product.where(:product_category => "FoodandBeverage").where(:show_at => 1).first(6)
      @second_food_beverage = Product.where(:product_category => "FoodandBeverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
 
      @time_sale_firsts = Product.where(:time_sale => "1").first

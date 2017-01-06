@@ -153,7 +153,7 @@ ActiveRecord::Schema.define(version: 20170105044301) do
     t.string   "product_quantity"
     t.string   "product_model"
     t.string   "delivery_method"
-    t.string   "total_price"
+    t.string   "thetotal_price"
   end
 
   create_table "products", force: :cascade do |t|
