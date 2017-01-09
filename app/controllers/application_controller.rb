@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
     @currency_exchange = CurrencyExchange.pluck(:currency_rate).last
     @theadmin = "theadmin"
     @theproductlist = Product.pluck(:short_title)
-    @myproductlist = @theproductlist.to_s.gsub('"','').gsub("[","").gsub("]","")
+    @myproductlist = @theproductlist.to_s.gsub('"','').gsub("[","").gsub("]","").gsub(', ',',')
 
   end
 

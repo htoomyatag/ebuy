@@ -73,7 +73,7 @@
 
 	    document.getElementById('mysubmit_search').onclick = function() {
 
-	
+			
 	        document.getElementById('search_result').submit();
 	        return false;
 	    };
@@ -92,8 +92,11 @@
 
   	var rawdatalist = "<%= raw @myproductlist %>";
   	 var mydatalist = rawdatalist.split(',');
+  	 
 
     var availableTags = mydatalist;
+    alert(availableTags);
+
     $( "#mytitle" ).autocomplete({
       source: availableTags
     });
@@ -101,3 +104,4 @@
 
 
   </script>
+
