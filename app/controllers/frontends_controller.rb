@@ -222,21 +222,18 @@ def chat_to_seller
 
   
   
-      if params[:cart_id]
+    if params[:cart_id]
          @line_items = LineItem.where("cart_id = ? ", params[:cart_id])
-      end
+    end
      
    # order number
    @myorder_number = Order.maximum(:id)
    if @myorder_number.nil?
-      @order_number =  13
+      @order_number =  1001
    else
       @order_number = Order.maximum(:id) + 1
    end
 
-   #product description
-   @delivery_method = params[:delivery_method]
-   @my_product_desc = params[:product_name].to_s;
    #product_price
       @total = params[:total_price];
       if @total.to_s.length == 1
@@ -265,33 +262,30 @@ def chat_to_seller
     #address
     @address = params[:customer_phone].to_s+params[:customer_house].to_s+params[:customer_township].to_s+params[:customer_city].to_s;
 
-    @personal = params[:customer_name].to_s;
-                
     
+    
+   
+
+
       key = 'ROHBJXV0BZM1SRXJQXACQM0HI22QBYGX';
+    
       @merchant_id = "208104000702167";
-
-      @invoice_no = "eBuyMyanmar"+Date.today.strftime("%d%m%y")+@order_number.to_s;
-
-      @product_desc = @my_product_desc;
-
+      @invoice_no = "eBuyMyanmar"+@order_number.to_s+(0...3).map { ('a'..'z').to_a[rand(26)] }.join;
+      @product_desc = params[:product_name].to_s.gsub(' ', "").gsub(',', "");
       @amount =  @concattotal.to_s+"00";
       @currency_code = "104";
-      @user_defined_1 = @address;
-      @user_defined_2 = @personal;
-      @user_defined_3 = params[:customer_email].to_s;
-
+      @user_defined_1 = params[:customer_name].to_s.gsub(' ', "").gsub(',', "");
+      @user_defined_2 = params[:customer_email].to_s.gsub(' ', "").gsub(',', "");
+      @user_defined_3 = @address.to_s.gsub(' ', "").gsub(',', "");
+     
 
       @tmp_data = [@merchant_id,@invoice_no,@product_desc,@amount,@currency_code,@user_defined_1,@user_defined_2,@user_defined_3]
-      puts "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-      puts @tmp_data
       @thisaok = @tmp_data.sort
-      @myaok = @thisaok.to_s.gsub('"', " ").gsub(',', "").gsub('[', "").gsub(']', "").gsub(' ', "")
+      @my_data = @thisaok.to_s.gsub('"', " ").gsub(',', "").gsub('[', "").gsub(']', "").gsub(' ', "")
+
 
       digest = OpenSSL::Digest.new('sha1')
-      hmac = OpenSSL::HMAC.hexdigest(digest, key, @myaok)
-      @aok = hmac
-
+      @hmac = OpenSSL::HMAC.hexdigest(digest, key, @my_data)
 
 
 

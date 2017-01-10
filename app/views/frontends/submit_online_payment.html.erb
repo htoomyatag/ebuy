@@ -7,7 +7,11 @@
 
        <div class="col-md-12">
     
-          <h4> Product Information</h4><hr>
+          <h4> Product Information
+              <span style="float:right;color:gray;">Invoice no: <%= @invoice_no %></span>
+
+          </h4><hr>
+
           <% if params[:cart_id] == nil %>
               <table class="table table-bordered">
                   <thead>
@@ -186,7 +190,37 @@
 
 <form method="post" action="http://122.248.120.252:60145/UAT/Payment/Payment/pay">
 
-<div style="display:none;">
+
+<div >
+
+        <%= @merchant_id %><br/>
+
+        <%= @invoice_no %><br/>
+
+        <%= @product_desc %><br/>
+
+        <%= @amount %><br/>
+
+        <%= @currency_code %><br/>
+
+       <%= @user_defined_1 %><br/>
+
+       <%= @user_defined_2 %><br/>
+
+        <%= @user_defined_3 %><br/>
+
+
+      <%= @hmac %>
+
+      <%= @my_data %>
+
+
+
+
+</div>
+
+
+<div >
 
         <input type="text" id="merchantID" name="merchantID" value="<%= @merchant_id %>"/><br/>
 
@@ -205,7 +239,7 @@
           <input type="text" id="userDefined3" name="userDefined3" value="<%= @user_defined_3 %>" /><br/>
 
 
-        <input type="text" id="hashValue" name="hashValue" value="<%= @aok %>" />
+        <input type="text" id="hashValue" name="hashValue" value="<%= @hmac %>" />
 
 
 </div>
