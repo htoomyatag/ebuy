@@ -393,7 +393,10 @@ def chat_to_seller
         elsif !params[:mymobiletitle].nil?
         @products = Product.where("title LIKE ? or short_title LIKE ?", "%#{params[:mymobiletitle]}%", "%#{params[:mymobiletitle]}%").limit(10) 
         elsif !params[:price_from].nil?
-        @products = Product.where(:discount_price => params[:price_from]..params[:price_to]).where("title LIKE ? or short_title LIKE ?", "%#{params[:the_product_model]}%", "%#{params[:the_product_model]}%").limit(10) 
+
+         price_from = params[:price_from].to_i * @currency_exchange.to_i
+         price_to =  params[:price_to].to_i * @currency_exchange.to_i
+        @products = Product.where(:discount_price => price_from..price_to).where("title LIKE ? or short_title LIKE ?", "%#{params[:the_product_model]}%", "%#{params[:the_product_model]}%").limit(10) 
 
         end
   end

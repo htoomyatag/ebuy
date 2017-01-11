@@ -2,7 +2,19 @@
   <div class="col-md-12">
 			<div class="well well-lg" id="key_word_search">
 				<b> Keyword Search </b>
-				<span id="search_parm"><%= params[:mytitle] %></span>
+				<span id="search_parm">
+				
+
+				<% if !params[:mytitle].nil? %>
+                     	<%= params[:mytitle] %>
+               <% elsif !params[:mymobiletitle].nil? %>
+               			<%= params[:mymobiletitle] %>
+                <% else %>
+                   		No Key word search
+                <% end %>
+
+
+				</span>
 			</div> 
   </div>
 
