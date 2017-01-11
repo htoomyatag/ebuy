@@ -13,7 +13,7 @@
 
 			 <a class="navbar-brand" href="/">
 				<span class="nav_text">
-					 <%= image_tag "home.png", :alt=>"profile" %>&nbsp;&nbsp;<%= t('home') %>
+					 <%= image_tag "home.png", :alt=>"profile" , :id=>"cart_mobi"%>&nbsp;&nbsp;<%= t('home') %>
 				</span>
               </a>
 
@@ -25,19 +25,19 @@
 
 
 			  <a class="navbar-brand" href="/en">
-				<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag"  %>
+				<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag", :id=>"cart_mobi"  %>
               </a>
 
              <a class="navbar-brand" href="/mm">
-            	<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;" %>
+            	<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;", :id=>"cart_mobi" %>
             </a>
 
               <a class="navbar-brand" href="#">
 				<span class="nav_text"><%= t('cart') %></span>
               </a>
 
-            <a class="navbar-brand" href="/cart_item?cart_id=<%= session[:cart_id] %>">
-				<%= image_tag "cart.png", :alt=>"profile" %>
+            <a class="navbar-brand" href="/cart_item?cart_id=<%= session[:cart_id] %>" id="cart_mobi">
+				<%= image_tag "cart.png", :alt=>"profile" , :id=>"cart_mobi"%>
 			</a>
 
 			<a class="navbar-brand">
@@ -45,7 +45,7 @@
 			</a>
 
 			 <span>
-             <%= form_tag(search_result_path, :method => "get", :class=>"form-inline", :style=>"width: 30em; margin: 0.6em;") do %> 
+             <%= form_tag(search_result_path, :method => "get", :class=>"form-inline", :style=>"width: 25em; margin: 0.6em;") do %> 
 			    <div class="input-group">
 			          <%= text_field_tag :mymobiletitle, params[:mymobiletitle], :placeholder => "Search products", :class=>"form-control" %>
 			        <div class="input-group-btn">
@@ -1224,5 +1224,13 @@
 
 	padding-top: 20px;
 }
+
+
+#cart_mobi{
+	width: 27px;
+	height: 22px;
+	margin-left: -10px;
+}
+
 
   </style>
