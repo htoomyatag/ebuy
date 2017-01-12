@@ -19,24 +19,73 @@
   </div>
 
 
-  <div class="col-md-12">
-
-
+  <div class="col-md-12" id="mobile_view">
 
      <% @products.each do |product| %>
-     		  <div class="col-md-2">
+     		         <div class="col-xs-6 col-md-6"  >
 	                                <a href="/product_info/<%= product.id %>">
                                     <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive" %>
                                      
-	                            	 <p id="product_title"><%= product.short_title %></p>
+	                            	 <p id="product_title"><%= product.short_title[0...7]+"..." %></p>
 			  	                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
-   <%= $product_price %> Ks</p>
+                                  <%= $product_price %> Ks</p>
 	                            	</a>
-	            </div>
+	               </div>
 	 
 	 <% end %>
+
+  </div>
+
+
+
+  <div class="col-md-12" id="desktop_view">
+
+
+      <table class="table table-condensed">
+
+          <thead>
+              <tr>
+                <th></th>
+                <th>Title</th>
+                <th>Actual price</th>
+                <th>Discount price</th>
+                <th>Quantity</th>
+
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @products.each do |product| %>
+                <tr>
+                  <td>
+
+                        <%= link_to product_info_path(product.id) do %>
+                                       <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive" %>
+                                    <% end %>
+
+
+                  </td>
+                  <td><%= product.short_title %></td>
+                  <td>
+                    <% round_up(product.actual_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+                  </td>
+                  <td>
+                    <% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
+                                        <%= $product_price %> Ks
+                  </td>
+                  <td><%= product.quantity %></td>
+                </tr>
+              <% end %>
+            </tbody>
+
+    </table>
+
 
 
 
   </div>
+
+
+
   </div>
