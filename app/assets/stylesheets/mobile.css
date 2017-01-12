@@ -39,7 +39,7 @@
 
 #all_catemobile_menu_link:hover {
 	color: white;
-	background-color: #337ab7;
+	background-color: #0f70b7;
 	padding-left: 30px;
 }
 
@@ -112,7 +112,7 @@
 
 #second_navbarmobile{
 
-	background:#3498DB;
+	background:#0f70b7;
 	position: relative;
 
 
@@ -141,14 +141,14 @@
 #product_title_mobile{
 	font-size: 12px;
 	text-align: center;
-	color: #337ab7;
+	color: #0f70b7;
 
 }
 
 #product_title_price{
 	font-size: 12px;
 	text-align: center;
-	color: #E74C3C;
+	color: #ee1f25;
 
 }
 

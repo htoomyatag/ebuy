@@ -11,7 +11,7 @@ overflow-x: hidden;
 
 
 #mynav{
- background-color: #E74C3C;
+ background-color: #ee1f25;
 }
 
 
@@ -87,7 +87,7 @@ overflow-x: hidden;
 
 #ebuy_title{
 	font-size: 55px;
-	color: #3498DB;
+	color: #0f70b7;
 	position: relative;
     left: -28px;
     top: -10px;
@@ -103,7 +103,7 @@ overflow-x: hidden;
 
 #ebuy_second {
 
-	color: #3498DB;
+	color: #0f70b7;
 	font-size: 35px;
 	font-weight: bold;
 	position: relative;
@@ -150,7 +150,7 @@ overflow-x: hidden;
 
 #menu_header{
 
- background-color: #3498DB;
+ background-color: #0f70b7;
  position: relative;
  top: -18px;
 
@@ -162,7 +162,7 @@ overflow-x: hidden;
 
 #my_navfooter{
 
-	background:#3498DB;
+	background:#0f70b7;
 
 	height: 300px;
 
@@ -212,7 +212,7 @@ overflow-x: hidden;
 
 
 #header {
-	color: #3498DB;
+	color: #0f70b7;
 	padding-left: 12px;
 	font-size: 12px;
 
@@ -222,13 +222,13 @@ overflow-x: hidden;
 	text-align:center;
 	position:relative;
 	left:70px;
-	color: #3498DB;
+	color: #0f70b7;
 	font-size: 12px;
 }
 
 
 #website_name{
-	color: #E74C3C;
+	color: #ee1f25;
 	font-weight: bold;
 	position: relative;
 	left: 10px;
@@ -260,7 +260,7 @@ overflow-x: hidden;
 }
 
 .fonter_head2title{
-	color: #3498DB;
+	color: #0f70b7;
 	font-size: 22px;
 	font-weight: bold;
 	padding-top: 10px;
@@ -277,7 +277,7 @@ overflow-x: hidden;
 .view_on_mobie {
 	position: relative;
 	float: right;
-	color: #3498DB;
+	color: #0f70b7;
 	font-size: 18px;
 }
 
@@ -287,7 +287,7 @@ overflow-x: hidden;
 
 #product_title{
 
-	color: #3498DB;
+	color: #0f70b7;
 	font-size: 18px;
 	text-align: center;
 
@@ -295,7 +295,7 @@ overflow-x: hidden;
 
 #product_price{
 
-	color: #E74C3C;
+	color: #ee1f25;
 	font-size: 18px;
 	text-align: center;
 
@@ -303,7 +303,7 @@ overflow-x: hidden;
 
 .the_header {
 	font-size: 16px;
-	color: #3498DB;
+	color: #0f70b7;
 	font-weight: bold;
 }
 
@@ -331,7 +331,7 @@ overflow-x: hidden;
 
 
 .detailpage_link {
-	color: #3498DB;
+	color: #0f70b7;
 	font-weight: bold;
 	text-align: left;
 	padding-left: 40px;
@@ -708,7 +708,7 @@ background-color: #0472c1;
 
 #menu_header_1, #menu_header_2{
 
-	 background-color: #3498DB;
+	 background-color: #0f70b7;
 		 position: relative;
 		 top: -28px;
 
@@ -756,7 +756,7 @@ background-color: #0472c1;
 #ebuy_pctitle{
 
     font-size: 35px;
-	color: #3498DB;
+	color: #0f70b7;
 	position: relative;
    left: 18px;
     top: 20px;
@@ -767,7 +767,7 @@ background-color: #0472c1;
 #ebuy_pcsecond{
 
 
-	color: #3498DB;
+	color: #0f70b7;
 	font-size: 25px;
 	font-weight: bold;
 	position: relative;
@@ -810,7 +810,7 @@ li { cursor: pointer; cursor: hand; }
 
 
 #key_word_search{
-	background-color: #3498DB;
+	background-color: #0f70b7;
 	color: white;
 }
 
