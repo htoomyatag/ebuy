@@ -16,7 +16,6 @@
             <tr>
               <th>Name</th>
               <th>Email</th>
-              <th>Phone</th>
               <th>Address</th>
               <th>Township</th>
               <th>City</th>
@@ -31,9 +30,8 @@
               <tr>
                 <td><%= order.buyer_name %></td>
                 <td><%= order.buyer_email %></td>
-                <td><%= order.buyer_phone %></td>
-                <td><%= order.buyer_address %></td>
-                <td><%= order.buyer_address %></td>
+                <td><%= (order.buyer_phone)+' '+order.buyer_address %></td>
+                <td><%= order.buyer_township %></td>
                 <td><%= order.buyer_city %></td>
                 <td><%= order.payment_type %></td>
                 <td><%= order.order_status %></td>
