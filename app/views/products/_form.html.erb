@@ -16,6 +16,13 @@
 
 
 
+<!--  -->
+
+
+
+<!--  -->
+
+
   <div class="col-md-12">
    <label>Product Number: <%= @myproduct_number %>
    </label><br>
@@ -396,21 +403,33 @@
     </div>
 
 
-      <div class="col-md-6"><br/>
-       <label>Start to sell on</label><br>
-         <div class="field">
-            <%= f.datetime_local_field(:start_to_sell_on, :class => "form-control")  %>
+
+        <div class='col-sm-6'>
+            <label>Start to sell on</label><br>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <%= f.text_field :start_to_sell_on, :class => "form-control" %>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
         </div>
-    </div>
 
-
-
-      <div class="col-md-6"><br/>
-       <label>End on</label><br>
-         <div class="field">
-            <%= f.datetime_local_field(:end_on, :class => "form-control" )  %>
+       
+        <div class='col-sm-6'>
+            <label>End on</label><br>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker2'>
+                    <%= f.text_field :end_on, :class => "form-control" %>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
         </div>
-    </div>
+
+
 
   
 
@@ -529,6 +548,24 @@
     </div>
   </div>
 <% end %>
+
+
+ <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+                  format: 'YYYY-MM-DD h:m'
+                });
+            });
+
+
+            $(function () {
+                $('#datetimepicker2').datetimepicker({
+                  format: 'YYYY-MM-DD h:m'
+                });
+            });
+</script>
+
+
 
 
 <script type="text/javascript">

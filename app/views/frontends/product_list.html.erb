@@ -26,8 +26,8 @@
 	                                <a href="/product_info/<%= product.id %>">
                                     <%= image_tag product.avatar1.url(:medium), :class=>"img-responsive" %>
                                      
-	                            	 <p id="product_title"><%= product.short_title[0...7]+"..." %></p>
-			  	                        <p id="product_price"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
+	                            	 <p id="product_title" style="font-size:10px;"><%= product.short_title[0...7]+"..." %></p>
+			  	                        <p id="product_price" style="font-size:10px;"><% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
                                   <%= $product_price %> Ks</p>
 	                            	</a>
 	               </div>
@@ -47,8 +47,8 @@
               <tr>
                 <th></th>
                 <th>Title</th>
-                <th>Actual price</th>
-                <th>Discount price</th>
+                <th>Original price</th>
+                <th>Offer price</th>
                 <th>Quantity</th>
 
               </tr>
@@ -68,7 +68,7 @@
                   <td><%= product.short_title %></td>
                   <td>
                     <% round_up(product.actual_price.to_i * @currency_exchange.to_i)  %>
-                                        <%= $product_price %> Ks
+                                     <strike>   <%= $product_price %> Ks </strike>
                   </td>
                   <td>
                     <% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>

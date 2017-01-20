@@ -26,3 +26,15 @@ Rails.application.config.assets.precompile += %w( jquery.zoom.min.js )
 Rails.application.config.assets.precompile += %w( quill.js )
 Rails.application.config.assets.precompile += %w( quill.snow.css )
 Rails.application.config.assets.precompile += %w( pusher.min.js )
+
+
+Rails.application.config.assets.precompile += %w( bootstrap-datetimepicker.min.js )
+Rails.application.config.assets.precompile += %w( moment.js )
+Rails.application.config.assets.precompile += %w( transition.js )
+Rails.application.config.assets.precompile += %w( collapse.js )
+Rails.application.config.assets.precompile += %w( bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( bootstrap-datetimepicker.min.js )
+
+
+Rails.application.config.assets.precompile += %w( bootstrap-datetimepicker.css )
+  

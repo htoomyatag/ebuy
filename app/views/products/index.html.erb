@@ -48,11 +48,19 @@
                 <td><%= product.actual_price %> SGD</td>
                 <td><%= product.discount_price %> SGD</td>
                 <td><%= product.product_category %></td>
-                <% if Time.current.utc.localtime.between?(product.start_to_sell_on.strftime("%Y-%m-%d %I:%M:%S +0630"),product.end_on.strftime("%Y-%m-%d %I:%M:%S +0630")) %>
-                  <td> <p id="running">Running </p></td>
+
+                <% if product.start_to_sell_on != nil or product.end_on != nil %>
+
+                      <% if Time.current.utc.localtime.between?(product.start_to_sell_on.strftime("%Y-%m-%d %I:%M:%S +0630"),product.end_on.strftime("%Y-%m-%d %I:%M:%S +0630")) %>
+                        <td> <p id="running">Running </p></td>
+                      <% else %>
+                         <td><p id="expire"> Expired </p></td>
+                      <% end %>
+
                 <% else %>
-                   <td><p id="expire"> Expired </p></td>
+                       <td> <p id="expire">No Timeplan </p></td>
                 <% end %>
+
                 <td><%= link_to 'Show', product %></td>
                 <td><%= link_to 'Edit', edit_product_path(product) %></td>
                 <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
