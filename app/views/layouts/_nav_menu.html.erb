@@ -526,7 +526,7 @@
 
 		          <li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('LivingRoomAppliances') %>  </a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" id="myleftmenu">
 							<li><%= link_to t('LivingRoomFurnitures'), product_list_path(:category => "LivingRoomFurnitures") %></li>
 					</ul>
 				  </li>
@@ -534,7 +534,7 @@
 
 		    	<li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('BedroomProducts') %></a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" id="myleftmenu" style="left: -165px;">
 
 							<li><%= link_to t('Pillows'), product_list_path(:category => "Pillows") %></li>
 							<li><%= link_to t('Bolsters'), product_list_path(:category => "Bolsters") %></li>
@@ -549,7 +549,7 @@
 
 	  			 <li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('BathroomAppliances') %> </a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" id="myleftmenu" style="left: -159px;">
 						<li><%= link_to t('BathroomShelves'), product_list_path(:category => "BathroomShelves") %></li>
 						<li><%= link_to t('Faucets'), product_list_path(:category => "Faucets") %></li>
 						<li><%= link_to t('ShowerCurtains'), product_list_path(:category => "ShowerCurtains") %></li>
@@ -563,7 +563,7 @@
 
 				   <li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('GarmentCare') %> </a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" id="myleftmenu" style="left: -159px;">
 
 						<li><%= link_to t('SewingMachines'), product_list_path(:category => "SewingMachines") %></li>
 						<li><%= link_to t('Needles'), product_list_path(:category => "Needles") %></li>
@@ -577,7 +577,7 @@
 
 				   <li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('KitchenandDining') %>  </a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" id="myleftmenu" style="left: -170px;">
 
 						<li><%= link_to t('KitchenStorage'), product_list_path(:category => "KitchenStorage") %></li>
 						<li><%= link_to t('CookingEquipments'), product_list_path(:category => "CookingEquipments") %></li>
@@ -591,7 +591,7 @@
 
 				   <li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('Housekeeping') %>  </a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" id="myleftmenu" style="left: -159px;">
 
 						<li><%= link_to t('Mops'), product_list_path(:category => "Mops") %></li>
 						<li><%= link_to t('Brooms'), product_list_path(:category => "Brooms") %></li>
@@ -604,7 +604,7 @@
 
 				   <li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('HomeDecoration') %></a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" id="myleftmenu" style="left: -185px;">
 
 						<li><%= link_to t('Carpets'), product_list_path(:category => "Carpets") %></li>
 						<li><%= link_to t('Mats'), product_list_path(:category => "Mats") %></li>
@@ -622,7 +622,7 @@
 
 				   <li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"> <%= t('OutdoorandGarden') %> </a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" id="myleftmenu" style="left: -159px;">
 
 		            	<li><%= link_to t('OutdoorSupplies'), product_list_path(:category => "OutdoorSupplies") %></li>
 						<li><%= link_to t('GardenSupplies'), product_list_path(:category => "GardenSupplies") %></li>
@@ -1094,7 +1094,7 @@
 
 		          <li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('Travel') %></a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" style="left: -160px;">
 
 							<li><%= link_to t('HotelPromotion'), product_list_path(:category => "HotelPromotion") %></li>
 							<li><%= link_to t('TravelPromotion'), product_list_path(:category => "TravelPromotion") %></li>
@@ -1105,7 +1105,7 @@
 
 		    	<li class="dropdown-submenu">
 		            <a tabindex="0" data-toggle="dropdown" class="mysubmenu"><%= t('RestaurantsandCafe') %></a>
-		            <ul class="dropdown-menu">
+		            <ul class="dropdown-menu" style="left: -160px;">
 							
 								<li><%= link_to t('Restaurants'), product_list_path(:category => "Restaurants") %></li>
 								<li><%= link_to t('Cafe'), product_list_path(:category => "Cafe") %></li>

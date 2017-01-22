@@ -821,6 +821,16 @@ li { cursor: pointer; cursor: hand; }
 }
 
 
+#myleftmenu{
+
+	
+    left: -185px;
+    
+
+
+}
+
+
 @media (min-width: 600px) {
   #mobile_view, #mobile_view_home {
     display: none; /* This is how it looks on desktop */
