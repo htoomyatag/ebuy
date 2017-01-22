@@ -11,7 +11,7 @@
                          <div class="col-xs-12" style="width:98%;margin-left:14px;">
 
                        
-	       					<% @first_authentic_products.each do |product| %>
+	       					<% @first_top_selling_products.each do |product| %>
 	                            <div class="col-xs-2">
 	                                
                                       <%= link_to product_info_path(product.id) do %>
@@ -35,7 +35,7 @@
                          <div class="col-xs-12">
 
 
-                        	<% @second_authentic_products.each do |product| %>
+                        	<% @second_top_selling_products.each do |product| %>
 	                            <div class="col-xs-2">
 	                                       
                                              <%= link_to product_info_path(product.id) do %>

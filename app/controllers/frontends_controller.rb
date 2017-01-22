@@ -332,8 +332,10 @@ def chat_to_seller
      @end_day = @product.end_on.strftime("%Y-%m-%d %I:%M:%S +0630")
   
 
-     @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").last(6)
-     @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6) 
+     @product_category = Product.pluck(:product_category).first
+
+     @first_authentic_products = Product.where(:product_category => @product_category).last(6)
+     @second_authentic_products = Product.where(:product_category => @product_category).where.not(id: 1).limit(6) 
 
      @first_recommend_products = Product.where(:admin_recommend => "1").last(6)
      @second_recommend_products = Product.where(:admin_recommend => "1").where.not(id: 1).limit(6) 
@@ -472,7 +474,7 @@ my_length = length-3
 
   def home
      
-         @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).first(6)
+     @first_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where(:show_at => 1).first(6)
      @second_authentic_products = Product.where(:product_category => "AuthenticBrandZone").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
  
 
@@ -493,6 +495,15 @@ my_length = length-3
 
      @first_food_beverage = Product.where(:product_category => "FoodandBeverage").where(:show_at => 1).first(6)
      @second_food_beverage = Product.where(:product_category => "FoodandBeverage").where.not(id: 1).limit(6).where(:show_at => 1).last(6)
+
+
+     puts "....................................................."
+
+     @myorder = Order.pluck(:product_name)
+     @first_top_selling_products =  Product.where('short_title IN (?)', @myorder).first(6)
+     @second_top_selling_products = Product.where('short_title IN (?)', @myorder).last(6)
+ 
+
 
      @time_sale_firsts = Product.where(:time_sale => "1").first
      @time_sale_seconds = Product.where(:time_sale => "1").second
