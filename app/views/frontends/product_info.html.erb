@@ -731,6 +731,8 @@ for (var i = min; i<=max; i++){
  		product_quantity =  $( "#product_quantity option:selected" ).text();
 
  		product_model =  $( "#myProductModel option:selected" ).text();
+
+ 		 if (color != "Choose" || size != "Choose" || delivery_method != "Choose" || product_model != "Choose") {
  	
   		$.ajax({
               type: 'post',
@@ -744,6 +746,14 @@ for (var i = min; i<=max; i++){
 
               }
            });
+
+
+  		} else{
+		
+		alert("Please choose require fields");
+
+}
+
 
 
 
@@ -763,9 +773,13 @@ for (var i = min; i<=max; i++){
 
 
  $('#btn_buy_now_desktop').click(function() {
- 
 
- 		product_id = "<%= @product.id %>";
+
+
+ 
+    //Place the code to execute here
+
+    	product_id = "<%= @product.id %>";
  		color = $( "#myProductColor option:selected" ).text();
  		size = $( "#myProductSize option:selected" ).text();
  		delivery_method = $( "#delivery_method option:selected" ).text();
@@ -774,6 +788,8 @@ for (var i = min; i<=max; i++){
 
 
  		product_model =  $( "#myProductModel option:selected" ).text();
+
+ if (color != "Choose" || size != "Choose" || delivery_method != "Choose" || product_model != "Choose") {
  	
   		$.ajax({
               type: 'get',
@@ -787,6 +803,20 @@ for (var i = min; i<=max; i++){
 
               }
            });
+
+
+
+
+} else{
+		
+		alert("Please choose require fields");
+
+}
+
+
+ 
+
+ 		
 
 
 
