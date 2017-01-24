@@ -47,18 +47,21 @@
         <div class="navbar-header">
           
     
-						<a href="/buyers/sign_in" id="mobile_menu_link">
-							<%= image_tag "sign.png", :alt=>"sign.png" %>
-							<span class="nav_text"><%= t('sign_in') %> </span>
-						</a>
-
-
-						<a href="/buyers/sign_up" id="mobile_menu_link">
-							<%= image_tag "register.png", :alt=>"register" %>
-							<span class="nav_text"><%= t('register') %> </span>
-						</a>
+						
 
 						<% if !buyer_signed_in? %>
+
+
+								<a href="/buyers/sign_in" id="mobile_menu_link">
+									<%= image_tag "sign.png", :alt=>"sign.png" %>
+									<span class="nav_text"><%= t('sign_in') %> </span>
+								</a>
+
+
+								<a href="/buyers/sign_up" id="mobile_menu_link">
+									<%= image_tag "register.png", :alt=>"register" %>
+									<span class="nav_text"><%= t('register') %> </span>
+								</a>
 
 								<a href="/buyers/sign_up" id="mobile_menu_link">
 									<%= image_tag "profile.png", :alt=>"profile" %>
@@ -68,10 +71,22 @@
 						<% else %>
 
 
+								<a href="#" id="mobile_menu_link">
+									<span class="nav_text">Hello <b> <%= current_buyer.buyer_name %>!</b></span>
+								</a>
+
+
 								<a href="/my_account" id="mobile_menu_link">
 									<%= image_tag "profile.png", :alt=>"profile" %>
 									<span class="nav_text"><%= t('my_account') %></span>
 								</a>
+
+								
+
+							    <span class="nav_text">
+								<%= link_to "Log out", destroy_buyer_session_path, method: :delete, :style => "color:white;", :id=>"mobile_menu_link"  %>
+								</span>
+								
 
 						<% end %>
 
