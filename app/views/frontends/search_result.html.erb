@@ -35,6 +35,8 @@
                      	<%= text_field_tag :the_product_model, params[:the_product_model], :placeholder => "to", :class=>"form-control", :value => params[:mytitle]  %>
                    <% elsif !params[:mymobiletitle].nil? %>
                     	<%= text_field_tag :the_product_model, params[:the_product_model], :placeholder => "to", :class=>"form-control", :value => params[:mymobiletitle]  %>
+                   <% elsif !params[:the_product_model].nil? %>
+                    	<%= text_field_tag :the_product_model, params[:the_product_model], :placeholder => "to", :class=>"form-control", :value => params[:the_product_model]  %>
                    <% else %>
                    		<%= text_field_tag :the_product_model, params[:the_product_model], :placeholder => "to", :class=>"form-control", :value => ""  %>
                    <% end %>
