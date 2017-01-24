@@ -334,8 +334,8 @@ def chat_to_seller
 
      @product_category = Product.pluck(:product_category).first
 
-     @first_authentic_products = Product.where(:product_category => @product_category).last(6)
-     @second_authentic_products = Product.where(:product_category => @product_category).where.not(id: 1).limit(6) 
+     @first_authentic_products = Product.where(:product_category => @product.product_category).last(6)
+     @second_authentic_products = Product.where(:product_category => @product.product_category).where.not(id: 1).limit(6) 
 
      @first_recommend_products = Product.where(:admin_recommend => "1").last(6)
      @second_recommend_products = Product.where(:admin_recommend => "1").where.not(id: 1).limit(6) 
