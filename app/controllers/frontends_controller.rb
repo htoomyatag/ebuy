@@ -398,7 +398,7 @@ def chat_to_seller
 
          price_from = params[:price_from].to_i/@currency_exchange.to_i
          price_to =  params[:price_to].to_i/@currency_exchange.to_i
-         @products = Product.where(:discount_price => price_from..price_to).where("title LIKE ? or short_title LIKE ?", "%#{params[:the_product_model]}%", "%#{params[:the_product_model]}%").limit(10) 
+         @products = Product.where('discount_price in (?)', price_from..price_to).where("title LIKE ? or short_title LIKE ?", "%#{params[:the_product_model]}%", "%#{params[:the_product_model]}%").limit(10) 
 
         end
   end

@@ -58,8 +58,8 @@
 			        <tr>
 			          <th></th>
 			          <th>Title</th>
-			          <th>Actual price</th>
-			          <th>Discount price</th>
+			          <th>Original price</th>
+			          <th>Offer price</th>
 			          <th>Quantity</th>
 
 			        </tr>
@@ -78,8 +78,9 @@
 			            </td>
 			            <td><%= product.short_title %></td>
 			            <td>
-			            	<% round_up(product.actual_price.to_i * @currency_exchange.to_i)  %>
+			            	<strike><% round_up(product.actual_price.to_i * @currency_exchange.to_i)  %>
                                         <%= $product_price %> Ks
+                            </strike>
 			            </td>
 			            <td>
 			            	<% round_up(product.discount_price.to_i * @currency_exchange.to_i)  %>
