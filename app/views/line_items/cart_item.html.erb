@@ -24,9 +24,9 @@
                           <a href="#">
                             <%= line_item.product.short_title %><br/>
 
-                            <span style="color:black;">Product Size: </span><%= line_item.product_size %><br/>
-                            <span style="color:black;">Product Color: </span><%= line_item.product_color %><br/>
-                            <span style="color:black;">Product Model: </span> <%= line_item.product_model %><br/>
+                            <span style="color:black;"><%= t("Product_Size")%>: </span><%= line_item.product_size %><br/>
+                            <span style="color:black;"><%= t("Product_Color")%>: </span><%= line_item.product_color %><br/>
+                            <span style="color:black;"><%= t("Product_Model")%>: </span> <%= line_item.product_model %><br/>
 
                           </a>
                         </td>
@@ -61,12 +61,12 @@
   
         <h4>   <%= t("Personal_Information")%> </h4><hr>
       <div class="field">
-        <p> <%= t("Your_Name") %></p>
+        <p> <%= t("name") %></p>
         <input class="form-control" type="text" name="customer_name" id="customer_name">
        
       </div><br>
       <div class="field">
-        <p><%= t("Your_Email") %></p>
+        <p><%= t("email") %></p>
         <input class="form-control" type="text" name="customer_email" id="customer_email">
       </div><br>
      
@@ -80,14 +80,14 @@
 
    <div class="col-md-6">
   
-        <h4><%= t("Delivery_Address") %></h4><hr>
+        <h4><%= t("shipping_delivery") %></h4><hr>
       <div class="field">
-         <p><%= t("Phone") %></p>
+         <p><%= t("phone") %></p>
          <input class="form-control" type="text" name="customer_phone" id="customer_phone">
       </div><br>
      
       <div class="field">
-        <p> <%= t("House Number, Street") %></p>
+        <p><%= t("House_Number_Street") %></p>
          <input class="form-control" type="text" name="customer_house" id="customer_house">
       </div><br>
 

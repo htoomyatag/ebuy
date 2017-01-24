@@ -17,13 +17,13 @@
 		      <thead>
 		        <tr>
 		          <th>#</th>
-		          <th>Name</th>
-		          <th>Model</th>
-		          <th>Color</th>
-		          <th>Size</th>
-		          <th>Quantity</th>
-		          <th>Price</th>
-		          <th>Delivery</th>
+		          <th><%= t("name")%></th>
+		          <th><%= t("Product_Model")%></th>
+		          <th><%= t("Product_Color")%></th>
+		          <th><%= t("Product_Size")%></th>
+		          <th><%= t("Order_Quantity")%></th>
+		          <th><%= t("Product_Size")%></th>
+		          <th><%= t("Delivery_Service")%></th>
 
 		         
 		        </tr>
@@ -63,7 +63,7 @@
 		    </table>
 
 
-            <h4> Product Images</h4><hr>
+            <h4> <%= t("Product_Images")%></h4><hr>
 
 
              <%= image_tag @product.avatar1.url, :id => "avatar_mobile_product1" %>
@@ -83,7 +83,8 @@
 
 
 
-		    <h4> Additional message</h4><hr>
+
+		    <h4> <%= t("Additional_message")%></h4><hr>
 		    <textarea class="form-control" rows="3" name="product_message" id="product_message"></textarea>
 		    <br/>
 
@@ -95,14 +96,14 @@
 
 	  <div class="col-md-6">
 	
-	  	  <h4> Personal Information</h4><hr>
+	  	  <h4> <%= t("Personal_Information")%></h4><hr>
 		  <div class="field">
-		    <p> Your Name</p>
+		    <p> <%= t("name")%> </p>
 		    <input class="form-control" type="text" name="customer_name" id="customer_name">
 
 		  </div><br>
 		  <div class="field">
-		    <p>Your Email</p>
+		    <p><%= t("email")%></p>
 		    <input class="form-control" type="text" name="customer_email" id="customer_email">
 		  </div><br>
 		 
@@ -116,25 +117,25 @@
 
 	 <div class="col-md-6">
 	
-	  	  <h4> Delivery Address</h4><hr>
+	  	  <h4> <%= t("shipping_delivery")%></h4><hr>
 		  <div class="field">
-		     <p>Phone</p>
+		     <p><%= t("phone")%></p>
 		     <input class="form-control" type="text" name="customer_phone" id="customer_phone">
 		  </div><br>
 		 
 		  <div class="field">
-		    <p> House Number, Street</p>
+		    <p> <%= t("House_Number_Street")%></p>
 		     <input class="form-control" type="text" name="customer_house" id="customer_house">
 		  </div><br>
 
 		   <div class="field">
-		    <p>Township</p>
+		    <p><%= t("Township")%></p>
 		    <input class="form-control" type="text" name="customer_township" id="customer_township">
 		  </div><br>
 
 
 		   <div class="field">
-		    <p>City</p>
+		    <p><%= t("City")%></p>
 		    <input class="form-control" type="text" name="customer_city" id="customer_city">
 		  </div><br>
 

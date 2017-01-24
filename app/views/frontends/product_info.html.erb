@@ -17,6 +17,8 @@
 
    <% if Time.current.utc.localtime.between?(@start_day,@end_day) %>
 		<h4 class="detailpage_link">
+		
+
 		  	Home > <%= @product.product_category %> > <%= @product.short_title %> > <%= @product.id %> 
 		</h4><br/>
 	
@@ -798,7 +800,7 @@ for (var i = min; i<=max; i++){
               data: {'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity, 'product_model':product_model},
               complete: function(r){
               
-					 var currentURL = '/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity+ '&product_model=' + product_model;
+					 var currentURL = '/<%= I18n.locale %>/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity+ '&product_model=' + product_model;
                      window.location.href = currentURL;
 
               }
