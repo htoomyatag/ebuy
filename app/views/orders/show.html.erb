@@ -53,6 +53,7 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
+                  <th>Product ID</th>
                   <th>Product Name</th>
                   <th>Model</th>
                   <th>Color</th>
@@ -64,6 +65,9 @@
               <tbody>
                 <% @line_items.each do |line_item| %>
                 <tr>
+                 <td>  
+                     <%= line_item.product.id %>
+                  </td>
                   <td>  
                      <%= line_item.product.title %>
                   </td>

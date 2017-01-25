@@ -271,6 +271,19 @@ $(document).ready(function(){
 
   document.getElementById("total_price").value = "<%= @cart.total_price %>";
 
+
+    "<% if buyer_signed_in? %>"
+
+     document.getElementById("customer_name").value = "<%= current_buyer.buyer_name %>";
+     document.getElementById("customer_email").value = "<%= current_buyer.email %>";
+     document.getElementById("customer_phone").value = "<%= current_buyer.buyer_phone %>";
+     document.getElementById("customer_house").value = "<%= current_buyer.buyer_address %>";
+     document.getElementById("customer_township").value = "<%= current_buyer.buyer_township %>";
+     document.getElementById("customer_city").value = "Yangon";
+
+
+  "<% end %>"
+
 });
 
 </script>
