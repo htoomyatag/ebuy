@@ -734,7 +734,7 @@ for (var i = min; i<=max; i++){
 
  		product_model =  $( "#myProductModel option:selected" ).text();
 
- 		 if (color != "Choose" || size != "Choose" || delivery_method != "Choose" || product_model != "Choose") {
+ 		 if (color != "Choose" && size != "Choose" && delivery_method != "Choose" && product_model != "Choose") {
  	
   		$.ajax({
               type: 'post',
@@ -791,7 +791,7 @@ for (var i = min; i<=max; i++){
 
  		product_model =  $( "#myProductModel option:selected" ).text();
 
- if (color != "Choose" || size != "Choose" || delivery_method != "Choose" || product_model != "Choose") {
+ if (color != "Choose" && size != "Choose" && delivery_method != "Choose" && product_model != "Choose") {
  	
   		$.ajax({
               type: 'get',
