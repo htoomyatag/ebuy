@@ -12,13 +12,13 @@
                   <div class="item active">
 
                       <div class="col-md-6">
-                           <a href="/product_info/<%= @time_sale_firsts.id %>">
+                           <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_firsts.id %>">
                             <%= image_tag @time_sale_firsts.avatar1.url(:medium), :id=>"time_sale_img" %>
                            </a>
                    
                       </div>
                       <div class="col-md-6"><br/><br/><br/>
-                           <a href="/product_info/<%= @time_sale_firsts.id %>">           
+                           <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_firsts.id %>">           
                               <p id="product_title"><%= @time_sale_firsts.short_title %></p>
                               <p id="product_price"><% round_up(@time_sale_firsts.discount_price.to_i * @currency_exchange.to_i)  %>
                                             <%= $product_price %> Ks</p>
@@ -33,13 +33,13 @@
               <% if !@time_sale_seconds.nil? %>
               <div class="item">
                   <div class="col-md-6">
-                   <a href="/product_info/<%= @time_sale_seconds.id %>">
+                   <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_seconds.id %>">
                         <%= image_tag @time_sale_seconds.avatar1.url(:medium), :id=>"time_sale_img" %>
                   </a>
                    
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
-                       <a href="/product_info/<%= @time_sale_seconds.id %>">           
+                       <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_seconds.id %>">           
                           <p id="product_title"><%= @time_sale_seconds.short_title %></p>
                           <p id="product_price">
                           <% round_up(@time_sale_seconds.discount_price.to_i * @currency_exchange.to_i)  %>
@@ -55,12 +55,12 @@
               <% if !@time_sale_thirds.nil? %>
               <div class="item">
                   <div class="col-md-6">
-                      <a href="/product_info/<%= @time_sale_thirds.id %>">
+                      <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_thirds.id %>">
                             <%= image_tag @time_sale_thirds.avatar1.url(:medium), :id=>"time_sale_img" %>
                       </a>
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
-                       <a href="/product_info/<%= @time_sale_thirds.id %>">           
+                       <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_thirds.id %>">           
                           <p id="product_title"><%= @time_sale_thirds.short_title %></p>
                           <p id="product_price">
                              <% round_up(@time_sale_thirds.discount_price.to_i * @currency_exchange.to_i)  %>
@@ -92,13 +92,13 @@
            <% if !@time_sale_fourths.nil? %>
               <div class="item active">
                   <div class="col-md-6">
-                       <a href="/product_info/<%= @time_sale_fourths.id %>">
+                       <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_fourths.id %>">
                         <%= image_tag @time_sale_fourths.avatar1.url(:medium), :id=>"time_sale_img" %>
                       </a>
                    
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
-                       <a href="/product_info/<%= @time_sale_fourths.id %>">           
+                       <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_fourths.id %>">           
                           <p id="product_title"><%= @time_sale_fourths.short_title %></p>
                           <p id="product_price">
                              <% round_up(@time_sale_fourths.discount_price.to_i * @currency_exchange.to_i)  %>
@@ -113,13 +113,13 @@
               <% if !@time_sale_fifths.nil? %>
               <div class="item">
                   <div class="col-md-6">
-                     <a href="/product_info/<%= @time_sale_fifths.id %>">
+                     <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_fifths.id %>">
                         <%= image_tag @time_sale_fifths.avatar1.url(:medium), :id=>"time_sale_img" %>
                       </a>
                     
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
-                       <a href="/product_info/<%= @time_sale_fifths.id %>">           
+                       <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_fifths.id %>">           
                           <p id="product_title"><%= @time_sale_fifths.short_title %></p>
                           <p id="product_price">
                              <% round_up(@time_sale_fifths.discount_price.to_i * @currency_exchange.to_i)  %>
@@ -134,12 +134,12 @@
               <% if !@time_sale_sixths.nil? %>
               <div class="item">
                   <div class="col-md-6">
-                     <a href="/product_info/<%= @time_sale_sixths.id %>">
+                     <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_sixths.id %>">
                         <%= image_tag @time_sale_sixths.avatar1.url(:medium), :id=>"time_sale_img" %>
                       </a>
                   </div>
                   <div class="col-md-6"><br/><br/><br/>
-                       <a href="/product_info/<%= @time_sale_sixths.id %>">           
+                       <a href="/<%= I18n.locale %>/product_info/<%= @time_sale_sixths.id %>">           
                           <p id="product_title"><%= @time_sale_sixths.short_title %></p>
                           <p id="product_price">
                                <% round_up(@time_sale_sixths.discount_price.to_i * @currency_exchange.to_i)  %>
