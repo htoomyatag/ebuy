@@ -57,7 +57,7 @@ Rails.application.routes.draw do
 
   get 'order_form' => 'frontends#order_form', as: 'order_form'
   get 'about_us' => 'frontends#about_us'
-  get 'contact_us' => 'frontends#contact_us'
+  match 'contact_us' => 'frontends#contact_us', as: :contact_us, via: [:get, :post]
   get 'help' => 'frontends#help'
   get 'product_info/:id' => 'frontends#product_info', as: 'product_info'
   get 'view_image/:id' => 'frontends#view_image', as: 'view_image'

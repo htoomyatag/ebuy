@@ -300,6 +300,7 @@
               var payment_type = "MPU";
               var delivery_method = "<%= params[:product_delivery_method] %>";
               var product_name = "<%= params[:product_name] %>";
+              var myproduct_name = product_name.replace(/#/,'_');
               var product_size = " <%= params[:product_size] %>";
               var product_color = "<%= params[:product_color] %>";
               var product_message = "<%= params[:product_message] %>";
@@ -317,7 +318,7 @@
                        "&delivery_method="+delivery_method+
                        "&thetotal_price="+thetotal_price+
                        "&cart_id="+cart_id+
-                       "&product_name="+product_name+
+                       "&product_name="+myproduct_name+
                        "&product_size="+product_size+
                        "&product_color="+product_color+
                        "&product_message="+product_message,
@@ -357,6 +358,7 @@
               var payment_type = "BankTransfer";
               var delivery_method = "<%= params[:product_delivery_method] %>";
               var product_name = "<%= params[:product_name] %>";
+              var myproduct_name = product_name.replace(/#/,'_');
               var product_size = " <%= params[:product_size] %>";
               var product_color = "<%= params[:product_color] %>";
               var product_message = "<%= params[:product_message] %>";
@@ -375,7 +377,7 @@
                        "&buyer_address="+buyer_address+
                        "&delivery_method="+delivery_method+
                        "&cart_id="+cart_id+
-                       "&product_name="+product_name+
+                       "&product_name="+myproduct_name+
                        "&thetotal_price="+thetotal_price+
                        "&product_size="+product_size+
                        "&product_color="+product_color+
@@ -415,6 +417,7 @@
               var payment_type = "CashOnDelivery";
               var delivery_method = "<%= params[:product_delivery_method] %>";
               var product_name = "<%= params[:product_name] %>";
+              var myproduct_name = product_name.replace(/#/,'_');
               var product_size = " <%= params[:product_size] %>";
               var product_color = "<%= params[:product_color] %>";
               var product_message = "<%= params[:product_message] %>";
@@ -431,7 +434,7 @@
                        "&buyer_address="+buyer_address+
                        "&delivery_method="+delivery_method+
                        "&cart_id="+cart_id+
-                       "&product_name="+product_name+
+                       "&product_name="+myproduct_name+
                        "&product_size="+product_size+
                        "&product_color="+product_color+
                        "&product_model="+product_model+
