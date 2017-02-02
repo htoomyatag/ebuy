@@ -161,12 +161,7 @@
 
      <% if !@product.specsq.nil? or !@product.specsa.nil? %>
                <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th>Fields</th>
-                        <th>Value</th>
-                      </tr>
-                    </thead>
+                    
                     <tbody>
                     <% @product.specsq.zip ( @product.specsa).each do |question, answer| %>
                       <tr>
