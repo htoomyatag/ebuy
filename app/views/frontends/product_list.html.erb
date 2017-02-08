@@ -56,6 +56,8 @@
 
             <tbody>
               <% @products.each do |product| %>
+
+              <% if  !product.start_to_sell_on.nil? %>
                 <tr>
                   <td>
 
@@ -76,6 +78,11 @@
                   </td>
                   <td><%= product.quantity %></td>
                 </tr>
+
+
+                <% end %>
+
+
               <% end %>
             </tbody>
 
