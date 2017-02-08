@@ -24,13 +24,25 @@
               </a>
 
 
-			  <a class="navbar-brand" href="/en">
-				<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag", :id=>"cart_mobi"  %>
-              </a>
+			
 
-             <a class="navbar-brand" href="/mm">
-            	<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;", :id=>"cart_mobi" %>
-            </a>
+		
+								
+								  <a class="navbar-brand" href="<%= request.original_url.gsub("/mm","/en") %>">
+										<%= image_tag "english_flag.png", :alt=>"english", :id => "english_flag", :id=>"cart_mobi"  %>
+						              </a>
+
+						             <a class="navbar-brand" href="<%= request.original_url.gsub("/en","/mm") %>">
+						            	<%= image_tag "mm_flag.png", :alt=>"myanmar", :style => "border:1px solid #021a40;", :id=>"cart_mobi" %>
+						            </a>
+
+
+
+
+			
+
+
+
 
               <a class="navbar-brand" href="#">
 				<span class="nav_text"><%= t('cart') %></span>
