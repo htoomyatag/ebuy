@@ -30,7 +30,7 @@ $(function(){ // DOM ready
 
   $("#tags_size input").on({
     focusout : function() {
-      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var mytxt = this.value.replace(/[^a-z0-9 \+\-\.\#]/ig,''); // allowed characters
       var txt = mytxt;
       if(txt) $("<span/>", {text:txt+",", insertBefore:this});
       this.value = "";
@@ -48,7 +48,7 @@ $(function(){ // DOM ready
 
     $("#tags_color input").on({
     focusout : function() {
-      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var mytxt = this.value.replace(/[^a-z0-9 \+\-\.\#]/ig,''); // allowed characters
       var txt = mytxt;
       if(txt) $("<span/>", {text:txt+",", insertBefore:this});
       this.value = "";
@@ -67,7 +67,7 @@ $(function(){ // DOM ready
 
     $("#tags_model input").on({
     focusout : function() {
-      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var mytxt = this.value.replace(/[^a-z0-9 \+\-\.\#]/ig,''); // allowed characters
       var txt = mytxt;
       if(txt) $("<span/>", {text:txt+",", insertBefore:this});
       this.value = "";

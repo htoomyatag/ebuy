@@ -328,8 +328,18 @@ def chat_to_seller
 
      @product = Product.find(params[:id])
 
-     @start_day = @product.start_to_sell_on.strftime("%Y-%m-%d %I:%M:%S +0630")
-     @end_day = @product.end_on.strftime("%Y-%m-%d %I:%M:%S +0630")
+
+     if !@product.start_to_sell_on.nil? or !@product.end_on.nil? 
+
+         @start_day = @product.start_to_sell_on.strftime("%Y-%m-%d %I:%M:%S +0630")
+         @end_day = @product.end_on.strftime("%Y-%m-%d %I:%M:%S +0630")
+
+     else
+
+        @start_day = "2017-02-08 12:57:22"
+        @end_day = "2017-02-08 12:57:22"
+
+     end
   
 
      @product_category = Product.pluck(:product_category).first
