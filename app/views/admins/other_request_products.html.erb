@@ -10,10 +10,9 @@
 		  <thead>
 		    <tr>
 		      <th>Title</th>
-		      <th>Actual price</th>
-		      <th>Offer price</th>
-		      <th>Quantity</th>
-		      <th>Category</th>
+		      <th>Sender Name</th>
+		      <th>Sender Phone</th>
+		      <th>Sender Email</th>
 		      <th colspan="2"></th>
 		    </tr>
 		  </thead>
@@ -22,12 +21,10 @@
     		<% @request_products.each do |request_product| %>
 		      <tr>
 		        <td><%= request_product.title %></td>
-		        <td><%= request_product.actual_price %></td>
-		        <td><%= request_product.discount_price %></td>
-		        <td><%= request_product.quantity %></td>
-		        <td><%= request_product.product_category %></td>
-		        <td><%= request_product.pick_up %></td>
-		        <td><%= request_product.start_to_sell_on %></td>
+		        <td><%= request_product.sender_name %></td>
+		        <td><%= request_product.sender_phone %></td>
+		        <td><%= request_product.sender_email %></td>
+		      
 		        <td><%= link_to 'Show', request_product %></td>
 		        <td><%= link_to 'Destroy', request_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		      </tr>
