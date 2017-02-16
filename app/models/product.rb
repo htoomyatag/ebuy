@@ -436,7 +436,22 @@ PRODUCTCHILDSUBCATEGORY = [
            "authentic_brand_zoneElectricalEquipmentsandParts",
            "authentic_brand_zoneMechanicalProductsandTools",
            "authentic_brand_zoneSafetyEquipmentsandAccessories",
-           "authentic_brand_zoneOEMProducts"
+           "authentic_brand_zoneOEMProducts",
+           "VegetableProducts",
+           "Confectionery",
+           "BakedGoods",
+           "GrainProducts",
+           "FoodIngredients",
+           "DairyProducts",
+           "HoneyProducts",
+           "MeatProducts",
+           "EggProducts",
+           "SeafoodProducts",
+           "Coffee",
+           "InstantFood",
+           "CannedFood",
+           "BabyFood",
+           "Beverage"
 
 
 
