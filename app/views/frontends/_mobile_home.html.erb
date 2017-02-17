@@ -104,7 +104,8 @@
 
 
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				  <!-- Indicators -->
 				  <ol class="carousel-indicators">
 				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -114,21 +115,40 @@
 
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
+				   
 				    <div class="item active">
-				      <%= image_tag("1001.jpg") %>
+				      
+                        	<%= image_tag @first_cover_images.cover_photo.url, :id => "image_slide" %>
+                      	
+
+				    </div>
+
+				    <div class="item">
+
+				    	
+				    	
+                        	<%= image_tag @second_cover_images.cover_photo.url, :id => "image_slide" %>
+                      
+						
+
+
 				    </div>
 				    <div class="item">
-				       <%= image_tag("1002.jpg") %>
+				       
+                        	<%= image_tag @third_cover_images.cover_photo.url, :id => "image_slide" %>
+                      	
+
 				    </div>
-				    <div class="item">
-				       <%= image_tag("1003.jpg") %>
-				    </div>
+
+
 				  </div>
 
-				  
+				  <!-- Controls -->
 				
 
+
 </div>
+
 
 
 
