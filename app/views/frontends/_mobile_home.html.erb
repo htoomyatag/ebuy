@@ -105,6 +105,9 @@
 
 
 
+
+
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				  <!-- Indicators -->
 				  <ol class="carousel-indicators">
@@ -118,7 +121,7 @@
 				   
 				    <div class="item active">
 				      
-                        	<%= image_tag @first_cover_images.cover_photo.url, :id => "image_slide" %>
+                        	<%= image_tag @first_cover_images.cover_photo.url%>
                       	
 
 				    </div>
@@ -127,7 +130,7 @@
 
 				    	
 				    	
-                        	<%= image_tag @second_cover_images.cover_photo.url, :id => "image_slide" %>
+                        	<%= image_tag @second_cover_images.cover_photo.url %>
                       
 						
 
@@ -135,7 +138,7 @@
 				    </div>
 				    <div class="item">
 				       
-                        	<%= image_tag @third_cover_images.cover_photo.url, :id => "image_slide" %>
+                        	<%= image_tag @third_cover_images.cover_photo.url %>
                       	
 
 				    </div>
@@ -148,8 +151,6 @@
 
 
 </div>
-
-
 
 
 
