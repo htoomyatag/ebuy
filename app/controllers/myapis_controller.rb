@@ -56,12 +56,10 @@ protect_from_forgery with: :null_session
           my_seconday_json = my_primary_json.to_json.gsub('\\', '')
           a = '"['
           b = ']"'
-          c = '],"' 
           my_third_json = my_seconday_json.gsub(a , "[")
           my_fourth_json = my_third_json.gsub(b , "]")
-          my_fifth_json = my_fourth_json.gsub(c , ']","')
           format.json {render json: my_primary_json}
-          format.text {render text: my_fifth_json}
+          format.text {render text: my_fourth_json}
     end
    end
 
