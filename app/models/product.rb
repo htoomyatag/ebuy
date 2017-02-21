@@ -98,7 +98,22 @@ PRODUCTSUBCATEGORY = [
               "authentic_brand_zoneOfficeandSchoolSupplies", 
               "authentic_brand_zoneLightsandLightings",
               "authentic_brand_zoneTransportation",
-              "authentic_brand_zoneElectronicElectricalandMechanicalProducts"
+              "authentic_brand_zoneElectronicElectricalandMechanicalProducts",
+              "other_accessories_authentic_brandzone",
+              "other_women_fashion",
+              "other_men_fashion",
+              "other_digital_mobile_electrical",
+              "other_home_living",
+              "other_health_beauty",
+              "other_food_beverage",
+              "other_kid_baby",
+              "other_sport",
+              "other_office",
+              "other_lighting",
+              "other_transportation",
+              "other_travel_deal",
+              "other_service",
+              "other_electronic"
      
 
 
