@@ -7,8 +7,7 @@
     		<h3>Edit Product
       
         <br>
-        <%= @raw_product %>
-        <%= @specsq %>
+
 
 
 
@@ -190,7 +189,7 @@ $("#mysubmitbutton").click(function(e) {
 
   for (var i = 0; i < specq_array.length; i++) {
 
-      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsq][]" id="product_specsq" value='+specq_array[i].replace("]","").replace("[","")+'>');
+      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsq][]" id="product_specsq" value='+specq_array[i].replace("]","").replace("[","").replace("@",'__')+'>');
       $('#cont_q').append(textarea);
         
     }
@@ -199,10 +198,19 @@ $("#mysubmitbutton").click(function(e) {
 
   for (var i = 0; i < speca_array.length; i++) {
 
-      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsa][]" id="product_specsa" value='+speca_array[i].replace("]","").replace("[","")+'>');
+      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsa][]" id="product_specsa" value='+speca_array[i].replace("]","").replace("[","").replace("@","__")+'>');
       $('#cont_a').append(textarea);
         
     }
+
+
+    var value_of_specq = document.getElementById("product_specsq").value;
+    document.getElementById("product_specsq").value = value_of_specq..replace("__"," ");
+
+    var value_of_speca = document.getElementById("product_specsa").value;
+    document.getElementById("product_specsa").value = value_of_speca..replace("__"," ");
+
+
 
 
 
