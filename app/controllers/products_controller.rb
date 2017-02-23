@@ -38,6 +38,8 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
 
+ @specsq = []
+ @specsa = []
        # order number
    @product_number = Product.maximum(:id)
    if @product_number.nil?
@@ -61,7 +63,7 @@ class ProductsController < ApplicationController
   if !@product.specsq.nil?
 
     @my_product_specsq = @product.specsq.to_s
-    @specsq = @product.specsq.to_s.gsub('"','')
+    @specsq = @product.specsq
 
 
   else
@@ -72,7 +74,7 @@ class ProductsController < ApplicationController
   if !@product.specsa.nil?
 
     @my_product_specsa = @product.specsa.to_s
-    @specsa = @product.specsa.to_s.gsub('"','')
+    @specsa = @product.specsa
 
 
   else

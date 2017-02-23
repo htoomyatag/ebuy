@@ -6,8 +6,9 @@
     		<div class="col-md-12">
     		<h3>Edit Product
         <br/>
-        <%= @specsq %> <br/>
-        <%= @specsa %>
+      
+
+    
       
         <br>
 
@@ -183,29 +184,32 @@ $("#mysubmitbutton").click(function(e) {
    $("#oldspec1").remove();
    $("#oldspec2").remove();
 
-  var raw_specq_array = "<%= @specsq %>"
-  var specq_array = raw_specq_array.split(',');
-  alert(specq_array);
+  // var raw_specq_array = "<%= @specsq %>"
+  // var specq_array = raw_specq_array.split(',');
+  // alert(specq_array);
 
-  var raw_speca_array = "<%= @specsa %>"
-  var speca_array = raw_speca_array.split(',');
+  // var raw_speca_array = "<%= @specsa %>"
+  // var speca_array = raw_speca_array.split(',');
 
 
-  for (var i = 0; i < specq_array.length; i++) {
 
-      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsq][]" id="product_specsq" value='+specq_array[i].replace("]","").replace("[","")+'>');
-      $('#cont_q').append(textarea);
+
+
+
+  // for (var i = 0; i < specq_array.length; i++) {
+
+  //     var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsq][]" id="product_specsq" value='+specq_array[i].replace("]","").replace("[","")+'>');
+  //     $('#cont_q').append(textarea);
         
-    }
+  //   }
 
 
+  // for (var i = 0; i < speca_array.length; i++) {
 
-  for (var i = 0; i < speca_array.length; i++) {
-
-      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsa][]" id="product_specsa" value='+speca_array[i].replace("]","").replace("[","")+'>');
-      $('#cont_a').append(textarea);
+  //     var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsa][]" id="product_specsa" value='+speca_array[i].replace("]","").replace("[","")+'>');
+  //     $('#cont_a').append(textarea);
         
-    }
+  //   }
 
 
    

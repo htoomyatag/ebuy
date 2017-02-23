@@ -272,6 +272,19 @@
           </div>
         </div>
 
+         <div class="col-md-6">
+             <% @specsq.each do |p| %>
+                <br/><input multiple="multiple" class="form-control" type="text" name="product[specsq][]" id="product_specsq" value='<%= p %>'>
+            <% end %>
+         </div>
+
+         <div class="col-md-6">
+             <% @specsa.each do |p| %>
+                <br/><input multiple="multiple" class="form-control" type="text" name="product[specsa][]" id="product_specsa" value='<%= p %>'>
+            <% end %>
+         </div>
+
+
 
         <div id='cont' >
 
