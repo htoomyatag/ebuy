@@ -5,6 +5,9 @@
   <div class="panel-body">
     		<div class="col-md-12">
     		<h3>Edit Product
+        <br/>
+        <%= @specsq %> <br/>
+        <%= @specsa %>
       
         <br>
 
@@ -182,6 +185,7 @@ $("#mysubmitbutton").click(function(e) {
 
   var raw_specq_array = "<%= @specsq %>"
   var specq_array = raw_specq_array.split(',');
+  alert(specq_array);
 
   var raw_speca_array = "<%= @specsa %>"
   var speca_array = raw_speca_array.split(',');
@@ -189,7 +193,7 @@ $("#mysubmitbutton").click(function(e) {
 
   for (var i = 0; i < specq_array.length; i++) {
 
-      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsq][]" id="product_specsq" value='+specq_array[i].replace("]","").replace("[","").replace("@",'__')+'>');
+      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsq][]" id="product_specsq" value='+specq_array[i].replace("]","").replace("[","")+'>');
       $('#cont_q').append(textarea);
         
     }
@@ -198,23 +202,13 @@ $("#mysubmitbutton").click(function(e) {
 
   for (var i = 0; i < speca_array.length; i++) {
 
-      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsa][]" id="product_specsa" value='+speca_array[i].replace("]","").replace("[","").replace("@","__")+'>');
+      var textarea =  $('<input multiple="multiple" class="form-control" type="text" name="product[specsa][]" id="product_specsa" value='+speca_array[i].replace("]","").replace("[","")+'>');
       $('#cont_a').append(textarea);
         
     }
 
 
-    var value_of_specq = document.getElementById("product_specsq").value;
-    document.getElementById("product_specsq").value = value_of_specq..replace("__"," ");
-
-    var value_of_speca = document.getElementById("product_specsa").value;
-    document.getElementById("product_specsa").value = value_of_speca..replace("__"," ");
-
-
-
-
-
-
+   
   // 
 
 
@@ -268,7 +262,7 @@ for (var i = 0; i < question_array.length; i++) {
 
       $("#tags_size input").on({
         focusout : function() {
-          var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+          var mytxt = this.value.replace(/[^a-z0-9 \+\-\.\#]/ig,''); // allowed characters
           var txt = mytxt;
           if(txt) $("<span/>", {text:txt+",", insertBefore:this});
           this.value = "";
@@ -286,7 +280,7 @@ for (var i = 0; i < question_array.length; i++) {
 
        $("#tags_color input").on({
     focusout : function() {
-      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var mytxt = this.value.replace(/[^a-z0-9 \+\-\.\#]/ig,''); // allowed characters
       var txt = mytxt;
       if(txt) $("<span/>", {text:txt+",", insertBefore:this});
       this.value = "";
@@ -303,7 +297,7 @@ for (var i = 0; i < question_array.length; i++) {
 
     $("#tags_model input").on({
     focusout : function() {
-      var mytxt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+      var mytxt = this.value.replace(/[^a-z0-9 \+\-\.\#]/ig,''); // allowed characters
       var txt = mytxt;
       if(txt) $("<span/>", {text:txt+",", insertBefore:this});
       this.value = "";
