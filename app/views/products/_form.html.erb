@@ -331,6 +331,21 @@
   </div>
 
 
+  <div class="col-md-6">
+             <% @question.each do |p| %>
+                <br/><input multiple="multiple" class="form-control" type="text" name="product[question][]" id="product_question" value='<%= p %>'>
+            <% end %>
+         </div>
+
+         <div class="col-md-6">
+             <% @answer.each do |p| %>
+                <br/><input multiple="multiple" class="form-control" type="text" name="product[answer][]" id="product_answer" value='<%= p %>'>
+            <% end %>
+         </div>
+
+         
+
+
         <div id='cont2' >
 
         </div>

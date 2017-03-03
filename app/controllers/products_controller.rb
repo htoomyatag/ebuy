@@ -1,3 +1,4 @@
+
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   layout "backend"
@@ -40,6 +41,9 @@ class ProductsController < ApplicationController
 
  @specsq = []
  @specsa = []
+
+ @question = []
+ @answer = []
        # order number
    @product_number = Product.maximum(:id)
    if @product_number.nil?
@@ -83,14 +87,14 @@ class ProductsController < ApplicationController
 
 
   if !@product.question.nil?
-    @question = @product.question.to_s.gsub('"','')
+    @question = @product.question
   else
     @question = ""
   end
 
 
   if !@product.answer.nil?
-    @answer = @product.answer.to_s.gsub('"','')
+    @answer = @product.answer
   else
     @answer = ""
   end

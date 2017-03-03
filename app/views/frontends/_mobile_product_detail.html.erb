@@ -423,7 +423,7 @@ for (var i = min; i<=max; i++){
               data: {'product_color':color,'product_size':size, 'delivery_method':delivery_method, 'product_quantity':product_quantity, 'product_model':product_model},
               complete: function(r){
               
-           var currentURL = '/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity+ '&product_model=' + product_model;
+           var currentURL = '/<%= I18n.locale %>/fill_your_order_form/'+product_id + '?product_color=' + color + '&product_size=' + size+ '&delivery_method=' + delivery_method+ '&product_quantity=' + product_quantity+ '&product_model=' + product_model;
                      window.location.href = currentURL;
 
               }

@@ -225,30 +225,30 @@ $("#mysubmitbutton").click(function(e) {
    $("#oldquestionandanswer").remove();
 
 
-  var raw_question_array = "<%= @question %>"
-  var question_array = raw_question_array.split(',');
+//   var raw_question_array = "<%= @question %>"
+//   var question_array = raw_question_array.split(',');
 
-  var raw_answer_array = "<%= @answer %>"
-  var answer_array = raw_answer_array.split(',');
+//   var raw_answer_array = "<%= @answer %>"
+//   var answer_array = raw_answer_array.split(',');
 
 
  
 
-for (var i = 0; i < question_array.length; i++) {
+// for (var i = 0; i < question_array.length; i++) {
 
-      var textarea =  $('<br/><input multiple="multiple" class="form-control" type="text" name="product[question][]" id="product_question" value='+question_array[i].replace("]","").replace("[","")+'>');
-      $('#contquestion_q').append(textarea);
+//       var textarea =  $('<br/><input multiple="multiple" class="form-control" type="text" name="product[question][]" id="product_question" value='+question_array[i].replace("]","").replace("[","")+'>');
+//       $('#contquestion_q').append(textarea);
         
-    }
+//     }
 
 
 
-  for (var i = 0; i < answer_array.length; i++) {
+//   for (var i = 0; i < answer_array.length; i++) {
 
-      var textarea =  $('<br/><input multiple="multiple" class="form-control" type="text" name="product[answer][]" id="product_answer" value='+answer_array[i].replace("]","").replace("[","")+'>');
-      $('#contanswer_a').append(textarea);
+//       var textarea =  $('<br/><input multiple="multiple" class="form-control" type="text" name="product[answer][]" id="product_answer" value='+answer_array[i].replace("]","").replace("[","")+'>');
+//       $('#contanswer_a').append(textarea);
         
-    }
+//     }
 
 
   // 
