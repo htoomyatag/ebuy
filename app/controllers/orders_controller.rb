@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
     if !params[:payment_type].nil?
     @orders = Order.where(:payment_type => params[:payment_type])
     else
-    @orders = Order.all
+    @orders = Order.all.paginate(:page => params[:page], :per_page => 50)
     end
   end
 

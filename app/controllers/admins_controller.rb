@@ -17,7 +17,7 @@ class AdminsController < ApplicationController
 
 
   def buyer_list
-      @buyers = Buyer.all
+      @buyers = Buyer.paginate(:page => params[:page], :per_page => 50)
   end
 
   def dashboard
