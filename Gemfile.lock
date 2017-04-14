@@ -73,6 +73,8 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise-token_authenticatable (0.5.2)
+      devise (>= 4.0.0, < 4.3.0)
     erubis (2.7.0)
     execjs (2.7.0)
     globalid (0.3.7)
@@ -204,6 +206,7 @@ DEPENDENCIES
   chronic
   coffee-rails (~> 4.1.0)
   devise
+  devise-token_authenticatable
   jbuilder (~> 2.0)
   jquery-rails
   momentjs-rails (>= 2.9.0)

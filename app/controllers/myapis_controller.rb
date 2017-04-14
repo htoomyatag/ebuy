@@ -96,10 +96,10 @@ protect_from_forgery with: :null_session
 
   end
 
-#http://localhost:3000/my_info?buyer_name=htoomyat
+#http://localhost:3000/my_info.txt?buyer_id=1
   def my_info
 
-    @buyers = Buyer.where(:buyer_name => params[:buyer_name])
+    @buyers = Buyer.where(:id => params[:buyer_id])
     respond_to do |format|
           my_primary_json = @buyers.to_json(:only => [:id, :buyer_name,:buyer_phone,:buyer_township,:buyer_address])
           my_seconday_json = my_primary_json.to_json.gsub('\\', '')
@@ -113,13 +113,10 @@ protect_from_forgery with: :null_session
   end
 
 
- #http://localhost:3000/edit_my_info?buyer_name=htoomyataung&new_buyer_name=kohtoomyataung&new_buyer_phone=0934453&new_buyer_township=haing&new_buyer_address=kan street&email=htoomyatmyat@gmail.com&password=123321&password_confirmation=123321
+ #http://localhost:3000/edit_my_info?buyer_id=1&new_buyer_name=kohtoomyataung&new_buyer_phone=0934453&new_buyer_township=haing&new_buyer_address=kan street&email=htoomyatmyat@gmail.com&password=123321&password_confirmation=123321
   def edit_my_info
 
-     @get_buyer_name = Buyer.where(:buyer_name => params[:buyer_name]).pluck(:id)
-     @buyer_id = @get_buyer_name.to_s.gsub("[","").gsub("]","")
-       
-     @edit_info = Buyer.find(@buyer_id)
+     @edit_info = Buyer.find(params[:buyer_id])
      @edit_info.update(
           :buyer_name => params[:new_buyer_name],
           :buyer_phone  => params[:new_buyer_phone],
@@ -132,25 +129,132 @@ protect_from_forgery with: :null_session
   end
 
 
+#http://localhost:3000/my_shoppinglist.txt?buyer_id=1
   def my_shoppinglist
 
-    #   @get_buyer_name = Buyer.where(:buyer_name => params[:buyer_name]).pluck(:id)
-    #   @buyer_id = @get_buyer_name.to_s.gsub("[","").gsub("]","")
-      
-    #   @orders = Order.where(:buyer_id => @buyer_id)
-    #    respond_to do |format|
-    #       my_primary_json = @orders.to_json(:only => [:id, :buyer_name,:buyer_phone,:buyer_township,:buyer_address])
-    #       my_seconday_json = my_primary_json.to_json.gsub('\\', '')
-    #       a = '"['
-    #       b = ']"'
-    #       my_third_json = my_seconday_json.gsub(a , "[")
-    #       my_fourth_json = my_third_json.gsub(b , "]")
-    #       format.json {render json: my_primary_json}
-    #       format.text {render text: my_fourth_json}
-    # end
+    @orders = Order.where(:buyer_id => params[:buyer_id])
+    respond_to do |format|
+          my_primary_json = @orders.to_json(:only => [
+                                              :id, 
+                                              :buyer_name,
+                                              :buyer_email,
+                                              :buyer_phone,
+                                              :buyer_address,
+                                              :buyer_township,
+                                              :buyer_city,
+                                              :payment_type,
+                                              :order_status
+                            ])
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          a = '"['
+          b = ']"'
+          my_third_json = my_seconday_json.gsub(a , "[")
+          my_fourth_json = my_third_json.gsub(b , "]")
+          format.json {render json: my_primary_json}
+          format.text {render text: my_fourth_json}
+    end
+
+  end
+
+#http://localhost:3000/my_wish_list.txt?buyer_id=1
+  def my_wish_list
+
+    @orders = WishList.where(:buyer_id => params[:buyer_id])
+    respond_to do |format|
+          my_primary_json = @orders.to_json(:only => [
+                                              :id, 
+                                              :product_name
+                            ])
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          a = '"['
+          b = ']"'
+          my_third_json = my_seconday_json.gsub(a , "[")
+          my_fourth_json = my_third_json.gsub(b , "]")
+          format.json {render json: my_primary_json}
+          format.text {render text: my_fourth_json}
+    end
+
   end
 
 
+#http://localhost:3000/my_coupon_list.txt
+def my_coupon_list
+
+    @orders = Coupon.all
+    respond_to do |format|
+          my_primary_json = @orders.to_json(:only => [
+                                              :id, 
+                                              :title,
+                                              :expire_date,
+                                              :limitation
+                                          ])
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          a = '"['
+          b = ']"'
+          my_third_json = my_seconday_json.gsub(a , "[")
+          my_fourth_json = my_third_json.gsub(b , "]")
+          format.json {render json: my_primary_json}
+          format.text {render text: my_fourth_json}
+    end
+
+  end
+
+
+#http://localhost:3000/myorder_list.txt?buyer_id=1
+def myorder_list
+
+   @orders = Order.where(:buyer_id => params[:buyer_id]).where(:order_status => "paid")
+    respond_to do |format|
+          my_primary_json = @orders.to_json(:only => [
+                                              :id, 
+                                              :buyer_name,
+                                              :buyer_email,
+                                              :buyer_phone,
+                                              :buyer_address,
+                                              :buyer_township,
+                                              :buyer_city,
+                                              :payment_type,
+                                              :order_status
+                            ])
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          a = '"['
+          b = ']"'
+          my_third_json = my_seconday_json.gsub(a , "[")
+          my_fourth_json = my_third_json.gsub(b , "]")
+          format.json {render json: my_primary_json}
+          format.text {render text: my_fourth_json}
+    end
+
+  end
+
+
+#http://localhost:3000/mycancel_list.txt?buyer_id=1
+def mycancel_list
+
+   @orders = Order.where(:buyer_id => params[:buyer_id]).where(:order_status => "order_cancel")
+
+    respond_to do |format|
+          my_primary_json = @orders.to_json(:only => [
+                                              :id, 
+                                              :buyer_name,
+                                              :buyer_email,
+                                              :buyer_phone,
+                                              :buyer_address,
+                                              :buyer_township,
+                                              :buyer_city,
+                                              :payment_type,
+                                              :order_status
+                            ])
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          a = '"['
+          b = ']"'
+          my_third_json = my_seconday_json.gsub(a , "[")
+          my_fourth_json = my_third_json.gsub(b , "]")
+          format.json {render json: my_primary_json}
+          format.text {render text: my_fourth_json}
+    end
+
+  end
 
 
 

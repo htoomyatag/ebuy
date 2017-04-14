@@ -13,6 +13,13 @@ Rails.application.routes.draw do
   match "my_info" => "myapis#my_info", as: :my_info, via: [:get, :post]
   match "edit_my_info" => "myapis#edit_my_info", as: :edit_my_info, via: [:get, :post]
   match "my_shoppinglist" => "myapis#my_shoppinglist", as: :my_shoppinglist, via: [:get, :post]
+  match "my_wish_list" => "myapis#my_wish_list", as: :my_wish_list, via: [:get, :post]
+  match "my_coupon_list" => "myapis#my_coupon_list", as: :my_coupon_list, via: [:get, :post]
+  match "myorder_list" => "myapis#myorder_list", as: :myorder_list, via: [:get, :post]
+  match "mycancel_list" => "myapis#mycancel_list", as: :mycancel_list, via: [:get, :post]
+
+
+
 
 
   resources :cover_images
@@ -23,6 +30,21 @@ Rails.application.routes.draw do
   get 'thanks_for_request' => 'request_products#thanks_for_request', as: 'thanks_for_request'
 
   devise_for :buyers, :controllers => {:sessions => "buyers/sessions", :registrations => "buyers/registrations"}
+  #devise_for :buyers, :authentication_token => 'authentication_token'
+
+  namespace :myapi do
+    namespace :v1 do
+      devise_scope :buyer do
+        post 'registrations' => 'registrations#create', :as => 'register'
+        post 'sessions' => 'sessions#create', :as => 'login'
+        delete 'sessions' => 'sessions#destroy', :as => 'logout'
+        post 'buyer_new' => 'registrations#buyer_new', :as => 'buyer_new'
+        
+      end
+    end
+  end
+
+
   devise_for :admins, :controllers => {:sessions => "admins/sessions", :registrations => "admins/registrations"}
   resources :admins
   get 'dashboard' => 'admins#dashboard'
