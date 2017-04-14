@@ -14,7 +14,7 @@ class Myapi::V1::SessionsController < Devise::SessionsController
     render :status => 200,
            :json => { :success => true,
                       :info => "Logged in",
-                      :data => {:auth_token => current_buyer.authentication_token,:buyer_id => current_buyer.id}}  
+                      :data => {:buyer_id => current_buyer.id}}  
   end
 
   
@@ -26,6 +26,16 @@ class Myapi::V1::SessionsController < Devise::SessionsController
                       :info => "Logged out",
                       :data => {} }
   end
+
+  def my_sign_out
+
+      render :status => 200,
+           :json => { :success => true,
+                      :info => "Logged out",
+                      :data => {} }
+
+  end
+
 
   def failure
     render :status => 401,

@@ -14,8 +14,7 @@ class Myapi::V1::RegistrationsController < Devise::RegistrationsController
       render :status => 200,
            :json => { :success => true,
                       :info => "Registered",
-                      :data => { :buyer => resource,
-                                 :auth_token => current_buyer.authentication_token, :buyer_id => current_buyer.id} }
+                      :data => { :buyer => resource,:buyer_id => current_buyer.id} }
     else
       render :status => :unprocessable_entity,
              :json => { :success => false,

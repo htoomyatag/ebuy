@@ -37,8 +37,9 @@ Rails.application.routes.draw do
       devise_scope :buyer do
         post 'registrations' => 'registrations#create', :as => 'register'
         post 'sessions' => 'sessions#create', :as => 'login'
-        delete 'sessions' => 'sessions#destroy', :as => 'logout'
+        # delete 'sessions' => 'sessions#destroy', :as => 'logout'
         post 'buyer_new' => 'registrations#buyer_new', :as => 'buyer_new'
+        get 'my_sign_out' => 'sessions#destroy', :as => 'logout'
         
       end
     end
