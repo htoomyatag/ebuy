@@ -14,7 +14,7 @@ class Myapi::V1::SessionsController < Devise::SessionsController
     render :status => 200,
            :json => { :success => true,
                       :info => "Logged in",
-                      :data => {:buyer_id => current_buyer.id}}  
+                      :data => {:buyer_id => current_buyer.id, :buyer_name => current_buyer.buyer_name, :buyer_email => current_buyer.email}}  
   end
 
   

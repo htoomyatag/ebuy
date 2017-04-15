@@ -36,6 +36,16 @@ class Myapi::V1::RegistrationsController < Devise::RegistrationsController
       :password_confirmation => params[:password_confirmation]
 
       )
+
+     if !@buyer.save
+           render :status => :unprocessable_entity,
+             :json => { :success => false}
+     else
+      render :status => :unprocessable_entity,
+             :json => { :success => true}
+
+     end
+
   end
 
 
