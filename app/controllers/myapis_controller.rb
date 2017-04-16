@@ -258,6 +258,107 @@ def mycancel_list
 
 
 
+
+#http://localhost:3000/mycart_list_by_buyer_id.txt?buyer_id=1
+def mycart_list_by_buyer_id
+
+   @orders = LineItem.where("buyer_id = ? ", params[:buyer_id])
+
+    respond_to do |format|
+          my_primary_json = @orders.to_json(:only => [
+                                            :product_id,
+                                            :cart_id,
+                                            :buyer_id,
+                                            :quantity,
+                                            :product_size,
+                                            :product_color,
+                                            :delivery_method,
+                                            :product_model,
+                            ])
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          a = '"['
+          b = ']"'
+          my_third_json = my_seconday_json.gsub(a , "[")
+          my_fourth_json = my_third_json.gsub(b , "]")
+          format.json {render json: my_primary_json}
+          format.text {render text: my_fourth_json}
+    end
+
+  end
+
+
+
+#http://localhost:3000/mycart_list_by_cart_id.txt?cart_key=123
+def mycart_list_by_cart_id
+
+   @orders = LineItem.where("cart_id = ? ", params[:cart_key])
+
+    respond_to do |format|
+          my_primary_json = @orders.to_json(:only => [
+                                            :product_id,
+                                            :cart_id,
+                                            :buyer_id,
+                                            :quantity,
+                                            :product_size,
+                                            :product_color,
+                                            :delivery_method,
+                                            :product_model,
+                            ])
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          a = '"['
+          b = ']"'
+          my_third_json = my_seconday_json.gsub(a , "[")
+          my_fourth_json = my_third_json.gsub(b , "]")
+          format.json {render json: my_primary_json}
+          format.text {render text: my_fourth_json}
+    end
+
+  end
+
+
+
+
+  def add_to_cart_mobi
+        
+      @cart = current_cart_mobi
+      puts "xxxxxxxxxxxxxxxxxxxxxxxxxxx"+@cart.to_s+"yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+      
+      
+      product = Product.find(params[:product_id])
+      color = params[:product_color]
+      delivery_method = params[:delivery_method]
+      size = params[:product_size]
+      quantity = params[:product_quantity].to_i
+      product_model = params[:product_model]
+      buyer_id = params[:buyer_id]
+
+      @line_item = @cart.add_item_mobi(product.id,size,color,delivery_method,quantity,product_model,buyer_id)
+     
+   end
+
+
+  def add_to_cart_mobi_with_key
+        
+      @cart = current_cart_mobi_with_key
+      puts "xxxxxxxxxxxxxxxxxxxxxxxxxxx"+@cart.to_s+"yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+      
+      
+      product = Product.find(params[:product_id])
+      color = params[:product_color]
+      delivery_method = params[:delivery_method]
+      size = params[:product_size]
+      quantity = params[:product_quantity].to_i
+      product_model = params[:product_model]
+     
+
+      @line_item = @cart.add_item_mobi_with_key(product.id,size,color,delivery_method,quantity,product_model)
+      render :json => { :success => true, :key => @cart.id}
+            
+   end
+
+
+
+
   def index
     @myapis = Myapi.all
   end

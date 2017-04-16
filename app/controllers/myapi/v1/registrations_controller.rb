@@ -38,11 +38,9 @@ class Myapi::V1::RegistrationsController < Devise::RegistrationsController
       )
 
      if !@buyer.save
-           render :status => :unprocessable_entity,
-             :json => { :success => false}
+           render :json => { :success => false}
      else
-      render :status => :unprocessable_entity,
-             :json => { :success => true}
+      render :json => { :success => true}
 
      end
 

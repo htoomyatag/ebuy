@@ -133,12 +133,28 @@
 				 <% end %>
 
 			</li>
-			<li>
-				<%= link_to cart_item_path(:cart_id => session[:cart_id]), id:"menulink" do %>
+			
+			<% if buyer_signed_in? %>
+
+				<li>
+				<%= link_to cart_item_path(:buyer_id => current_buyer.id), id:"menulink" do %>
 					<%= image_tag "cart.png", :alt=>"profile" %>
 					<%= t("view_cart")%>
 				|<% end %>
-			</li>
+				</li>
+
+			<% else %>
+
+				<li>
+					<%= link_to cart_item_path(:cart_id => session[:cart_id]), id:"menulink" do %>
+						<%= image_tag "cart.png", :alt=>"profile" %>
+						<%= t("view_cart")%>
+					|<% end %>
+				</li>
+
+			<% end %>
+
+
 			<li>
 				<%= link_to contact_us_path, id:"menulink" do %>
 					<%= image_tag "phone.png", :alt=>"phone" %>

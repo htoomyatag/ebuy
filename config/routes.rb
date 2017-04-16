@@ -17,7 +17,10 @@ Rails.application.routes.draw do
   match "my_coupon_list" => "myapis#my_coupon_list", as: :my_coupon_list, via: [:get, :post]
   match "myorder_list" => "myapis#myorder_list", as: :myorder_list, via: [:get, :post]
   match "mycancel_list" => "myapis#mycancel_list", as: :mycancel_list, via: [:get, :post]
-
+  match "mycart_list_by_buyer_id" => "myapis#mycart_list_by_buyer_id", as: :mycart_list_by_buyer_id, via: [:get, :post]
+  match "mycart_list_by_cart_id" => "myapis#mycart_list_by_cart_id", as: :mycart_list_by_cart_id, via: [:get, :post]
+  post 'add_to_cart_mobi' => 'myapis#add_to_cart_mobi', as: 'add_to_cart_mobi'
+  post 'add_to_cart_mobi_with_key' => 'myapis#add_to_cart_mobi_with_key', as: 'add_to_cart_mobi_with_key'
 
 
 
@@ -60,6 +63,7 @@ Rails.application.routes.draw do
 
   resources :line_items
   get 'cart_item' => 'line_items#cart_item', as: 'cart_item'
+
 
   resources :orders
 

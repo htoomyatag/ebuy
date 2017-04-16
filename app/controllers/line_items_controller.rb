@@ -54,12 +54,15 @@ my_length = length-3
 
   def create
       @cart = current_cart
+      puts "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"+@cart.to_s+"yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+      
       product = Product.find(params[:product_id])
       color = params[:product_color]
       delivery_method = params[:delivery_method]
       size = params[:product_size]
       quantity = params[:product_quantity].to_i
       product_model = params[:product_model]
+
       @line_item = @cart.add_item(product.id,size,color,delivery_method,quantity,product_model)
       respond_to do |format|
             if @line_item.save
@@ -72,6 +75,10 @@ my_length = length-3
         end
    end
 
+
+
+
+
   def cart_item
       
       @coupons = Coupon.all
@@ -80,6 +87,12 @@ my_length = length-3
       if params[:cart_id]
          @line_items = LineItem.where("cart_id = ? ", params[:cart_id])
       end
+
+      if params[:buyer_id]
+         @line_items = LineItem.where("buyer_id = ? ", params[:buyer_id])
+      end
+
+
 
   end
 
