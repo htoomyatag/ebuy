@@ -18,9 +18,11 @@ Rails.application.routes.draw do
   match "myorder_list" => "myapis#myorder_list", as: :myorder_list, via: [:get, :post]
   match "mycancel_list" => "myapis#mycancel_list", as: :mycancel_list, via: [:get, :post]
   match "mycart_list_by_buyer_id" => "myapis#mycart_list_by_buyer_id", as: :mycart_list_by_buyer_id, via: [:get, :post]
-  match "mycart_list_by_cart_id" => "myapis#mycart_list_by_cart_id", as: :mycart_list_by_cart_id, via: [:get, :post]
+  match "mycart_list_by_cart_key" => "myapis#mycart_list_by_cart_key", as: :mycart_list_by_cart_key, via: [:get, :post]
   post 'add_to_cart_mobi' => 'myapis#add_to_cart_mobi', as: 'add_to_cart_mobi'
   post 'add_to_cart_mobi_with_key' => 'myapis#add_to_cart_mobi_with_key', as: 'add_to_cart_mobi_with_key'
+  post 'delete_cart' => 'myapis#delete_cart', as: 'delete_cart'
+
 
 
 

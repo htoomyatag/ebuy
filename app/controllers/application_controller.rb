@@ -81,20 +81,37 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def current_cart_mobi_with_key
+  # def current_cart_mobi_with_key
 
      
 
-          @session_cart = Random.rand(1001...2001) 
+  #         # @session_cart = Random.rand(1001...2001) 
 
           
-          Cart.find(@session_cart)
-          rescue ActiveRecord::RecordNotFound
-          cart = Cart.create(:id => @session_cart)
-          @session_cart = @session_cart
-          cart
+  #         # Cart.find(@session_cart)
+  #         # rescue ActiveRecord::RecordNotFound
+  #         # cart = Cart.create(:cart_key => @session_cart)
+  #         # @session_cart = @session_cart
+  #         # cart
 
-  end
+
+  #        @cart_key = Random.rand(1001...2001) 
+  #        @mycart_number = Cart.maximum(:id)
+  #        if @mycart_number.nil?
+  #           @cart_number =  1
+  #        else
+  #           @cart_number = Cart.maximum(:id) + 1
+  #        end
+
+  #         @session_cart = @cart_number
+          
+  #         Cart.find(@session_cart)
+  #         rescue ActiveRecord::RecordNotFound
+  #         cart = Cart.create(:cart_key => @cart_key)
+  #         @session_cart = cart.id
+  #         cart
+
+  # end
 
   def reset_cart
      Cart.find(session[:cart_id])

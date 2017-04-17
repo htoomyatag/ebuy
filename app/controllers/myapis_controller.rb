@@ -264,17 +264,21 @@ def mycart_list_by_buyer_id
 
    @orders = LineItem.where("buyer_id = ? ", params[:buyer_id])
 
-    respond_to do |format|
-          my_primary_json = @orders.to_json(:only => [
-                                            :product_id,
-                                            :cart_id,
-                                            :buyer_id,
-                                            :quantity,
-                                            :product_size,
-                                            :product_color,
-                                            :delivery_method,
-                                            :product_model,
-                            ])
+   respond_to do |format|
+      
+          my_primary_json = {:cart => @orders.to_json(
+                      :only => [
+                                  :product_id,
+                                  :cart_id,
+                                  :buyer_id,
+                                  :quantity,
+                                  :product_size,
+                                  :product_color,
+                                  :delivery_method,
+                                  :product_model
+                                ])
+                  }
+
           my_seconday_json = my_primary_json.to_json.gsub('\\', '')
           a = '"['
           b = ']"'
@@ -288,22 +292,26 @@ def mycart_list_by_buyer_id
 
 
 
-#http://localhost:3000/mycart_list_by_cart_id.txt?cart_key=123
-def mycart_list_by_cart_id
+#http://localhost:3000/mycart_list_by_cart_key.txt?cart_key=123
+def mycart_list_by_cart_key
 
-   @orders = LineItem.where("cart_id = ? ", params[:cart_key])
+   @orders = LineItem.where("cart_key = ? ", params[:cart_key])
 
     respond_to do |format|
-          my_primary_json = @orders.to_json(:only => [
-                                            :product_id,
-                                            :cart_id,
-                                            :buyer_id,
-                                            :quantity,
-                                            :product_size,
-                                            :product_color,
-                                            :delivery_method,
-                                            :product_model,
-                            ])
+      
+          my_primary_json = {:cart => @orders.to_json(
+                      :only => [
+                                  :product_id,
+                                  :cart_id,
+                                  :buyer_id,
+                                  :quantity,
+                                  :product_size,
+                                  :product_color,
+                                  :delivery_method,
+                                  :product_model
+                                ])
+                  }
+
           my_seconday_json = my_primary_json.to_json.gsub('\\', '')
           a = '"['
           b = ']"'
@@ -339,21 +347,65 @@ def mycart_list_by_cart_id
 
   def add_to_cart_mobi_with_key
         
-      @cart = current_cart_mobi_with_key
-      puts "xxxxxxxxxxxxxxxxxxxxxxxxxxx"+@cart.to_s+"yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
       
-      
-      product = Product.find(params[:product_id])
-      color = params[:product_color]
-      delivery_method = params[:delivery_method]
-      size = params[:product_size]
-      quantity = params[:product_quantity].to_i
-      product_model = params[:product_model]
-     
-
-      @line_item = @cart.add_item_mobi_with_key(product.id,size,color,delivery_method,quantity,product_model)
-      render :json => { :success => true, :key => @cart.id}
+      if params[:cart_key] == ""
+            @cart = current_cart_mobi
+            cart_key = Random.rand(1001...2001) 
+            puts "xxxxxxxxxxxxxxxxxxxxxxxxxxx"+@cart.to_s+"yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
             
+            
+            product = Product.find(params[:product_id])
+            color = params[:product_color]
+            delivery_method = params[:delivery_method]
+            size = params[:product_size]
+            quantity = params[:product_quantity].to_i
+            product_model = params[:product_model]
+           
+
+            @line_item = @cart.add_item_mobi_with_key(product.id,size,color,delivery_method,quantity,product_model,cart_key)
+            render :json => { :success => true, :key => cart_key}
+
+      else
+
+            @cart = current_cart_mobi
+            cart_key = params[:cart_key]
+            puts "xxxxxxxxxxxxxxxxxxxxxxxxxxx"+@cart.to_s+"yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+            
+            
+            product = Product.find(params[:product_id])
+            color = params[:product_color]
+            delivery_method = params[:delivery_method]
+            size = params[:product_size]
+            quantity = params[:product_quantity].to_i
+            product_model = params[:product_model]
+           
+
+            @line_item = @cart.add_item_mobi_with_key(product.id,size,color,delivery_method,quantity,product_model,cart_key)
+            render :json => { :success => true, :key => cart_key}
+
+
+      end
+
+            
+   end
+
+   #http://localhost:3000/delete_cart
+   def delete_cart
+    
+      @line_items = LineItem.where(:cart_id => params[:cart_id])
+      @line_items.each do |line_item|
+            line_item.destroy
+      end
+
+
+     @carts = Cart.where(:id => params[:cart_id])
+     @carts.each do |cart|
+            cart.destroy
+      end
+
+      render :json => { :success => true}
+   
+
    end
 
 
