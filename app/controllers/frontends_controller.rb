@@ -581,6 +581,11 @@ my_length = length-3
   end
 
 
+  def submit_online_payment_mobi
+
+  end
+
+
 
   
 
@@ -651,11 +656,13 @@ my_length = length-3
 
     # Choose layout according to action
     def layout_per_action
+      
       if action_name == "pc_version"
         "site_layout"
       else
         "application"
       end
+
     end
 
 

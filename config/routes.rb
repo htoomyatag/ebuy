@@ -74,7 +74,8 @@ Rails.application.routes.draw do
 
 
   resources :frontends
-  
+  get 'submit_online_payment_mobi' => 'frontends#submit_online_payment_mobi'  
+
 
 
 
